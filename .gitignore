@@ -1,0 +1,16 @@
+# Personal startup config (never commit)
+config.json
+
+# Local output files
+*.local.*
+outputs/
+
+# OS files
+.DS_Store
+
+# Node
+node_modules/
+
+# IDE
+.vscode/
+.idea/

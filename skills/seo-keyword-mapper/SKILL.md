@@ -1,0 +1,1 @@
+seo-keyword-mapper.skill
