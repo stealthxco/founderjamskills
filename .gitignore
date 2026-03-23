@@ -14,3 +14,7 @@ node_modules/
 # IDE
 .vscode/
 .idea/
+
+# Environment files
+.env
+.env.local
