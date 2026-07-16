@@ -10,12 +10,19 @@
     },
     "track": {
       "type": "string",
-      "enum": ["product", "growth"],
+      "enum": [
+        "product",
+        "growth"
+      ],
       "description": "Workshop track: product (prototype building) or growth (go-to-market)"
     },
     "stage": {
       "type": "string",
-      "enum": ["idea", "pre-revenue", "early-revenue"],
+      "enum": [
+        "idea",
+        "pre-revenue",
+        "early-revenue"
+      ],
       "description": "Current startup stage"
     },
     "problem_statement": {
@@ -50,7 +57,9 @@
     },
     "channels_selected": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "Primary distribution channels (set by icp-definer or growth-builder)"
     },
     "lead_magnet": {
@@ -59,9 +68,62 @@
     },
     "business_type": {
       "type": "string",
-      "enum": ["b2b-saas", "services", "marketplace", "consumer", ""],
+      "enum": [
+        "b2b-saas",
+        "services",
+        "marketplace",
+        "consumer",
+        ""
+      ],
       "description": "Business model type for tailored recommendations"
+    },
+    "outbound_system": {
+      "type": "string",
+      "description": "One-line summary of the founder-led outbound system: channels, cadence, CTA, tier (set by outbound-composer)"
+    },
+    "published_pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "lead-magnet-gate",
+              "ab-test-a",
+              "ab-test-b",
+              "scoreboard",
+              "demo"
+            ]
+          },
+          "url": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "gate": {
+            "type": "string",
+            "enum": [
+              "email",
+              "password",
+              "none"
+            ]
+          }
+        },
+        "required": [
+          "purpose",
+          "url"
+        ]
+      },
+      "description": "Live pages published during or after the workshop (set by page-launcher)"
     }
   },
-  "required": ["startup_name", "track", "stage", "problem_statement", "target_market"]
+  "required": [
+    "startup_name",
+    "track",
+    "stage",
+    "problem_statement",
+    "target_market"
+  ]
 }
