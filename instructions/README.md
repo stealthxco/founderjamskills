@@ -2,6 +2,8 @@
 
 These instruction files let you use the Founder Jam skills without installing Claude Code. Each file contains an activation prompt you can paste directly into Claude Desktop or Claude Cowork.
 
+> **Even easier (Pro/Max/Team/Enterprise plans):** upload a ready-made skill instead of pasting a prompt. Grab a `.zip` from the [`../dist/`](../dist/) folder and add it under **Settings → Capabilities → Skills → Upload skill** in the Claude app. See [`../dist/README.md`](../dist/README.md). The paste-in prompts below work on any plan, including Free.
+
 ## Two Ways to Use These Skills
 
 ### Option 1: Claude Code (Full Experience)

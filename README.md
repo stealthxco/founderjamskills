@@ -48,15 +48,22 @@ Setup takes about 5 minutes. After running `founder-setup`, you're ready to star
 | 20 | `outbound-composer` | Growth | Part 3 (alternative) or Post-Workshop | Prospect sourcing plan, LinkedIn + email sequence pack, daily cadence + reply triage, one-page Outbound OS |
 | 21 | `page-launcher` | Both | On-demand (after `offer-designer` / `prototype-launcher`) | Live published pages via agentpub.io: email-gated lead magnet, positioning A/B test, 30-day scoreboard, demo-that-travels (Claude Code only) |
 
-## Two Ways to Use These Skills
+## Three Ways to Use These Skills
+
+### Claude Desktop / claude.ai (Upload a File — easiest)
+
+Download a ready-to-install `.zip` from the [`dist/`](dist/) folder and upload it in the
+Claude app under **Settings → Capabilities → Skills → Upload skill**. No terminal, no
+cloning. Start with `founder-setup.zip`. See [`dist/README.md`](dist/README.md) for the
+2-minute walkthrough. *(Uploading Skills requires a Pro, Max, Team, or Enterprise plan.)*
 
 ### Claude Code (Full Experience)
 
 Run `./install.sh` to symlink all skills into Claude Code. Invoke any skill by name. Skills read and write to a shared `config.json` so context flows between them automatically.
 
-### Claude Desktop / Cowork (Simpler)
+### Paste-In Prompts (any plan, no install)
 
-Run `./install.sh --lite` or browse the `instructions/` folder. Each file contains the activation prompt to paste into a new Claude conversation. No installation needed.
+Browse the [`instructions/`](instructions/) folder (or run `./install.sh --lite`). Each file contains an activation prompt to paste into a new Claude conversation. Works on any plan, no upload needed.
 
 ## Product Track Guide
 
