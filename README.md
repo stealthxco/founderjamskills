@@ -45,6 +45,8 @@ Setup takes about 5 minutes. After running `founder-setup`, you're ready to star
 | 17 | `seo-keyword-mapper` | Both | Post-Workshop | 6 Circles keyword maps, programmatic SEO templates, publishing roadmaps |
 | 18 | `content-calendar-planner` | Both | Post-Workshop | Weekly/monthly content calendars with velocity rules and ratio tracking |
 | 19 | `landing-page-auditor` | Both | Post-Workshop | 8-dimension page audits with prioritized fixes and A/B test variants |
+| 20 | `outbound-composer` | Growth | Part 3 (alternative) or Post-Workshop | Prospect sourcing plan, LinkedIn + email sequence pack, daily cadence + reply triage, one-page Outbound OS |
+| 21 | `page-launcher` | Both | On-demand (after `offer-designer` / `prototype-launcher`) | Live published pages via agentpub.io: email-gated lead magnet, positioning A/B test, 30-day scoreboard, demo-that-travels (Claude Code only) |
 
 ## Two Ways to Use These Skills
 
