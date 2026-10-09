@@ -9,9 +9,9 @@ Two Founder Jam skills, set up for founders working on their own: find your firs
 
 ## Pick your path
 
-**Any Claude plan, including Free:** open `paste-in-prompts/`, copy a prompt into a new chat at claude.ai, fill in the brackets.
+**Any Claude plan, including Free:** open `paste-in-prompts/` in the kit zip (`starter-kit/paste-in/` in this repo), copy a prompt into a new chat at claude.ai, fill in the brackets.
 
-**Claude Pro, Max, Team or Enterprise:** upload the zips in `upload-to-claude/` under **Settings → Capabilities → Skills → Upload skill**, then start a chat and say "Run icp-definer."
+**Claude Pro, Max, Team or Enterprise:** upload the zips in `upload-to-claude/` in the kit zip (`starter-kit/dist/` in this repo) under **Settings → Capabilities → Skills → Upload skill**, then start a chat and say "Run icp-definer."
 
 Either way, run ICP Definer first. It ends with a **FOUNDER JAM HANDOFF** block. Copy it and paste it into Lead Magnet Ideator so you don't retype your answers.
 
