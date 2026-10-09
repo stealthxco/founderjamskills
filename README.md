@@ -48,6 +48,10 @@ Setup takes about 5 minutes. After running `founder-setup`, you're ready to star
 | 20 | `outbound-composer` | Growth | Part 3 (alternative) or Post-Workshop | Prospect sourcing plan, LinkedIn + email sequence pack, daily cadence + reply triage, one-page Outbound OS |
 | 21 | `page-launcher` | Both | On-demand (after `offer-designer` / `prototype-launcher`) | Live published pages via agentpub.io: email-gated lead magnet, positioning A/B test, 30-day scoreboard, demo-that-travels (Claude Code only) |
 
+## Founder Jam Starter Kit
+
+Not at a Founder Jam yet? [`starter-kit/`](starter-kit/) packages `icp-definer` and `lead-magnet-ideator` for working on your own: paste-in prompts for any Claude plan, solo-mode upload zips, and a one-page quickstart. Download everything as [`starter-kit/dist/founder-jam-starter-kit.zip`](starter-kit/dist/founder-jam-starter-kit.zip).
+
 ## Three Ways to Use These Skills
 
 ### Claude Desktop / claude.ai (Upload a File — easiest)
