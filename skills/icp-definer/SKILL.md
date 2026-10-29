@@ -1,1 +1,0 @@
-icp-definer.skill

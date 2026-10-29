@@ -1,1 +1,0 @@
-content-calendar-planner.skill

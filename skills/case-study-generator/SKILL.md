@@ -1,1 +1,0 @@
-case-study-generator.skill

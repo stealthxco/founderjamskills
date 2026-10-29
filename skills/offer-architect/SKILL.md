@@ -1,1 +1,0 @@
-offer-architect.skill
