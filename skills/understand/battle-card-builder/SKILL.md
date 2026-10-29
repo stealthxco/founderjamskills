@@ -1,14 +1,14 @@
 ---
 name: battle-card-builder
-description: Map your competitive landscape for Founder Jam Product Track. Runs a SWOT self-assessment, identifies 3-5 competitors across all categories, and generates a battle card per competitor. Uses live web search when available.
+description: Map the competitive landscape. Runs a SWOT self-assessment, identifies 3-5 competitors across direct, indirect, status quo, and future categories, and builds a battle card for each one. Use in the Understand stage, especially on the product and positioning path, or whenever a founder says they have no competitors.
+license: CC-BY-4.0
 ---
 
 # Battle Card Builder
 
 Map your competitive landscape before you build anything else. This skill runs you through an honest SWOT self-assessment, then identifies your real competitors (including the ones most founders miss), and generates a battle card for each one.
 
-**Track:** Product
-**Workshop Segment:** Activity 1 - Competitive Landscape (9:30-10:45am)
+**Stage:** Understand. **Best for paths:** product and positioning (useful on every path).
 **Time estimate:** 75 minutes
 
 ## Overview
@@ -19,11 +19,15 @@ Map your competitive landscape before you build anything else. This skill runs y
 4. Battle card generation per competitor
 5. Competitive summary table + "How We Win" one-liners
 
-## Config
+## Context
 
-Read `config.json` if present. Extract: `startup_name`, `problem_statement`, `target_market`, `facilitated_mode`.
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
-If config is missing, ask conversationally:
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+Fields needed: `startup_name`, `problem_statement`, `target_market`.
+
+If a field is missing, ask conversationally:
 - "What's your startup called?"
 - "In one sentence, what problem does it solve?"
 - "Who is your target customer?"
@@ -34,7 +38,7 @@ Before looking outward, look inward. Run the founder through an honest self-asse
 
 Ask: "Before we look at competitors, let's be honest about where you stand today. I'll ask you about strengths, weaknesses, opportunities, and threats."
 
-Collect answers and output a Miro-ready SWOT matrix:
+Collect answers and output a paste-ready SWOT matrix:
 
 ```
 ## [startup_name] SWOT Self-Assessment
@@ -57,7 +61,7 @@ Prompts for each quadrant:
 - Opportunities: "What trends or market shifts could you ride? What's underserved in your space?"
 - Threats: "Who could enter your market and hurt you? What technology shift could make you irrelevant?"
 
-If `facilitated_mode` is true, add after weaknesses: "Which of these weaknesses would a well-funded competitor weaponize against you in a sales conversation?"
+If `mode` is `with-sherpa`, add after weaknesses: "Which of these weaknesses would a well-funded competitor weaponize against you in a sales conversation?"
 
 ## Step 2: Competitor Identification
 
@@ -83,7 +87,7 @@ Use WebSearch with queries like:
 
 Generate a list of 3-5 competitors (minimum one from each non-empty category). Confirm with the founder before proceeding.
 
-If `facilitated_mode` is true, add: "Who is the status quo competitor? The customer doing nothing or using spreadsheets is often your biggest competitor -- and the hardest to sell against."
+If `mode` is `with-sherpa`, add: "Who is the status quo competitor? The customer doing nothing or using spreadsheets is often your biggest competitor -- and the hardest to sell against."
 
 ## Step 3: Battle Cards
 
@@ -138,7 +142,7 @@ Research sources per competitor:
 [Your specific advantage -- be concrete, not generic]
 ```
 
-If `facilitated_mode` is true, add a "Devil's Advocate" section to each card:
+If `mode` is `with-sherpa`, add a "Devil's Advocate" section to each card:
 - "What if their weakness is actually a conscious trade-off? Could their customers see it as a feature?"
 - "What's your evidence for this weakness -- G2 reviews, sales conversations, or assumption?"
 
@@ -167,9 +171,9 @@ Then output "How We Win" one-liners:
 - vs. Status Quo: [one sentence -- this is often the most important one]
 ```
 
-## Facilitated Mode Questions
+## Sherpa-Mode Questions
 
-When `facilitated_mode` is true, add these provocative questions at natural moments:
+When `mode` is `with-sherpa`, add these provocative questions at natural moments:
 
 - After SWOT weaknesses: "What job is the customer hiring today without you?"
 - After competitor list: "Which competitor are you most scared of? Why?"
@@ -180,22 +184,20 @@ When `facilitated_mode` is true, add these provocative questions at natural mome
 ## Output Summary
 
 When complete, confirm:
-- SWOT 2x2 matrix (Miro-ready)
+- SWOT 2x2 matrix (paste-ready)
 - One battle card per competitor
 - Competitive summary table ranked by threat level
 - "How We Win" one-liners
 
 Then say: "Save this output -- your hypothesis engine session works best when you know exactly which competitors you're trying to outmaneuver."
 
-## Config Dependencies
+## Where this runs
 
-**Reads:** `startup_name`, `problem_statement`, `target_market`, `facilitated_mode`
-**Writes:** Nothing (informational output only)
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Uses web search when it is available; if not, ask the founder to paste in what they know. Paste your handoff block at the start. |
+| Claude Code | Full flow with web search. Can also read and write `config.json`. |
 
-## Platform Notes
+---
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Full: WebSearch + reads config.json |
-| Claude Desktop | Full: WebSearch available via tool use |
-| Claude Cowork | Partial: founder provides competitor data; no live search |
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

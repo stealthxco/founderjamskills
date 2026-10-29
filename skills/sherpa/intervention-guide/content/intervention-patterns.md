@@ -1,6 +1,6 @@
 # Intervention Patterns
 
-12 failure modes with specific facilitator responses. Use this during the event when a team is stuck or going off-track.
+12 failure modes with specific sherpa responses. Use this during the event when a team is stuck or going off-track.
 
 ---
 

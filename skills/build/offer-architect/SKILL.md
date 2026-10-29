@@ -1,9 +1,12 @@
 ---
 name: offer-architect
-description: Optimize existing offers into Grand Slam packages using Hormozi's 9-step process, Value Equation scoring, bonus stacking, guarantee language, and upsell/downsell architecture. This skill optimizes offers; offer-designer creates initial ones.
+description: Turn an existing offer into a Grand Slam package using Hormozi's 9-step process, covering Value Equation scoring, bonus stacking, guarantee design, and upsell and downsell architecture. Use in the Build stage on the sales or product and positioning path, after offer-designer, or whenever a founder's offer is hard to explain or price.
+license: CC-BY-4.0
 ---
 
 # Offer Architect Skill
+
+**Stage:** Build. **Best for paths:** sales, product and positioning.
 
 ## Overview
 
@@ -20,20 +23,24 @@ Key capabilities:
 - Apply MAGIC naming for incomparability
 - Create ethical scarcity language authentic to your model
 
-## Config Dependencies
+## Context
 
-**Reads from `config.json`:**
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+**Read from the handoff block:**
 - `startup_name` -- company name for package branding
 - `icp_segment` -- target customer profile for obstacle mapping
 - `business_type` -- service model for delivery vehicle selection
-- `facilitated_mode` -- enables challenge prompts
+- `mode` -- `with-sherpa` adds challenge prompts
 
-**Optional config fields:**
+**Optional details (not in the handoff block, ask if useful):**
 - `service_areas` -- array of service offerings
 - `team_size` -- for authentic scarcity language
 - `engagement_model` -- pricing model (e.g., "fixed-fee", "retainer", "project-based")
 
-**Writes:** Nothing (output is presented for review and manual saving)
+**Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
 ## The Grand Slam Offer Process (Hormozi, Adapted for Services)
 
@@ -267,9 +274,9 @@ That's a [X]:1 return on your investment before you even factor in the business 
 4. **Validate architecture** -- Check the upsell/downsell path for gaps
 5. **Review and refine** -- Iterate with founder input
 
-## Facilitated Mode
+## Sherpa Mode
 
-When `facilitated_mode: true`, add these challenge prompts:
+When `mode` is `with-sherpa`, add these challenge prompts:
 
 - "What's the most common reason prospects say no after hearing your price? That's Step 2, obstacle #1."
 - "If you had to guarantee a specific result, what would you guarantee? Now build the package around delivering that."
@@ -293,10 +300,13 @@ When `facilitated_mode: true`, add these challenge prompts:
 - If using `show-rate-optimizer`: confirmation emails can reference specific package names
 - If using `landing-page-auditor`: service pages should present the package using the value stack format
 
-## Platform Notes
+## Where this runs
 
-| Platform | How to Use |
-|----------|-----------|
-| **Claude Code** | Full experience. Run as a skill with config.json in the working directory |
-| **Claude Desktop** | Paste the skill content as a Project instruction. Walk through the 9 steps interactively |
-| **Claude Cowork** | Add as a source document. Best for collaborative package design sessions |
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

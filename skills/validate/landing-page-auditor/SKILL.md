@@ -1,9 +1,12 @@
 ---
 name: landing-page-auditor
-description: Audit and optimize landing pages using Hormozi's Value Equation, essential page elements framework, and weekly A/B testing protocol. Applies Dickerson's positioning angle templates and rejection cycles. Scores pages on conversion readiness and generates optimized copy variants.
+description: Audit a landing page across 8 dimensions using Hormozi's Value Equation and essential page elements, plus Dickerson's positioning angles, and produce prioritized fixes and A/B test variants. Use in the Validate stage when a page exists and the founder wants to know whether the message works.
+license: CC-BY-4.0
 ---
 
 # Landing Page Auditor Skill
+
+**Stage:** Validate. **Best for paths:** product and positioning, GTM and growth.
 
 ## Overview
 
@@ -17,19 +20,23 @@ Key capabilities:
 - Audit programmatic SEO pages for quality and uniqueness
 - Check for Isenberg's "congruence" -- does the page match the traffic source?
 
-## Config Dependencies
+## Context
 
-**Reads from `config.json`:**
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+**Read from the handoff block:**
 - `startup_name` -- company name for copy variants
 - `icp_segment` -- target customer for congruence checking
 - `business_type` -- service model for positioning angle selection
-- `facilitated_mode` -- enables challenge prompts
+- `mode` -- `with-sherpa` adds challenge prompts
 
-**Optional config fields:**
+**Optional details (not in the handoff block, ask if useful):**
 - `service_areas` -- array of service offerings for page-specific guidance
 - `common_objections` -- array of top sales objections for FAQ scoring
 
-**Writes:** Nothing (output is presented for review and manual saving)
+**Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
 ## The Audit Scorecard
 
@@ -105,7 +112,7 @@ Score each factor 1-10.
 | 3-4 | Minimal FAQ |
 | 1-2 | No FAQ |
 
-Use your top sales objections (from `common_objections` config or from experience).
+Use your top sales objections (from the founder's sales calls or from experience).
 
 ### Dimension 6: Traffic-Source Congruence (Isenberg)
 
@@ -273,9 +280,9 @@ After reviewing or generating page copy:
 5. **Generate copy variants** -- 3 options for top fixes
 6. **Document** -- Save audit for tracking improvement
 
-## Facilitated Mode
+## Sherpa Mode
 
-When `facilitated_mode: true`, add these challenge prompts:
+When `mode` is `with-sherpa`, add these challenge prompts:
 
 - "Open your homepage right now. Can you tell what you do, who you help, and what result you deliver within 5 seconds? If not, that's fix #1."
 - "Count your CTA variations across your site. If you have more than 2 different CTA phrases, simplify."
@@ -298,10 +305,13 @@ When `facilitated_mode: true`, add these challenge prompts:
 - If using `case-study-generator`: case study pages should be audited for proof placement
 - If using `lead-magnet-ideator`: lead magnet landing pages need congruence auditing
 
-## Platform Notes
+## Where this runs
 
-| Platform | How to Use |
-|----------|-----------|
-| **Claude Code** | Full experience. Run as a skill with config.json. Can read website source files directly |
-| **Claude Desktop** | Paste the skill content as a Project instruction. Paste page content or URL for audit |
-| **Claude Cowork** | Add as a source document. Share screenshots or page HTML for review |
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

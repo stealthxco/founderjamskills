@@ -1,11 +1,14 @@
 ---
 name: growth-builder
-description: Growth Track Part 3. Build one automation (sales lead enrichment or customer support), define your North Star metric, and create a concrete 30-day validation plan with Green/Yellow/Red decision thresholds. Reads icp_segment, lead_magnet, channels_selected. Writes channels_selected (confirmed).
+description: Build one automation (sales lead enrichment or customer support), define a North Star metric, and write a 30-day validation plan with Green/Yellow/Red decision thresholds. Use in the Build stage on the GTM and growth or ops and automation paths.
+license: CC-BY-4.0
 ---
 
 # Growth Builder
 
-Complete the Growth Track arc: build one automation to replace a manual process, define the single metric that tells you if growth is working, and create a 30-day validation plan with explicit decision gates. This is Growth Track Part 3.
+**Stage:** Build. **Best for paths:** GTM and growth, ops and automation.
+
+Build one automation to replace a manual process, define the single metric that tells you if growth is working, and create a 30-day validation plan with explicit decision gates. Run it after you have an ICP, a lead magnet, and channels, or on the ops and automation path when a manual process is the bottleneck.
 
 ## Overview
 
@@ -19,7 +22,11 @@ Three sequential sub-activities:
 
 ## Setup
 
-Read `config.json` if present. Required fields: `icp_segment`, `lead_magnet`, `channels_selected`, `startup_name`, `stage`, `business_type`, `facilitated_mode`.
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+Fields needed: `icp_segment`, `lead_magnet`, `channels_selected`, `startup_name`, `stage`, `business_type`.
 
 If any fields are missing, ask for them before proceeding. If `channels_selected` is empty, ask which channel(s) the founder selected in the previous activity.
 
@@ -153,7 +160,7 @@ Setup complexity: **Easy** (1-2 hours first-time setup)
 **First action to take:** [specific first step to begin setup today]
 ```
 
-**Facilitated mode challenge prompts:**
+**Sherpa-mode challenge prompts:**
 - "Which automation will save you the most time in the next 30 days?"
 - "What is the manual step you are doing today that this replaces?"
 - "If this automation breaks, how will you know within 24 hours?"
@@ -230,7 +237,7 @@ For each metric, ask the founder: "What would Green look like in 30 days?" Use t
 **Who reviews:** [founder name / accountability partner]
 ```
 
-**Facilitated mode challenge prompts:**
+**Sherpa-mode challenge prompts:**
 - "If you could only track one number for 90 days, what would tell you if this is working?"
 - "What does 'activated' mean for your specific product -- not sign-ups, the moment they get value?"
 - "Who outside this room will review these metrics with you in 30 days?"
@@ -325,7 +332,7 @@ Each cold message should feel like a 1:1 message, not a blast. If it could be se
 
 **Step 3: Confirm channels_selected**
 
-Based on the 30-day plan, confirm which channels the founder is committing to. Apply the 80/15/5 framework to make the allocation explicit. Update config.
+Based on the 30-day plan, confirm which channels the founder is committing to. Apply the 80/15/5 framework to make the allocation explicit. Update the handoff block.
 
 **Output: 30-Day Calendar + Decision Framework Card**
 
@@ -372,30 +379,26 @@ Based on the 30-day plan, confirm which channels the founder is committing to. A
 **Who reviews with me:** [accountability partner name]
 ```
 
-**Facilitated mode challenge prompts:**
+**Sherpa-mode challenge prompts:**
 - "What's your decision rule for knowing when to pivot vs. persist -- and are you willing to commit to it now?"
 - "What could break this plan in Week 1, and how will you catch it early?"
 - "Who outside this room will hold you to these numbers in 30 days?"
 
-## Write Config
+## Handoff
 
-After completing all three sub-activities, update `config.json`:
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence with these fields filled in:
 
-```json
-{
-  "channels_selected": ["[confirmed primary channel 1]", "[confirmed primary channel 2]"]
-}
-```
+- `channels_selected`: [confirmed primary channel 1], [confirmed primary channel 2]
 
-## Config Dependencies
+Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access, also write the same fields to `config.json`.
 
-**Reads:** `icp_segment`, `lead_magnet`, `channels_selected`, `startup_name`, `stage`, `business_type`, `facilitated_mode`
-**Writes:** `channels_selected` (confirmed)
+## Where this runs
 
-## Platform Notes
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start and copy the updated block at the end. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Full flow: reads full config, writes confirmed channels_selected |
-| Claude Desktop | Full flow: manual context input for missing config fields |
-| Claude Cowork | Full flow: recommended for non-technical founders -- rich text output works well |
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

@@ -1,11 +1,16 @@
 ---
 name: page-launcher
-description: Both tracks, on-demand. Ship what you just designed to a LIVE URL during the session using agentpub.io - an email-gated lead magnet page, an A/B positioning test, a 30-day metrics scoreboard, or a "demo that travels" page. Turns offer-designer / prototype-launcher outputs into things you can actually test today. Reads lead_magnet, icp_segment. Writes published_pages. Claude Code only (needs shell access).
+description: Claude Code only. Publishes a live page (an email-gated lead magnet, an A/B positioning test, a 30-day scoreboard, or a demo page) to agentpub.io by running shell commands, so it needs Claude Code with Bash access. In claude.ai or Claude desktop, publish an artifact instead. Use in the Build stage after offer-designer or prototype-launcher. Third-party skill by Scott Murtaugh of GP Automations.
+license: CC0-1.0
 ---
 
 # Page Launcher
 
-The gap between "we designed a lead magnet" and "there is a URL collecting emails" is where most workshop output goes to die. This skill closes it in the room: generate a single-file page from what the founder already built today, publish it to a live URL on agentpub.io, and gate it so it captures leads.
+**Stage:** Build. **Best for paths:** any path.
+
+> Claude Code only. This skill publishes pages by running `curl` in a shell, so it needs Claude Code with Bash access. Do not run it in claude.ai or Claude desktop. See "No Claude Code? Publish an artifact instead" below.
+
+The gap between "we designed a lead magnet" and "there is a URL collecting emails" is where most workshop output goes to die. This skill closes the gap: generate a single-file page from what the founder already built today, publish it to a live URL on agentpub.io, and gate it so it captures leads.
 
 Four modes. Pick the one that matches the founder's next test:
 
@@ -18,13 +23,17 @@ Four modes. Pick the one that matches the founder's next test:
 
 **Time estimate:** 25-45 minutes per mode
 
-**Platform requirement:** Claude Code only - publishing runs `curl` from the shell. On Claude Desktop/Cowork, generate the HTML here, then publish from Claude Code or any static host.
+**Platform requirement:** Claude Code only. Publishing runs `curl` from the shell.
 
 ## Setup
 
-Read `config.json` if present. Helpful fields: `startup_name`, `icp_segment`, `lead_magnet`, `business_type`.
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
-**Publishing account (do this once, ~2 minutes):** agentpub can publish anonymously (24-hour site + one-time claim link) or authenticated (permanent, and REQUIRED for the email gate in Mode A). For a workshop, set up the account - the email gate is usually the point:
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+Fields needed (helpful, not required): `startup_name`, `icp_segment`, `lead_magnet`, `business_type`.
+
+**Publishing account (do this once, ~2 minutes):** agentpub can publish anonymously (24-hour site + one-time claim link) or authenticated (permanent, and REQUIRED for the email gate in Mode A). At Founder Jam, set up the account - the email gate is usually the point:
 
 1. Ask the founder for the email they want the account under.
 2. `POST https://agentpub.io/api/auth/agent/request-code` with `{"email":"..."}` - a 6-digit code arrives in their inbox.
@@ -65,6 +74,16 @@ Conventions to follow every time:
 - Keep the founder's data out of danger: nothing on a published page that shouldn't be semi-public (the URL is unguessable, not secret). No API keys, no customer PII.
 - After finalize, verify: `curl -s -o /dev/null -w "%{http_code}" https://<slug>.agentpub.io/` and confirm the gate if one was set.
 
+## No Claude Code? Publish an artifact instead
+
+Solo founders in claude.ai or Claude desktop can get the same result without a shell:
+
+1. Pick the mode below that matches your next test (A to D) and follow its page content steps.
+2. Ask Claude to build that page as a single-file HTML artifact, using your offer and ICP from your FOUNDER JAM HANDOFF block.
+3. Publish or share the artifact from the artifact view to get a link you can send.
+4. An artifact page can't store email addresses by itself. For lead capture, embed a Tally or Typeform form in the page and send leads there.
+5. Keep your handoff block current by adding the link to `published_pages`.
+
 ## Process
 
 ### Mode A: Lead-Magnet Gate
@@ -88,7 +107,7 @@ Conventions to follow every time:
 
 **Anonymous fallback (no account):** publish ungated, and embed a Tally/Typeform form in the page for capture instead. Surface the `claimUrl` immediately.
 
-**Facilitated mode challenge prompts:**
+**Sherpa-mode challenge prompts:**
 - "Read the headline. Would [named person from their ICP exercise] stop scrolling for it?"
 - "The gate asks for an email BEFORE showing the goods. Is the promise above the gate strong enough to justify that?"
 
@@ -109,7 +128,7 @@ Conventions to follow every time:
 - Or post variant links in two comparable communities.
 - Metric: leads (gated) or replies-mentioning-the-page per 50 sends. Pre-commit the decision rule: "If B beats A by 2x at 50+ sends each, B is the message."
 
-**Facilitated mode challenge prompt:** "What will you DO differently if A wins? If the answer is 'nothing,' this test isn't worth running - pick a real fork in the road."
+**Sherpa-mode challenge prompt:** "What will you DO differently if A wins? If the answer is 'nothing,' this test isn't worth running - pick a real fork in the road."
 
 **Output:** Two live URLs + the split plan + the pre-committed decision rule.
 
@@ -129,7 +148,7 @@ Conventions to follow every time:
 
 **Step 4 - the weekly ritual (write this into their calendar):** each week, update ONLY `data.json` and re-publish via the patch endpoint (`POST /api/v1/publish/<slug>/patch` with just that file, then finalize). Two minutes a week. The founder can do it by asking Claude Code: "update my scoreboard: [numbers]."
 
-**Facilitated mode challenge prompt:** "Who, specifically, sees this scoreboard besides you? A scoreboard nobody else looks at is a diary."
+**Sherpa-mode challenge prompt:** "Who, specifically, sees this scoreboard besides you? A scoreboard nobody else looks at is a diary."
 
 **Output:** Live URL + the weekly update ritual + who's watching.
 
@@ -147,40 +166,31 @@ Conventions to follow every time:
 
 **Step 4:** Publish (stable name `<startup>-demo`), open (this page WANTS to be forwarded). This URL is what goes in every outbound Touch 2 and every post-meeting follow-up - it's built to be forwarded to the person who wasn't in the room.
 
-**Facilitated mode challenge prompt:** "Imagine your champion forwards this to their skeptical boss. What's the boss's first objection, and does the page answer it?"
+**Sherpa-mode challenge prompt:** "Imagine your champion forwards this to their skeptical boss. What's the boss's first objection, and does the page answer it?"
 
 **Output:** Live URL + the 3 places it gets used this week (sequences, follow-ups, signature).
 
-## Write Config
+## Handoff
 
-After publishing, append to `config.json` (create the array if missing):
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence with these fields filled in:
 
-```json
-{
-  "published_pages": [
-    {"purpose": "lead-magnet-gate | ab-test-a | ab-test-b | scoreboard | demo",
-     "url": "https://<slug>.agentpub.io/",
-     "name": "<stable-handle>",
-     "gate": "email | password | none"}
-  ]
-}
-```
+- `published_pages`: [purpose]=[url], comma-separated, e.g. lead-magnet-gate=https://slug.agentpub.io/
 
-## Config Dependencies
-
-**Reads:** `startup_name`, `icp_segment`, `lead_magnet` (Mode A), `business_type`, `facilitated_mode`
-**Writes:** `published_pages`
+Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access, also write the same fields to `config.json`.
 
 ## Safety Notes
 
 - Never publish credentials, customer PII, or anything the founder wouldn't show a stranger - unguessable URL is not access control.
 - Anonymous publishes: surface the one-time `claimUrl` to the founder IMMEDIATELY; it is shown once and is the only way to keep the site.
-- The API key lives in `~/.config/agentpub/credentials` (0600) and nowhere else - not in the page, not in config.json, not in chat.
+- The API key lives in `~/.config/agentpub/credentials` (0600) and nowhere else - not in the page, not in the handoff block or config.json, not in chat.
 
-## Platform Notes
+## Where this runs
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Full flow: generates, publishes, gates, verifies, writes config |
-| Claude Desktop | Generates page HTML + plan only; publish from Claude Code or any static host |
-| Claude Cowork | Same as Desktop |
+| Where | What happens |
+|-------|--------------|
+| Claude Code | Full flow: generates, publishes, gates, verifies, and records the pages. |
+| claude.ai or Claude desktop | Do not run the publishing steps. Build the page as an artifact instead (see the section near the top). |
+
+---
+
+Third-party skill. Written by Scott Murtaugh of GP Automations and released under CC0 1.0 (public domain dedication). It is not covered by the CC BY 4.0 license that applies to the rest of the pack. Distributed in the Founder Jam skills pack, whose credit line is: Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

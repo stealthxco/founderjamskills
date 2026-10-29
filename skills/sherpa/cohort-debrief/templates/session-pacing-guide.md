@@ -1,10 +1,21 @@
 # Session Pacing Guide
 
-Use this guide to keep both tracks on schedule. Times are guidelines -- the lead facilitator may flex the agenda based on cohort momentum.
+Use this guide to keep founders on schedule. Times are guidelines -- the lead facilitator may flex the agenda based on cohort momentum.
+
+## How these blocks map to the four stages
+
+Founder Jam v2 runs one track with four stages (Understand, Focus, Build, Validate) and four paths. The block timings below come from the v1 Product and Growth days. They still work as building blocks: use the ones your founders' paths need, and cut or compress to fit the day Innovate Charlotte sets.
+
+| Stage | Blocks | Skills that run them |
+|-------|--------|----------------------|
+| Understand | Product Activity 1 (SWOT + Battle Cards) | `battle-card-builder`, `market-analyzer` |
+| Focus | Product Activity 2 (Hypothesis Design); Growth Sessions 1-4 (ICP, JTBD, Competitive Growth Analysis, Lead Magnet Selection) | `hypothesis-engine`, `icp-definer`, `lead-magnet-ideator` |
+| Build | Product Activity 3 (Prototype Launcher); Growth Sessions 5-9 (Content Workflow, Email Sequence, Automation, North Star Metrics, 30-Day Plan) | `prototype-launcher`, `offer-designer`, `growth-builder`, `outbound-composer` |
+| Validate | Commitments (Validation Planner + Pitch Prep) | `validation-planner`, `pitch-builder` |
 
 ---
 
-## Product Track
+## Product blocks (v1 timings)
 
 **Total structured time:** ~315 minutes (5h 15m) across activities and commitments.
 
@@ -14,14 +25,14 @@ Use this guide to keep both tracks on schedule. Times are guidelines -- the lead
 
 | Block | Time | What's Happening |
 |-------|------|------------------|
-| Intro & SWOT | 0:00-0:15 | Facilitator frames competitive landscape. Founders fill in SWOT assumptions before research. |
+| Intro & SWOT | 0:00-0:15 | Sherpa frames competitive landscape. Founders fill in SWOT assumptions before research. |
 | Competitor Research | 0:15-0:45 | Identify 3-5 competitors including status quo. Use Perplexity, GPT, Claude, Crunchbase. |
 | Battle Card Generation | 0:45-1:15 | Build battle cards in Miro: name, positioning, ICP, pricing, onboarding, strengths, weaknesses, "how we win." |
 | Review & Synthesis | 1:15-1:30 | Revisit SWOT with new evidence. Identify top 2-3 opportunity areas. |
 
 **If running long, cut:** Compress review to 5 min. Carry synthesis into Activity 2 framing.
 
-**Key facilitator prompts:**
+**Key sherpa prompts:**
 - "What job is the customer hiring today without you?"
 - "Where are switching costs the highest?"
 - "What's your unfair advantage the big players can't copy soon?"
@@ -39,7 +50,7 @@ Use this guide to keep both tracks on schedule. Times are guidelines -- the lead
 
 **If running long, cut:** Shorten diverge to 15 min (aim for 4-5 options minimum). Combine evaluate + converge.
 
-**Key facilitator prompts:**
+**Key sherpa prompts:**
 - "Is this testable in 30 days?"
 - "What would prove this wrong?"
 - "Which hypothesis unlocks the most if it works?"
@@ -81,7 +92,7 @@ Use this guide to keep both tracks on schedule. Times are guidelines -- the lead
 
 ---
 
-## Growth Track
+## Growth blocks (v1 timings)
 
 **Total structured time:** ~270 minutes (4h 30m) across three blocks.
 
@@ -97,7 +108,7 @@ Use this guide to keep both tracks on schedule. Times are guidelines -- the lead
 | Segment identification | 0:05-0:20 | Identify 2-3 distinct customer segments. Score by: pain intensity, willingness to pay, accessibility. |
 | ICP selection | 0:20-0:30 | Commit to one primary ICP for the day. Document the rationale. |
 
-**Key facilitator prompts:**
+**Key sherpa prompts:**
 - "Who has this problem the worst?"
 - "Where does this person spend their time online?"
 - "What's the trigger event that makes them look for a solution?"
@@ -140,7 +151,7 @@ Use this guide to keep both tracks on schedule. Times are guidelines -- the lead
 | Format brainstorm | 0:08-0:18 | Brainstorm formats: template, checklist, calculator, audit, mini-course, swipe file. |
 | Selection | 0:18-0:25 | Choose one that is both valuable and achievable in the session. Draft the outline. |
 
-**Key facilitator prompts:**
+**Key sherpa prompts:**
 - "What question does your ICP Google before finding you?"
 - "Can you create this in the next 60 minutes?"
 - "What format makes them say 'I need this now'?"
@@ -167,7 +178,7 @@ Use this guide to keep both tracks on schedule. Times are guidelines -- the lead
 | Email writing | 0:08-0:20 | Draft first 3 emails: value-first, low-pitch. AI-assisted. |
 | First email review | 0:20-0:25 | Review email #1. Does it deliver on the lead magnet promise? |
 
-**Key facilitator prompts:**
+**Key sherpa prompts:**
 - "What happens if they don't open email #1?"
 - "What's your call-to-action in email #3?"
 
@@ -197,7 +208,7 @@ Candid conversation: what's working in AI-native growth in 2026. Real channels, 
 - Sales: Form submission -> Clearbit/Hunter.io enrichment -> CRM update -> Slack notification
 - Support: Email/form -> AI classification -> ticket creation -> auto-response
 
-**Key facilitator prompts:**
+**Key sherpa prompts:**
 - "What manual task takes you 2+ hours/week?"
 - "Can this workflow handle edge cases gracefully?"
 - "How will you monitor failures?"
@@ -212,7 +223,7 @@ Candid conversation: what's working in AI-native growth in 2026. Real channels, 
 | Supporting metrics | 0:10-0:18 | Identify 3-5 supporting metrics. Build simple dashboard in Google Sheets. |
 | A/B test plan | 0:18-0:25 | Plan first A/B test for 30-day period. What are you testing and why? |
 
-**Key facilitator prompts:**
+**Key sherpa prompts:**
 - "What's the one number that proves growth?"
 - "What triggers a pivot vs. staying the course?"
 - "Can you explain your metrics to a 10-year-old?"
@@ -227,7 +238,7 @@ Candid conversation: what's working in AI-native growth in 2026. Real channels, 
 | Success criteria | 0:18-0:25 | Each week needs 3-5 specific actions and success criteria (e.g., "50 landing page visitors"). |
 | Decision triggers | 0:25-0:30 | Define when to pivot vs. persist. "If <5 signups, revisit offer." |
 
-**Key facilitator prompts:**
+**Key sherpa prompts:**
 - "What's realistic given your current time constraints?"
 - "What would make you kill this experiment?"
 - "How will you celebrate small wins?"

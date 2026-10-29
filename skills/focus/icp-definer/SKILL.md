@@ -1,11 +1,14 @@
 ---
 name: icp-definer
-description: Growth Track Part 1. Define your ideal customer using Jobs-to-be-Done, analyze how competitors are growing, and select 1-2 primary distribution channels. Writes icp_segment to config.json.
+description: Define the beachhead customer with Jobs-to-be-Done, study how competitors win their customers, and choose 1-2 distribution channels. Use in the Focus stage on the GTM and growth or sales path, or whenever a founder's customer is still 'anyone'. Ends with an updated FOUNDER JAM HANDOFF block.
+license: CC-BY-4.0
 ---
 
 # ICP Definer
 
-Define your beachhead customer, understand how competitors are acquiring customers, and select your distribution strategy. This is Growth Track Part 1.
+**Stage:** Focus. **Best for paths:** GTM and growth, sales.
+
+Define your beachhead customer, understand how competitors are acquiring customers, and select your distribution strategy. This is the Focus-stage skill for finding your first customer.
 
 ## Overview
 
@@ -19,9 +22,14 @@ Three sequential sub-activities:
 
 ## Setup
 
-Read `config.json` if present. If missing, ask:
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+Path check: if `path` is empty or `undecided`, help the founder choose one of the four paths (see `founder-setup`, Step 2) before going further. With a sherpa, decide it together.
+
+If the block doesn't have them, ask:
 - Startup name, problem statement, target market, stage, business type
-- Set `facilitated_mode` to `true` as default
 
 ## Process
 
@@ -103,7 +111,7 @@ If time allows, evaluate segments through an additional lens after JTBD scoring.
 
 This matrix helps founders distinguish between segments that are attractive today vs. segments that build toward a defensible position.
 
-**Facilitated mode challenge prompts:**
+**Sherpa-mode challenge prompts:**
 - "Who has this problem the worst, right now, and would pay the most to fix it?"
 - "If you picked the wrong beachhead, how long until you'd know?"
 - "Who has budget authority AND urgency to act -- not just frustration?"
@@ -262,31 +270,28 @@ Evaluate 4-6 relevant channels against all 4 criteria. Sum scores. Recommend the
 **What channel success looks like in 30 days:** [specific metric threshold]
 ```
 
-**Facilitated mode challenge prompts:**
+**Sherpa-mode challenge prompts:**
 - "Which competitor is growing fastest -- and what are they doing that you could do better?"
 - "Where does your ICP already go to solve adjacent problems?"
 - "What channel gives you 100 conversations in 30 days without paid budget?"
 
-## Write Config
+## Handoff
 
-After completing all three sub-activities, update `config.json`:
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence with these fields filled in:
 
-```json
-{
-  "icp_segment": "[beachhead segment name and one-line JTBD]",
-  "channels_selected": ["[primary channel 1]", "[primary channel 2]"]
-}
-```
+- `icp_segment`: [beachhead segment name and one-line JTBD]
+- `top_pains`: [the 1-2 pains the beachhead feels most]
+- `channels_selected`: [primary channel 1], [primary channel 2]
 
-## Config Dependencies
+Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access, also write the same fields to `config.json`.
 
-**Reads:** `startup_name`, `problem_statement`, `target_market`, `stage`, `business_type`, `facilitated_mode`
-**Writes:** `icp_segment`, `channels_selected`
+## Where this runs
 
-## Platform Notes
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Uses web search when it is available; if not, ask the founder to paste in what they know. Paste your handoff block at the start and copy the updated block at the end. |
+| Claude Code | Full flow with web search. Can also read and write `config.json`. |
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Full flow: reads config.json, WebSearch for competitive research, writes icp_segment |
-| Claude Desktop | Full flow: WebSearch available for competitive research |
-| Claude Cowork | Full flow: founder provides competitive intel manually if no WebSearch |
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

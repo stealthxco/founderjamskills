@@ -1,9 +1,12 @@
 ---
 name: content-calendar-planner
-description: Plan and schedule content across all channels (blog, social, newsletter, email) with publishing velocity rules, Isenberg's validation cascade, and Hormozi's give-to-ask ratio enforcement. Turns keyword maps and content ideas into a phased, trackable publishing calendar.
+description: Plan content across blog, social, newsletter, and email with publishing velocity rules, Isenberg's validation cascade, and Hormozi's give-to-ask ratios. Turns keyword maps and content ideas into a phased, trackable calendar. Use in the Build stage on the GTM and growth path, once channels and topics are chosen.
+license: CC-BY-4.0
 ---
 
 # Content Calendar Planner Skill
+
+**Stage:** Build. **Best for paths:** GTM and growth.
 
 ## Overview
 
@@ -17,20 +20,24 @@ Key capabilities:
 - Track content pipeline status from idea through publication
 - Identify content gaps by service area, customer segment, and funnel stage
 
-## Config Dependencies
+## Context
 
-**Reads from `config.json`:**
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+**Read from the handoff block:**
 - `startup_name` -- company name for content branding
 - `icp_segment` -- target customer for gap analysis
 - `business_type` -- service model for content type selection
-- `facilitated_mode` -- enables challenge prompts
+- `mode` -- `with-sherpa` adds challenge prompts
 
-**Optional config fields:**
+**Optional details (not in the handoff block, ask if useful):**
 - `service_areas` -- array of service offerings for coverage tracking
 - `newsletter_name` -- for newsletter scheduling
 - `content_channels` -- array of active channels (e.g., ["blog", "linkedin", "newsletter", "email"])
 
-**Writes:** Nothing (output is presented for review and manual saving)
+**Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
 ## Channel Cadence Framework
 
@@ -225,9 +232,9 @@ Stage 4: Amplification
 5. **Check dependencies** -- Ensure referenced content exists before emails send
 6. **Track** -- Update pipeline tracker
 
-## Facilitated Mode
+## Sherpa Mode
 
-When `facilitated_mode: true`, add these challenge prompts:
+When `mode` is `with-sherpa`, add these challenge prompts:
 
 - "How many blog posts do you have right now? How many completed engagements? The gap between those numbers is your content backlog."
 - "What's your current publishing cadence? If the answer is 'random,' that's the first thing to fix."
@@ -249,10 +256,13 @@ When `facilitated_mode: true`, add these challenge prompts:
 - If using `nurture-engine`: nurture emails reference published content -- the calendar tracks dependencies
 - If using `lead-magnet-ideator`: new lead magnets need landing pages and promotional content scheduled
 
-## Platform Notes
+## Where this runs
 
-| Platform | How to Use |
-|----------|-----------|
-| **Claude Code** | Full experience. Run as a skill with config.json in the working directory |
-| **Claude Desktop** | Paste the skill content as a Project instruction. Specify the planning period |
-| **Claude Cowork** | Add as a source document. Paste your current content inventory for best results |
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

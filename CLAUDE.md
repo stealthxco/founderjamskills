@@ -56,7 +56,7 @@ If you skip setup, each skill will ask for what it needs.
 
 ## Skill Files
 
-Skills are located in `skills/[skill-name]/[skill-name].skill`. After running `install.sh`, they are symlinked into `~/.claude/skills/` and can be invoked by name in Claude Code.
+Skills are located in `skills/[stage]/[skill-name]/SKILL.md` (stage is understand, focus, build, validate, or sherpa). Each SKILL.md is a real file, and any templates a skill needs are bundled in its folder. After running `install.sh`, each skill folder is symlinked into `~/.claude/skills/` and can be invoked by name in Claude Code. See `PATHS.md` for which skills to use on each path.
 
 For Claude Desktop or Cowork users, see the `instructions/` folder for markdown versions of each skill.
 

@@ -1,8 +1,8 @@
 # Startup Debrief: [Name]
 
 **Date:** [Event Date]
-**Track:** [Product / Growth]
-**Facilitator:** [Your Name]
+**Path:** [Product and positioning / GTM and growth / Sales / Ops and automation]
+**Sherpa:** [Your Name]
 
 ## What They Committed To
 - [ ] [Commitment 1 from validation-planner]
@@ -13,9 +13,9 @@
 - **Hypothesis/ICP:** [What they chose and why]
 - **Prototype/Lead Magnet:** [What they built]
 - **Channels:** [Selected distribution channels]
-- **North Star Metric:** [If Growth Track]
+- **North Star Metric:** [If they set one]
 
-## Facilitator Assessment
+## Sherpa Assessment
 **Energy Level:** [High / Medium / Low]
 **Engagement:** [Active / Passive / Resistant]
 **Quality of Output:** [Strong / Adequate / Needs Work]

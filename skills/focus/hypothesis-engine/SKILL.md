@@ -1,14 +1,14 @@
 ---
 name: hypothesis-engine
-description: Generate and select your top strategic hypothesis using the Double Diamond method. Diverges to 6-10 candidates, scores each on desirability/feasibility/viability, then converges to your top 2-3. Writes the winning hypothesis to config.json.
+description: Generate and choose a strategic hypothesis with the Double Diamond method. Diverge to 6-10 candidates, score each on desirability, feasibility, and viability, then converge to the top 2-3. Use in the Focus stage, especially on the product and positioning and ops and automation paths, after the Understand work on competitors.
+license: CC-BY-4.0
 ---
 
 # Hypothesis Engine
 
 Turn your competitive insights into a testable strategic hypothesis. This skill runs the Double Diamond -- first diverging to generate many candidates, then converging to the 2-3 worth validating. You leave with a hypothesis written in two formats: an outcome statement and a validation commitment.
 
-**Track:** Product
-**Workshop Segment:** Activity 2 - Hypothesis Design (11:00am-12:15pm)
+**Stage:** Focus. **Best for paths:** product and positioning, ops and automation.
 **Time estimate:** 75 minutes
 
 ## Overview
@@ -17,13 +17,19 @@ Turn your competitive insights into a testable strategic hypothesis. This skill 
 2. Diverge: generate 6-10 hypothesis candidates using thought starters
 3. Evaluate: score each on desirability, feasibility, viability (1-5)
 4. Converge: select top 2-3 for dual-format development
-5. Write winning hypothesis to config.json
+5. Hand off the winning hypothesis in the FOUNDER JAM HANDOFF block
 
-## Config
+## Context
 
-Read `config.json` if present. Extract: `startup_name`, `problem_statement`, `target_market`, `stage`, `facilitated_mode`.
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
-If config is missing, ask conversationally:
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+Path check: if `path` is empty or `undecided`, help the founder choose one of the four paths (see `founder-setup`, Step 2) before going further. With a sherpa, decide it together.
+
+Fields needed: `startup_name`, `problem_statement`, `target_market`, `stage`.
+
+If a field is missing, ask conversationally:
 - "What's your startup called?"
 - "What problem does it solve, and for who?"
 - "What stage are you at -- idea, pre-revenue, or early-revenue?"
@@ -133,7 +139,7 @@ Output a diverge board:
 | ... | | |
 ```
 
-If `facilitated_mode` is true, after the diverge board add: "Which hypothesis are you avoiding because it would require the most change? That's probably the most important one."
+If `mode` is `with-sherpa`, after the diverge board add: "Which hypothesis are you avoiding because it would require the most change? That's probably the most important one."
 
 ## Step 3: Evaluate Phase
 
@@ -164,7 +170,7 @@ Sense-check each candidate against the founder's reality:
 - Stage (pre-revenue): balance all three -- you need a path to paying customers
 - Stage (early-revenue): weight viability higher -- optimize what's already working
 
-If `facilitated_mode` is true, challenge low-risk hypotheses: "A risk score of 1 might mean this hypothesis is safe to test -- or it might mean you're not testing something that matters. What's the highest-risk hypothesis on this board?"
+If `mode` is `with-sherpa`, challenge low-risk hypotheses: "A risk score of 1 might mean this hypothesis is safe to test -- or it might mean you're not testing something that matters. What's the highest-risk hypothesis on this board?"
 
 ## Step 4: Converge Phase
 
@@ -193,19 +199,17 @@ After all selected hypotheses are developed, ask the founder to pick one primary
 
 "You'll take one of these into the Prototype Launcher. Which hypothesis do you want to test in the next session?"
 
-## Step 5: Write Config
+## Step 5: Hand off
 
-If running in Claude Code, update `config.json` with the winning hypothesis:
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence with these fields filled in:
 
-```json
-{
-  "hypothesis_selected": "[winning hypothesis in outcome statement format]"
-}
-```
+- `hypothesis_selected`: [winning hypothesis in outcome statement format]
 
-## Facilitated Mode Questions
+Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access, also write the same fields to `config.json`.
 
-When `facilitated_mode` is true, add these provocative questions at natural moments:
+## Sherpa-Mode Questions
+
+When `mode` is `with-sherpa`, add these provocative questions at natural moments:
 
 - After diverge board: "Which hypothesis are you avoiding because it would require the most change? That's probably the most important one."
 - After scores: "What's the fastest you could know if this hypothesis is wrong?"
@@ -215,22 +219,20 @@ When `facilitated_mode` is true, add these provocative questions at natural mome
 ## Output Summary
 
 When complete:
-- Diverge board: all 6-10 candidates (Miro-ready table)
+- Diverge board: all 6-10 candidates (paste-ready table)
 - Evaluation table with scores
 - Top 2-3 hypothesis cards in dual format
-- Winning hypothesis written to config.json
+- Winning hypothesis in the updated FOUNDER JAM HANDOFF block
 
 Then say: "Take your winning hypothesis into the Prototype Launcher. Your goal is to build the fastest thing that can confirm or deny it."
 
-## Config Dependencies
+## Where this runs
 
-**Reads:** `startup_name`, `problem_statement`, `target_market`, `stage`, `facilitated_mode`
-**Writes:** `hypothesis_selected`
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start and copy the updated block at the end. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
 
-## Platform Notes
+---
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Full: reads and writes config.json |
-| Claude Desktop | Full: manual context input; outputs hypothesis cards for manual saving |
-| Claude Cowork | Full: same as Desktop |
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

@@ -1,9 +1,12 @@
 ---
 name: seo-keyword-mapper
-description: Map keyword opportunities using Dickerson's 6 Circles Method, generate programmatic SEO templates, apply Isenberg's validation cascade to prioritize topics, and build a publishing roadmap.
+description: Map keyword opportunities with Dickerson's 6 Circles method, generate programmatic SEO templates, apply Isenberg's validation cascade to prioritize topics, and build a publishing roadmap. Use in the Build stage on the GTM and growth path when organic search or content is a planned channel.
+license: CC-BY-4.0
 ---
 
 # SEO Keyword Mapper Skill
+
+**Stage:** Build. **Best for paths:** GTM and growth.
 
 ## Overview
 
@@ -17,19 +20,23 @@ Key capabilities:
 - Score keywords on volume, competition, intent alignment, and customer fit
 - Build a phased publishing roadmap with velocity guidance
 
-## Config Dependencies
+## Context
 
-**Reads from `config.json`:**
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+**Read from the handoff block:**
 - `startup_name` -- company name for page titles
 - `icp_segment` -- target customer for ICP fit scoring
 - `business_type` -- service model for keyword selection
-- `facilitated_mode` -- enables challenge prompts
+- `mode` -- `with-sherpa` adds challenge prompts
 
-**Optional config fields:**
+**Optional details (not in the handoff block, ask if useful):**
 - `service_areas` -- array of service offerings (drives Circle 1)
 - `industries_served` -- array of target industries (drives programmatic templates)
 
-**Writes:** Nothing (output is presented for review and manual saving)
+**Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
 ## The 6 Circles Method (Dickerson)
 
@@ -41,7 +48,7 @@ Core service keywords. Most competitive but most directly commercial.
 
 | Service Area | Primary Keywords | Long-Tail Variants |
 |-------------|-----------------|-------------------|
-| [from config or input] | [2-3 primary terms] | [3-5 long-tail phrases] |
+| [from the handoff block or input] | [2-3 primary terms] | [3-5 long-tail phrases] |
 
 ### Circle 2: Problems You Solve
 
@@ -232,9 +239,9 @@ Before publishing ANY page:
 5. **Build publishing roadmap** -- Phased plan respecting velocity rules
 6. **Track** -- Maintain keyword tracker with coverage and performance data
 
-## Facilitated Mode
+## Sherpa Mode
 
-When `facilitated_mode: true`, add these challenge prompts:
+When `mode` is `with-sherpa`, add these challenge prompts:
 
 - "What do your clients literally type into Google when they're looking for someone like you? That's Circle 2."
 - "What's the one result you deliver that makes clients say 'wow'? Build Circle 3 around that."
@@ -256,10 +263,13 @@ When `facilitated_mode: true`, add these challenge prompts:
 - If using `lead-magnet-ideator`: Circle 2 and Circle 5 feed lead magnet concept generation
 - If using `landing-page-auditor`: programmatic pages should be audited after creation
 
-## Platform Notes
+## Where this runs
 
-| Platform | How to Use |
-|----------|-----------|
-| **Claude Code** | Full experience. Run as a skill with config.json in the working directory |
-| **Claude Desktop** | Paste the skill content as a Project instruction. Specify the service area to map |
-| **Claude Cowork** | Add as a source document. Works best when you paste your service descriptions and client pain points |
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

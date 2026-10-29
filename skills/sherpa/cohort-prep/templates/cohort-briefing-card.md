@@ -2,7 +2,7 @@
 
 ## Startup: [Name]
 **Founder(s):** [Names]
-**Track:** [Product / Growth]
+**Path:** [Product and positioning / GTM and growth / Sales / Ops and automation / Undecided]
 **Stage:** [Idea / Pre-Revenue / Early-Revenue]
 **Business Type:** [B2B SaaS / Services / Marketplace / Consumer]
 
@@ -23,7 +23,7 @@
 ### Recommended Emphasis Areas
 - [Which activity will need more time]
 - [Which framework they may struggle with]
-- [Specific facilitator question to push on]
+- [Specific sherpa question to push on]
 
-### Facilitator Notes
+### Sherpa Notes
 [Space for day-of observations]

@@ -23,7 +23,7 @@ Quick reminder of your immediate priorities:
 
 If you hit a wall on any of these, reply and I'll point you in the right direction.
 
-[Facilitator Name]
+[Sherpa Name]
 
 ---
 
@@ -44,7 +44,7 @@ How are the numbers looking? Your target was [specific number from 30-day plan].
 If you're ahead of pace -- great, keep pushing.
 If you're behind -- that's normal. The question is why. Reply with a quick update and I'll share what I've seen work for other founders in your situation.
 
-[Facilitator Name]
+[Sherpa Name]
 
 ---
 
@@ -70,7 +70,7 @@ No judgment either way -- the framework exists so you can make the call without 
 
 Reply with your color and I'll send you specific next steps for that path.
 
-[Facilitator Name]
+[Sherpa Name]
 
 ---
 
@@ -84,8 +84,8 @@ Reply with your color and I'll send you specific next steps for that path.
 | `[Week 1 action 1-3]` | From their 30-day plan, Week 1 rows |
 | `[Week 2 milestone 1-2]` | From their 30-day plan, Week 2 success criteria |
 | `[specific number from 30-day plan]` | The quantified target they set (e.g., 50 landing page visitors) |
-| `[specific metric]` | Their North Star metric (Growth Track) or hypothesis metric (Product Track) |
-| `[Facilitator Name]` | Your first name |
+| `[specific metric]` | Their North Star metric, or their hypothesis metric on product and positioning |
+| `[Sherpa Name]` | Your first name |
 
 ## Notes
 

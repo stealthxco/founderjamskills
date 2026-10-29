@@ -1,11 +1,14 @@
 ---
 name: market-analyzer
-description: Rapid competitive market intelligence for Founder Jam. TAM/SAM/SOM analysis, competitive landscape mapping, and channel opportunity sizing. Works in web-augmented or founder-input mode.
+description: Rapid market intelligence covering TAM, SAM, and SOM sizing, a competitive landscape map, and channel opportunity sizing. Works with live web search or with research the founder pastes in. Use in the Understand stage, or any time a founder needs to size a market or check a competitive claim.
+license: CC-BY-4.0
 ---
 
 # Market Analyzer
 
-Run rapid competitive market intelligence to inform strategic decisions. Available any time during the day -- most useful during Activity 1 (Product Track) or Part 1 (Growth Track).
+**Stage:** Understand. **Best for paths:** all paths.
+
+Run rapid competitive market intelligence to inform strategic decisions. Available any time during the day. It is most useful in the Understand and Focus stages.
 
 ## Overview
 
@@ -19,15 +22,19 @@ Output is framed as strategic intelligence -- not an SEO audit.
 
 ## Process
 
-### Step 1: Load Config
+### Step 1: Load context
 
-Read `config.json` if it exists. Extract:
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+Fields needed:
 - `startup_name`
 - `problem_statement`
 - `target_market`
-- `facilitated_mode`
+- `mode`
 
-If config is missing, ask:
+If a field is missing, ask:
 1. "What's your startup? (name + one-sentence problem)"
 2. "Who is your target market?"
 3. "What category or industry are you in?"
@@ -90,7 +97,7 @@ Calculate or estimate each level using both methods. Always show your work.
 **Divergence flag:** If top-down and bottom-up TAM estimates diverge by more than 3x, flag it explicitly:
 > "Your top-down and bottom-up estimates diverge significantly. This usually means either the industry data is too broad, or your unit economics assumptions need revisiting. Let's dig into which one is off."
 
-Present as a Miro-ready table:
+Present as a paste-ready table:
 
 ```
 ## Market Size Snapshot: [startup_name]
@@ -120,7 +127,7 @@ Then generate the 2x2 competitive landscape map. Choose the axes most relevant t
 - **Option B:** Market reach (niche-broad) vs. Specialization (generalist-specialist)
 - **Option C:** Ask founder: "What's the axis that matters most in your category?"
 
-Present as Miro-ready text:
+Present as paste-ready text:
 
 ```
 ## Competitive Landscape: [startup_name]
@@ -157,9 +164,9 @@ Write one paragraph on what this market picture means for the founder's go-to-ma
 - What this means for pricing ceiling
 - What timing signal exists (why now, or why wait)
 
-### Step 8: Facilitator Questions
+### Step 8: Sherpa questions
 
-If `facilitated_mode` is true, surface these questions as prompts for reflection after delivering the output:
+If `mode` is `with-sherpa`, surface these questions as prompts for reflection after delivering the output:
 
 - "Is the market big enough to build a venture-scale business, or should this be a lifestyle business? Both are valid."
 - "Which competitor is winning -- and what does that tell you about what the market values?"
@@ -168,22 +175,20 @@ If `facilitated_mode` is true, surface these questions as prompts for reflection
 
 ## Output Format
 
-Deliver all four outputs in sequence as Miro-ready markdown:
+Deliver all four outputs in sequence as paste-ready markdown:
 
 1. **Market Size Snapshot** -- TAM/SAM/SOM table with methodology notes
 2. **Competitive Landscape Map** -- 2x2 grid in text format
 3. **Opportunity Summary** -- 3-5 bullet observations
 4. **Strategic Implications** -- one direct paragraph
 
-## Config Dependencies
+## Where this runs
 
-**Reads:** `startup_name`, `problem_statement`, `target_market`, `facilitated_mode`
-**Writes:** Nothing
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Uses web search when it is available; if not, ask the founder to paste in what they know. Paste your handoff block at the start. |
+| Claude Code | Full flow with web search. Can also read and write `config.json`. |
 
-## Platform Notes
+---
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Full: WebSearch + file output |
-| Claude Desktop | Full: WebSearch available |
-| Claude Cowork | Founder-input mode only; no live web search |
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

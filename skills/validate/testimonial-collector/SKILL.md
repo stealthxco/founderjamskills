@@ -1,9 +1,12 @@
 ---
 name: testimonial-collector
-description: Generate personalized testimonial request emails, maintain a collection tracker, format testimonials for website placement, and run champion activation plans. Implements Hormozi's Proof Playbook and Isenberg's champion activation model.
+description: Write personalized testimonial request emails, keep a collection tracker, format testimonials for website placement, and run champion activation plans, using Hormozi's Proof Playbook and Isenberg's champion model. Use in the Validate stage once early customers or pilot users exist.
+license: CC-BY-4.0
 ---
 
 # Testimonial Collector Skill
+
+**Stage:** Validate. **Best for paths:** sales, GTM and growth.
 
 ## Overview
 
@@ -17,19 +20,23 @@ Key capabilities:
 - Map testimonials to common objections so proof appears where doubt lives
 - Track a three-touchpoint cadence (end of engagement, 3-month check-in, 6-month check-in)
 
-## Config Dependencies
+## Context
 
-**Reads from `config.json`:**
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+**Read from the handoff block:**
 - `startup_name` -- company name for email personalization
 - `icp_segment` -- target customer profile for champion scoring
 - `business_type` -- service model for template selection
-- `facilitated_mode` -- enables challenge prompts
+- `mode` -- `with-sherpa` adds challenge prompts
 
-**Optional config fields:**
+**Optional details (not in the handoff block, ask if useful):**
 - `crm_platform` -- CRM for integration guidance (e.g., "hubspot", "pipedrive")
 - `service_areas` -- array of service offerings for objection mapping
 
-**Writes:** Nothing (output is presented for review and manual saving)
+**Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
 ## The Objection-to-Testimonial Pattern (Hormozi)
 
@@ -262,9 +269,9 @@ Before generating a testimonial request, you need engagement results. If structu
 5. **Format received testimonials** -- Clean up text, generate website card format with placement recommendations
 6. **Activate champions** -- Score all clients, identify top 3-5, generate activation plans
 
-## Facilitated Mode
+## Sherpa Mode
 
-When `facilitated_mode: true`, add these challenge prompts:
+When `mode` is `with-sherpa`, add these challenge prompts:
 
 - "Who are your 3 happiest clients right now? What specific results did they get?"
 - "Which of the 5 common objections do you hear most in sales conversations?"
@@ -287,10 +294,13 @@ When `facilitated_mode: true`, add these challenge prompts:
 - If using `case-study-generator`: pair testimonials with case studies for combined proof
 - If using `landing-page-auditor`: testimonial placement recommendations inform the audit's social proof scoring
 
-## Platform Notes
+## Where this runs
 
-| Platform | How to Use |
-|----------|-----------|
-| **Claude Code** | Full experience. Run as a skill with config.json in the working directory |
-| **Claude Desktop** | Paste the skill content as a Project instruction. Provide client details in conversation |
-| **Claude Cowork** | Add as a source document. Works best when you paste the results inventory form with completed data |
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

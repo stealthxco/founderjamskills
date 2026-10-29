@@ -1,13 +1,16 @@
 ---
 name: lead-magnet-ideator
-description: On-demand skill. Generate multiple scored lead magnet concepts using Hormozi's lead magnet taxonomy, Isenberg's hyper-congruent micro-tool model, and Dickerson's AI-powered asset creation approach. Reads icp_segment and business_type from config. Complements offer-designer by focusing on ideation and evaluation rather than building a single lead magnet.
+description: Generate and score 5-7 lead magnet concepts using Hormozi's taxonomy, Isenberg's micro-tool model, and Dickerson's AI-powered asset approach, then draft quick tests for the best ones. Use in the Focus stage on the GTM and growth path, or any time before building a lead magnet with offer-designer.
+license: CC-BY-4.0
 ---
 
 # Lead Magnet Ideator
 
+**Stage:** Focus. **Best for paths:** GTM and growth.
+
 Generate, score, and compare 5-7 lead magnet concepts so you can pick the strongest one to build. This is an on-demand skill -- use it any time you need fresh lead magnet ideas or want to evaluate concepts before committing build time.
 
-**Relationship to offer-designer:** The offer-designer (Growth Track Part 2) helps you design and build one lead magnet during the workshop. This skill is for when you need to brainstorm multiple concepts, score them against each other, and pick the best one. Use this skill first to identify your strongest concept, then use offer-designer to build it out with landing page copy, automation flow, and nurture sequence.
+**Relationship to offer-designer:** The offer-designer (Build stage) helps you design and build one lead magnet. This skill is for when you need to brainstorm multiple concepts, score them against each other, and pick the best one. Use this skill first to identify your strongest concept, then use offer-designer to build it out with landing page copy, automation flow, and nurture sequence.
 
 ## Overview
 
@@ -21,7 +24,11 @@ Three core capabilities:
 
 ## Setup
 
-Read `config.json` if present. Required fields: `startup_name`, `icp_segment`, `business_type`.
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+Fields needed: `startup_name`, `icp_segment`, `business_type`.
 
 If `icp_segment` is missing, ask: "Who is your ideal customer? (Run `icp-definer` first if you haven't.)"
 
@@ -93,7 +100,7 @@ Use AI to handle approximately 80% of lead magnet creation. The founder adds the
 
 ### Step 1: Set Context
 
-Confirm from config or ask:
+Confirm from the handoff block or ask:
 - Startup name
 - ICP segment (from icp-definer)
 - Business type (B2B SaaS, Services, Marketplace, Consumer)
@@ -186,9 +193,9 @@ Composite = (V * 3 + B * 3 + I * 3 + C * 2 + S * 2 + D * 2 + R * 1) / 16
 - **2.0-2.9** = Needs rework. One or more critical dimensions are weak.
 - **Below 2.0** = Kill it. Doesn't fit the model.
 
-## Facilitated Mode Challenge Prompts
+## Sherpa-Mode Challenge Prompts
 
-Use these when `facilitated_mode` is `true`:
+Use these when `mode` is `with-sherpa`:
 
 - "Would you give your email address for this? Would your best customer?"
 - "Which of these 7 concepts would your ICP forward to a colleague?"
@@ -204,8 +211,8 @@ Use these when `facilitated_mode` is `true`:
 ### Date: YYYY-MM-DD
 
 ### Context
-- ICP: [beachhead from config]
-- Business Type: [from config]
+- ICP: [beachhead from the handoff block]
+- Business Type: [from the handoff block]
 - Core Offer: [what they sell]
 
 ### Concepts Generated: [N]
@@ -233,15 +240,13 @@ Use these when `facilitated_mode` is `true`:
 - The MAGIC naming formula should produce clear names, not clever ones. Clarity beats cleverness.
 - Build estimates should be honest. If a concept requires 40+ hours, say so. Don't pretend everything is EASY tier.
 
-## Config Dependencies
+## Where this runs
 
-**Reads:** `startup_name`, `icp_segment`, `business_type`, `facilitated_mode`
-**Writes:** Nothing (ideation output only)
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
 
-## Platform Notes
+---
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Full flow: reads config.json, generates scored concepts |
-| Claude Desktop | Full flow: manual input if config missing |
-| Claude Cowork | Full flow: rich text output works well for concept comparison review |
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

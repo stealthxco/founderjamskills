@@ -7,9 +7,9 @@ it cannot drift from skills/: every change is an exact anchor replacement, and a
 missing anchor fails the build instead of silently shipping the workshop text.
 
 What changes in the solo edition:
-  - facilitated_mode defaults to false (the workshop copies default to true)
-  - claude.ai has no config.json, so icp-definer ends by printing a handoff
-    block and lead-magnet-ideator asks for it
+  - the description is prefixed so the kit's skills are easy to tell apart
+  - everything else is copied from skills/<stage>/<name>/SKILL.md; the v2 skills
+    already default to solo mode and use the FOUNDER JAM HANDOFF block
 
 Output:
   starter-kit/skills/<skill>/SKILL.md      (real files, readable on GitHub)
@@ -27,55 +27,19 @@ import zipfile
 REPO = pathlib.Path(__file__).resolve().parent.parent
 KIT = REPO / "starter-kit"
 
-HANDOFF_BLOCK = """## Handoff Block (Starter Kit)
-
-Claude.ai and Claude Desktop have no shared `config.json`, so the next skill cannot read what this one wrote. After the Write Config step, ALWAYS print this block in a code fence and tell the founder: "Copy this block. Paste it when you run `lead-magnet-ideator`, or into any later Founder Jam skill."
-
-```
-FOUNDER JAM HANDOFF
-startup_name: [name]
-problem_statement: [one sentence]
-business_type: [B2B SaaS / Services / Marketplace / Consumer]
-stage: [idea / pre-revenue / early-revenue]
-icp_segment: [beachhead segment name and one-line JTBD]
-top_pains: [the 1-2 pains the beachhead feels most]
-channels_selected: [primary channel 1], [primary channel 2]
-```
-
-"""
-
-SOLO_NOTE = (
-    "- Set `facilitated_mode` to `false` as default (Starter Kit solo edition). "
-    "Skip the facilitated-mode challenge prompts unless the founder asks to be pushed harder.\n"
-)
-
+# v2 skills already ask "Is a sherpa with you today?", default to solo, and print and accept the
+# FOUNDER JAM HANDOFF block themselves, so the kit only changes the description.
 EDITS = {
-    "icp-definer": [
-        (
-            "description: Growth Track Part 1.",
-            "description: Founder Jam Starter Kit (solo edition). Growth Track Part 1.",
-        ),
-        ("- Set `facilitated_mode` to `true` as default\n", SOLO_NOTE),
-        ("## Config Dependencies\n", HANDOFF_BLOCK + "## Config Dependencies\n"),
-    ],
-    "lead-magnet-ideator": [
-        (
-            "description: On-demand skill.",
-            "description: Founder Jam Starter Kit (solo edition). On-demand skill.",
-        ),
-        (
-            'If `icp_segment` is missing, ask: "Who is your ideal customer? (Run `icp-definer` first if you haven\'t.)"\n',
-            "If there is no `config.json`, first ask: \"Paste your FOUNDER JAM HANDOFF block from `icp-definer`, "
-            "or say 'skip' and I'll ask a few questions instead.\" Read every field you need from the block.\n\n"
-            'If `icp_segment` is still missing, ask: "Who is your ideal customer? (Run `icp-definer` first if you haven\'t.)"\n\n'
-            + SOLO_NOTE,
-        ),
-    ],
+    "icp-definer": [("\ndescription: ", "\ndescription: Founder Jam Starter Kit (solo edition). ")],
+    "lead-magnet-ideator": [("\ndescription: ", "\ndescription: Founder Jam Starter Kit (solo edition). ")],
 }
 
 
 def build_skill(name: str, edits: list[tuple[str, str]]) -> pathlib.Path:
-    text = (REPO / "skills" / name / f"{name}.skill").read_text()
+    matches = sorted((REPO / "skills").glob(f"*/{name}/SKILL.md"))
+    if len(matches) != 1:
+        sys.exit(f"ERROR: expected one skills/<stage>/{name}/SKILL.md, found {len(matches)}")
+    text = matches[0].read_text()
     for old, new in edits:
         count = text.count(old)
         if count != 1:

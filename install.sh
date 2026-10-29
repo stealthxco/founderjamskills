@@ -24,7 +24,7 @@ if [ "$1" = "--uninstall" ]; then
         print_warning "No Claude skills directory found. Nothing to uninstall."
         exit 0
     fi
-    for skill_dir in "$SKILLS_DIR"/*/; do
+    for skill_dir in "$SKILLS_DIR"/*/*/; do
         skill_name=$(basename "$skill_dir")
         target="$CLAUDE_SKILLS_DIR/$skill_name"
         if [ -L "$target" ]; then
@@ -59,10 +59,8 @@ if [ "$1" = "--lite" ]; then
     echo "  3. Copy the activation prompt from the instructions file"
     echo "  4. Paste it into a new Claude Desktop or Cowork conversation"
     echo ""
-    echo "Skill order:"
-    echo ""
-    echo "  Product Track:  founder-setup -> battle-card-builder -> hypothesis-engine -> prototype-launcher -> pitch-builder -> validation-planner"
-    echo "  Growth Track:   founder-setup -> icp-definer -> offer-designer -> growth-builder -> pitch-builder -> validation-planner"
+    echo "  Start with founder-setup, then follow your path. See PATHS.md for the skills on each path."
+    echo "  Stages: Understand -> Focus -> Build -> Validate"
     echo ""
 
     # Try to open the instructions README
@@ -104,22 +102,17 @@ mkdir -p "$CLAUDE_SKILLS_DIR"
 installed=0
 skipped=0
 
-for skill_dir in "$SKILLS_DIR"/*/; do
+# Skills live at skills/<stage>/<name>/SKILL.md; each skill folder is linked by name.
+for skill_dir in "$SKILLS_DIR"/*/*/; do
     skill_name=$(basename "$skill_dir")
-    skill_file="$skill_dir/$skill_name.skill"
     skill_md="$skill_dir/SKILL.md"
     target="$CLAUDE_SKILLS_DIR/$skill_name"
 
-    # Verify skill file exists
-    if [ ! -f "$skill_file" ]; then
-        print_warning "  Skipped: $skill_name (no .skill file found)"
+    # Verify SKILL.md exists
+    if [ ! -f "$skill_md" ]; then
+        print_warning "  Skipped: $skill_name (no SKILL.md found)"
         skipped=$((skipped + 1))
         continue
-    fi
-
-    # Create SKILL.md symlink inside skill directory if missing
-    if [ ! -e "$skill_md" ]; then
-        ln -s "$skill_name.skill" "$skill_md"
     fi
 
     # Symlink skill directory into ~/.claude/skills/
@@ -133,11 +126,12 @@ for skill_dir in "$SKILLS_DIR"/*/; do
     fi
 done
 
-# Copy config template if needed
+# config.json is optional. The skills work from a pasted FOUNDER JAM HANDOFF block;
+# in Claude Code they can also read and write config.json when it exists.
 if [ ! -f "$REPO_DIR/config.json" ]; then
     cp "$REPO_DIR/config.example.json" "$REPO_DIR/config.json"
     echo ""
-    print_success "Created config.json from template."
+    print_success "Created config.json from template (optional in Claude Code)."
 fi
 
 echo ""
@@ -149,7 +143,6 @@ fi
 echo ""
 print_success "Ready! Run 'founder-setup' to get started."
 echo ""
-echo "Skill order:"
-echo "  Product Track:  founder-setup -> battle-card-builder -> hypothesis-engine -> prototype-launcher -> pitch-builder -> validation-planner"
-echo "  Growth Track:   founder-setup -> icp-definer -> offer-designer -> growth-builder -> pitch-builder -> validation-planner"
+echo "Stages: Understand -> Focus -> Build -> Validate"
+echo "Start with founder-setup, then follow your path (see PATHS.md)."
 echo ""

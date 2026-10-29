@@ -1,14 +1,14 @@
 ---
 name: prototype-launcher
-description: Build a rapid prototype based on your winning hypothesis. Selects the right prototype type from 8 categories, generates the actual artifact (Lovable prompt, Carrd copy, campaign brief, etc.), and creates a test plan. Keeps founders from over-engineering.
+description: Build the fastest prototype that can confirm or deny a winning hypothesis. Picks a prototype type, generates the actual artifact (a Lovable prompt, landing page copy, a service blueprint, a campaign brief, and more), and writes a test plan. Use in the Build stage on the product and positioning or ops and automation paths.
+license: CC-BY-4.0
 ---
 
 # Prototype Launcher
 
 Build the fastest thing that can confirm or deny your hypothesis. This skill selects the right prototype type, generates the actual artifact, and keeps you focused on learning -- not building a product.
 
-**Track:** Product
-**Workshop Segment:** Activity 3 - Rapid Prototyping (1:00-3:00pm)
+**Stage:** Build. **Best for paths:** product and positioning, ops and automation.
 **Time estimate:** 120 minutes
 
 ## The Three Mantras
@@ -21,11 +21,15 @@ These apply at every step. If you find yourself second-guessing, return here.
 
 A prototype is not meant to last. It is meant to answer one question: does this hypothesis hold? Build the minimum version that can give you a real signal.
 
-## Config
+## Context
 
-Read `config.json` if present. Extract: `hypothesis_selected`, `startup_name`, `stage`, `target_market`, `facilitated_mode`.
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
-If `hypothesis_selected` is empty or config is missing, ask:
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+Fields needed: `hypothesis_selected`, `startup_name`, `stage`, `target_market`.
+
+If `hypothesis_selected` is empty or the handoff block is missing, ask:
 - "What's your winning hypothesis from the hypothesis engine session?"
 - "What's your startup and who is your target customer?"
 - "What stage are you at -- idea, pre-revenue, or early-revenue?"
@@ -55,7 +59,7 @@ Before selecting a type, establish the brief:
 [When will you have a result? Default to 2 weeks.]
 ```
 
-If `facilitated_mode` is true, add before proceeding: "What's the riskiest assumption in your hypothesis? Can you design the prototype to test that first -- before anything else?"
+If `mode` is `with-sherpa`, add before proceeding: "What's the riskiest assumption in your hypothesis? Can you design the prototype to test that first -- before anything else?"
 
 ## Step 2: Select Prototype Type
 
@@ -81,7 +85,7 @@ Which prototype type fits your hypothesis?
 - Early-revenue + growth lever -> Marketing Campaign, Subscription Model, or Brand Identity
 - Any stage + "I don't know if they'd pay" -> Landing Page with pricing shown
 
-If `facilitated_mode` is true, after selection add: "Before you build -- what assumption does this prototype NOT test? Name it. That might be the one that kills you later."
+If `mode` is `with-sherpa`, after selection add: "Before you build -- what assumption does this prototype NOT test? Name it. That might be the one that kills you later."
 
 ## Step 3: Thought Starters
 
@@ -523,9 +527,9 @@ Check each assumption baked into this prototype that still needs validation:
 **Be ready to throw it away.** If the hypothesis is wrong, the prototype served its purpose. The learning is the output, not the artifact.
 ```
 
-## Facilitated Mode Questions
+## Sherpa-Mode Questions
 
-When `facilitated_mode` is true, add these provocative questions at natural moments:
+When `mode` is `with-sherpa`, add these provocative questions at natural moments:
 
 - After prototype brief: "What's the riskiest assumption in your prototype? Can you test that first?"
 - After type selection: "Before you build -- what assumption does this prototype NOT test?"
@@ -536,22 +540,20 @@ When `facilitated_mode` is true, add these provocative questions at natural mome
 ## Output Summary
 
 When complete:
-- Prototype brief (Miro-ready)
+- Prototype brief (paste-ready)
 - Selected artifact (Lovable prompt / Carrd copy / campaign brief / pricing page / service blueprint / brand brief / discovery framework / onboarding sequence)
 - Test plan: who to show it to, what to measure, by when
 - Throwaway checklist: assumptions still requiring validation
 
 Then say: "You have a prototype and a test plan. Show it to five people before the end-of-day share-out. The goal is one real signal -- not polish."
 
-## Config Dependencies
+## Where this runs
 
-**Reads:** `hypothesis_selected`, `startup_name`, `stage`, `target_market`, `facilitated_mode`
-**Writes:** Nothing (outputs artifacts directly)
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
 
-## Platform Notes
+---
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Full: reads config.json including hypothesis_selected |
-| Claude Desktop | Full: manual hypothesis input; full artifact output |
-| Claude Cowork | Full: same as Desktop; well-suited for non-technical founders |
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

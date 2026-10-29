@@ -1,11 +1,12 @@
 ---
 name: intervention-guide
-description: Real-time facilitator support. Describe the current situation at your table and get specific intervention strategies, pacing checks, and redirect techniques. Covers both Product and Growth tracks.
+description: Real-time sherpa support. Describe what is happening at your table and get intervention language, a pacing check against the stage of the day, what not to say, a 5-minute redirect, and challenge questions. Covers all four paths. Use mid-session when a founder or team is stuck, drifting, or running long.
+license: CC-BY-4.0
 ---
 
 # Intervention Guide
 
-Real-time support for facilitators during a Founder Jam event. Describe what's happening at your table and get specific words to say, pacing status, and a redirect strategy -- fast.
+Real-time support for sherpas during a Founder Jam event. Describe what's happening at your table and get specific words to say, pacing status, and a redirect strategy -- fast.
 
 ## Overview
 
@@ -22,7 +23,7 @@ This skill is designed to be invoked mid-session. It takes a situational descrip
 
 ### Step 1: Situation Intake
 
-Ask the facilitator one question:
+Ask the sherpa one question:
 
 "What's happening at your table right now? Describe the situation, which activity they're on, and what's not working."
 
@@ -32,29 +33,37 @@ Parse the response for:
 - Current activity (see Activity List below)
 - Failure mode (see Failure Modes below)
 - Approximate time into the session
-- Track (Product or Growth, if discernible)
+- Path (product and positioning, GTM and growth, sales, or ops and automation, if discernible)
 
 ### Step 2: Activity Identification
 
-Map the described situation to the current activity:
+Map the described situation to the current stage and activity:
 
-**Product Track:**
+**Understand:**
 - `battle-card-builder` -- SWOT analysis, competitor research, battle card creation
-- `hypothesis-engine` -- hypothesis generation, diverge/converge, "If/then/by" framing
-- `prototype-launcher` -- prototype type selection, build phase, internal review
+- `market-analyzer` -- market sizing, competitive landscape
 
-**Growth Track:**
+**Focus:**
 - `icp-definer` -- ICP definition, JTBD mapping, segment selection
+- `hypothesis-engine` -- hypothesis generation, diverge/converge, "If/then/by" framing
+- `lead-magnet-ideator` -- lead magnet concepts and scoring
+
+**Build:**
+- `prototype-launcher` -- prototype type selection, build phase, internal review
 - `offer-designer` -- lead magnet selection, content workflow, email sequence
 - `growth-builder` -- automation build, North Star metrics, 30-day plan
+- `outbound-composer` -- prospect list, sequences, daily cadence
 
-**Shared:**
-- `validation-planner` -- commitment writing, pitch prep
+**Validate:**
+- `validation-planner` -- commitment writing
+- `pitch-builder` -- share-out prep
+
+**General:**
 - `general` -- unclear or early in session
 
 ### Step 3: Pacing Check
 
-Based on the current time and activity, tell the facilitator where the startup should be. Reference `templates/session-pacing-guide.md` for block breakdowns.
+Based on the current time and activity, tell the sherpa where the startup should be. Reference `templates/session-pacing-guide.md` (bundled in this skill's folder) for block breakdowns. Its timings come from the v1 two-track days, so treat them as guidelines and flex to the day's actual schedule.
 
 Format:
 
@@ -68,9 +77,9 @@ PACING: They should be at [X] by now. They are [ahead / on track / behind] by ap
 
 Based on the failure mode identified, provide:
 
-**What to say:** Specific words or questions the facilitator can use right now. Not generic advice -- actual language.
+**What to say:** Specific words or questions the sherpa can use right now. Not generic advice -- actual language.
 
-**What NOT to say:** Common facilitator mistakes for this exact situation.
+**What NOT to say:** Common sherpa mistakes for this exact situation.
 
 **Redirect strategy:** How to get them back on track in 5 minutes or less. Include a specific action, not just a principle.
 
@@ -90,7 +99,7 @@ Based on the failure mode identified, provide:
 | Hypothesis is too vague | "Can you add a specific number and a deadline to that?" | "Good start, but..." | Hand them the If/Then/By template. Ask them to fill in the blank numbers out loud. |
 | No existing customer data | "Let's build from what competitors' customers say publicly -- reviews, Reddit, LinkedIn comments." | "You need data first" | Pull one competitor review together. Extract pain language directly from customer voice. |
 
-### Step 5: Facilitated Mode Questions
+### Step 5: Challenge Questions
 
 Suggest 2-3 provocative questions from the question bank below that match the current situation. These are designed to unlock momentum, not to create more debate.
 
@@ -125,16 +134,19 @@ Suggest 2-3 provocative questions from the question bank below that match the cu
 - "If you had to ship something tomorrow, what would it be?"
 - "What are you most afraid to test?"
 
-## Config
+## Context
 
 **Reads:** Nothing.
 **Writes:** Nothing.
-**References:** `content/intervention-patterns.md` (this repo), facilitator question bank above.
+**References:** `content/intervention-patterns.md` (bundled in this skill's folder), the question bank above.
 
-## Platform Notes
+## Where this runs
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Fastest response -- run in terminal, paste situation, get immediate output |
-| Claude Desktop | Conversational mode works well; keep session open during event |
-| Claude Cowork | Same as Desktop |
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Output is text in the chat; copy what you want to keep. |
+| Claude Code | Full flow. May write a file on request. |
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

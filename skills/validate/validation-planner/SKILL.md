@@ -1,9 +1,12 @@
 ---
 name: validation-planner
-description: Create a structured accountability plan at the end of Founder Jam. Uses the 2 Days / 2 Weeks / 2 Months framework with funnel math and a 30-day Green/Yellow/Red decision framework.
+description: Create the accountability plan that closes the day, with 2 days / 2 weeks / 2 months commitments with specific numbers and owners, funnel math, a 30-day Green/Yellow/Red decision framework, an accountability partner, and calendar reminders. Use in the Validate stage, as the last working skill of Founder Jam.
+license: CC-BY-4.0
 ---
 
 # Validation Planner
+
+**Stage:** Validate. **Best for paths:** all paths.
 
 Turn today's work into a concrete 30-day commitment plan before you leave. Pushes for specificity -- not "do outreach" but real numbers, real owners, real deadlines. Includes funnel math and a decision framework so you know when to persist, optimize, or pivot.
 
@@ -11,24 +14,28 @@ Turn today's work into a concrete 30-day commitment plan before you leave. Pushe
 
 This is the last skill of the day. Run it in the final 15 minutes.
 
-- Works for both Product and Growth tracks
-- Tailors funnel math defaults to track and stage
-- Outputs a commitment card formatted for Miro
+- Works for all four paths
+- Tailors funnel math defaults to path and startup stage
+- Outputs a commitment card you can paste into Miro, Notion, or a doc
 
 **Time estimate:** 15 minutes
 
 ## Process
 
-### Step 1: Load Config
+### Step 1: Load context
 
-Read `config.json` if it exists. Extract:
-- `track` -- tailors funnel math template (B2B vs B2C defaults)
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+Fields needed:
+- `path` -- tailors funnel math template (B2B vs B2C defaults)
 - `stage` -- adjusts ambition of targets (idea vs early-revenue)
 - `startup_name` -- personalizes output
-- `facilitated_mode` -- adds or removes coach prompts
+- `mode` -- with-sherpa adds coach prompts
 
-If config is missing, ask:
-1. "What track are you on -- Product or Growth?"
+If a field is missing, ask:
+1. "Which path are you on: product and positioning, GTM and growth, sales, or ops and automation?"
 2. "What stage are you at -- idea, pre-revenue, or early-revenue?"
 3. "What's your startup name?"
 
@@ -97,9 +104,9 @@ Decision: [what you'll do if you hit it / miss it]
 
 ### Step 4: Funnel Math
 
-Build a funnel math table tailored to track and stage. The goal is to work backwards from the desired outcome.
+Build a funnel math table tailored to path and startup stage. The goal is to work backwards from the desired outcome.
 
-**Funnel template (customize numbers based on stage and track):**
+**Funnel template (customize numbers based on startup stage and path):**
 
 ```
 ## Funnel Math: [startup_name]
@@ -114,13 +121,15 @@ Build a funnel math table tailored to track and stage. The goal is to work backw
 | Closed customers | [X] | [X]% | Close rate from calls |
 ```
 
-**Default conversion benchmarks by track:**
+**Default conversion benchmarks by model:**
 
-B2B / Product Track (cold outreach model):
+B2B or sales path (cold outreach model):
 - 250 cold emails -> 50 website visits (20%) -> 36 captures (72%) -> 18 qualified (50%) -> 9 calls (50%) -> 3 customers (33%)
 
-B2C / Growth Track (content + lead magnet model):
+B2C or GTM and growth path (content + lead magnet model):
 - 1,000 impressions -> 100 clicks (10%) -> 70 captures (70%) -> 35 qualified (50%) -> 10 replies (29%) -> 3 customers (30%)
+
+On the product and positioning and ops and automation paths, use whichever model matches how the founder will reach their first users.
 
 Adjust defaults based on `stage`:
 - Idea stage: use conservative numbers, note they're benchmarks not guarantees
@@ -181,9 +190,9 @@ Generate text-format calendar reminders. Founder adds these manually.
 5. [Today + 60 days]: "[startup_name] 2-month validation gate"
 ```
 
-### Step 8: Facilitator Questions
+### Step 8: Sherpa questions
 
-If `facilitated_mode` is true, surface these questions as final prompts:
+If `mode` is `with-sherpa`, surface these questions as final prompts:
 
 - "What's the smallest experiment you could run in 48 hours that would tell you something real?"
 - "If you hit Yellow in 30 days, what's your decision rule for pivoting vs. optimizing?"
@@ -191,22 +200,20 @@ If `facilitated_mode` is true, surface these questions as final prompts:
 
 ## Output Format
 
-Deliver in sequence, Miro-ready:
+Deliver in sequence, paste-ready:
 
 1. **Commitment Card** -- 2D/2W/2M with specific actions, owners, and signals
 2. **Funnel Math Table** -- volume targets with conversion benchmarks
 3. **Decision Framework** -- Green/Yellow/Red thresholds with action rules
 4. **Calendar Reminders** -- text format, founder adds manually
 
-## Config Dependencies
+## Where this runs
 
-**Reads:** `track`, `stage`, `startup_name`, `facilitated_mode`
-**Writes:** Nothing
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
 
-## Platform Notes
+---
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Full: reads config.json for context |
-| Claude Desktop | Full: manual context input |
-| Claude Cowork | Full: same as Desktop |
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

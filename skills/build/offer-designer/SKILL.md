@@ -1,11 +1,14 @@
 ---
 name: offer-designer
-description: Growth Track Part 2. Design a lead magnet matched to your business type, map content workflow automation, and write a 7-email nurture sequence. Reads icp_segment from config. Writes lead_magnet.
+description: Design a lead magnet that fits the business type, map the content and lead-capture workflow, and write a 7-email nurture sequence. Use in the Build stage on the GTM and growth path, after icp-definer has chosen a beachhead customer.
+license: CC-BY-4.0
 ---
 
 # Offer Designer
 
-Build your lead generation engine: a lead magnet your ICP will actually download, the automation workflow to capture and score leads, and a 7-email nurture sequence to convert them. This is Growth Track Part 2.
+**Stage:** Build. **Best for paths:** GTM and growth.
+
+Build your lead generation engine: a lead magnet your ICP will actually download, the automation workflow to capture and score leads, and a 7-email nurture sequence to convert them. Run it after `icp-definer` has chosen your beachhead customer.
 
 ## Overview
 
@@ -19,7 +22,11 @@ Three sequential sub-activities:
 
 ## Setup
 
-Read `config.json` if present. Required fields: `icp_segment`, `startup_name`, `business_type`, `facilitated_mode`.
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+Fields needed: `icp_segment`, `startup_name`, `business_type`.
 
 If `icp_segment` is missing, ask: "What's your beachhead customer segment? (Run `icp-definer` first if you haven't.)"
 
@@ -132,7 +139,7 @@ Generate the four elements that appear before the scroll:
 **CTA Copy:** [Action verb] + [what they get] (e.g., "Download the Calculator" / "Get the Benchmark Report")
 ```
 
-**Facilitated mode challenge prompts:**
+**Sherpa-mode challenge prompts:**
 - "Would you give your email address for this lead magnet? Would your best customer?"
 - "Is this lead magnet solving a real problem in 5 minutes, or is it just educational?"
 - "What is the specific outcome someone can achieve using only what's in this lead magnet?"
@@ -216,7 +223,7 @@ Form submission received
 | Clay | Deep enrichment + AI scoring | Paid ($149/mo+) |
 | ActiveCampaign | Email automation + advanced segmentation | Paid ($29/mo+) |
 
-**Output: Automation Workflow Diagram (text-based, Miro-ready)**
+**Output: Automation Workflow Diagram (text-based, paste-ready)**
 
 ```
 ## [startup_name] Lead Flow
@@ -442,7 +449,7 @@ P.S. [Hook -- something valuable coming soon or a final compelling reason to act
 
 - After this email: move to monthly newsletter cadence for long-term nurture.
 
-**Facilitated mode challenge prompts:**
+**Sherpa-mode challenge prompts:**
 - "What would make someone forward this email to a colleague?"
 - "Which email in the sequence is most likely to get a reply? Is it soon enough?"
 - "What is the one outcome you want from this sequence -- a reply, a booking, or a purchase?"
@@ -491,25 +498,21 @@ Body:
 CTA: [final offer or community invitation]
 ```
 
-## Write Config
+## Handoff
 
-After completing all three sub-activities, update `config.json`:
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence with these fields filled in:
 
-```json
-{
-  "lead_magnet": "[selected type] - [working title]"
-}
-```
+- `lead_magnet`: [selected type] - [working title]
 
-## Config Dependencies
+Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access, also write the same fields to `config.json`.
 
-**Reads:** `icp_segment`, `startup_name`, `business_type`, `facilitated_mode`
-**Writes:** `lead_magnet`
+## Where this runs
 
-## Platform Notes
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start and copy the updated block at the end. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Full flow: reads config.json, writes lead_magnet |
-| Claude Desktop | Full flow: manual ICP input if config missing |
-| Claude Cowork | Full flow: rich text output works well for email sequence review |
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

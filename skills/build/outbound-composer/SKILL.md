@@ -1,9 +1,12 @@
 ---
 name: outbound-composer
-description: Growth Track supplement (Part 3 alternative or follow-on). Turn founder-led selling into a founder-led outbound SYSTEM - prospect sourcing plan, LinkedIn + email sequences, a daily cadence, reply triage, and founder-content air cover. Manual-first, with HeyReach/Instantly as an optional scale tier. Reads icp_segment, lead_magnet, channels_selected. Writes outbound_system.
+description: Turn founder-led selling into an outbound system with a prospect sourcing plan, LinkedIn and email sequences, a daily cadence, reply triage rules, and founder content for air cover. Manual first, with HeyReach or Instantly as an optional scale tier. Use in the Build stage on the sales path, or whenever direct outreach is the main channel. Third-party skill by Scott Murtaugh of GP Automations.
+license: CC0-1.0
 ---
 
 # Outbound Composer
+
+**Stage:** Build. **Best for paths:** sales.
 
 Most early-stage founders already do outbound - a LinkedIn DM here, a warm intro there. What they don't have is a *system*: a repeatable list-build, message sequence, daily cadence, and triage rules that fill the calendar without depending on mood or memory. This skill builds that system in one sitting.
 
@@ -21,7 +24,11 @@ Three sequential sub-activities:
 
 ## Setup
 
-Read `config.json` if present. Required fields: `icp_segment`, `startup_name`, `business_type`, `stage`, `facilitated_mode`. Helpful fields: `lead_magnet`, `channels_selected`.
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+Fields needed: `icp_segment`, `startup_name`, `business_type`, `stage`. Helpful fields: `lead_magnet`, `channels_selected`.
 
 If `icp_segment` is missing, ask: "What's your beachhead customer segment? (Run `icp-definer` first if you haven't.)"
 
@@ -82,7 +89,7 @@ The "Personalization note" column is mandatory - one specific observation per pr
 
 **A note on "scraping":** this skill outputs search recipes and list-building guidance, not scraping scripts. Bulk-scraping LinkedIn violates its terms and risks the founder's account - the exact account they need for outreach. Apollo/exports and manual list-building get to 100 prospects in 2-3 hours without that risk.
 
-**Facilitated mode challenge prompts:**
+**Sherpa-mode challenge prompts:**
 - "Name three real people, right now, who match this ICP. If you can't, the ICP is too abstract to prospect against."
 - "Which source gives you prospects with a trigger signal, not just a matching title?"
 - "What disqualifies a prospect? If nothing does, your list will be 40% waste."
@@ -160,7 +167,7 @@ Deliverability guardrails to state: warm domains only (no brand-new domain blast
 2. Merge-field-only "personalization" ([First Name] at [Company]) does not count.
 3. 10 highly personalized messages beat 50 generic ones on replies AND on account safety.
 
-**Facilitated mode challenge prompts:**
+**Sherpa-mode challenge prompts:**
 - "Read Touch 1 out loud. Would YOU accept this connection request from a stranger?"
 - "Where's the give? If every touch asks and none gives, rewrite."
 - "What does the prospect learn from Email 3 even if they never buy? If nothing, it's not a value email."
@@ -212,7 +219,7 @@ Outbound and content compound: prospects who receive a DM check the founder's pr
 
 **State the safety rule plainly:** do not automate LinkedIn outreach from a new or small (under ~500 connections) account, and never automate before the copy has earned replies manually. Automation multiplies whatever you feed it - including bans and silence. The 30-day plan below is Tier 1 on purpose.
 
-**Facilitated mode challenge prompts:**
+**Sherpa-mode challenge prompts:**
 - "When exactly is your 30-minute block? If it isn't on the calendar, it doesn't exist."
 - "What reply rate over the first 100 touches makes you keep this copy vs. rewrite it?" (Anchor: under 3% positive = rewrite the ICP or the give, not just the words.)
 
@@ -232,25 +239,21 @@ Week 4 review: keep / rewrite / rethink-channel based on
       [green: N+ calls | yellow: replies but no calls | red: under 3% positive]
 ```
 
-## Write Config
+## Handoff
 
-After completing all three sub-activities, update `config.json`:
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence with these fields filled in:
 
-```json
-{
-  "outbound_system": "[channel mix] - [N]/day cadence - CTA: [outcome] - Tier 1 until [date/threshold]"
-}
-```
+- `outbound_system`: [channel mix] - [N]/day cadence - CTA: [outcome] - Tier 1 until [date/threshold]
 
-## Config Dependencies
+Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access, also write the same fields to `config.json`.
 
-**Reads:** `icp_segment`, `startup_name`, `business_type`, `stage`, `facilitated_mode`, `lead_magnet` (optional), `channels_selected` (optional)
-**Writes:** `outbound_system`
+## Where this runs
 
-## Platform Notes
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start and copy the updated block at the end. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Full flow: reads/writes config.json; can also draft the tracking-sheet CSV to a file |
-| Claude Desktop | Full flow with manual context input; founder copies outputs to their own sheet |
-| Claude Cowork | Full flow; sequence pack renders well for live editing with a facilitator |
+---
+
+Third-party skill. Written by Scott Murtaugh of GP Automations and released under CC0 1.0 (public domain dedication). It is not covered by the CC BY 4.0 license that applies to the rest of the pack. Distributed in the Founder Jam skills pack, whose credit line is: Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

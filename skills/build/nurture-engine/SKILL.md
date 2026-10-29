@@ -1,9 +1,12 @@
 ---
 name: nurture-engine
-description: Generate source-specific email nurture sequences for leads captured through assessments, lead magnets, contact forms, and newsletter signups. Implements Dickerson's 7-email framework with Hormozi's 3.5:1 give-to-ask ratio.
+description: Write source-specific 7-email nurture sequences for leads from assessments, lead magnets, contact forms, and newsletter signups, with Hormozi's 3.5:1 give-to-ask ratio and a non-closer track. Use in the Build stage on the GTM and growth or sales path, once a lead magnet or offer exists.
+license: CC-BY-4.0
 ---
 
 # Nurture Engine Skill
+
+**Stage:** Build. **Best for paths:** GTM and growth, sales.
 
 ## Overview
 
@@ -17,21 +20,25 @@ Key capabilities:
 - Map CRM integration points
 - Produce non-closer nurture tracks for prospects who take calls but don't buy
 
-## Config Dependencies
+## Context
 
-**Reads from `config.json`:**
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+**Read from the handoff block:**
 - `startup_name` -- company name for email personalization
 - `icp_segment` -- target customer profile for content matching
 - `business_type` -- service model for CTA selection
-- `facilitated_mode` -- enables challenge prompts
+- `mode` -- `with-sherpa` adds challenge prompts
 
-**Optional config fields:**
+**Optional details (not in the handoff block, ask if useful):**
 - `crm_platform` -- CRM for integration guidance (e.g., "hubspot", "activecampaign", "mailchimp")
 - `newsletter_name` -- your newsletter name for subscriber sequence
 - `service_areas` -- array of service offerings for content matching
 - `sign_off_phrase` -- custom email sign-off
 
-**Writes:** Nothing (output is presented for review and manual saving)
+**Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
 ## The 7-Email Framework (Dickerson, Adapted)
 
@@ -189,9 +196,9 @@ Adapt these to your specific CRM platform.
 5. **Review copy** -- Check against email copy rules
 6. **Map CRM triggers** -- Document automation points for your CRM
 
-## Facilitated Mode
+## Sherpa Mode
 
-When `facilitated_mode: true`, add these challenge prompts:
+When `mode` is `with-sherpa`, add these challenge prompts:
 
 - "Where do most of your leads come from right now? Start with that source's sequence first."
 - "What's the single most valuable thing you could teach a new lead in 5 minutes? That's Email 3."
@@ -215,10 +222,13 @@ When `facilitated_mode: true`, add these challenge prompts:
 - If using `case-study-generator`: case study content feeds Email 4 across all sequences
 - If using `content-calendar-planner`: nurture emails that reference published content need dependency tracking
 
-## Platform Notes
+## Where this runs
 
-| Platform | How to Use |
-|----------|-----------|
-| **Claude Code** | Full experience. Run as a skill with config.json in the working directory |
-| **Claude Desktop** | Paste the skill content as a Project instruction. Specify the source type to generate |
-| **Claude Cowork** | Add as a source document. Best when you paste your existing case studies and resources for reference |
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

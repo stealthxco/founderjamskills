@@ -1,33 +1,42 @@
 ---
 name: pitch-builder
-description: Structure your end-of-day share-out at Founder Jam. Track-aware: Product Track (7-10 min) or Growth Track (5 min). Generates talking points, not scripts. Iterative refinement section by section.
+description: Structure the end-of-day share-out. Picks a 7-10 minute prototype format or a 5 minute customer-and-offer format based on the founder's path and slot length, then builds talking points section by section, a timing guide, and a one-sentence pitch. Use in the Validate stage, after validation-planner.
+license: CC-BY-4.0
 ---
 
 # Pitch Builder
+
+**Stage:** Validate. **Best for paths:** all paths.
 
 Structure your end-of-day presentation in 20-30 minutes. Generates talking points -- not a script -- so your delivery stays natural and founder-authentic. Works through each section iteratively before moving to the next.
 
 ## Overview
 
-This skill is track-aware. It detects your track from config and runs the right format automatically.
+This skill is path-aware. It picks a format from the founder's path and the length of their share-out slot.
 
-- **Product Track:** 7-10 minute presentation (5 sections)
-- **Growth Track:** 5 minute presentation (4 sections)
+- **Format A, prototype share-out:** 7-10 minutes, 5 sections. The default for product and positioning.
+- **Format B, customer and offer share-out:** 5 minutes, 4 sections. The default for GTM and growth, sales, and ops and automation.
 
-**Time estimate:** 20-30 minutes at workshop
+Ask how long the share-out slot really is. If it is shorter than the format, trim the middle sections and always keep the One Ask.
+
+**Time estimate:** 20-30 minutes
 
 ## Process
 
-### Step 1: Load Config
+### Step 1: Load context
 
-Read `config.json` if it exists. Extract:
-- `track` (product/growth) -- determines output mode
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+Fields needed:
+- `path` -- picks the format (Format A for product and positioning, Format B for the others)
 - `startup_name` -- personalizes output
-- `facilitated_mode` -- adds or removes coach prompts
+- `mode` -- with-sherpa adds coach prompts
 - Also read for context: `hypothesis_selected`, `icp_segment`, `lead_magnet`, `channels_selected`
 
-If config is missing, ask:
-1. "What track are you on -- Product or Growth?"
+If a field is missing, ask:
+1. "Which path are you on, and how long is your share-out slot?"
 2. "What's your startup name?"
 3. "Give me a one-sentence summary of what you built or figured out today."
 
@@ -35,14 +44,14 @@ If config is missing, ask:
 
 Before building the pitch, gather what happened during the day. Ask conversationally (one question at a time, build on each answer):
 
-**If Product Track:**
+**If Format A:**
 1. "What were the most interesting things you learned about your competitive landscape?"
 2. "What hypothesis did you end up choosing -- and what made it the winner over the others?"
 3. "What did you prototype? Walk me through what it is and how it works."
 4. "What surprised you most today? What would you do differently?"
 5. "What specific help do you need from this cohort?"
 
-**If Growth Track:**
+**If Format B:**
 1. "Who is your beachhead customer -- be specific. What's the JTBD statement you landed on?"
 2. "What's your lead magnet and what did you build today (nurture sequence, automation, or content workflow)?"
 3. "What are your concrete 30-day commitments? Give me the numbers."
@@ -54,7 +63,7 @@ Work through each section iteratively. After drafting each section, ask: "Does t
 
 ---
 
-**PRODUCT TRACK FORMAT (7-10 minutes)**
+**FORMAT A: PROTOTYPE SHARE-OUT (7-10 minutes)**
 
 **Section 1: Competitive Landscape Findings (90 seconds)**
 
@@ -135,7 +144,7 @@ Draft format:
 
 ---
 
-**GROWTH TRACK FORMAT (5 minutes)**
+**FORMAT B: CUSTOMER AND OFFER SHARE-OUT (5 minutes)**
 
 **Section 1: ICP and Offer (60 seconds)**
 
@@ -201,7 +210,7 @@ Draft format:
 
 After all sections are drafted, generate a timing guide:
 
-**Product Track:**
+**Format A:**
 ```
 ## Timing Guide
 
@@ -212,7 +221,7 @@ After all sections are drafted, generate a timing guide:
 8:00 - 8:30   One ask
 ```
 
-**Growth Track:**
+**Format B:**
 ```
 ## Timing Guide
 
@@ -229,9 +238,9 @@ Generate a one-sentence pitch for hallway conversations. Format:
 
 Offer 2-3 variations and ask which one sounds most like how the founder actually talks.
 
-### Step 6: Facilitator Questions
+### Step 6: Sherpa questions
 
-If `facilitated_mode` is true, surface these questions as final reflection prompts:
+If `mode` is `with-sherpa`, surface these questions as final reflection prompts:
 
 - "If you only had 60 seconds, what's the one thing you want people to remember?"
 - "What's the ask that would actually move you forward this week?"
@@ -239,21 +248,19 @@ If `facilitated_mode` is true, surface these questions as final reflection promp
 
 ## Output Format
 
-Deliver in sequence, Miro-ready:
+Deliver in sequence, paste-ready:
 
 1. **Pitch Outline** -- section-by-section talking points
 2. **Timing Guide** -- section lengths
 3. **One-Sentence Pitch** -- 2-3 options for hallway conversations
 
-## Config Dependencies
+## Where this runs
 
-**Reads:** `track`, `startup_name`, `facilitated_mode`, `hypothesis_selected`, `icp_segment`, `lead_magnet`, `channels_selected`
-**Writes:** Nothing
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
 
-## Platform Notes
+---
 
-| Platform | Behavior |
-|----------|----------|
-| Claude Code | Full: reads config.json for track detection |
-| Claude Desktop | Full: manual track input; full output |
-| Claude Cowork | Full: same as Desktop |
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

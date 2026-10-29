@@ -1,9 +1,12 @@
 ---
 name: show-rate-optimizer
-description: Generate confirmation sequences, pre-call value notes, and no-show recovery emails to maximize discovery call show rates. Implements Hormozi's 89% show-rate protocol adapted for B2B service businesses.
+description: Write confirmation sequences, pre-call value notes, and no-show recovery emails to raise discovery call show rates, using Hormozi's 89% show-rate protocol adapted for B2B services. Use in the Build stage on the sales path, once the founder is booking calls.
+license: CC-BY-4.0
 ---
 
 # Show Rate Optimizer Skill
+
+**Stage:** Build. **Best for paths:** sales.
 
 ## Overview
 
@@ -17,19 +20,23 @@ Key capabilities:
 - Produce no-show recovery sequences
 - Track show rates over time and recommend adjustments
 
-## Config Dependencies
+## Context
 
-**Reads from `config.json`:**
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+**Read from the handoff block:**
 - `startup_name` -- company name for email templates
 - `icp_segment` -- target customer profile for case study matching
 - `business_type` -- service model context
 
-**Optional config fields:**
+**Optional details (not in the handoff block, ask if useful):**
 - `crm_platform` -- CRM for integration guidance
 - `scheduling_tool` -- calendar booking tool (e.g., "calendly", "hubspot meetings")
 - `service_areas` -- array of service offerings for case study matching
 
-**Writes:** Nothing (output is presented for review and manual saving)
+**Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
 ## The 89% Show-Rate Protocol (Hormozi, Adapted)
 
@@ -290,9 +297,9 @@ Maintain a tracker with this structure:
 4. **Generate the sequence** -- Produce all 3 emails + pre-call value note
 5. **Track** -- Update the show-rate tracker with every call entry
 
-## Facilitated Mode
+## Sherpa Mode
 
-When `facilitated_mode: true`, add these challenge prompts:
+When `mode` is `with-sherpa`, add these challenge prompts:
 
 - "What's your current show rate? If you don't know, that's the first problem to solve."
 - "What happens between someone booking a call and the call happening? If the answer is 'nothing,' you're leaving pipeline on the table."
@@ -315,10 +322,13 @@ When `facilitated_mode: true`, add these challenge prompts:
 - If using `offer-architect`: named packages can be referenced in the agenda section of Email 2
 - If using `nurture-engine`: no-show prospects who exhaust recovery can enter a longer nurture sequence
 
-## Platform Notes
+## Where this runs
 
-| Platform | How to Use |
-|----------|-----------|
-| **Claude Code** | Full experience. Run as a skill with config.json in the working directory |
-| **Claude Desktop** | Paste the skill content as a Project instruction. Provide prospect details in conversation |
-| **Claude Cowork** | Add as a source document. Provide call details and company info for personalization |
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

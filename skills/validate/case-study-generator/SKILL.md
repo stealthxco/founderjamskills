@@ -1,9 +1,12 @@
 ---
 name: case-study-generator
-description: Generate multi-format case study packages from engagement results. Outputs website case studies, companion blog posts, LinkedIn derivatives, and newsletter sections. Implements Dickerson's referral flywheel and Hormozi's Hook-Retain-Reward framework.
+description: Turn results into a multi-format case study package with a website case study, a companion blog post, LinkedIn posts, and a newsletter section, using Dickerson's referral flywheel and Hormozi's Hook-Retain-Reward. Use in the Validate stage once a customer or pilot has real results to show.
+license: CC-BY-4.0
 ---
 
 # Case Study Generator Skill
+
+**Stage:** Validate. **Best for paths:** sales, GTM and growth.
 
 ## Overview
 
@@ -18,20 +21,24 @@ Key capabilities:
 - Produce newsletter sections
 - Map each case study to relevant service pages and CTAs for proof placement
 
-## Config Dependencies
+## Context
 
-**Reads from `config.json`:**
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+
+Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+
+**Read from the handoff block:**
 - `startup_name` -- company name for case study branding
 - `icp_segment` -- target customer profile for proof placement
 - `business_type` -- service model context
-- `facilitated_mode` -- enables challenge prompts
+- `mode` -- `with-sherpa` adds challenge prompts
 
-**Optional config fields:**
+**Optional details (not in the handoff block, ask if useful):**
 - `service_areas` -- array of service offerings for mapping
 - `newsletter_name` -- for newsletter section formatting
 - `sign_off_phrase` -- for LinkedIn post sign-off
 
-**Writes:** Nothing (output is presented for review and manual saving)
+**Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
 ## The Referral Flywheel (Dickerson)
 
@@ -274,9 +281,9 @@ Before generating a case study, you need engagement data. If structured data isn
 5. **Generate proof placement map** -- Map to website pages, objections, service areas
 6. **Review** -- Apply quality checklist before delivering
 
-## Facilitated Mode
+## Sherpa Mode
 
-When `facilitated_mode: true`, add these challenge prompts:
+When `mode` is `with-sherpa`, add these challenge prompts:
 
 - "How many completed engagements do you have? How many have companion blog posts? The gap is your backlog."
 - "What's the single most impressive metric from any client engagement? That's your first case study."
@@ -316,10 +323,13 @@ Before delivering:
 - If using `nurture-engine`: case studies feed Email 4 (social proof) across all nurture sequences
 - If using `landing-page-auditor`: case study pages should be audited for conversion effectiveness
 
-## Platform Notes
+## Where this runs
 
-| Platform | How to Use |
-|----------|-----------|
-| **Claude Code** | Full experience. Run as a skill with config.json in the working directory |
-| **Claude Desktop** | Paste the skill content as a Project instruction. Provide engagement data in conversation |
-| **Claude Cowork** | Add as a source document. Paste the completed data collection form for best results |
+| Where | What happens |
+|-------|--------------|
+| claude.ai or Claude desktop (skill uploaded) | Full flow. Paste your handoff block at the start. Save any output you want to keep. |
+| Claude Code | Full flow. Can also read and write `config.json`. |
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam
