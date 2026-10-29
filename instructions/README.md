@@ -2,7 +2,7 @@
 
 These instruction files let you use the Founder Jam skills without installing Claude Code. Each file contains an activation prompt you can paste directly into Claude Desktop or Claude Cowork.
 
-> **Even easier (Pro/Max/Team/Enterprise plans):** upload a ready-made skill instead of pasting a prompt. Grab a `.zip` from the [`../dist/`](../dist/) folder and add it under **Settings → Capabilities → Skills → Upload skill** in the Claude app. See [`../dist/README.md`](../dist/README.md). The paste-in prompts below work on any plan, including Free.
+> **Even easier (Skills turned on):** upload a ready-made skill instead of pasting a prompt. Grab a `.zip` from the [`../dist/`](../dist/) folder and add it under **Customize → Skills → + → Create skill → Upload a skill** in the Claude app (older layout: Settings → Capabilities → Skills → Upload skill). See [`../dist/README.md`](../dist/README.md). The paste-in prompts below work on any plan, including Free.
 
 ## Two Ways to Use These Skills
 
@@ -71,6 +71,6 @@ Want more tools, frameworks, and insights for founders? Subscribe to the **Build
 
 ## About Founder Jam
 
-Founder Jam is a full-day workshop experience hosted by [Innovate Charlotte](https://www.innovatecharlotte.org/) and [StealthX](https://stealthx.co/).
+Founder Jam is a full-day workshop experience co-created by Drew Burdick and [Innovate Charlotte](https://www.innovatecharlotte.org/).
 
 Visit [innovatecharlotte.org/founderjams](https://www.innovatecharlotte.org/founderjams) for upcoming events.

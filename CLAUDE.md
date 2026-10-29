@@ -1,65 +1,44 @@
-# Founder Jam Skills Pack
+# Founder Jam skills
 
-**For:** Founder Jam workshop attendees
-**Hosted by:** [Innovate Charlotte](https://www.innovatecharlotte.org/) and [StealthX](https://stealthx.co/)
-**Event:** https://www.innovatecharlotte.org/founderjams
+**For:** Founder Jam workshop attendees and sherpas
+**Program:** co-created by Drew Burdick and [Innovate Charlotte](https://www.innovatecharlotte.org/)
+**Event:** https://www.innovatecharlotte.org/founderjam
 
-## What This Is
+## What this is
 
-A set of 19 Claude Code skills -- 10 for the workshop day, 9 for post-workshop growth operations -- for early-stage startup founders participating in Founder Jam, a full-day workshop experience hosted by Innovate Charlotte and StealthX. Product Track founders build competitive intelligence, strategic hypotheses, and rapid prototypes. Growth Track founders define ICPs, design offers, and build go-to-market automation.
+25 skills for Founder Jam, a one-day founder workshop: 21 founder skills and 4 sherpa skills. The day follows four stages (Understand, Focus, Build, Validate). Each founder picks one of four paths with their sherpa during Focus: product and positioning, GTM and growth, sales, or ops and automation. Commitments are 2 days, 2 weeks, and 2 months.
 
-## Quick Start
+## Quick start
 
-1. Run `./install.sh` to install all skills
-2. Run `founder-setup` to capture your startup context
-3. Choose your track and follow the activity sequence below
+1. Run `./install.sh` (or install the `founder-jam` plugin, or upload `dist/founder-setup.zip` in the Claude apps).
+2. Run `founder-setup` to capture your startup context and get a suggested path.
+3. Follow your path in `PATHS.md`.
 
-## Tracks
+## Where things are
 
-**Product Track** (prototype building):
-`battle-card-builder` -> `hypothesis-engine` -> `prototype-launcher`
+- `skills/<stage>/<skill>/SKILL.md`, where stage is understand, focus, build, validate, or sherpa. Each SKILL.md is a real file, and the skill's templates live in its folder.
+- `PATHS.md`: the path map.
+- `docs/claude-apps-guide.md`: uploading skills, adding the plugin, artifacts, connectors, ChatGPT notes.
+- `.claude-plugin/`: plugin and marketplace manifests.
+- `dist/`: one zip per skill, built by `./package-skills.sh`.
+- `instructions/`: paste-in prompts for any plan.
+- `starter-kit/`: two skills for founders working alone.
 
-**Growth Track** (go-to-market strategy):
-`icp-definer` -> `offer-designer` -> `growth-builder`
+## Context
 
-**Shared (both tracks):**
-- `founder-setup` (start of day)
-- `pitch-builder` (end of day)
-- `validation-planner` (end of day)
+Skills run from the FOUNDER JAM HANDOFF block pasted in the chat. Each skill prints an updated block when it finishes. In Claude Code, an optional `config.json` (never committed) holds the same fields. If a skill has no context, it asks for what it needs.
 
-**On-demand:**
-- `market-analyzer` (available any time for competitive research)
+## Rules for editing
 
-**Growth Operations (on-demand, post-workshop):**
-- `lead-magnet-ideator` (brainstorm and score multiple lead magnet concepts)
-- `testimonial-collector` (testimonial requests, collection tracking, champion activation)
-- `show-rate-optimizer` (confirmation sequences, pre-call value notes, no-show recovery)
-- `offer-architect` (Grand Slam package optimization -- use after offer-designer)
-- `nurture-engine` (source-specific 7-email nurture sequences)
-- `case-study-generator` (multi-format case study packages)
-- `seo-keyword-mapper` (6 Circles keyword maps, programmatic SEO templates)
-- `content-calendar-planner` (content calendars with velocity rules and ratio tracking)
-- `landing-page-auditor` (8-dimension page audits with A/B test variants)
+- Every SKILL.md has frontmatter with `name` (equal to the folder name), `description`, and `license` (`CC-BY-4.0`, or `CC0-1.0` for third-party skills). `./package-skills.sh` enforces this.
+- Every SKILL.md ends with the credit line. Third-party skills end with their own credit note plus the line.
+- Keep Scott Murtaugh and GP Automations items labeled third-party under their own license. Don't relicense them.
+- Skills augment the sherpas. They don't replace them.
+- Free tools by default. Frameworks are cited in `ATTRIBUTION.md`.
+- After editing a skill, run `./package-skills.sh` and `python3 starter-kit/build.py`, and commit the rebuilt zips.
 
-## Config
+## License
 
-Your startup context lives in `config.json` (never committed to git). Created by `founder-setup` at the start of your session. Each skill reads this config and enriches it with new data as you progress through the day.
+CC BY 4.0 from v2.0.0 (Drew Burdick, licensor). v1.x is CC0. Credit line:
 
-If you skip setup, each skill will ask for what it needs.
-
-## Important Constraints
-
-- All frameworks cited in ATTRIBUTION.md
-- Skills augment the workshop facilitators -- they don't replace them
-- Free tools by default; paid tools are optional enhancements
-- All outputs designed to paste into Miro boards
-
-## Skill Files
-
-Skills are located in `skills/[stage]/[skill-name]/SKILL.md` (stage is understand, focus, build, validate, or sherpa). Each SKILL.md is a real file, and any templates a skill needs are bundled in its folder. After running `install.sh`, each skill folder is symlinked into `~/.claude/skills/` and can be invoked by name in Claude Code. See `PATHS.md` for which skills to use on each path.
-
-For Claude Desktop or Cowork users, see the `instructions/` folder for markdown versions of each skill.
-
-## Attribution
-
-Frameworks used in these skills are cited in ATTRIBUTION.md. All source material is from published books and public domain methodologies.
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

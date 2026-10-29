@@ -469,6 +469,20 @@ Before automating any of this, run it manually with at least 3 users. Document w
 
 ---
 
+### Optional: build a clickable version as a Claude artifact
+
+In claude.ai or Claude desktop, offer this after generating the artifact for Type 1 (software or app), Type 2 (landing page), Type 4 (subscription pricing page), or Type 8 (onboarding flow). Ask: "Want a clickable version you can show someone right now?" If yes:
+
+1. Confirm "Create and edit files" (also labeled "Code execution and file creation") is on in Settings > Capabilities. Artifacts need it. If it's off, say so and skip this step.
+2. Ask Claude to build a single-page interactive artifact from the prototype brief. Limit it to the 2 to 4 screens or steps the hypothesis needs, use realistic sample content, include no login or payment, and put a short line at the top saying it's a prototype.
+3. Iterate in small steps. Change one thing per message.
+4. Artifacts start private. To test it, the founder shares it with the people they choose using the sharing controls in the artifact panel. Remind them to check who can open it first.
+5. Set expectations: an artifact doesn't store sign-ups or take payments. For lead capture, embed a Tally or Typeform form and send leads there. If the prototype calls Claude, testers use their own Claude account and plan limits, so pick testers who have one or mock the AI answer.
+
+In Claude Code, build a single HTML file the founder can open in a browser instead. ChatGPT users can ask for a single-file HTML page and preview it in canvas.
+
+The full walkthrough is in `docs/claude-apps-guide.md` in the Founder Jam skills repository.
+
 ## Step 5: Test Plan
 
 After generating the artifact, create a test plan:

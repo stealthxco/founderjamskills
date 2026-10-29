@@ -1,0 +1,21 @@
+{
+  "name": "founder-jam",
+  "displayName": "Founder Jam",
+  "version": "2.0.0",
+  "description": "Skills for Founder Jam, a one-day founder workshop co-created by Drew Burdick and Innovate Charlotte. 21 founder skills grouped by the four stages (Understand, Focus, Build, Validate) plus 4 sherpa skills for facilitators.",
+  "author": {
+    "name": "Drew Burdick",
+    "url": "https://drewburdick.com/founderjam"
+  },
+  "homepage": "https://drewburdick.com/founderjam",
+  "repository": "https://github.com/stealthxco/founderjamskills",
+  "license": "CC-BY-4.0",
+  "keywords": ["founders", "startups", "workshop", "founder-jam", "go-to-market", "prototyping"],
+  "skills": [
+    "./skills/understand/",
+    "./skills/focus/",
+    "./skills/build/",
+    "./skills/validate/",
+    "./skills/sherpa/"
+  ]
+}

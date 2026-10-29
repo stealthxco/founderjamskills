@@ -1,63 +1,63 @@
-# Installable Skill Files (Claude Desktop / claude.ai)
+# Installable skill zips (Claude desktop and claude.ai)
 
-Each `.zip` in this folder is one Founder Jam skill, packaged so you can upload it
-straight into the **Claude desktop app** or **claude.ai** — no Claude Code, no terminal,
-no cloning required.
+Each `.zip` here is one Founder Jam skill, packaged so you can upload it into the Claude desktop app or claude.ai. No Claude Code, terminal, or cloning needed.
 
 ## Install a skill (2 minutes)
 
-1. Download the `.zip` for the skill you want (click the file above, then **Download raw file**).
-2. Open **Claude Desktop** (or **claude.ai** in a browser).
-3. Go to **Settings → Capabilities → Skills**.
-4. Click **Upload skill** and choose the `.zip` you downloaded.
-5. Start a new chat and ask for it by name, e.g. *"Run founder-setup"* or *"Use the icp-definer skill."*
+1. Download the `.zip` for the skill you want (open the file on GitHub and choose the download button).
+2. Open Claude desktop or claude.ai.
+3. Go to Customize > Skills, click the plus button, choose "Create skill", then "Upload a skill". In older layouts the path is Settings > Capabilities > Skills > Upload skill.
+4. Pick the zip and switch the skill on.
+5. Start a new chat and ask for it by name, for example "Run founder-setup."
 
-Repeat for each skill you want. Start with **`founder-setup.zip`** — the other skills build on the context it captures.
+Skills need "Code execution and file creation" switched on in Settings > Capabilities (it may read "Create and edit files"). On Team and Enterprise plans an owner controls this. If uploads aren't available to you, use the paste-in prompts in [`../instructions/`](../instructions/) instead.
 
-> **Heads up:** Uploading custom Skills requires a **Pro, Max, Team, or Enterprise** plan with
-> code execution enabled. On the Free plan, use the paste-in prompts in [`../instructions/`](../instructions/) instead — same skills, no upload needed.
+Start with `founder-setup.zip`. The other skills use the handoff block it prints. Then upload the skills for your path (see [`../PATHS.md`](../PATHS.md)). The full walkthrough, with artifacts and connectors, is in [`../docs/claude-apps-guide.md`](../docs/claude-apps-guide.md).
 
 ## What's in each zip
 
-Every zip contains one folder with a `SKILL.md` inside it. That's the whole skill — self-contained, nothing else to install.
+One folder named for the skill, containing:
+
+- `SKILL.md`, the skill itself
+- any `templates/` or `content/` files the skill uses
+- `LICENSE`, CC BY 4.0 (third-party skills carry the CC0 text instead)
+- `CREDIT.txt`, the credit line
 
 ## The skills
 
-**Start here**
-- `founder-setup.zip` — capture your startup context (run this first)
+Understand
+- `founder-setup.zip` (run this first), `market-analyzer.zip`, `battle-card-builder.zip`
 
-**Product Track** (build a prototype)
-- `battle-card-builder.zip` · `hypothesis-engine.zip` · `prototype-launcher.zip`
+Focus
+- `icp-definer.zip`, `hypothesis-engine.zip`, `lead-magnet-ideator.zip`
 
-**Growth Track** (go-to-market)
-- `icp-definer.zip` · `offer-designer.zip` · `growth-builder.zip`
+Build
+- `prototype-launcher.zip`, `offer-designer.zip`, `growth-builder.zip`, `offer-architect.zip`, `nurture-engine.zip`, `seo-keyword-mapper.zip`, `content-calendar-planner.zip`, `show-rate-optimizer.zip`
+- `outbound-composer.zip`, third-party by Scott Murtaugh of GP Automations, CC0
+- `page-launcher.zip`, third-party by Scott Murtaugh of GP Automations, CC0. It publishes with shell commands, so it only runs fully in Claude Code. In claude.ai or Claude desktop, ask Claude to build the page as an artifact instead.
 
-**Wrap-up (both tracks)**
-- `pitch-builder.zip` · `validation-planner.zip`
+Validate
+- `validation-planner.zip`, `pitch-builder.zip`, `testimonial-collector.zip`, `case-study-generator.zip`, `landing-page-auditor.zip`
 
-**Any time**
-- `market-analyzer.zip`
+Sherpa (for facilitators)
+- `cohort-prep.zip`, `intervention-guide.zip`, `cohort-debrief.zip`, `follow-up-generator.zip`
 
-**Growth operations (post-workshop)**
-- `lead-magnet-ideator.zip` · `testimonial-collector.zip` · `show-rate-optimizer.zip`
-- `offer-architect.zip` · `nurture-engine.zip` · `case-study-generator.zip`
-- `seo-keyword-mapper.zip` · `content-calendar-planner.zip` · `landing-page-auditor.zip`
-- `outbound-composer.zip` — turn founder-led selling into an outbound system
+## Rebuilding the zips
 
-**Claude Code only**
-- `page-launcher.zip` — publishes live pages via agentpub.io and needs shell access, so it only runs fully in Claude Code. The zip installs on Desktop for reference, but use it in Claude Code for the live-publish flow.
-
-## Rebuilding these zips
-
-Maintainers: after editing any skill, regenerate every zip with:
+After you edit a skill, regenerate every zip from the repo root:
 
 ```bash
 ./package-skills.sh
 ```
 
-Run from the repo root. The script validates each skill's frontmatter and rebuilds `dist/*.zip`.
+The script validates each skill's frontmatter, checks that every template a skill references is bundled, and rebuilds `dist/*.zip`.
 
-## Other ways to use these skills
+## Other ways to use the skills
 
-- **Claude Code:** run `./install.sh` from the repo root (symlinks all skills into `~/.claude/skills/`).
-- **Any plan / no upload:** copy the activation prompts in [`../instructions/`](../instructions/) into a chat.
+- Plugin: add `stealthxco/founderjamskills` as a marketplace and install `founder-jam`.
+- Claude Code: run `./install.sh` from the repo root.
+- Any plan, no upload: the activation prompts in [`../instructions/`](../instructions/).
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam
