@@ -1,6 +1,6 @@
 ---
 name: outbound-composer
-description: Turn founder-led selling into an outbound system with a prospect sourcing plan, LinkedIn and email sequences, a daily cadence, reply triage rules, and founder content for air cover. Manual first, with HeyReach or Instantly as an optional scale tier. Use in the Build stage on the sales path, or whenever direct outreach is the main channel. Third-party skill by Scott Murtaugh of GP Automations.
+description: Build an outbound system: prospect sourcing, LinkedIn and email sequences, daily cadence, reply triage, founder content. Build stage, sales path. Third-party skill by Scott Murtaugh, GP Automations.
 license: CC0-1.0
 ---
 

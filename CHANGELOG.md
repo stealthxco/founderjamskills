@@ -10,6 +10,9 @@ Founder Jam moves to one track with four paths.
 - Every skill defaults to solo mode, asks whether a sherpa is with the founder, and works from a pasted FOUNDER JAM HANDOFF block. `config.json` is optional and only used in Claude Code.
 - Every SKILL.md is a real file with the templates it needs bundled in its folder. The v1 symlinks are gone.
 - `founder-setup` suggests a path and prints the handoff block. `validation-planner` and `pitch-builder` use the 2-day, 2-week, 2-month commitments.
+- Every skill description is 200 characters or fewer, the limit claude.ai documents for custom skills. `package-skills.sh` now enforces it.
+- The paste-in prompts in `instructions/` and `starter-kit/paste-in/` are rewritten for the one-track, four-path model. They use the handoff block, default to solo mode, and carry the credit line.
+- The starter-kit zips are built from `skills/focus/` and carry LICENSE and CREDIT.txt, so there is one copy of `icp-definer` and `lead-magnet-ideator`.
 - `README.md`, `CLAUDE.md`, and `install.sh` are rewritten for the new layout. `install.sh` replaces stale v1 links, takes `--no-sherpa`, and only removes links it created.
 
 ### Added

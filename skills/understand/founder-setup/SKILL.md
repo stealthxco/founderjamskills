@@ -1,6 +1,6 @@
 ---
 name: founder-setup
-description: Start here. Captures a founder's startup context, asks whether a sherpa is with them, suggests a path (product and positioning, GTM and growth, sales, or ops and automation), and prints the FOUNDER JAM HANDOFF block that every other Founder Jam skill reads. Use at the start of Founder Jam, or before any other skill in the pack when no handoff block exists yet.
+description: Start here. Captures startup context, asks if a sherpa is present, suggests a path, and prints the FOUNDER JAM HANDOFF block every other skill reads. Use first, before any other skill in the pack.
 license: CC-BY-4.0
 ---
 
@@ -100,7 +100,7 @@ Present your suggestion with one sentence of reasoning and let the founder choos
 
 Share these three tips:
 
-**Tip 1: Give context, not just commands.**
+**Tip 1: Give context with each request.**
 Instead of "write me a landing page," say "write a landing page for [startup_name] targeting [target_market] who struggle with [problem]. The tone should be [direct/friendly/technical]."
 
 **Tip 2: Push back on the output.**

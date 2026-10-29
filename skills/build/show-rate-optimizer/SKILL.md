@@ -1,6 +1,6 @@
 ---
 name: show-rate-optimizer
-description: Write confirmation sequences, pre-call value notes, and no-show recovery emails to raise discovery call show rates, using Hormozi's 89% show-rate protocol adapted for B2B services. Use in the Build stage on the sales path, once the founder is booking calls.
+description: Write confirmation sequences, pre-call value notes, and no-show recovery emails to raise discovery call show rates, using Hormozi's 89% show-rate protocol. Build stage, sales path.
 license: CC-BY-4.0
 ---
 
@@ -27,22 +27,22 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 **Read from the handoff block:**
-- `startup_name` -- company name for email templates
-- `icp_segment` -- target customer profile for case study matching
-- `business_type` -- service model context
+- `startup_name`: company name for email templates
+- `icp_segment`: target customer profile for case study matching
+- `business_type`: service model context
 
 **Optional details (not in the handoff block, ask if useful):**
-- `crm_platform` -- CRM for integration guidance
-- `scheduling_tool` -- calendar booking tool (e.g., "calendly", "hubspot meetings")
-- `service_areas` -- array of service offerings for case study matching
+- `crm_platform`: CRM for integration guidance
+- `scheduling_tool`: calendar booking tool (e.g., "calendly", "hubspot meetings")
+- `service_areas`: array of service offerings for case study matching
 
 **Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
-## The 89% Show-Rate Protocol (Hormozi, Adapted)
+## The 89% show-rate protocol (Hormozi, adapted)
 
 Hormozi's lead nurture playbook achieves up to 89% show rates through a data-driven sequence. This adaptation replaces consumer urgency tactics with professional, value-first communication.
 
-### Why Most Show Rates Are Low
+### Why most show rates are low
 
 | Cause | Fix |
 |-------|-----|
@@ -53,7 +53,7 @@ Hormozi's lead nurture playbook achieves up to 89% show rates through a data-dri
 | Prospect finds another option | Case studies demonstrate unique differentiation |
 | No cost of missing the call | Value note makes them feel they'll miss something specific |
 
-### The Sequence: 3 Emails + 1 Value Note
+### The sequence: 3 emails + 1 value note
 
 ```
 [Call Booked]
@@ -78,9 +78,9 @@ Hormozi's lead nurture playbook achieves up to 89% show rates through a data-dri
 [No-Show] --> Recovery Sequence
 ```
 
-## Email Templates
+## Email templates
 
-### Email 1: Immediate Confirmation
+### Email 1: Immediate confirmation
 
 Sent within minutes of the call being booked. Make the prospect feel this was a smart decision.
 
@@ -96,7 +96,7 @@ Meeting link: [video call link]
 
 To give you a sense of how we work, here's a quick look at a recent engagement with a [similar industry/company type] company:
 
-[Case Study Summary -- 3-4 sentences max]
+[Case Study Summary, 3-4 sentences max]
 - Situation: [what they faced]
 - What we did: [engagement type and approach]
 - Result: [specific measurable outcome]
@@ -118,7 +118,7 @@ Select the most relevant proof point based on (in priority order):
 
 If no close match exists, use the most impressive general outcome.
 
-### Email 2: 24-Hour Reminder
+### Email 2: 24-Hour reminder
 
 Sent exactly 24 hours before the scheduled call. Adds a second proof point and sets the agenda.
 
@@ -137,16 +137,16 @@ Here's what I'd like to cover:
 
 No prep needed on your end. I've done some research on [Company Name] and have a few observations I think you'll find interesting.
 
-One more example that might be relevant -- [second case study or different engagement type]:
+One more example that might be relevant, [second case study or different engagement type]:
 
-[Case Study Summary -- 2-3 sentences]
+[Case Study Summary, 2-3 sentences]
 
 See you tomorrow.
 
 [Your Name]
 ```
 
-### Email 3: 1-Hour Reminder
+### Email 3: 1-Hour reminder
 
 Sent 1 hour before the call. Short, functional.
 
@@ -157,24 +157,24 @@ Hey [First Name],
 
 We're on in an hour. Here's the link: [meeting link]
 
-I put together a quick note on [Company Name] that I think you'll find useful -- I'll share it at the top of our call.
+I put together a quick note on [Company Name] that I think you'll find useful. I'll share it at the top of our call.
 
 Talk soon,
 
 [Your Name]
 ```
 
-## Pre-Call Value Note
+## Pre-call value note
 
 This is NOT sent to the prospect. It's prepared for you to reference during the first 2 minutes of the call. It demonstrates that you did homework and care about the prospect's specific situation.
 
 ```
-## Pre-Call Value Note: [Company Name]
+## Pre-call value note: [Company name]
 ### Prepared: YYYY-MM-DD
 
 **Prospect:** [Name], [Title]
 **Company:** [Company Name]
-**Source:** [How they found you -- referral, assessment, content, cold]
+**Source:** [How they found you, referral, assessment, content, cold]
 
 **3 Observations About Their Business:**
 1. [Observation from their website, LinkedIn, recent news, or public data]
@@ -185,10 +185,10 @@ This is NOT sent to the prospect. It's prepared for you to reference during the 
 "[First Name], before we dive in, I spent some time on [Company]'s [website/product/recent announcement] and noticed [observation]. Companies in your position often [insight]. I'd love to hear if that resonates, and if so, I can share how we've helped [similar company type] address exactly that."
 
 **Most Relevant Case Study to Reference:**
-[Title] -- [1-sentence summary with specific result]
+[Title]: [1-sentence summary with specific result]
 
 **Qualification Pre-Signals (from available data):**
-- Budget: [any signals -- company size, funding, stated budget]
+- Budget: [any signals, company size, funding, stated budget]
 - Authority: [is this person a decision maker?]
 - Need: [what triggered the call?]
 - Timing: [any urgency signals?]
@@ -202,18 +202,18 @@ This is NOT sent to the prospect. It's prepared for you to reference during the 
 - Assessment or lead magnet data (if they completed one)
 - CRM data (if available)
 
-## No-Show Recovery Sequence
+## No-show recovery sequence
 
 When a prospect doesn't show up, they haven't rejected you. They got busy. The recovery sequence is low-pressure and gives them an easy path to reschedule.
 
-### Recovery Email 1: Same Day (30 Minutes After Missed Call)
+### Recovery email 1: Same day (30 minutes after missed call)
 
 ```
-Subject: Missed you today -- easy to reschedule
+Subject: Missed you today, easy to reschedule
 
 Hey [First Name],
 
-Looks like we missed each other for our [Time] call. No worries at all -- these things happen.
+Looks like we missed each other for our [Time] call. No worries at all, these things happen.
 
 If you'd like to reschedule, here are a few times that work:
 - [Option 1]
@@ -227,10 +227,10 @@ Either way, I'm still interested in the conversation when the timing works for y
 [Your Name]
 ```
 
-### Recovery Email 2: 48 Hours Later
+### Recovery email 2: 48 hours later
 
 ```
-Subject: Re: Missed you today -- easy to reschedule
+Subject: Re: Missed you today, easy to reschedule
 
 Hey [First Name],
 
@@ -241,7 +241,7 @@ In the meantime, here's something that might be useful: [link to a relevant blog
 [Your Name]
 ```
 
-### Recovery Email 3: 7 Days Later (Final)
+### Recovery email 3: 7 days later (final)
 
 ```
 Subject: Still interested?
@@ -250,19 +250,19 @@ Hey [First Name],
 
 I know things get busy. If [the challenge they originally mentioned] is still on your radar, I'm here whenever the timing is right.
 
-No need to reply if priorities have shifted -- I'll just keep sending useful stuff through [your newsletter or content channel].
+No need to reply if priorities have shifted. I'll just keep sending useful stuff through [your newsletter or content channel].
 
 [Your Name]
 ```
 
 After 3 recovery attempts with no response: move to newsletter-only nurture. Do not send additional recovery emails.
 
-## Show-Rate Tracking
+## Show-rate tracking
 
 Maintain a tracker with this structure:
 
 ```
-## Show Rate Tracker
+## Show rate tracker
 **Last updated:** YYYY-MM-DD
 
 ### Calls
@@ -291,13 +291,13 @@ Maintain a tracker with this structure:
 
 ## Workflow
 
-1. **Receive call details** -- Prospect name, title, company, call date/time, source, and context
-2. **Research the prospect** -- Gather intelligence for the pre-call value note from public sources
-3. **Match case studies** -- Select 2 proof points (best match for Email 1, second angle for Email 2)
-4. **Generate the sequence** -- Produce all 3 emails + pre-call value note
-5. **Track** -- Update the show-rate tracker with every call entry
+1. **Receive call details**: Prospect name, title, company, call date/time, source, and context
+2. **Research the prospect**: Gather intelligence for the pre-call value note from public sources
+3. **Match case studies**: Select 2 proof points (best match for Email 1, second angle for Email 2)
+4. **Generate the sequence**: Produce all 3 emails + pre-call value note
+5. **Track**: Update the show-rate tracker with every call entry
 
-## Sherpa Mode
+## Sherpa mode
 
 When `mode` is `with-sherpa`, add these challenge prompts:
 
@@ -315,7 +315,7 @@ When `mode` is `with-sherpa`, add these challenge prompts:
 - Never send the pre-call value note to the prospect. It's internal prep only
 - If no case studies match the prospect's situation, use the most impressive general outcome rather than forcing a weak match
 
-## Works Well With
+## Works well with
 
 - If using `testimonial-collector`: case studies referenced in confirmation emails should include testimonial snippets when available
 - If using `lead-magnet-ideator`: prospects who came through a lead magnet get a confirmation that references the specific asset they engaged with

@@ -1,6 +1,6 @@
 ---
 name: lead-magnet-ideator
-description: Generate and score 5-7 lead magnet concepts using Hormozi's taxonomy, Isenberg's micro-tool model, and Dickerson's AI-powered asset approach, then draft quick tests for the best ones. Use in the Focus stage on the GTM and growth path, or any time before building a lead magnet with offer-designer.
+description: Generate and score 5-7 lead magnet concepts using Hormozi's taxonomy, Isenberg's micro-tool model, and Dickerson's AI asset approach, then draft quick tests. Focus stage, GTM and growth path.
 license: CC-BY-4.0
 ---
 
@@ -8,7 +8,7 @@ license: CC-BY-4.0
 
 **Stage:** Focus. **Best for paths:** GTM and growth.
 
-Generate, score, and compare 5-7 lead magnet concepts so you can pick the strongest one to build. This is an on-demand skill -- use it any time you need fresh lead magnet ideas or want to evaluate concepts before committing build time.
+Generate, score, and compare 5-7 lead magnet concepts so you can pick the strongest one to build. This is an on-demand skill, use it any time you need fresh lead magnet ideas or want to evaluate concepts before committing build time.
 
 **Relationship to offer-designer:** The offer-designer (Build stage) helps you design and build one lead magnet. This skill is for when you need to brainstorm multiple concepts, score them against each other, and pick the best one. Use this skill first to identify your strongest concept, then use offer-designer to build it out with landing page copy, automation flow, and nurture sequence.
 
@@ -16,9 +16,9 @@ Generate, score, and compare 5-7 lead magnet concepts so you can pick the strong
 
 Three core capabilities:
 
-1. **Ideate** -- Generate 5-7 lead magnet concepts matched to your ICP and business type
-2. **Score** -- Evaluate each concept on 7 dimensions using a weighted scoring framework
-3. **Validate** -- Draft quick-test hooks to validate concepts before investing build time
+1. **Ideate**: Generate 5-7 lead magnet concepts matched to your ICP and business type
+2. **Score**: Evaluate each concept on 7 dimensions using a weighted scoring framework
+3. **Validate**: Draft quick-test hooks to validate concepts before investing build time
 
 **Time estimate:** 30-45 minutes
 
@@ -34,9 +34,9 @@ If `icp_segment` is missing, ask: "Who is your ideal customer? (Run `icp-definer
 
 If `business_type` is missing, ask: "What type of business is this? B2B SaaS, Services, Marketplace, or Consumer?"
 
-## Core Frameworks
+## Core frameworks
 
-### Hormozi Lead Magnet Taxonomy (from $100M Leads)
+### Hormozi lead magnet taxonomy (from $100M leads)
 
 **Three Types:**
 
@@ -53,15 +53,15 @@ If `business_type` is missing, ask: "What type of business is this? B2B SaaS, Se
 3. **Services:** Free audit, strategy session, diagnostic review
 4. **Physical Products:** Tangible items (books, charts, kits)
 
-### MAGIC Naming Formula (from $100M Offers)
+### MAGIC naming formula (from $100M offers)
 
 Name your lead magnet using 3-5 of these elements:
 
-- **M = Magnet** -- Why does this exist? (free, limited-time, exclusive)
-- **A = Avatar** -- Who is it for? (founders, marketers, ops leaders)
-- **G = Goal** -- What result does it produce? (more leads, less churn, faster shipping)
-- **I = Interval** -- What's the time frame? (30 days, 15 minutes, one week)
-- **C = Container** -- What format is it? (see container list below)
+- **M = Magnet**: Why does this exist? (free, limited-time, exclusive)
+- **A = Avatar**: Who is it for? (founders, marketers, ops leaders)
+- **G = Goal**: What result does it produce? (more leads, less churn, faster shipping)
+- **I = Interval**: What's the time frame? (30 days, 15 minutes, one week)
+- **C = Container**: What format is it? (see container list below)
 
 **Container words by business type:**
 
@@ -80,7 +80,7 @@ Name your lead magnet using 3-5 of these elements:
 - "SaaS Pricing Benchmark Report" (Goal + Container + Avatar implied)
 - "Customer Onboarding Blueprint for B2B Teams" (Goal + Container + Avatar)
 
-### Isenberg's Hyper-Congruent Model
+### Isenberg's Hyper-Congruent model
 
 Instead of one generic lead magnet for everything, create lead magnets tailored to specific content pieces. Each lead magnet feels like the natural next step from a specific post, video, or article.
 
@@ -88,7 +88,7 @@ Instead of one generic lead magnet for everything, create lead magnets tailored 
 
 **Validation cascade:** Before building a lead magnet, test the concept as a lightweight social post. If the post resonates, expand to a full lead magnet. If not, iterate before investing build time.
 
-### Dickerson's AI-Powered Asset Creation
+### Dickerson's AI-powered asset creation
 
 Use AI to handle approximately 80% of lead magnet creation. The founder adds the remaining 20%: unique insights, proprietary data, real examples, and industry credibility.
 
@@ -98,7 +98,7 @@ Use AI to handle approximately 80% of lead magnet creation. The founder adds the
 
 ## Process
 
-### Step 1: Set Context
+### Step 1: Set context
 
 Confirm from the handoff block or ask:
 - Startup name
@@ -107,7 +107,7 @@ Confirm from the handoff block or ask:
 - Core offer (what do you sell?)
 - Top 1-2 customer pain points
 
-### Step 2: Generate 5-7 Concepts
+### Step 2: Generate 5-7 concepts
 
 Produce concepts that mix types and delivery methods. Rules:
 - Mix Hormozi types (don't generate all Problem Revealing)
@@ -119,7 +119,7 @@ Produce concepts that mix types and delivery methods. Rules:
 For each concept, output:
 
 ```
-### Concept [N]: [MAGIC Name]
+### Concept [N]: [MAGIC name]
 
 **Type:** [Problem Revealing / Sample & Trial / One Step of Multi-Step]
 **Delivery Method:** [Software / Information / Services / Physical]
@@ -139,7 +139,7 @@ For each concept, output:
 - Tools: [what you'd use to build it]
 ```
 
-### Step 3: Score Each Concept
+### Step 3: Score each concept
 
 Apply the 7-dimension scoring framework (see below). Present as a comparison table:
 
@@ -151,7 +151,7 @@ Apply the 7-dimension scoring framework (see below). Present as a comparison tab
 
 Rank by composite score. Flag any concept scoring below 3.0 with a recommendation to rework or kill.
 
-### Step 4: Validation Hooks
+### Step 4: Validation hooks
 
 For the top 2-3 concepts:
 
@@ -160,14 +160,14 @@ For the top 2-3 concepts:
 
 **Validation principle:** Post the hook on LinkedIn, X, or wherever your ICP gathers. If it gets strong engagement, build the lead magnet. If not, iterate on the concept before investing build time.
 
-### Step 5: Recommend Next Step
+### Step 5: Recommend next step
 
 Based on scoring:
 - **Top concept scores 4.0+:** "Build this now. Use `offer-designer` to create landing page copy, automation flow, and nurture sequence."
 - **Top concept scores 3.0-3.9:** "Strong concept but needs refinement. Test the validation hook first, then build."
 - **Top concept below 3.0:** "None of these concepts are strong enough yet. Let's reframe the problem or adjust the ICP."
 
-## 7-Dimension Scoring Framework
+## 7-Dimension scoring framework
 
 Score each concept 1-5 on each dimension.
 
@@ -181,7 +181,7 @@ Score each concept 1-5 on each dimension.
 | 6 | **Distribution Fit** | Can you promote this through channels you already use? | Medium |
 | 7 | **Reuse Potential** | Can results generate content, case studies, or data loops? | Low |
 
-### Composite Score Calculation
+### Composite score calculation
 
 ```
 Composite = (V * 3 + B * 3 + I * 3 + C * 2 + S * 2 + D * 2 + R * 1) / 16
@@ -193,7 +193,7 @@ Composite = (V * 3 + B * 3 + I * 3 + C * 2 + S * 2 + D * 2 + R * 1) / 16
 - **2.0-2.9** = Needs rework. One or more critical dimensions are weak.
 - **Below 2.0** = Kill it. Doesn't fit the model.
 
-## Sherpa-Mode Challenge Prompts
+## Sherpa-mode challenge prompts
 
 Use these when `mode` is `with-sherpa`:
 
@@ -204,10 +204,10 @@ Use these when `mode` is `with-sherpa`:
 - "What's the simplest version of the top concept you could ship in 4 hours?"
 - "Does the bridge to your paid offer feel natural, or does it feel forced?"
 
-## Output Format
+## Output format
 
 ```
-## Lead Magnet Ideation - [startup_name]
+## Lead magnet ideation - [startup_name]
 ### Date: YYYY-MM-DD
 
 ### Context
@@ -215,18 +215,18 @@ Use these when `mode` is `with-sherpa`:
 - Business Type: [from the handoff block]
 - Core Offer: [what they sell]
 
-### Concepts Generated: [N]
+### Concepts generated: [N]
 [Full concept cards from Step 2]
 
-### Scoring Comparison
+### Scoring comparison
 [Table from Step 3]
 
-### Top Recommendation
+### Top recommendation
 **Build:** [top concept name]
 **Why:** [1-2 sentence rationale based on scoring]
 **Next Step:** [offer-designer / validate first / rethink]
 
-### Validation Hooks
+### Validation hooks
 [Hooks from Step 4 for top 2-3 concepts]
 ```
 

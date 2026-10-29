@@ -4,7 +4,7 @@
 
 Ships what you designed today to a live URL on agentpub.io, in one of four modes: an email-gated lead magnet page (the gate captures leads - no form builder needed), a two-variant positioning A/B test, a 30-day metrics scoreboard you update weekly in place, or a "demo that travels" page (video + QR + ROI one-pager) for products whose wow requires being there.
 
-**Time:** 25-45 minutes per mode | **Both tracks, on-demand (best right after Offer Designer or Prototype Launcher)**
+**Time:** 25-45 minutes per mode | **Stage:** Build. **Best for paths:** any (best right after Offer Designer or Prototype Launcher). Third-party skill.
 
 ## Important: Publishing Requires Claude Code
 
@@ -57,4 +57,13 @@ Then:
    agentpub.io with the right gate (email gate for A, optional password for C),
    a stable name so updates go to the same URL, and where my captured leads
    will appear.
+
+Handoff: if I paste a FOUNDER JAM HANDOFF block (key: value lines such as startup_name, mode, path, stage, problem_statement, target_market, icp_segment, hypothesis_selected, channels_selected, lead_magnet), use it as my context and ask only for what is missing. If I'm working alone, skip the challenge questions unless I ask to be pushed harder. When you finish, print the full block again in a code box with your new fields filled in and every other field unchanged, so I can paste it into the next prompt.
 ```
+
+
+---
+
+Third-party skill by Scott Murtaugh of GP Automations, released under CC0 1.0. It is not covered by the CC BY 4.0 license that applies to the rest of the Founder Jam pack.
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

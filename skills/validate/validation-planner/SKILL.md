@@ -1,6 +1,6 @@
 ---
 name: validation-planner
-description: Create the accountability plan that closes the day, with 2 days / 2 weeks / 2 months commitments with specific numbers and owners, funnel math, a 30-day Green/Yellow/Red decision framework, an accountability partner, and calendar reminders. Use in the Validate stage, as the last working skill of Founder Jam.
+description: Create the plan that closes the day: 2-day, 2-week, and 2-month commitments with numbers and owners, funnel math, a 30-day Green/Yellow/Red framework, and an accountability partner. Validate stage.
 license: CC-BY-4.0
 ---
 
@@ -8,7 +8,7 @@ license: CC-BY-4.0
 
 **Stage:** Validate. **Best for paths:** all paths.
 
-Turn today's work into a concrete 30-day commitment plan before you leave. Pushes for specificity -- not "do outreach" but real numbers, real owners, real deadlines. Includes funnel math and a decision framework so you know when to persist, optimize, or pivot.
+Turn today's work into a concrete 30-day commitment plan before you leave. Pushes for specificity, not "do outreach" but real numbers, real owners, real deadlines. Includes funnel math and a decision framework so you know when to persist, optimize, or pivot.
 
 ## Overview
 
@@ -29,23 +29,23 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 Fields needed:
-- `path` -- tailors funnel math template (B2B vs B2C defaults)
-- `stage` -- adjusts ambition of targets (idea vs early-revenue)
-- `startup_name` -- personalizes output
-- `mode` -- with-sherpa adds coach prompts
+- `path`: tailors funnel math template (B2B vs B2C defaults)
+- `stage`: adjusts ambition of targets (idea vs early-revenue)
+- `startup_name`: personalizes output
+- `mode`: with-sherpa adds coach prompts
 
 If a field is missing, ask:
 1. "Which path are you on: product and positioning, GTM and growth, sales, or ops and automation?"
-2. "What stage are you at -- idea, pre-revenue, or early-revenue?"
+2. "What stage are you at, idea, pre-revenue, or early-revenue?"
 3. "What's your startup name?"
 
-### Step 2: Context Check
+### Step 2: Context check
 
 Ask one quick question: "Give me the one thing you're most committed to testing in the next 30 days."
 
 This seeds the commitment structure. Build on it rather than starting from scratch.
 
-### Step 3: 2 Days / 2 Weeks / 2 Months Commitments
+### Step 3: 2 days / 2 weeks / 2 months commitments
 
 Work through each horizon one at a time. For each, push for specificity over vagueness.
 
@@ -54,7 +54,7 @@ Work through each horizon one at a time. For each, push for specificity over vag
 Ask: "What's the smallest experiment you could run in the next 48 hours that would tell you something real?"
 
 Capture:
-- Specific action (not "talk to customers" -- "send cold emails to 10 people in [specific list]")
+- Specific action (not "talk to customers": "send cold emails to 10 people in [specific list]")
 - Expected output (what you'll have at the end)
 - Success signal (what would tell you it worked)
 
@@ -75,7 +75,7 @@ Ask: "What will you have completed in two weeks that you don't have today?"
 Capture:
 - Specific milestone (a live landing page, 50 outreach emails sent, first 3 customer interviews done)
 - Owner (who on the team is responsible)
-- A number (volume, revenue, conversations -- something measurable)
+- A number (volume, revenue, conversations, something measurable)
 
 Format:
 ```
@@ -102,18 +102,18 @@ Target: [revenue, customers, or key metric]
 Decision: [what you'll do if you hit it / miss it]
 ```
 
-### Step 4: Funnel Math
+### Step 4: Funnel math
 
 Build a funnel math table tailored to path and startup stage. The goal is to work backwards from the desired outcome.
 
 **Funnel template (customize numbers based on startup stage and path):**
 
 ```
-## Funnel Math: [startup_name]
+## Funnel math: [startup_name]
 
 | Stage | Target | Conversion Rate | Notes |
 |-------|--------|-----------------|-------|
-| Outreach sent | [X] | -- | Starting volume |
+| Outreach sent | [X] |, | Starting volume |
 | Website visits | [X] | [X]% | From outreach |
 | Email captures | [X] | [X]% | Typical 60-70% of visits |
 | Qualified leads | [X] | [X]% | ICP match filter |
@@ -137,21 +137,21 @@ Adjust defaults based on `stage`:
 
 After presenting the table, ask: "Do these numbers feel realistic for your situation, or should we adjust?"
 
-### Step 5: 30-Day Decision Framework
+### Step 5: 30-day decision framework
 
 Present the Green/Yellow/Red framework with thresholds specific to this startup:
 
 ```
-## 30-Day Decision Framework: [startup_name]
+## 30-day decision framework: [startup_name]
 
 **North Star Metric:** [the one number that matters most]
 **Target by Day 30:** [specific number]
 
 | Signal | Threshold | Action |
 |--------|-----------|--------|
-| Green | 70%+ of target | Persist -- double down on what's working, document the playbook |
-| Yellow | 40-70% of target | Optimize -- find the one funnel step furthest from target and fix it |
-| Red | Below 40% | Pivot -- revisit ICP or offer before investing more effort |
+| Green | 70%+ of target | Persist, double down on what's working, document the playbook |
+| Yellow | 40-70% of target | Optimize, find the one funnel step furthest from target and fix it |
+| Red | Below 40% | Pivot, revisit ICP or offer before investing more effort |
 
 **If Yellow:** Run a funnel audit. Find the biggest drop-off. Fix that one thing before changing anything else.
 **If Red:** Go back to founder-setup. Revisit your ICP and problem statement before the next push.
@@ -159,7 +159,7 @@ Present the Green/Yellow/Red framework with thresholds specific to this startup:
 
 Ask the founder to confirm the North Star metric before finalizing. Push for one number, not a list.
 
-### Step 6: Accountability Partner
+### Step 6: Accountability partner
 
 Ask: "Who outside this room will hold you accountable to these numbers?"
 
@@ -176,12 +176,12 @@ Check-in: [date/cadence]
 Format: [how you'll share progress]
 ```
 
-### Step 7: Calendar Reminders
+### Step 7: Calendar reminders
 
 Generate text-format calendar reminders. Founder adds these manually.
 
 ```
-## Calendar Reminders to Add
+## Calendar reminders to add
 
 1. [Today + 2 days]: "[startup_name] 48-hour experiment check-in"
 2. [Today + 7 days]: "Week 1 funnel review with [accountability partner]"
@@ -198,14 +198,14 @@ If `mode` is `with-sherpa`, surface these questions as final prompts:
 - "If you hit Yellow in 30 days, what's your decision rule for pivoting vs. optimizing?"
 - "Who outside this room will hold you accountable to these numbers?"
 
-## Output Format
+## Output format
 
 Deliver in sequence, paste-ready:
 
-1. **Commitment Card** -- 2D/2W/2M with specific actions, owners, and signals
-2. **Funnel Math Table** -- volume targets with conversion benchmarks
-3. **Decision Framework** -- Green/Yellow/Red thresholds with action rules
-4. **Calendar Reminders** -- text format, founder adds manually
+1. **Commitment Card**: 2D/2W/2M with specific actions, owners, and signals
+2. **Funnel Math Table**: volume targets with conversion benchmarks
+3. **Decision Framework**: Green/Yellow/Red thresholds with action rules
+4. **Calendar Reminders**: text format, founder adds manually
 
 ## Where this runs
 

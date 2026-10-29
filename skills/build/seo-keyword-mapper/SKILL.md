@@ -1,6 +1,6 @@
 ---
 name: seo-keyword-mapper
-description: Map keyword opportunities with Dickerson's 6 Circles method, generate programmatic SEO templates, apply Isenberg's validation cascade to prioritize topics, and build a publishing roadmap. Use in the Build stage on the GTM and growth path when organic search or content is a planned channel.
+description: Map keyword opportunities with Dickerson's 6 Circles, generate programmatic SEO templates, prioritize topics, and build a publishing roadmap. Build stage, GTM and growth path when search is a channel.
 license: CC-BY-4.0
 ---
 
@@ -27,22 +27,22 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 **Read from the handoff block:**
-- `startup_name` -- company name for page titles
-- `icp_segment` -- target customer for ICP fit scoring
-- `business_type` -- service model for keyword selection
-- `mode` -- `with-sherpa` adds challenge prompts
+- `startup_name`: company name for page titles
+- `icp_segment`: target customer for ICP fit scoring
+- `business_type`: service model for keyword selection
+- `mode`: `with-sherpa` adds challenge prompts
 
 **Optional details (not in the handoff block, ask if useful):**
-- `service_areas` -- array of service offerings (drives Circle 1)
-- `industries_served` -- array of target industries (drives programmatic templates)
+- `service_areas`: array of service offerings (drives Circle 1)
+- `industries_served`: array of target industries (drives programmatic templates)
 
 **Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
-## The 6 Circles Method (Dickerson)
+## The 6 Circles method (Dickerson)
 
 Every keyword opportunity exists in one of six circles. Map all six before writing a single word.
 
-### Circle 1: What You Sell
+### Circle 1: What you sell
 
 Core service keywords. Most competitive but most directly commercial.
 
@@ -50,7 +50,7 @@ Core service keywords. Most competitive but most directly commercial.
 |-------------|-----------------|-------------------|
 | [from the handoff block or input] | [2-3 primary terms] | [3-5 long-tail phrases] |
 
-### Circle 2: Problems You Solve
+### Circle 2: Problems you solve
 
 Client pain points, stated in their language (not yours). High intent because searchers are looking for solutions.
 
@@ -60,7 +60,7 @@ Client pain points, stated in their language (not yours). High intent because se
 
 **Tip:** Use language from actual sales conversations, support tickets, and client calls. Not your marketing copy.
 
-### Circle 3: Outcomes You Deliver
+### Circle 3: Outcomes you deliver
 
 Result-oriented keywords. Connect to case studies and social proof.
 
@@ -68,7 +68,7 @@ Result-oriented keywords. Connect to case studies and social proof.
 |---------|---------|-------------------|
 | [measurable result] | [search terms] | [matching proof asset] |
 
-### Circle 4: Unique Positioning
+### Circle 4: Unique positioning
 
 Differentiation keywords. Lower volume but higher conversion.
 
@@ -76,7 +76,7 @@ Differentiation keywords. Lower volume but higher conversion.
 |---------------|---------|--------------|
 | [what makes you different] | [terms] | [how to write about this] |
 
-### Circle 5: Adjacent Topics
+### Circle 5: Adjacent topics
 
 Related interest areas your ICP searches for, even when not actively buying.
 
@@ -84,7 +84,7 @@ Related interest areas your ICP searches for, even when not actively buying.
 |---------------|---------|------------------------|
 | [related topic your ICP cares about] | [terms] | [how this connects to services] |
 
-### Circle 6: Entities to Associate
+### Circle 6: Entities to associate
 
 Brand association keywords. People, companies, tools, and methodologies you want to appear alongside in search.
 
@@ -94,7 +94,7 @@ Brand association keywords. People, companies, tools, and methodologies you want
 | Technology platforms | [tools] | Integration and expertise content |
 | Methodologies | [frameworks] | Application and adaptation content |
 
-## Keyword Scoring Framework
+## Keyword scoring framework
 
 Score every keyword on 5 dimensions (1-5 each):
 
@@ -109,12 +109,12 @@ Score every keyword on 5 dimensions (1-5 each):
 **Composite Score:** Volume + (Competition inverted) + Intent Alignment + ICP Fit + Conversion Potential
 
 **Priority tiers:**
-- 20-25: Tier 1 -- Write immediately
-- 15-19: Tier 2 -- Write in Phase 2
-- 10-14: Tier 3 -- Programmatic pages or later
+- 20-25: Tier 1, Write immediately
+- 15-19: Tier 2, Write in Phase 2
+- 10-14: Tier 3, Programmatic pages or later
 - Below 10: Skip or monitor
 
-### Starving Crowd Filter (Hormozi)
+### Starving Crowd filter (Hormozi)
 
 After scoring, apply this filter to top keywords:
 
@@ -125,11 +125,11 @@ After scoring, apply this filter to top keywords:
 | Decision Speed | Can they move in 30-60 days? | Long procurement cycles you can't serve |
 | Willingness | Is budget allocated? | "Free" intent, pure DIY seekers |
 
-## Programmatic SEO Templates (Dickerson)
+## Programmatic SEO templates (Dickerson)
 
 Generate pages at scale using template patterns.
 
-### Template 1: `[Service] for [Industry]`
+### Template 1: `[Service] for [industry]`
 
 ```
 URL pattern: /services/[service-slug]-for-[industry-slug]
@@ -143,28 +143,28 @@ Content outline per page:
 3. Relevant case study (Circle 3 keywords)
 4. CTA to assessment or strategy call
 
-### Template 2: `[Service] for [Role]`
+### Template 2: `[Service] for [role]`
 
 ```
 URL pattern: /services/[service-slug]-for-[role-slug]
 Title pattern: "[Service] for [Role]s | [startup_name]"
 ```
 
-### Template 3: `[Tool/Approach] vs [Tool/Approach]`
+### Template 3: `[tool/approach] vs [tool/approach]`
 
 ```
 URL pattern: /insights/[thing-a]-vs-[thing-b]
 Title pattern: "[Thing A] vs [Thing B]: Which Is Right for [ICP]?"
 ```
 
-### Template 4: `Best [Solution] for [Use Case]`
+### Template 4: `Best [solution] for [use case]`
 
 ```
 URL pattern: /insights/best-[solution]-for-[use-case]
 Title pattern: "Best [Solution] for [Use Case] | [startup_name]"
 ```
 
-### Publishing Velocity Rules (Dickerson)
+### Publishing velocity rules (Dickerson)
 
 - Publish 3-5 pages per week, NOT all at once
 - Velocity signals matter to search engines
@@ -172,7 +172,7 @@ Title pattern: "Best [Solution] for [Use Case] | [startup_name]"
 - Maximum 2 programmatic pages on the same day
 - Batch-create content, then schedule publication over weeks
 
-## Validation Cascade (Isenberg)
+## Validation cascade (Isenberg)
 
 Before committing to a full blog post or page, validate the topic:
 
@@ -198,7 +198,7 @@ Stage 4: Amplify via newsletter + paid (ongoing)
 
 **Exception:** Programmatic pages skip the cascade. Validate the template pattern, not individual pages.
 
-## Human Checkpoint Checklist (Dickerson)
+## Human checkpoint checklist (Dickerson)
 
 Before publishing ANY page:
 
@@ -209,37 +209,37 @@ Before publishing ANY page:
 - [ ] Passes the test: "Would you send this to a client?"
 - [ ] CTA present and contextually relevant
 
-## Output Format
+## Output format
 
 ```
-## Keyword Map: [Service Area]
+## Keyword map: [Service area]
 **Last updated:** YYYY-MM-DD
 
 ### Circle 1-6
 [tables for each circle]
 
-### Scoring Summary
+### Scoring summary
 | Keyword | Vol | Comp | Intent | ICP | Conv | Total | Tier | Starving Crowd? |
 |---------|-----|------|--------|-----|------|-------|------|-----------------|
 [sorted by total score descending]
 
-### Programmatic Opportunities
+### Programmatic opportunities
 [template patterns and estimated page counts]
 
-### Recommended Publishing Order
+### Recommended publishing order
 [prioritized list with rationale]
 ```
 
 ## Workflow
 
-1. **Select service area** -- Specific area or "all" to map everything
-2. **Map all 6 circles** -- Populate with specific keywords using client language
-3. **Score and prioritize** -- Apply 5-dimension scoring + starving crowd filter
-4. **Generate programmatic templates** -- For Tier 3 keywords
-5. **Build publishing roadmap** -- Phased plan respecting velocity rules
-6. **Track** -- Maintain keyword tracker with coverage and performance data
+1. **Select service area**: Specific area or "all" to map everything
+2. **Map all 6 circles**: Populate with specific keywords using client language
+3. **Score and prioritize**: Apply 5-dimension scoring + starving crowd filter
+4. **Generate programmatic templates**: For Tier 3 keywords
+5. **Build publishing roadmap**: Phased plan respecting velocity rules
+6. **Track**: Maintain keyword tracker with coverage and performance data
 
-## Sherpa Mode
+## Sherpa mode
 
 When `mode` is `with-sherpa`, add these challenge prompts:
 
@@ -256,7 +256,7 @@ When `mode` is `with-sherpa`, add these challenge prompts:
 - Never skip the validation cascade for high-investment content
 - Never fabricate search volume data. Use available tools or flag as estimated
 
-## Works Well With
+## Works well with
 
 - If using `content-calendar-planner`: keyword maps feed directly into the content calendar
 - If using `case-study-generator`: Circle 3 keywords map to specific case studies for blog posts

@@ -1,6 +1,6 @@
 ---
 name: growth-builder
-description: Build one automation (sales lead enrichment or customer support), define a North Star metric, and write a 30-day validation plan with Green/Yellow/Red decision thresholds. Use in the Build stage on the GTM and growth or ops and automation paths.
+description: Build one automation (sales lead enrichment or customer support), define a North Star metric, and write a 30-day validation plan with Green/Yellow/Red thresholds. Build stage, GTM or ops paths.
 license: CC-BY-4.0
 ---
 
@@ -32,11 +32,11 @@ If any fields are missing, ask for them before proceeding. If `channels_selected
 
 ## Process
 
-### Sub-activity A: Choose One Automation
+### Sub-activity A: Choose one automation
 
 **Introduce the activity:**
 
-"Automation is not about replacing human relationships -- it is about removing the manual steps that prevent you from having more of them. Pick one automation to build today. Done and deployed beats perfect and planned."
+"Automation is not about replacing human relationships, it is about removing the manual steps that prevent you from having more of them. Pick one automation to build today. Done and deployed beats perfect and planned."
 
 **Present two options and ask the founder to choose:**
 
@@ -140,7 +140,7 @@ Setup complexity: **Easy** (1-2 hours first-time setup)
 **Output: Automation Spec**
 
 ```
-## Automation Spec - [startup_name]
+## Automation spec - [startup_name]
 
 **Type:** [Sales Lead Enrichment / Customer Support]
 **Setup complexity:** [Easy / Medium / Hard]
@@ -167,7 +167,7 @@ Setup complexity: **Easy** (1-2 hours first-time setup)
 
 ---
 
-### Sub-activity B: North Star Metric + Supporting Metrics
+### Sub-activity B: North Star metric + supporting metrics
 
 **Introduce the activity:**
 
@@ -219,7 +219,7 @@ For each metric, ask the founder: "What would Green look like in 30 days?" Use t
 **Output: Metrics Dashboard Template**
 
 ```
-## Metrics Dashboard - [startup_name]
+## Metrics dashboard - [startup_name]
 
 **North Star:** [metric name]
 **30-day target:** [number]
@@ -239,20 +239,20 @@ For each metric, ask the founder: "What would Green look like in 30 days?" Use t
 
 **Sherpa-mode challenge prompts:**
 - "If you could only track one number for 90 days, what would tell you if this is working?"
-- "What does 'activated' mean for your specific product -- not sign-ups, the moment they get value?"
+- "What does 'activated' mean for your specific product, not sign-ups, the moment they get value?"
 - "Who outside this room will review these metrics with you in 30 days?"
 
 ---
 
-### Sub-activity C: 30-Day Validation Plan
+### Sub-activity C: 30-day validation plan
 
 **Introduce the activity:**
 
-"Thirty days. Specific weekly commitments. And a decision rule before you start so that you know exactly when to persist, optimize, or pivot -- without having to make an emotional judgment call mid-experiment."
+"Thirty days. Specific weekly commitments. And a decision rule before you start so that you know exactly when to persist, optimize, or pivot, without having to make an emotional judgment call mid-experiment."
 
 **Step 1: Build the week-by-week plan**
 
-**Week 1 -- Setup (Days 1-7)**
+**Week 1, Setup (Days 1-7)**
 Goal: Everything is live, nothing is manual.
 - [ ] Channels activated (profiles, pages, templates ready)
 - [ ] Lead magnet live at a real URL
@@ -260,21 +260,21 @@ Goal: Everything is live, nothing is manual.
 - [ ] Metrics dashboard created and baseline recorded
 - [ ] First content piece drafted or scheduled
 
-**Week 2 -- Launch (Days 8-14)**
+**Week 2, Launch (Days 8-14)**
 Goal: First real outreach or publish.
 - [ ] First outreach batch sent (minimum: 50 personalized messages, or 1 piece of content published)
 - [ ] Lead magnet promoted on primary channel
 - [ ] First lead captured and routed through automation
 - [ ] Weekly metrics check: are acquisition numbers moving?
 
-**Week 3 -- Optimize (Days 15-21)**
+**Week 3, Optimize (Days 15-21)**
 Goal: Fix the weakest element before scaling.
 - [ ] Review all metrics against targets
 - [ ] Identify the single metric furthest from target
 - [ ] Run one focused adjustment (message, audience, offer, or channel)
 - [ ] Keep outreach or publishing cadence consistent
 
-**Week 4 -- Decide (Days 22-30)**
+**Week 4, Decide (Days 22-30)**
 Goal: Green/Yellow/Red assessment with a commitment to the next 60 days.
 - [ ] Final metrics review against all targets
 - [ ] Apply decision framework (below)
@@ -285,26 +285,26 @@ Goal: Green/Yellow/Red assessment with a commitment to the next 60 days.
 
 Based on North Star Metric performance at the end of Week 4:
 
-**Green -- 70% or more of target achieved**
+**Green, 70% or more of target achieved**
 Decision: Persist and scale.
 - Document exactly what worked (message, audience, timing, channel)
 - Double the effort or budget in this direction
 - Build a repeatable system around what is working
 - Set 60-day target at 2x the 30-day result
 
-**Yellow -- 40-70% of target achieved**
+**Yellow, 40-70% of target achieved**
 Decision: Optimize before scaling.
-- Identify the single metric furthest from target -- that is the constraint
+- Identify the single metric furthest from target, that is the constraint
 - Run one focused A/B test on the weakest element
 - Hold current investment level while iterating
 - Set a 30-day timer for the next decision point
 - Do NOT add new channels or new offers yet
 
-**Red -- Under 40% of target achieved**
+**Red, Under 40% of target achieved**
 Decision: Pivot the approach.
 - Do not scale a broken channel or broken offer
 - Return to diagnosis: Was the ICP right? Was the message right? Was the channel right?
-- Talk to 5 people who saw the offer but did not convert -- listen for the real objection
+- Talk to 5 people who saw the offer but did not convert, listen for the real objection
 - Pick a different channel or fundamentally reframe the offer before investing more
 
 **80/15/5 Channel Allocation Rule:**
@@ -312,7 +312,7 @@ Decision: Pivot the approach.
 When the founder confirms channels for the 30-day plan, apply this allocation framework:
 
 - **Primary channel (80% of effort):** The one channel that scored highest and has the fastest path to signal. This is where nearly all time, energy, and budget goes for the first 30 days.
-- **Secondary channel (15% of effort):** A supporting channel that reinforces the primary -- often content or nurture that feeds the primary channel's pipeline.
+- **Secondary channel (15% of effort):** A supporting channel that reinforces the primary, often content or nurture that feeds the primary channel's pipeline.
 - **Experimental (5% of effort):** One small test of a channel or tactic outside the plan. Low investment, just enough to learn whether it merits future attention.
 
 The mistake early-stage founders make is spreading effort across 4-5 channels and getting no signal from any of them. The 80/15/5 rule forces focus.
@@ -321,12 +321,12 @@ The mistake early-stage founders make is spreading effort across 4-5 channels an
 
 If the founder's primary or secondary channel involves outbound email, LinkedIn outreach, or cold messages, enforce these rules for all generated outreach copy:
 
-- No "I hope this email finds you well" -- start with something specific to the recipient
-- No corporate jargon -- write like a person, not a press release
-- Questions > Statements -- ask, don't tell
-- Specific > Generic -- name the industry, the role, the problem
-- Short > Long -- under 75 words for cold email, under 100 words for follow-ups
-- One CTA per email -- never give two choices
+- No "I hope this email finds you well": start with something specific to the recipient
+- No corporate jargon: write like a person, not a press release
+- Questions > Statements: ask, don't tell
+- Specific > Generic: name the industry, the role, the problem
+- Short > Long: under 75 words for cold email, under 100 words for follow-ups
+- One CTA per email: never give two choices
 
 Each cold message should feel like a 1:1 message, not a blast. If it could be sent to 1,000 people without changing a word, it is not personalized enough.
 
@@ -337,35 +337,35 @@ Based on the 30-day plan, confirm which channels the founder is committing to. A
 **Output: 30-Day Calendar + Decision Framework Card**
 
 ```
-## 30-Day Validation Plan - [startup_name]
+## 30-day validation plan - [startup_name]
 
 **North Star:** [metric]
 **Target:** [number]
 **Primary channel:** [channel]
 **Lead magnet:** [title]
 
-### Week 1 -- Setup
+### Week 1: Setup
 - [ ] [specific action 1]
 - [ ] [specific action 2]
 - [ ] [specific action 3]
 
-### Week 2 -- Launch
+### Week 2: Launch
 - [ ] [specific action 1]
 - [ ] [specific action 2]
 - [ ] [specific action 3]
 
-### Week 3 -- Optimize
+### Week 3: Optimize
 - [ ] [specific action 1]
 - [ ] [specific action 2]
 
-### Week 4 -- Decide
+### Week 4: Decide
 - [ ] Final metrics review
 - [ ] Apply Green / Yellow / Red framework
 - [ ] Write 60-day commitment
 
 ---
 
-## Decision Framework Card
+## Decision framework card
 
 **My North Star target for 30 days:** [number]
 
@@ -380,7 +380,7 @@ Based on the 30-day plan, confirm which channels the founder is committing to. A
 ```
 
 **Sherpa-mode challenge prompts:**
-- "What's your decision rule for knowing when to pivot vs. persist -- and are you willing to commit to it now?"
+- "What's your decision rule for knowing when to pivot vs. persist, and are you willing to commit to it now?"
 - "What could break this plan in Week 1, and how will you catch it early?"
 - "Who outside this room will hold you to these numbers in 30 days?"
 

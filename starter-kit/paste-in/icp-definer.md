@@ -60,3 +60,7 @@ channels_selected:
 ---
 
 **Next:** copy the FOUNDER JAM HANDOFF block and use it in `lead-magnet-ideator.md`.
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

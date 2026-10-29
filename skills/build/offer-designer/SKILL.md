@@ -1,6 +1,6 @@
 ---
 name: offer-designer
-description: Design a lead magnet that fits the business type, map the content and lead-capture workflow, and write a 7-email nurture sequence. Use in the Build stage on the GTM and growth path, after icp-definer has chosen a beachhead customer.
+description: Design a lead magnet that fits the business type, map the content and lead-capture workflow, and write a 7-email nurture sequence. Build stage, GTM and growth path, after icp-definer.
 license: CC-BY-4.0
 ---
 
@@ -34,7 +34,7 @@ If `business_type` is missing, ask: "What type of business is this? B2B SaaS, Se
 
 ## Process
 
-### Optional Pre-Step: Value Proposition Canvas
+### Optional pre-step: Value proposition canvas
 
 If the founder has not yet articulated a clear value proposition, offer this as an optional pre-step before lead magnet selection. Skip if the founder already has a strong positioning statement from a previous session.
 
@@ -57,7 +57,7 @@ Output a brief positioning statement if the founder needs one:
 
 ---
 
-### Sub-activity A: Offer + Lead Magnet Design
+### Sub-activity A: Offer + lead magnet design
 
 **Introduce the activity:**
 
@@ -68,23 +68,23 @@ Output a brief positioning statement if the founder needs one:
 Present options based on `business_type`:
 
 **B2B SaaS:**
-- ROI Calculator -- "Input your current [cost/time], see your payback period with [startup_name]"
-- Industry Benchmark Report -- "How does your [key metric] compare to peers in [industry]?"
-- Implementation Checklist -- Step-by-step guide to [core outcome]
+- ROI Calculator: "Input your current [cost/time], see your payback period with [startup_name]"
+- Industry Benchmark Report: "How does your [key metric] compare to peers in [industry]?"
+- Implementation Checklist: Step-by-step guide to [core outcome]
 
 **Services / Agency:**
-- Client Case Study -- Before/after with specific numbers, specific situation, specific timeline
-- Template Library -- The actual templates your team uses (strategy deck, proposal, onboarding doc)
-- Free Audit -- Scoped 20-minute review of a specific deliverable (landing page, sales deck, workflow)
+- Client Case Study: Before/after with specific numbers, specific situation, specific timeline
+- Template Library: The actual templates your team uses (strategy deck, proposal, onboarding doc)
+- Free Audit: Scoped 20-minute review of a specific deliverable (landing page, sales deck, workflow)
 
 **Marketplace:**
-- Seller Success Guide -- "How our top 10 [supply-side participants] got their first 10 [transactions]"
-- Buyer Decision Framework -- Step-by-step guide for buyers to evaluate options in this category
+- Seller Success Guide: "How our top 10 [supply-side participants] got their first 10 [transactions]"
+- Buyer Decision Framework: Step-by-step guide for buyers to evaluate options in this category
 
 **Consumer:**
-- Comparison Guide -- Side-by-side breakdown of top alternatives including yours
-- "Before You Buy" Checklist -- What to look for and ask before making a decision
-- Community Access -- Free entry to a Slack group, Discord, or private newsletter for this ICP
+- Comparison Guide: Side-by-side breakdown of top alternatives including yours
+- "Before You Buy" Checklist: What to look for and ask before making a decision
+- Community Access: Free entry to a Slack group, Discord, or private newsletter for this ICP
 
 **Lead Magnet Complexity Tiers:**
 
@@ -92,11 +92,11 @@ Before selecting, orient the founder on realistic build times for the workshop d
 
 | Tier | Description | Build Time | Best For |
 |------|-------------|-----------|---------|
-| **EASY** | PDF, checklist, simple guide | 30-60 min | Everyone -- START HERE during the workshop |
+| **EASY** | PDF, checklist, simple guide | 30-60 min | Everyone, START HERE during the workshop |
 | **MEDIUM** | Interactive quiz, simple calculator | 60-90 min | Companies with a clear ROI story |
 | **HARD** | Custom tool, interactive app | 2-4+ hours | Post-event project, not for workshop day |
 
-Recommend starting with an EASY tier lead magnet during the workshop. Medium and Hard tiers are post-event projects -- the founder should build and deploy an EASY version today and upgrade later once they have data.
+Recommend starting with an EASY tier lead magnet during the workshop. Medium and Hard tiers are post-event projects, the founder should build and deploy an EASY version today and upgrade later once they have data.
 
 **Lead Magnet Requirements Checklist:**
 
@@ -106,7 +106,7 @@ Before the founder begins building, validate the lead magnet concept against the
 - [ ] **Has a clear value promise** visible in the title
 - [ ] **Can be consumed in under 10 minutes** (quick to value)
 - [ ] **Leads naturally to the product or service** (logical next step)
-- [ ] **Requires email to access** (gated -- the whole point is lead capture)
+- [ ] **Requires email to access** (gated: the whole point is lead capture)
 - [ ] **Has a clear CTA at the end** (drives the next action)
 
 If a lead magnet fails any of these, revise before building. A checklist that checks all six boxes will outperform a polished guide that misses two.
@@ -129,10 +129,10 @@ Generate the four elements that appear before the scroll:
 ```
 **Headline:** [Direct benefit statement addressing the ICP's #1 pain]
 
-**Subhead:** [Expand on the headline -- who this is for, what they will walk away with]
+**Subhead:** [Expand on the headline, who this is for, what they will walk away with]
 
 **3 Bullet Outcomes:**
-- [Specific thing they will learn or get -- use numbers where possible]
+- [Specific thing they will learn or get: use numbers where possible]
 - [Second specific outcome]
 - [Third specific outcome]
 
@@ -147,7 +147,7 @@ Generate the four elements that appear before the scroll:
 **Output: Lead Magnet Brief**
 
 ```
-## Lead Magnet Brief - [startup_name]
+## Lead magnet brief - [startup_name]
 
 **Type:** [selected type]
 **Working Title:** [draft title]
@@ -169,11 +169,11 @@ CTA: [CTA copy]
 
 ---
 
-### Sub-activity B: Content Workflow Automation
+### Sub-activity B: Content workflow automation
 
 **Introduce the activity:**
 
-"Before we build the email sequence, let's map the plumbing -- how content creates leads and how leads get captured, scored, and routed. Even a simple version of this system saves hours every week."
+"Before we build the email sequence, let's map the plumbing, how content creates leads and how leads get captured, scored, and routed. Even a simple version of this system saves hours every week."
 
 **Repurposing workflow:**
 
@@ -226,7 +226,7 @@ Form submission received
 **Output: Automation Workflow Diagram (text-based, paste-ready)**
 
 ```
-## [startup_name] Lead Flow
+## [startup_name] lead flow
 
 [Content Published]
       |
@@ -254,13 +254,13 @@ Form submission received
 
 ---
 
-### Sub-activity C: 7-Email Nurture Sequence
+### Sub-activity C: 7-Email nurture sequence
 
 **Introduce the activity:**
 
-"The nurture sequence converts leads who are not ready to buy today into conversations next month. Seven emails, 21 days. The goal is one specific action at the end -- a reply, a booking, or a purchase."
+"The nurture sequence converts leads who are not ready to buy today into conversations next month. Seven emails, 21 days. The goal is one specific action at the end, a reply, a booking, or a purchase."
 
-**Ask first:** "What is the one outcome you want from this sequence -- a reply, a booking, or a purchase?"
+**Ask first:** "What is the one outcome you want from this sequence, a reply, a booking, or a purchase?"
 
 This determines the CTA for Email 5 and Email 7.
 
@@ -285,7 +285,7 @@ Best practices: keep under 50 characters when possible, use first name sparingly
 
 For each email, produce a subject line and a full fill-in email body using the templates below. All copy should be written for the `icp_segment` persona identified in `icp-definer`. Include personalization tokens ([First Name], [Company]) and P.S. hooks where indicated.
 
-**Email 1 -- Day 0 (Immediate after form submission)**
+**Email 1, Day 0 (Immediate after form submission)**
 - Purpose: Deliver the lead magnet, set expectations for the sequence
 - Subject: "Here's your [lead magnet title], [First Name]"
 - Template:
@@ -297,18 +297,18 @@ Thanks for downloading [Lead Magnet Title]!
 
 Here's your copy: [Link]
 
-Quick tip: [Specific insight from the lead magnet that teases the most valuable part -- write one sentence that makes them want to open it immediately].
+Quick tip: [Specific insight from the lead magnet that teases the most valuable part, write one sentence that makes them want to open it immediately].
 
-Over the next few weeks I'll send you [X] short emails about [topic] -- practical, no fluff. If you want to [take the next step], I'm happy to [specific offer].
+Over the next few weeks I'll send you [X] short emails about [topic]: practical, no fluff. If you want to [take the next step], I'm happy to [specific offer].
 
 [Your Name]
 [Company]
 
-P.S. In my next email, I'll share [teaser for Email 2 -- make it specific and curiosity-driven].
+P.S. In my next email, I'll share [teaser for Email 2, make it specific and curiosity-driven].
 ```
 
-**Email 2 -- Day 2**
-- Purpose: Pure value -- one insight with no ask
+**Email 2, Day 2**
+- Purpose: Pure value, one insight with no ask
 - Subject: Use Curiosity or Number formula
 - Template:
 
@@ -319,21 +319,21 @@ Most [target audience] struggle with [topic] because they [common mistake].
 
 Here's what I've learned working with [X number of] customers:
 
-[Key insight #1 -- specific and actionable]
+[Key insight #1, specific and actionable]
 
-[Key insight #2 -- counterintuitive or surprising]
+[Key insight #2, counterintuitive or surprising]
 
-[Key insight #3 -- immediately applicable]
+[Key insight #3, immediately applicable]
 
 The fix? [Simple framework or one-sentence approach].
 
-Reply if this resonates -- I read every email.
+Reply if this resonates. I read every email.
 
 [Your Name]
 ```
 
-**Email 3 -- Day 5**
-- Purpose: Education -- how to think about the problem
+**Email 3, Day 5**
+- Purpose: Education, how to think about the problem
 - Subject: "Why most [ICP descriptor] get [core challenge] wrong"
 - Template:
 
@@ -344,7 +344,7 @@ Let me reframe something about [core problem]:
 
 [Share the mental model or industry context that changes how they think about it. 2-3 sentences that connect back to what the lead magnet started.]
 
-[Explain why the conventional approach fails -- be specific, not generic.]
+[Explain why the conventional approach fails, be specific, not generic.]
 
 [Introduce your alternative framing in 1-2 sentences.]
 
@@ -353,8 +353,8 @@ Tomorrow I'll share how one [customer type] applied this and what happened.
 [Your Name]
 ```
 
-**Email 4 -- Day 8**
-- Purpose: Social proof -- customer story with specifics
+**Email 4, Day 8**
+- Purpose: Social proof, customer story with specifics
 - Subject: "How [generic company/person type] went from [pain state] to [outcome]"
 - Template:
 
@@ -366,22 +366,22 @@ Quick story for you:
 [Customer Name/Type] came to us with [specific problem]. They had tried [alternatives] but [why those didn't work].
 
 After working with us:
-- [Result 1 -- specific number or outcome]
-- [Result 2 -- specific number or outcome]
-- [Result 3 -- specific number or outcome]
+- [Result 1: specific number or outcome]
+- [Result 2: specific number or outcome]
+- [Result 3: specific number or outcome]
 
 Here's what made the difference: [Key insight about why it worked].
 
-Want similar results? [Soft CTA -- reply or link]
+Want similar results? [Soft CTA, reply or link]
 
 [Your Name]
 
 P.S. [Personal note or additional proof point]
 ```
 
-**Email 5 -- Day 12**
+**Email 5, Day 12**
 - Purpose: Value + soft CTA (first gentle offer)
-- Subject: "[Resource title] -- thought you'd want this"
+- Subject: "[Resource title]: thought you'd want this"
 - Template:
 
 ```
@@ -389,20 +389,20 @@ Hey [First Name],
 
 I put together [resource/framework/guide] that I think you'll find useful:
 
-[Describe the resource in 1-2 sentences -- what it is and why it matters to them]
+[Describe the resource in 1-2 sentences, what it is and why it matters to them]
 
 [Link or inline content]
 
-If you're working through [specific problem], I'd be happy to [specific offer -- 20-minute call / quick review / free demo].
+If you're working through [specific problem], I'd be happy to [specific offer, 20-minute call / quick review / free demo].
 
-No pressure -- but if [pain point] is costing you [specific cost], it's worth a conversation.
+No pressure, but if [pain point] is costing you [specific cost], it's worth a conversation.
 
 [Calendly Link or "Just reply to this email"]
 
 [Your Name]
 ```
 
-**Email 6 -- Day 16**
+**Email 6, Day 16**
 - Purpose: Address the most common objection
 - Subject: "The most common reason [ICP] don't [take desired action]"
 - Template:
@@ -412,18 +412,18 @@ Hey [First Name],
 
 I'll be direct: the #1 reason [target audience] don't [take desired action] is [name the objection directly].
 
-I get it. [Empathize -- 1-2 sentences showing you understand why this objection is real.]
+I get it. [Empathize, 1-2 sentences showing you understand why this objection is real.]
 
 But here's what I've seen: [Counter-argument or reframe with a specific example or data point.]
 
-If that's what's been holding you back, [specific next step -- reply, book a call, try a free version].
+If that's what's been holding you back, [specific next step, reply, book a call, try a free version].
 
 [Your Name]
 
 P.S. [Address a secondary objection or add urgency]
 ```
 
-**Email 7 -- Day 21**
+**Email 7, Day 21**
 - Purpose: Ongoing cadence invitation
 - Subject: "Still thinking about [core pain/topic]?"
 - Template:
@@ -437,14 +437,14 @@ Is [solving this problem] still a priority?
 
 If yes, here are two ways I can help:
 
-1. [Quick option -- reply to this email, join community, etc.]
-2. [Deeper option -- book a call, start a trial, etc.]
+1. [Quick option, reply to this email, join community, etc.]
+2. [Deeper option, book a call, start a trial, etc.]
 
-If now isn't the right time, no worries -- I'll keep sending [weekly/monthly] insights on [topic]. You can always reply when the timing is right.
+If now isn't the right time, no worries. I'll keep sending [weekly/monthly] insights on [topic]. You can always reply when the timing is right.
 
 [Your Name]
 
-P.S. [Hook -- something valuable coming soon or a final compelling reason to act]
+P.S. [Hook, something valuable coming soon or a final compelling reason to act]
 ```
 
 - After this email: move to monthly newsletter cadence for long-term nurture.
@@ -452,46 +452,46 @@ P.S. [Hook -- something valuable coming soon or a final compelling reason to act
 **Sherpa-mode challenge prompts:**
 - "What would make someone forward this email to a colleague?"
 - "Which email in the sequence is most likely to get a reply? Is it soon enough?"
-- "What is the one outcome you want from this sequence -- a reply, a booking, or a purchase?"
+- "What is the one outcome you want from this sequence, a reply, a booking, or a purchase?"
 
 **Output: 7-Email Sequence**
 
 ```
-## 7-Email Nurture Sequence - [startup_name]
+## 7-Email nurture sequence - [startup_name]
 
-### Email 1 - Day 0
+### Email 1 - day 0
 Subject: [subject line]
 Body:
 [3-5 sentences]
 CTA: [action]
 
-### Email 2 - Day 2
+### Email 2 - day 2
 Subject: [subject line]
 Body:
 [3-5 sentences]
 
-### Email 3 - Day 5
+### Email 3 - day 5
 Subject: [subject line]
 Body:
 [3-5 sentences]
 
-### Email 4 - Day 8
+### Email 4 - day 8
 Subject: [subject line]
 Body:
 [3-5 sentences]
 
-### Email 5 - Day 12
+### Email 5 - day 12
 Subject: [subject line]
 Body:
 [3-5 sentences]
 CTA: [booking link or reply instruction]
 
-### Email 6 - Day 16
+### Email 6 - day 16
 Subject: [subject line]
 Body:
 [3-5 sentences]
 
-### Email 7 - Day 21
+### Email 7 - day 21
 Subject: [subject line]
 Body:
 [3-5 sentences]

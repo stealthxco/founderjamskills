@@ -1,20 +1,15 @@
 #!/usr/bin/env python3
 """Build the Founder Jam Starter Kit from the workshop skills.
 
-The kit is a solo-mode edition of two skills (icp-definer, lead-magnet-ideator)
-for founders who are not at a Founder Jam. It is generated, not hand-copied, so
-it cannot drift from skills/: every change is an exact anchor replacement, and a
-missing anchor fails the build instead of silently shipping the workshop text.
-
-What changes in the solo edition:
-  - the description is prefixed so the kit's skills are easy to tell apart
-  - everything else is copied from skills/<stage>/<name>/SKILL.md; the v2 skills
-    already default to solo mode and use the FOUNDER JAM HANDOFF block
+The kit is two skills (icp-definer, lead-magnet-ideator) for founders who are not
+at a Founder Jam. There is one copy of each skill: the zips are built straight from
+skills/focus/<name>/, the same folder package-skills.sh uses for dist/, so the kit
+cannot drift from the pack and a founder who uploads both gets identical skills.
+Each zip also carries LICENSE and CREDIT.txt, the same as dist/*.zip.
 
 Output:
-  starter-kit/skills/<skill>/SKILL.md      (real files, readable on GitHub)
-  starter-kit/dist/<skill>.zip             (claude.ai / Desktop upload)
-  starter-kit/dist/founder-jam-starter-kit.zip  (everything in one download)
+  starter-kit/dist/<skill>.zip                   (claude.ai / Desktop upload)
+  starter-kit/dist/founder-jam-starter-kit.zip   (everything in one download)
 
 Usage: python3 starter-kit/build.py
 """
@@ -26,38 +21,36 @@ import zipfile
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 KIT = REPO / "starter-kit"
-
-# v2 skills already ask "Is a sherpa with you today?", default to solo, and print and accept the
-# FOUNDER JAM HANDOFF block themselves, so the kit only changes the description.
-EDITS = {
-    "icp-definer": [("\ndescription: ", "\ndescription: Founder Jam Starter Kit (solo edition). ")],
-    "lead-magnet-ideator": [("\ndescription: ", "\ndescription: Founder Jam Starter Kit (solo edition). ")],
-}
+SKILLS = ["icp-definer", "lead-magnet-ideator"]
+CREDIT = (
+    "Founder Jam curriculum and skills by Drew Burdick \u00b7 program co-created with "
+    "Innovate Charlotte \u00b7 CC BY 4.0 \u00b7 drewburdick.com/founderjam"
+)
 
 
-def build_skill(name: str, edits: list[tuple[str, str]]) -> pathlib.Path:
+def entry(zf: zipfile.ZipFile, arc: str, data: bytes) -> None:
+    info = zipfile.ZipInfo(arc, date_time=(2026, 1, 1, 0, 0, 0))
+    info.compress_type = zipfile.ZIP_DEFLATED
+    info.external_attr = 0o644 << 16
+    zf.writestr(info, data)
+
+
+def build_skill_zip(name: str, out: pathlib.Path) -> None:
     matches = sorted((REPO / "skills").glob(f"*/{name}/SKILL.md"))
     if len(matches) != 1:
         sys.exit(f"ERROR: expected one skills/<stage>/{name}/SKILL.md, found {len(matches)}")
-    text = matches[0].read_text()
-    for old, new in edits:
-        count = text.count(old)
-        if count != 1:
-            sys.exit(f"ERROR: {name}: anchor found {count} times (need exactly 1): {old[:60]!r}")
-        text = text.replace(old, new)
-    out = KIT / "skills" / name / "SKILL.md"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(text)
-    return out
-
-
-def zip_dir(zip_path: pathlib.Path, entries: list[tuple[pathlib.Path, str]]) -> None:
-    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
-        for src, arc in entries:
-            info = zipfile.ZipInfo(arc, date_time=(2026, 1, 1, 0, 0, 0))
-            info.compress_type = zipfile.ZIP_DEFLATED
-            info.external_attr = 0o644 << 16
-            zf.writestr(info, src.read_bytes())
+    src = matches[0].parent
+    files: list[tuple[str, bytes]] = []
+    for path in sorted(src.rglob("*")):
+        if path.is_symlink():
+            sys.exit(f"ERROR: symlink in skill folder: {path}")
+        if path.is_file() and path.name != ".DS_Store":
+            files.append((f"{name}/{path.relative_to(src).as_posix()}", path.read_bytes()))
+    files.append((f"{name}/LICENSE", (REPO / "LICENSE").read_bytes()))
+    files.append((f"{name}/CREDIT.txt", (CREDIT + "\n").encode("utf-8")))
+    with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
+        for arc, data in sorted(files):
+            entry(zf, arc, data)
 
 
 def main() -> None:
@@ -66,9 +59,8 @@ def main() -> None:
     dist.mkdir(parents=True)
 
     bundle: list[tuple[pathlib.Path, str]] = []
-    for name, edits in EDITS.items():
-        skill_md = build_skill(name, edits)
-        zip_dir(dist / f"{name}.zip", [(skill_md, f"{name}/SKILL.md")])
+    for name in SKILLS:
+        build_skill_zip(name, dist / f"{name}.zip")
         bundle.append((dist / f"{name}.zip", f"founder-jam-starter-kit/upload-to-claude/{name}.zip"))
         print(f"built starter-kit/dist/{name}.zip")
 
@@ -80,7 +72,9 @@ def main() -> None:
             sys.exit(f"ERROR: missing starter-kit/{extra}")
         bundle.append((path, f"founder-jam-starter-kit/{extra}"))
 
-    zip_dir(dist / "founder-jam-starter-kit.zip", bundle)
+    with zipfile.ZipFile(dist / "founder-jam-starter-kit.zip", "w", zipfile.ZIP_DEFLATED) as zf:
+        for src, arc in bundle:
+            entry(zf, arc, src.read_bytes())
     print("built starter-kit/dist/founder-jam-starter-kit.zip")
 
 

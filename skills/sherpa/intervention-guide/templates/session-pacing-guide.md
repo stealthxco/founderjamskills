@@ -1,6 +1,6 @@
 # Session Pacing Guide
 
-Use this guide to keep founders on schedule. Times are guidelines -- the lead facilitator may flex the agenda based on cohort momentum.
+Use this guide to keep founders on schedule. Times are guidelines. The lead facilitator may flex the agenda based on cohort momentum.
 
 ## How these blocks map to the four stages
 
@@ -21,7 +21,7 @@ Founder Jam v2 runs one track with four stages (Understand, Focus, Build, Valida
 
 ---
 
-### Activity 1: SWOT + Battle Cards (90 min)
+### Activity 1: SWOT + battle cards (90 min)
 
 | Block | Time | What's Happening |
 |-------|------|------------------|
@@ -39,7 +39,7 @@ Founder Jam v2 runs one track with four stages (Understand, Focus, Build, Valida
 
 ---
 
-### Activity 2: Hypothesis Design (75 min)
+### Activity 2: Hypothesis design (75 min)
 
 | Block | Time | What's Happening |
 |-------|------|------------------|
@@ -57,7 +57,7 @@ Founder Jam v2 runs one track with four stages (Understand, Focus, Build, Valida
 
 ---
 
-### Activity 3: Prototype Launcher (120 min)
+### Activity 3: Prototype launcher (120 min)
 
 | Block | Time | What's Happening |
 |-------|------|------------------|
@@ -86,7 +86,7 @@ Founder Jam v2 runs one track with four stages (Understand, Focus, Build, Valida
 | Validation Planner | 0:00-0:15 | Each founder writes 3 commitments: 2 days / 2 weeks / 2 months. Specific actions, not intentions. |
 | Pitch Prep | 0:15-0:30 | Prepare 3-minute share-out: hypothesis, prototype, top commitment. |
 
-**If running long, cut:** Validation planner to 10 min. Pitch prep is informal -- no polish needed.
+**If running long, cut:** Validation planner to 10 min. Pitch prep is informal, no polish needed.
 
 ---
 
@@ -98,9 +98,9 @@ Founder Jam v2 runs one track with four stages (Understand, Focus, Build, Valida
 
 ---
 
-### Block 1: Define & Discover (90 min)
+### Block 1: Define & discover (90 min)
 
-#### Session 1: ICP Definition (30 min)
+#### Session 1: ICP definition (30 min)
 
 | Block | Time | What's Happening |
 |-------|------|------------------|
@@ -115,7 +115,7 @@ Founder Jam v2 runs one track with four stages (Understand, Focus, Build, Valida
 
 ---
 
-#### Session 2: JTBD Deep Dive (20 min)
+#### Session 2: JTBD deep dive (20 min)
 
 | Block | Time | What's Happening |
 |-------|------|------------------|
@@ -126,7 +126,7 @@ Founder Jam v2 runs one track with four stages (Understand, Focus, Build, Valida
 
 ---
 
-#### Session 3: Competitive Growth Analysis (40 min)
+#### Session 3: Competitive growth analysis (40 min)
 
 | Block | Time | What's Happening |
 |-------|------|------------------|
@@ -141,9 +141,9 @@ Founder Jam v2 runs one track with four stages (Understand, Focus, Build, Valida
 
 ---
 
-### Block 2: Design + AI Panel (90 min)
+### Block 2: Design + AI panel (90 min)
 
-#### Session 4: Lead Magnet Selection (25 min)
+#### Session 4: Lead magnet selection (25 min)
 
 | Block | Time | What's Happening |
 |-------|------|------------------|
@@ -158,7 +158,7 @@ Founder Jam v2 runs one track with four stages (Understand, Focus, Build, Valida
 
 ---
 
-#### Session 5: Content & Automation Workflow (25 min)
+#### Session 5: Content & automation workflow (25 min)
 
 | Block | Time | What's Happening |
 |-------|------|------------------|
@@ -170,7 +170,7 @@ Founder Jam v2 runs one track with four stages (Understand, Focus, Build, Valida
 
 ---
 
-#### Session 6: Lead Magnet Delivery & Email Sequence (25 min)
+#### Session 6: Lead magnet delivery & email sequence (25 min)
 
 | Block | Time | What's Happening |
 |-------|------|------------------|
@@ -184,7 +184,7 @@ Founder Jam v2 runs one track with four stages (Understand, Focus, Build, Valida
 
 ---
 
-#### AI Panel (15 min)
+#### AI panel (15 min)
 
 Candid conversation: what's working in AI-native growth in 2026. Real channels, real automation wins, honest failures.
 
@@ -215,7 +215,7 @@ Candid conversation: what's working in AI-native growth in 2026. Real channels, 
 
 ---
 
-#### Session 8: North Star Metrics (25 min)
+#### Session 8: North Star metrics (25 min)
 
 | Block | Time | What's Happening |
 |-------|------|------------------|
@@ -230,7 +230,7 @@ Candid conversation: what's working in AI-native growth in 2026. Real channels, 
 
 ---
 
-#### Session 9: 30-Day Plan (30 min)
+#### Session 9: 30-day plan (30 min)
 
 | Block | Time | What's Happening |
 |-------|------|------------------|
@@ -247,9 +247,9 @@ Candid conversation: what's working in AI-native growth in 2026. Real channels, 
 
 ---
 
-## General Pacing Rules
+## General pacing rules
 
 - **Behind by 15+ minutes:** Cut the lowest-leverage diverge block. Move to convergence.
-- **Ahead by 15+ minutes:** Add a "stress test" round -- ask one hard question per person.
+- **Ahead by 15+ minutes:** Add a "stress test" round, ask one hard question per person.
 - **Stuck team:** Re-center on ICP and one concrete next action. Escalate to lead facilitator if stuck for more than 10 minutes.
 - **Energy crash:** Take a 5-minute break before afternoon block. Worth the time.

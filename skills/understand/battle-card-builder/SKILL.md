@@ -1,6 +1,6 @@
 ---
 name: battle-card-builder
-description: Map the competitive landscape. Runs a SWOT self-assessment, identifies 3-5 competitors across direct, indirect, status quo, and future categories, and builds a battle card for each one. Use in the Understand stage, especially on the product and positioning path, or whenever a founder says they have no competitors.
+description: Map the competitive landscape: run a SWOT self-assessment, identify 3-5 competitors across four categories, and build a battle card for each. Understand stage, especially product and positioning.
 license: CC-BY-4.0
 ---
 
@@ -34,7 +34,7 @@ If a field is missing, ask conversationally:
 - "In one sentence, what problem does it solve?"
 - "Who is your target customer?"
 
-## Step 1: SWOT Self-Assessment
+## Step 1: SWOT self-assessment
 
 Before looking outward, look inward. Run the founder through an honest self-assessment.
 
@@ -43,7 +43,7 @@ Ask: "Before we look at competitors, let's be honest about where you stand today
 Collect answers and output a paste-ready SWOT matrix:
 
 ```
-## [startup_name] SWOT Self-Assessment
+## [startup_name] SWOT self-assessment
 
 | | Helpful | Harmful |
 |---|---|---|
@@ -65,7 +65,7 @@ Prompts for each quadrant:
 
 If `mode` is `with-sherpa`, add after weaknesses: "Which of these weaknesses would a well-funded competitor weaponize against you in a sales conversation?"
 
-## Step 2: Competitor Identification
+## Step 2: Competitor identification
 
 Handle the "no competitors" objection directly if the founder claims it:
 
@@ -75,7 +75,7 @@ Then identify competitors across four categories:
 
 **Direct competitors:** Companies solving the same problem for the same customer
 **Indirect competitors:** Companies solving the same job-to-be-done with a different approach
-**Status quo:** The current workaround -- spreadsheets, manual processes, doing nothing, hiring someone
+**Status quo:** The current workaround, spreadsheets, manual processes, doing nothing, hiring someone
 **Future competitors:** Large platforms or well-funded players who could enter this space
 
 Ask: "Let's find your real competitors. I'll search for some, and I want you to add any you've encountered in sales conversations or customer research."
@@ -89,9 +89,9 @@ Use WebSearch with queries like:
 
 Generate a list of 3-5 competitors (minimum one from each non-empty category). Confirm with the founder before proceeding.
 
-If `mode` is `with-sherpa`, add: "Who is the status quo competitor? The customer doing nothing or using spreadsheets is often your biggest competitor -- and the hardest to sell against."
+If `mode` is `with-sherpa`, add: "Who is the status quo competitor? The customer doing nothing or using spreadsheets is often your biggest competitor, and the hardest to sell against."
 
-## Step 3: Battle Cards
+## Step 3: Battle cards
 
 For each competitor, research and generate a battle card. Use WebSearch where available.
 
@@ -104,56 +104,56 @@ Research sources per competitor:
 **Battle Card Format:**
 
 ```
-## Battle Card: [Competitor Name]
+## Battle card: [Competitor name]
 **URL:** [competitor URL]
 **Category:** [Direct / Indirect / Status Quo / Future]
 
 ### Positioning
-[How they describe themselves in their own words -- from their homepage headline]
+[How they describe themselves in their own words, from their homepage headline]
 
-### Ideal Customer Profile
-[Who they're built for -- company size, industry, role]
+### Ideal customer profile
+[Who they're built for, company size, industry, role]
 
 ### Pricing
 [Model (seat/usage/flat) and price points if visible; "Not public" if gated]
 
-### Onboarding Experience
-[How they get customers started -- self-serve, sales-assisted, implementation required]
+### Onboarding experience
+[How they get customers started, self-serve, sales-assisted, implementation required]
 
-### Switching Costs
+### Switching costs
 **Level:** [High / Medium / Low]
 **Rationale:** [Why it is or isn't hard to leave them]
 
-### Key Integrations
+### Key integrations
 [List 3-5 integrations they highlight]
 
-### Top 3 Strengths
+### Top 3 strengths
 1. [strength]
 2. [strength]
 3. [strength]
 
-### Top 3 Weaknesses
-1. [weakness -- look for G2 review patterns, common complaints]
+### Top 3 weaknesses
+1. [weakness, look for G2 review patterns, common complaints]
 2. [weakness]
 3. [weakness]
 
-### Notable Case Studies / Social Proof
+### Notable case studies / social proof
 [Customer names, outcomes, or "No public case studies found"]
 
-### How We Win Against [Competitor Name]
-[Your specific advantage -- be concrete, not generic]
+### How we win against [competitor name]
+[Your specific advantage, be concrete, not generic]
 ```
 
 If `mode` is `with-sherpa`, add a "Devil's Advocate" section to each card:
 - "What if their weakness is actually a conscious trade-off? Could their customers see it as a feature?"
-- "What's your evidence for this weakness -- G2 reviews, sales conversations, or assumption?"
+- "What's your evidence for this weakness: G2 reviews, sales conversations, or assumption?"
 
-## Step 4: Competitive Summary Table
+## Step 4: Competitive summary table
 
 Output a ranked summary table ordered by threat level (high to low):
 
 ```
-## Competitive Landscape Summary
+## Competitive landscape summary
 
 | Competitor | Category | Threat Level | Primary Strength | Our Advantage |
 |---|---|---|---|---|
@@ -166,24 +166,24 @@ Output a ranked summary table ordered by threat level (high to low):
 Then output "How We Win" one-liners:
 
 ```
-## How We Win
+## How we win
 
 - vs. [Competitor 1]: [one sentence]
 - vs. [Competitor 2]: [one sentence]
-- vs. Status Quo: [one sentence -- this is often the most important one]
+- vs. Status Quo: [one sentence, this is often the most important one]
 ```
 
-## Sherpa-Mode Questions
+## Sherpa-mode questions
 
 When `mode` is `with-sherpa`, add these provocative questions at natural moments:
 
 - After SWOT weaknesses: "What job is the customer hiring today without you?"
 - After competitor list: "Which competitor are you most scared of? Why?"
-- After battle cards: "Where are switching costs highest -- and is that a moat or a trap?"
+- After battle cards: "Where are switching costs highest, and is that a moat or a trap?"
 - After summary table: "What's your unfair advantage the big players can't copy in 18 months?"
-- Final challenge: "If you lost to a competitor today, which one would it be -- and what would they have done right?"
+- Final challenge: "If you lost to a competitor today, which one would it be, and what would they have done right?"
 
-## Output Summary
+## Output summary
 
 When complete, confirm:
 - SWOT 2x2 matrix (paste-ready)
@@ -191,7 +191,7 @@ When complete, confirm:
 - Competitive summary table ranked by threat level
 - "How We Win" one-liners
 
-Then say: "Save this output -- your hypothesis engine session works best when you know exactly which competitors you're trying to outmaneuver."
+Then say: "Save this output, your hypothesis engine session works best when you know exactly which competitors you're trying to outmaneuver."
 
 ## Where this runs
 

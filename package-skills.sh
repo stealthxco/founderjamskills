@@ -50,7 +50,7 @@ for src in "$SKILLS_DIR"/*/*/SKILL.md; do
   echo "$fm" | grep -qx "name: $skill" || fail "ERROR: $skill frontmatter 'name:' must equal '$skill'."
   desc="$(echo "$fm" | sed -n 's/^description: //p')"
   [ -n "$desc" ] || fail "ERROR: $skill missing 'description:' in frontmatter."
-  [ "${#desc}" -le 1024 ] || fail "ERROR: $skill description is ${#desc} chars (max 1024)."
+  [ "${#desc}" -le 200 ] || fail "ERROR: $skill description is ${#desc} chars (max 200)."
   lic="$(echo "$fm" | sed -n 's/^license: //p')"
   echo "$fm" | grep -Eq '^license: (CC-BY-4\.0|CC0-1\.0)$' || fail "ERROR: $skill missing 'license: CC-BY-4.0' (or CC0-1.0 for third-party skills)."
 

@@ -29,4 +29,4 @@ Founder Jam curriculum and skills by Drew Burdick · program co-created with Inn
 
 The two skills in this kit are CC BY 4.0. Frameworks are credited in `ATTRIBUTION.md` in the main repository.
 
-*Maintainers: this folder is generated. Edit `skills/`, `starter-kit/paste-in/`, or this README, then run `python3 starter-kit/build.py`.*
+*Maintainers: this folder is generated. Edit `skills/focus/`, `starter-kit/paste-in/`, or this README, then run `python3 starter-kit/build.py`.*

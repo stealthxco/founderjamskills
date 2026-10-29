@@ -1,6 +1,6 @@
 ---
 name: offer-architect
-description: Turn an existing offer into a Grand Slam package using Hormozi's 9-step process, covering Value Equation scoring, bonus stacking, guarantee design, and upsell and downsell architecture. Use in the Build stage on the sales or product and positioning path, after offer-designer, or whenever a founder's offer is hard to explain or price.
+description: Turn an existing offer into a Grand Slam package with Hormozi's 9-step process: Value Equation scoring, bonus stacking, guarantees, and upsells. Build stage, sales or product and positioning path.
 license: CC-BY-4.0
 ---
 
@@ -30,19 +30,19 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 **Read from the handoff block:**
-- `startup_name` -- company name for package branding
-- `icp_segment` -- target customer profile for obstacle mapping
-- `business_type` -- service model for delivery vehicle selection
-- `mode` -- `with-sherpa` adds challenge prompts
+- `startup_name`: company name for package branding
+- `icp_segment`: target customer profile for obstacle mapping
+- `business_type`: service model for delivery vehicle selection
+- `mode`: `with-sherpa` adds challenge prompts
 
 **Optional details (not in the handoff block, ask if useful):**
-- `service_areas` -- array of service offerings
-- `team_size` -- for authentic scarcity language
-- `engagement_model` -- pricing model (e.g., "fixed-fee", "retainer", "project-based")
+- `service_areas`: array of service offerings
+- `team_size`: for authentic scarcity language
+- `engagement_model`: pricing model (e.g., "fixed-fee", "retainer", "project-based")
 
 **Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
-## The Grand Slam Offer Process (Hormozi, Adapted for Services)
+## The Grand Slam offer process (Hormozi, adapted for services)
 
 ### Step 1: Find the Starving Crowd
 
@@ -55,7 +55,7 @@ Identify which customer segment has the most urgent, painful need RIGHT NOW.
 | Willingness to Pay | Is budget allocated or allocatable? |
 | Decision Speed | Can they move in 30-60 days? |
 
-### Step 2: Map Every Obstacle
+### Step 2: Map every obstacle
 
 List EVERY reason a prospect might say "no" or fail to achieve the outcome. Be exhaustive.
 
@@ -71,7 +71,7 @@ List EVERY reason a prospect might say "no" or fail to achieve the outcome. Be e
 | Budget | Investment feels risky | "That's a lot of money" |
 | Authority | Decision involves others | "I need to get buy-in" |
 
-### Step 3: Create Solutions for Each Obstacle
+### Step 3: Create solutions for each obstacle
 
 For every obstacle in Step 2, design a solution and assign a delivery vehicle:
 
@@ -98,7 +98,7 @@ Value = (Dream Outcome x Perceived Likelihood) / (Time Delay x Effort & Sacrific
 
 Score each factor 1-10. Composite = (DO x PL) / (TD x ES). Higher is better.
 
-### Step 5: Trim and Stack
+### Step 5: Trim and stack
 
 Remove low-value items. Keep only high-value, high-impact components. Then stack them so each component is visible and valued individually.
 
@@ -109,7 +109,7 @@ For each component in the package:
 
 **Principle:** Breaking offerings into component parts increases perceived value more than bundling them together.
 
-### Step 6: Name Using MAGIC Formula
+### Step 6: Name using MAGIC formula
 
 | Element | Question |
 |---------|----------|
@@ -126,7 +126,7 @@ For each component in the package:
 
 Choose containers that fit your service model. Good B2B containers: Sprint, System, Partnership, Diagnostic, Blueprint, Accelerator, Program.
 
-### Step 7: Design the Guarantee
+### Step 7: Design the guarantee
 
 Four tiers:
 
@@ -139,7 +139,7 @@ Four tiers:
 
 **Naming the guarantee:** Don't call it a "guarantee." Give it a name: "The Results Commitment," "The Milestone Promise," "The Extension Pledge."
 
-### Step 8: Add Ethical Scarcity
+### Step 8: Add ethical scarcity
 
 Use scarcity that is actually true to your business:
 
@@ -152,7 +152,7 @@ Use scarcity that is actually true to your business:
 - Never manufacture urgency ("only 2 spots left!" when there are 10)
 - Publicize when fully booked (this is social proof, not pressure)
 
-### Step 9: Design Upsell/Downsell Architecture
+### Step 9: Design upsell/downsell architecture
 
 Create a natural progression:
 
@@ -164,7 +164,7 @@ ENTRY:
   [Primary package]
   |
 UPSELL (presented at entry completion):
-  [Deeper engagement -- build on initial findings]
+  [Deeper engagement, build on initial findings]
   |
 UPSELL (presented at deeper completion):
   [Full transformation partnership]
@@ -175,12 +175,12 @@ CONTINUITY (for all completers):
 
 Each transition must be natural: the previous engagement reveals the need for the next one.
 
-## Bonus Stacking Framework
+## Bonus stacking framework
 
 For each package, create 3-5 named bonuses with stated individual values:
 
 ```
-## Bonus Stack: [Package Name]
+## Bonus stack: [Package name]
 
 | # | Bonus Name | What It Is | Stated Value |
 |---|-----------|-----------|-------------|
@@ -199,20 +199,20 @@ For each package, create 3-5 named bonuses with stated individual values:
 - Named compellingly (not "Bonus 1")
 - Bonuses are real things you actually deliver (never fabricated)
 
-## Value Stack Presentation (for Proposals)
+## Value stack presentation (for proposals)
 
 When presenting pricing, use the infomercial stacking model:
 
 ```
 "Here's what's included in the [Package Name]:
 
-[Component 1]: [Name] -- [what it does] -- valued at $X
-[Component 2]: [Name] -- [what it does] -- valued at $X
-[Component 3]: [Name] -- [what it does] -- valued at $X
+[Component 1]: [Name]: [what it does]: valued at $X
+[Component 2]: [Name]: [what it does]: valued at $X
+[Component 3]: [Name]: [what it does]: valued at $X
 
 Plus these bonuses:
-[Bonus 1]: [Name] -- valued at $X
-[Bonus 2]: [Name] -- valued at $X
+[Bonus 1]: [Name]: valued at $X
+[Bonus 2]: [Name]: valued at $X
 
 Total value: $XX,000
 
@@ -221,10 +221,10 @@ Your investment: $XX,000
 That's a [X]:1 return on your investment before you even factor in the business outcomes."
 ```
 
-## Package Spec Output Format
+## Package spec output format
 
 ```
-## Package Spec: [MAGIC Name]
+## Package spec: [MAGIC name]
 
 ### Summary
 - **Target Customer:** [who this is for]
@@ -234,7 +234,7 @@ That's a [X]:1 return on your investment before you even factor in the business 
 - **Guarantee:** [type + language]
 - **Scarcity:** [authentic limitation]
 
-### Value Equation Score
+### Value Equation score
 - Dream Outcome: X/10
 - Perceived Likelihood: X/10
 - Time Delay: X/10 (lower = better)
@@ -246,35 +246,35 @@ That's a [X]:1 return on your investment before you even factor in the business 
 |---|-----------|-------------|-------------|
 [table]
 
-### Bonus Stack
+### Bonus stack
 | # | Bonus | Description | Stated Value |
 |---|-------|-------------|-------------|
 [table]
 
-### Guarantee Language
+### Guarantee language
 [Full guarantee text]
 
-### Upsell Path
+### Upsell path
 - From: [what downsell feeds this package]
 - To: [what this package naturally upsells to]
 - Continuity: [ongoing advisory option]
 
-### Obstacles Addressed
+### Obstacles addressed
 [Map back to Step 2 obstacles]
 
-### Proposal Value Stack
+### Proposal value stack
 [Ready-to-paste presentation format]
 ```
 
 ## Workflow
 
-1. **Select service area** -- Which part of your business needs a Grand Slam package?
-2. **Walk through all 9 steps** -- Execute each step, confirming at each stage
-3. **Generate package spec** -- Compile into the canonical format
-4. **Validate architecture** -- Check the upsell/downsell path for gaps
-5. **Review and refine** -- Iterate with founder input
+1. **Select service area**: Which part of your business needs a Grand Slam package?
+2. **Walk through all 9 steps**: Execute each step, confirming at each stage
+3. **Generate package spec**: Compile into the canonical format
+4. **Validate architecture**: Check the upsell/downsell path for gaps
+5. **Review and refine**: Iterate with founder input
 
-## Sherpa Mode
+## Sherpa mode
 
 When `mode` is `with-sherpa`, add these challenge prompts:
 
@@ -292,7 +292,7 @@ When `mode` is `with-sherpa`, add these challenge prompts:
 - Never design packages that require capabilities you don't have
 - Guarantee language must be deliverable. Never promise outcomes you can't control
 
-## Works Well With
+## Works well with
 
 - If using `offer-designer`: design your initial offer there first, then optimize it here
 - If using `testimonial-collector`: testimonials should map to specific packages for targeted proof

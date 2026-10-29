@@ -1,6 +1,6 @@
 ---
 name: cohort-prep
-description: Pre-event preparation for sherpas. Ingest a cohort roster, build a briefing card per startup with predicted sticking points by path, suggest sherpa assignments, and create a Miro board setup checklist organized by the four stages. Use 24-48 hours before a Founder Jam.
+description: Pre-event prep for sherpas. Ingest a cohort roster, build a briefing card per startup with predicted sticking points by path, suggest sherpa assignments, and make a Miro checklist.
 license: CC-BY-4.0
 ---
 
@@ -20,7 +20,7 @@ This skill walks through:
 
 ## Process
 
-### Step 1: Ingest Roster
+### Step 1: Ingest roster
 
 Accept cohort data in any of these formats:
 
@@ -45,7 +45,7 @@ Accept cohort data in any of these formats:
 
 If any required field is missing, ask for it before proceeding.
 
-### Step 2: Generate Briefing Cards
+### Step 2: Generate briefing cards
 
 For each startup, produce a briefing card using the `templates/cohort-briefing-card.md` format.
 
@@ -61,18 +61,18 @@ For each startup, produce a briefing card using the `templates/cohort-briefing-c
 | Ops and automation | May want custom code when a simple workflow would test the idea; may automate a process they haven't mapped yet |
 | B2B SaaS | Competitive data is available but dense; may spend too long on battle cards |
 | Services | ICP is often vague ("any business"); push for job title and company size specificity |
-| Marketplace | Two-sided ICP problem -- push them to choose one side for the day |
+| Marketplace | Two-sided ICP problem, push them to choose one side for the day |
 | Consumer | Distribution channel selection is hardest; may lack budget for paid; needs organic channel plan |
 
 **Recommended emphasis areas:** Flag which stage of the day (Understand, Focus, Build, or Validate) will likely need extra time for this startup. Reference `templates/session-pacing-guide.md`.
 
-### Step 3: Suggest Sherpa Assignments
+### Step 3: Suggest sherpa assignments
 
 If sherpa names and domains are provided, suggest assignments based on:
 
-1. **Domain expertise match** -- Pair sherpas with startups in adjacent industries or similar business models.
-2. **Business type match** -- B2B SaaS startups benefit from sherpas with software or sales backgrounds; Services from operational experience.
-3. **Table size balance** -- Distribute startups evenly. No sherpa should have more than 2 startups unless the cohort is small.
+1. **Domain expertise match**: Pair sherpas with startups in adjacent industries or similar business models.
+2. **Business type match**: B2B SaaS startups benefit from sherpas with software or sales backgrounds; Services from operational experience.
+3. **Table size balance**: Distribute startups evenly. No sherpa should have more than 2 startups unless the cohort is small.
 
 Output suggested assignments as a table:
 
@@ -83,7 +83,7 @@ Output suggested assignments as a table:
 
 If sherpa roster is not provided, skip this step and note it as a manual action item.
 
-### Step 4: Miro Board Setup Checklist
+### Step 4: Miro board setup checklist
 
 Build one board layout for the whole cohort with four stage columns: Understand, Focus, Build, Validate. Founders pick their path in Focus, so pre-load the shared frames for every table and keep the path frames ready to drop in.
 
@@ -102,27 +102,27 @@ Build one board layout for the whole cohort with four stage columns: Understand,
 - [ ] Sales: ICP canvas, first-100-prospects list frame, sequence drafts frame, call tracker
 - [ ] Ops and automation: manual-time audit table, workflow diagram space (node mapping area), North Star metric tracker
 
-### Step 5: Output Summary
+### Step 5: Output summary
 
 After processing all startups, present a cohort overview:
 
 ```
-## Cohort Overview: [Event Date]
+## Cohort overview: [Event date]
 
 **Total Startups:** N
 **Path Distribution:** N product and positioning / N GTM and growth / N sales / N ops and automation / N undecided
 **Stage Distribution:** N Idea / N Pre-Revenue / N Early-Revenue
 
-### Common Themes
-[2-3 patterns across the cohort -- e.g., "3 of 5 startups are services businesses with vague ICPs"]
+### Common themes
+[2-3 patterns across the cohort, e.g., "3 of 5 startups are services businesses with vague ICPs"]
 
-### Predicted High-Attention Startups
+### Predicted high-attention startups
 [List startups that will likely need the most sherpa intervention, with reason]
 
-### Top Risks for the Day
-[2-3 cohort-level risks -- e.g., "Most startups are idea-stage, expect slow battle card research phase"]
+### Top risks for the day
+[2-3 cohort-level risks, e.g., "Most startups are idea-stage, expect slow battle card research phase"]
 
-### Sherpa Assignments
+### Sherpa assignments
 [Table from Step 3, or "Manual assignment needed"]
 ```
 

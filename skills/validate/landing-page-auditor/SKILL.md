@@ -1,6 +1,6 @@
 ---
 name: landing-page-auditor
-description: Audit a landing page across 8 dimensions using Hormozi's Value Equation and essential page elements, plus Dickerson's positioning angles, and produce prioritized fixes and A/B test variants. Use in the Validate stage when a page exists and the founder wants to know whether the message works.
+description: Audit a landing page across 8 dimensions using Hormozi's Value Equation and Dickerson's positioning angles, and produce prioritized fixes and A/B test variants. Validate stage, once a page exists.
 license: CC-BY-4.0
 ---
 
@@ -18,7 +18,7 @@ Key capabilities:
 - Evaluate copy, social proof placement, CTA clarity, and mobile optimization
 - Generate optimized headline, subhead, and CTA variants for A/B testing
 - Audit programmatic SEO pages for quality and uniqueness
-- Check for Isenberg's "congruence" -- does the page match the traffic source?
+- Check for Isenberg's "congruence": does the page match the traffic source?
 
 ## Context
 
@@ -27,22 +27,22 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 **Read from the handoff block:**
-- `startup_name` -- company name for copy variants
-- `icp_segment` -- target customer for congruence checking
-- `business_type` -- service model for positioning angle selection
-- `mode` -- `with-sherpa` adds challenge prompts
+- `startup_name`: company name for copy variants
+- `icp_segment`: target customer for congruence checking
+- `business_type`: service model for positioning angle selection
+- `mode`: `with-sherpa` adds challenge prompts
 
 **Optional details (not in the handoff block, ask if useful):**
-- `service_areas` -- array of service offerings for page-specific guidance
-- `common_objections` -- array of top sales objections for FAQ scoring
+- `service_areas`: array of service offerings for page-specific guidance
+- `common_objections`: array of top sales objections for FAQ scoring
 
 **Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
-## The Audit Scorecard
+## The audit scorecard
 
 Every page is scored on 8 dimensions (1-10 each, some weighted 2x).
 
-### Dimension 1: Headline Clarity (Weight: 2x)
+### Dimension 1: Headline clarity (weight: 2x)
 
 | Score | Criteria |
 |-------|---------|
@@ -54,7 +54,7 @@ Every page is scored on 8 dimensions (1-10 each, some weighted 2x).
 
 **Hormozi rule:** Write at a third-grade reading level. Simple sentences, small words.
 
-### Dimension 2: Value Equation Alignment (Weight: 2x)
+### Dimension 2: Value Equation alignment (weight: 2x)
 
 ```
 Value = (Dream Outcome x Perceived Likelihood) / (Time Delay x Effort & Sacrifice)
@@ -69,7 +69,7 @@ Value = (Dream Outcome x Perceived Likelihood) / (Time Delay x Effort & Sacrific
 
 Score each factor 1-10.
 
-### Dimension 3: Social Proof Placement
+### Dimension 3: Social proof placement
 
 | Score | Criteria |
 |-------|---------|
@@ -90,7 +90,7 @@ Score each factor 1-10.
 | Pricing | "Is this worth it?" | ROI testimonial |
 | CTA | "Should I commit?" | Recent testimonial + guarantee language |
 
-### Dimension 4: CTA Clarity and Frequency
+### Dimension 4: CTA clarity and frequency
 
 | Score | Criteria |
 |-------|---------|
@@ -102,7 +102,7 @@ Score each factor 1-10.
 
 **Hormozi rule:** "Stupid simple" directions. No confusion about next steps.
 
-### Dimension 5: FAQ / Objection Handling
+### Dimension 5: FAQ / objection handling
 
 | Score | Criteria |
 |-------|---------|
@@ -114,7 +114,7 @@ Score each factor 1-10.
 
 Use your top sales objections (from the founder's sales calls or from experience).
 
-### Dimension 6: Traffic-Source Congruence (Isenberg)
+### Dimension 6: Traffic-source congruence (Isenberg)
 
 Does the page match what the visitor expected?
 
@@ -128,7 +128,7 @@ Does the page match what the visitor expected?
 
 **Check for each source:** organic search (headline matches query?), social post (delivers on promise?), email (continues conversation?), referral (speaks to recommendation?).
 
-### Dimension 7: Mobile Optimization
+### Dimension 7: Mobile optimization
 
 | Score | Criteria |
 |-------|---------|
@@ -138,7 +138,7 @@ Does the page match what the visitor expected?
 | 3-4 | Significant usability issues |
 | 1-2 | Broken on mobile |
 
-### Dimension 8: Brand Voice Compliance
+### Dimension 8: Brand voice compliance
 
 | Score | Criteria |
 |-------|---------|
@@ -148,7 +148,7 @@ Does the page match what the visitor expected?
 | 3-4 | Reads like generic template copy |
 | 1-2 | Off-brand or AI slop |
 
-## Composite Score
+## Composite score
 
 ```
 Score = (Headline x 2) + (Value Equation x 2) + Social Proof + CTA + FAQ + Congruence + Mobile + Voice
@@ -163,11 +163,11 @@ Max possible: 100
 | 55-69 | Needs Work | Significant revisions |
 | Below 55 | Rebuild | Fundamental issues |
 
-## Positioning Angle Templates (Dickerson)
+## Positioning angle templates (Dickerson)
 
 When generating optimized copy variants:
 
-### For Service Business Pages
+### For service business pages
 
 | Angle | Template |
 |-------|---------|
@@ -176,7 +176,7 @@ When generating optimized copy variants:
 | Results Track Record | "We've helped [#] companies achieve [specific outcome]" |
 | Anti-Agency | "No [common frustration]. Just [what you actually deliver]." |
 
-### For Assessment / Tool Pages
+### For assessment / tool pages
 
 | Angle | Template |
 |-------|---------|
@@ -184,7 +184,7 @@ When generating optimized copy variants:
 | Simplicity | "Answer [X] questions. Get a custom roadmap." |
 | No Commitment | "Free. No sales calls required." |
 
-## Rejection Cycle Process (Dickerson)
+## Rejection cycle process (Dickerson)
 
 After reviewing or generating page copy:
 
@@ -194,21 +194,21 @@ After reviewing or generating page copy:
 4. Test conversion readiness: "Would you actually take the CTA action from this page?"
 5. Iterate until right
 
-## A/B Testing Protocol (Hormozi)
+## A/B testing protocol (Hormozi)
 
-### Weekly Testing Cadence
+### Weekly testing cadence
 
 ```
-## A/B Test: [Page Name]
+## A/B test: [Page name]
 **Week of:** YYYY-MM-DD
 
-### Element Being Tested
+### Element being tested
 [headline / subhead / CTA text / CTA placement / social proof]
 
-### Variant A (Control)
+### Variant A (control)
 [current version]
 
-### Variant B (Challenger)
+### Variant B (challenger)
 [new version with rationale]
 
 ### Metric
@@ -226,10 +226,10 @@ After reviewing or generating page copy:
 - Run for 7 days or 100 visitors per variant minimum
 - Never assume your first version is the best
 
-## Audit Output Format
+## Audit output format
 
 ```
-## Page Audit: [Page Name/URL]
+## Page audit: [Page name/URL]
 **Audited:** YYYY-MM-DD
 **Composite Score:** X/100
 **Rating:** [Strong / Good / Needs Work / Rebuild]
@@ -246,13 +246,13 @@ After reviewing or generating page copy:
 | Mobile | X/10 | 1x | X | [observation] |
 | Brand Voice | X/10 | 1x | X | [observation] |
 
-### Priority Fixes (Ordered by Impact)
-1. **[Fix]** -- Impact: [High/Med/Low] -- Effort: [High/Med/Low]
+### Priority fixes (ordered by impact)
+1. **[Fix]**: Impact: [High/Med/Low]: Effort: [High/Med/Low]
    - Current: [what exists]
    - Recommended: [specific change]
    - Rationale: [why]
 
-### Copy Variants for A/B Testing
+### Copy variants for A/B testing
 **Headlines:**
 - A (current): [current]
 - B: [variant + rationale]
@@ -263,7 +263,7 @@ After reviewing or generating page copy:
 - B: [variant]
 - C: [variant]
 
-### Congruence Check
+### Congruence check
 | Traffic Source | Match? | Fix Needed? |
 |--------------|--------|-------------|
 | Organic: [keyword] | [Y/N] | [fix] |
@@ -273,14 +273,14 @@ After reviewing or generating page copy:
 
 ## Workflow
 
-1. **Select page** -- URL, page name, or "batch" for all key pages
-2. **Read the page** -- Review actual content (never assume based on page name alone)
-3. **Score all 8 dimensions** -- Specific observations for each
-4. **Generate fix list** -- Prioritized by impact and effort
-5. **Generate copy variants** -- 3 options for top fixes
-6. **Document** -- Save audit for tracking improvement
+1. **Select page**: URL, page name, or "batch" for all key pages
+2. **Read the page**: Review actual content (never assume based on page name alone)
+3. **Score all 8 dimensions**: Specific observations for each
+4. **Generate fix list**: Prioritized by impact and effort
+5. **Generate copy variants**: 3 options for top fixes
+6. **Document**: Save audit for tracking improvement
 
-## Sherpa Mode
+## Sherpa mode
 
 When `mode` is `with-sherpa`, add these challenge prompts:
 
@@ -297,7 +297,7 @@ When `mode` is `with-sherpa`, add these challenge prompts:
 - Never recommend removing social proof to "simplify." Social proof near CTAs is non-negotiable
 - Never ignore mobile optimization
 
-## Works Well With
+## Works well with
 
 - If using `offer-architect`: package value propositions inform CTA language on service pages
 - If using `testimonial-collector`: placement recommendations from the collector should match audit findings

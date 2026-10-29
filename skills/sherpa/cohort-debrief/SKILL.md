@@ -1,6 +1,6 @@
 ---
 name: cohort-debrief
-description: Post-event cohort debrief for sherpas. Collect per-startup notes, generate a summary card per startup, find patterns across paths and stages, and capture improvements for the next Founder Jam. Use the same day as the event, within 24 hours.
+description: Post-event cohort debrief for sherpas. Collect per-startup notes, build a summary card per startup, find patterns across paths and stages, and capture improvements. Use within 24 hours of the event.
 license: CC-BY-4.0
 ---
 
@@ -20,9 +20,9 @@ This skill walks through:
 
 ## Process
 
-### Step 1: Collect Per-Startup Notes
+### Step 1: Collect per-startup notes
 
-For each startup in the cohort, ask the sherpa these questions conversationally. Do not dump all questions at once -- ask one topic at a time, acknowledge each answer, and move forward.
+For each startup in the cohort, ask the sherpa these questions conversationally. Do not dump all questions at once, ask one topic at a time, acknowledge each answer, and move forward.
 
 **Questions (in order):**
 
@@ -66,13 +66,13 @@ If a founder shared their FOUNDER JAM HANDOFF block (the format is defined in th
 
 Collect data for all startups before generating cards.
 
-### Step 2: Generate Summary Cards
+### Step 2: Generate summary cards
 
 For each startup, produce a debrief card using the `templates/debrief-template.md` format.
 
-Fill all fields from the collected notes. Do not leave template placeholders unfilled -- if data is missing, note "Not captured" rather than leaving a bracket.
+Fill all fields from the collected notes. Do not leave template placeholders unfilled, if data is missing, note "Not captured" rather than leaving a bracket.
 
-### Step 3: Aggregate Cohort Insights
+### Step 3: Aggregate cohort insights
 
 After all individual cards are complete, analyze patterns across the cohort:
 
@@ -97,10 +97,10 @@ After all individual cards are complete, analyze patterns across the cohort:
 ```
 3 of 5 startups on the GTM and growth path chose LinkedIn as primary channel.
 2 of 3 startups on the product and positioning path built landing page prototypes.
-Idea-stage startups scored lower on output quality across the board -- hypotheses were too broad.
+Idea-stage startups scored lower on output quality across the board, hypotheses were too broad.
 ```
 
-### Step 4: Improvement Suggestions
+### Step 4: Improvement suggestions
 
 Based on sherpa notes and cohort patterns, produce a structured improvement report:
 
@@ -120,7 +120,7 @@ Based on sherpa notes and cohort patterns, produce a structured improvement repo
 - Produce a short, prioritized list (3-5 items) of the highest-leverage changes
 - Format: "Change [X] because [Y] happened with [N] startups"
 
-### Step 5: Output Package
+### Step 5: Output package
 
 Produce the full output in this order:
 

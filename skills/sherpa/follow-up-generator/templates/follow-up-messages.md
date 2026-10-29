@@ -4,7 +4,7 @@ Three templated messages for post-event founder follow-up. Each message uses per
 
 ---
 
-## Message 1: 2-Day Check-In
+## Message 1: 2-day check-in
 
 **Subject:** Quick follow-up from Founder Jam
 
@@ -27,9 +27,9 @@ If you hit a wall on any of these, reply and I'll point you in the right directi
 
 ---
 
-## Message 2: 2-Week Milestone
+## Message 2: 2-week milestone
 
-**Subject:** 2-week check -- how's [specific metric] looking?
+**Subject:** 2-week check, how's [specific metric] looking?
 
 ---
 
@@ -41,16 +41,16 @@ Two weeks since Founder Jam. By now you should have:
 
 How are the numbers looking? Your target was [specific number from 30-day plan].
 
-If you're ahead of pace -- great, keep pushing.
-If you're behind -- that's normal. The question is why. Reply with a quick update and I'll share what I've seen work for other founders in your situation.
+If you're ahead of pace, great, keep pushing.
+If you're behind, that's normal. The question is why. Reply with a quick update and I'll share what I've seen work for other founders in your situation.
 
 [Sherpa Name]
 
 ---
 
-## Message 3: 2-Month Validation Gate
+## Message 3: 2-month validation gate
 
-**Subject:** Decision time -- Green, Yellow, or Red?
+**Subject:** Decision time, Green, Yellow, or Red?
 
 ---
 
@@ -66,7 +66,7 @@ Where did you land?
 - Yellow (40-70%): There's something here but it needs tuning. What's the one metric furthest from target?
 - Red (<40%): Time to revisit the fundamentals. Was the ICP right? Was the channel right? Was the offer right?
 
-No judgment either way -- the framework exists so you can make the call without emotion.
+No judgment either way, the framework exists so you can make the call without emotion.
 
 Reply with your color and I'll send you specific next steps for that path.
 
@@ -74,7 +74,7 @@ Reply with your color and I'll send you specific next steps for that path.
 
 ---
 
-## Personalization Tokens Reference
+## Personalization tokens reference
 
 | Token | Source |
 |-------|--------|

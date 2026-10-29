@@ -1,6 +1,6 @@
 ---
 name: testimonial-collector
-description: Write personalized testimonial request emails, keep a collection tracker, format testimonials for website placement, and run champion activation plans, using Hormozi's Proof Playbook and Isenberg's champion model. Use in the Validate stage once early customers or pilot users exist.
+description: Write personalized testimonial request emails, keep a collection tracker, format testimonials for the website, and run champion activation plans. Validate stage, once early customers or pilots exist.
 license: CC-BY-4.0
 ---
 
@@ -27,22 +27,22 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 **Read from the handoff block:**
-- `startup_name` -- company name for email personalization
-- `icp_segment` -- target customer profile for champion scoring
-- `business_type` -- service model for template selection
-- `mode` -- `with-sherpa` adds challenge prompts
+- `startup_name`: company name for email personalization
+- `icp_segment`: target customer profile for champion scoring
+- `business_type`: service model for template selection
+- `mode`: `with-sherpa` adds challenge prompts
 
 **Optional details (not in the handoff block, ask if useful):**
-- `crm_platform` -- CRM for integration guidance (e.g., "hubspot", "pipedrive")
-- `service_areas` -- array of service offerings for objection mapping
+- `crm_platform`: CRM for integration guidance (e.g., "hubspot", "pipedrive")
+- `service_areas`: array of service offerings for objection mapping
 
 **Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
-## The Objection-to-Testimonial Pattern (Hormozi)
+## The objection-to-testimonial pattern (Hormozi)
 
 The strongest testimonials directly counter specific buying objections. Instead of asking "Can you say nice things about us?", ask questions designed to elicit proof against doubts.
 
-### Mapping Objections to Questions
+### Mapping objections to questions
 
 | Common Objection | Testimonial Question to Counter It |
 |-----------------|-----------------------------------|
@@ -54,22 +54,22 @@ The strongest testimonials directly counter specific buying objections. Instead 
 
 Customize these 5 objections for your specific business. The pattern works across any service model.
 
-## Testimonial Request Framework
+## Testimonial request framework
 
-### Email Template: Initial Request
+### Email template: Initial request
 
 ```
-Subject: Quick favor -- would mean a lot
+Subject: Quick favor, would mean a lot
 
 Hey [Client First Name],
 
 I've been reflecting on the work we did together on [project/engagement name], and the [specific result] outcome still stands out.
 
-Would you be open to sharing a brief testimonial about the experience? Totally informal -- a few sentences is perfect. It helps other companies in similar situations feel confident about working with us.
+Would you be open to sharing a brief testimonial about the experience? Totally informal, a few sentences is perfect. It helps other companies in similar situations feel confident about working with us.
 
 Here are a couple of prompts if helpful (pick whichever resonates):
 
-- [Question 1 from objection map -- most relevant to this client's experience]
+- [Question 1 from objection map: most relevant to this client's experience]
 - [Question 2 from objection map]
 
 No pressure at all. If you'd prefer, I'm happy to draft something based on what we discussed during [specific meeting or milestone], and you can just approve or edit.
@@ -79,12 +79,12 @@ Thanks, [Client First Name]. Really appreciated working with your team.
 [Your Name]
 ```
 
-### Email Template: Draft-for-Approval (Higher Response Rate)
+### Email template: Draft-for-approval (higher response rate)
 
 When the client is likely too busy to write from scratch:
 
 ```
-Subject: Drafted something -- 30 seconds to review?
+Subject: Drafted something, 30 seconds to review?
 
 Hey [Client First Name],
 
@@ -92,7 +92,7 @@ I know you're busy, so I drafted a quick testimonial based on the results from [
 
 ---
 
-"[Draft testimonial based on known results -- 2-3 sentences, specific, outcome-focused]"
+"[Draft testimonial based on known results, 2-3 sentences, specific, outcome-focused]"
 
 -- [Client First Name], [Title], [Company]
 
@@ -105,21 +105,21 @@ Thanks for considering it.
 [Your Name]
 ```
 
-### Email Template: Follow-Up (If No Response After 7 Days)
+### Email template: Follow-up (if no response after 7 days)
 
 ```
-Subject: Re: Quick favor -- would mean a lot
+Subject: Re: Quick favor, would mean a lot
 
 Hey [Client First Name],
 
-Just bumping this in case it got buried. Totally understand if the timing isn't right -- no pressure.
+Just bumping this in case it got buried. Totally understand if the timing isn't right, no pressure.
 
 If it's easier, I can send over a draft for you to approve instead of writing from scratch. Just say the word.
 
 [Your Name]
 ```
 
-## Three-Touchpoint Cadence
+## Three-touchpoint cadence
 
 | Touchpoint | When | Purpose | Template |
 |-----------|------|---------|----------|
@@ -129,11 +129,11 @@ If it's easier, I can send over a draft for you to approve instead of writing fr
 
 Log every attempt in your tracker regardless of response.
 
-## Champion Activation Plan (Isenberg)
+## Champion activation plan (Isenberg)
 
 Champions are past clients who would actively recommend you without being asked. Typically 3-5 exist in any client roster.
 
-### Identifying Champions
+### Identifying champions
 
 Score each past client on 3 criteria (1-5):
 
@@ -145,7 +145,7 @@ Score each past client on 3 criteria (1-5):
 
 Champions score 12+ across all three dimensions.
 
-### Activation Actions (Per Champion)
+### Activation actions (per champion)
 
 | Action | What to Do | Cadence |
 |--------|-----------|---------|
@@ -155,16 +155,16 @@ Champions score 12+ across all three dimensions.
 | Content Collaboration | Invite to co-author content, join a podcast, or speak at an event | As appropriate |
 | Recognition | Feature in newsletter, social media, or website as a thought leader (with permission) | Ongoing |
 
-### Three-Way Introduction Template (Hormozi)
+### Three-way introduction template (Hormozi)
 
 Instead of "Do you know anyone who..?", use this higher-conversion approach:
 
 ```
-Subject: Introduction -- [Champion Name] suggested we connect
+Subject: Introduction, [Champion Name] suggested we connect
 
 Hey [Referral First Name],
 
-[Champion Name] mentioned you're working through [specific problem or initiative]. We recently helped [Champion's company] with something similar -- [one-sentence result].
+[Champion Name] mentioned you're working through [specific problem or initiative]. We recently helped [Champion's company] with something similar, [one-sentence result].
 
 [Champion Name] thought it might be worth a quick conversation. No pitch, just a 20-minute call to see if there's a fit.
 
@@ -175,13 +175,13 @@ Would [day] or [day] work for a brief chat?
 CC: [Champion Name]
 ```
 
-## Testimonial Formatting
+## Testimonial formatting
 
-### Website Card Format
+### Website card format
 
 ```
 **Quote:**
-"[Testimonial text -- 2-4 sentences, specific outcomes, genuine voice]"
+"[Testimonial text, 2-4 sentences, specific outcomes, genuine voice]"
 
 **Attribution:**
 [Full Name], [Title], [Company Name]
@@ -189,7 +189,7 @@ CC: [Champion Name]
 **Placement Recommendation:**
 - Primary: [specific page and location on your website]
 - Secondary: [additional placement]
-- Reason: [why this testimonial works here -- matches the objection or pain point on that page]
+- Reason: [why this testimonial works here, matches the objection or pain point on that page]
 
 **Tags:**
 - Objection countered: [which objection this addresses]
@@ -197,7 +197,7 @@ CC: [Champion Name]
 - ICP: [which customer segment this resonates with]
 ```
 
-### Placement Strategy
+### Placement strategy
 
 Map testimonials to website pages based on what doubt exists at each decision point:
 
@@ -209,12 +209,12 @@ Map testimonials to website pages based on what doubt exists at each decision po
 | Contact / pricing page | "Is this worth the investment?" | ROI-focused, cost-of-inaction framing |
 | Assessment / tool pages | "Should I trust this tool?" | "The assessment revealed insights we didn't expect" |
 
-## Testimonial Collection Tracker
+## Testimonial collection tracker
 
 Maintain a tracker with this structure:
 
 ```
-## Testimonial Collection Tracker
+## Testimonial collection tracker
 **Last updated:** YYYY-MM-DD
 
 ### Pipeline
@@ -229,7 +229,7 @@ Maintain a tracker with this structure:
 - Response rate: X%
 - Next touchpoints due: [list]
 
-### Objection Coverage
+### Objection coverage
 | Objection | Testimonials Available | Gap? |
 |-----------|----------------------|------|
 | Too expensive | X | [Y/N] |
@@ -238,18 +238,18 @@ Maintain a tracker with this structure:
 | Can we start smaller | X | [Y/N] |
 | Burned before | X | [Y/N] |
 
-### Champion Roster
+### Champion roster
 | Champion | Company | Score | Last Activation | Next Action |
 |----------|---------|-------|----------------|-------------|
 | [Name] | [Co] | X/15 | YYYY-MM-DD | [action] |
 ```
 
-## Data Collection Pre-Step
+## Data collection pre-step
 
 Before generating a testimonial request, you need engagement results. If structured data isn't available, use this form:
 
 ```
-## Results Inventory: [Client Name]
+## Results inventory: [Client name]
 
 1. **Engagement type:** [Workshop / Sprint / PoC / Full Build / Strategy]
 2. **Duration:** [start date - end date]
@@ -262,14 +262,14 @@ Before generating a testimonial request, you need engagement results. If structu
 
 ## Workflow
 
-1. **Identify targets** -- List all past/current clients. Check which have testimonials, which are due for a touchpoint
-2. **Collect results data** -- For each target, gather engagement results. Run data collection pre-step if needed
-3. **Generate requests** -- Select the most relevant objection-to-testimonial questions. Choose template based on relationship temperature
-4. **Track everything** -- Log every request in the tracker with date and status
-5. **Format received testimonials** -- Clean up text, generate website card format with placement recommendations
-6. **Activate champions** -- Score all clients, identify top 3-5, generate activation plans
+1. **Identify targets**: List all past/current clients. Check which have testimonials, which are due for a touchpoint
+2. **Collect results data**: For each target, gather engagement results. Run data collection pre-step if needed
+3. **Generate requests**: Select the most relevant objection-to-testimonial questions. Choose template based on relationship temperature
+4. **Track everything**: Log every request in the tracker with date and status
+5. **Format received testimonials**: Clean up text, generate website card format with placement recommendations
+6. **Activate champions**: Score all clients, identify top 3-5, generate activation plans
 
-## Sherpa Mode
+## Sherpa mode
 
 When `mode` is `with-sherpa`, add these challenge prompts:
 
@@ -287,7 +287,7 @@ When `mode` is `with-sherpa`, add these challenge prompts:
 - Always save copies of requests sent for tracking
 - If engagement data is incomplete, run the data collection pre-step rather than guessing
 
-## Works Well With
+## Works well with
 
 - If using `offer-designer` or `offer-architect`: testimonials should map to specific package value propositions
 - If using `lead-magnet-ideator`: assessment tool testimonials feed the lead magnet portfolio

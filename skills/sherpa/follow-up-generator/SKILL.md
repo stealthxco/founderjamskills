@@ -1,6 +1,6 @@
 ---
 name: follow-up-generator
-description: Generate personalized post-event follow-up messages for founders. Writes the 2-day, 2-week, and 2-month check-ins that reference each founder's own commitments, numbers, and path. Use after a Founder Jam, once per startup, with the founder's validation-planner output.
+description: Generate personalized post-event follow-ups for founders: the 2-day, 2-week, and 2-month check-ins that reference each founder's own commitments, numbers, and path. Use after the event, per startup.
 license: CC-BY-4.0
 ---
 
@@ -11,15 +11,15 @@ Post-event skill for sherpas. Generate three ready-to-send follow-up messages pe
 ## Overview
 
 This skill produces three messages:
-1. **2-Day check-in** -- accountability nudge while commitments are fresh
-2. **2-Week milestone** -- progress check against specific targets
-3. **2-Month validation gate** -- Green / Yellow / Red assessment against North Star
+1. **2-Day check-in**: accountability nudge while commitments are fresh
+2. **2-Week milestone**: progress check against specific targets
+3. **2-Month validation gate**: Green / Yellow / Red assessment against North Star
 
 **When to run:** After the event, using notes from each startup's validation planner output. Run once per startup.
 
 ## Process
 
-### Step 1: Input Collection
+### Step 1: Input collection
 
 Ask the sherpa for the following information about one startup. Collect everything before generating messages.
 
@@ -68,21 +68,21 @@ If the founder shared their FOUNDER JAM HANDOFF block (the format is defined in 
 
 If any required field is missing, ask for it before generating messages. Do not generate with empty personalization tokens.
 
-### Step 2: Generate 3 Messages
+### Step 2: Generate 3 messages
 
 Generate all three messages using the `templates/follow-up-messages.md` format.
 
 **Requirements for each message:**
 - Founder's first name (not "Hi there" or generic opening)
-- Specific numbers from their commitments -- not generic percentages or vague language
-- Specific actions they said they would take -- pulled directly from their 30-day plan
+- Specific numbers from their commitments: not generic percentages or vague language
+- Specific actions they said they would take, pulled directly from their 30-day plan
 - Path-specific language:
   - Product and positioning: use "hypothesis," "prototype," "validate," "test"
   - GTM and growth: use "ICP," "lead magnet," "sequence," "pipeline"
   - Sales: use "prospects," "replies," "calls," "pipeline"
   - Ops and automation: use "workflow," "automation," "hours saved," "handoff"
 - No em dashes
-- Plain text only -- no markdown formatting in the messages themselves
+- Plain text only: no markdown formatting in the messages themselves
 
 **Message 1: 2-Day Check-In**
 
@@ -112,7 +112,7 @@ Fill the template with:
 
 If no North Star metric was captured (common on product and positioning), substitute the 30-day target metric and number. Note the substitution in a sherpa comment above the message.
 
-### Step 3: Personalization Check
+### Step 3: Personalization check
 
 Before presenting messages, verify:
 
@@ -159,9 +159,9 @@ If yes, return to Step 1.
 | claude.ai or Claude desktop (skill uploaded) | Full flow. Output is text in the chat; copy what you want to keep. |
 | Claude Code | Full flow. May write a file on request. |
 
-## Timing Reminders
+## Timing reminders
 
-- **Message 1:** Send within 48 hours of the event -- ideally the evening of or morning after.
+- **Message 1:** Send within 48 hours of the event, ideally the evening of or morning after.
 - **Message 2:** Send exactly 14 days post-event. Set a calendar reminder before you leave.
 - **Message 3:** Send approximately 60 days post-event.
 - If a founder replies to an earlier message, acknowledge their update and skip the scheduled message if it's redundant.

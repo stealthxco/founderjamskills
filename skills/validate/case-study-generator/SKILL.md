@@ -1,6 +1,6 @@
 ---
 name: case-study-generator
-description: Turn results into a multi-format case study package with a website case study, a companion blog post, LinkedIn posts, and a newsletter section, using Dickerson's referral flywheel and Hormozi's Hook-Retain-Reward. Use in the Validate stage once a customer or pilot has real results to show.
+description: Turn results into a case study package: website case study, companion blog post, LinkedIn posts, and newsletter section, using Dickerson's referral flywheel. Validate stage, once real results exist.
 license: CC-BY-4.0
 ---
 
@@ -28,19 +28,19 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 **Read from the handoff block:**
-- `startup_name` -- company name for case study branding
-- `icp_segment` -- target customer profile for proof placement
-- `business_type` -- service model context
-- `mode` -- `with-sherpa` adds challenge prompts
+- `startup_name`: company name for case study branding
+- `icp_segment`: target customer profile for proof placement
+- `business_type`: service model context
+- `mode`: `with-sherpa` adds challenge prompts
 
 **Optional details (not in the handoff block, ask if useful):**
-- `service_areas` -- array of service offerings for mapping
-- `newsletter_name` -- for newsletter section formatting
-- `sign_off_phrase` -- for LinkedIn post sign-off
+- `service_areas`: array of service offerings for mapping
+- `newsletter_name`: for newsletter section formatting
+- `sign_off_phrase`: for LinkedIn post sign-off
 
 **Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
-## The Referral Flywheel (Dickerson)
+## The referral flywheel (Dickerson)
 
 ```
 DELIVER outstanding results
@@ -63,20 +63,20 @@ DELIVER more results (repeat)
 
 Every case study should accelerate this flywheel. A case study that sits on a website page but never becomes content is a wasted asset.
 
-## Story Arc Framework
+## Story arc framework
 
 Every case study follows the same narrative structure regardless of output format:
 
-### 1. SITUATION (The Before)
+### 1. SITUATION (the before)
 
 What was the client dealing with before your engagement?
 
-- Company context (industry, size, stage -- anonymized)
+- Company context (industry, size, stage, anonymized)
 - The triggering event (what made them seek help)
 - What they'd tried before (and why it didn't work)
 - The cost of the status quo (time, money, missed opportunities)
 
-### 2. CHALLENGE (The Tension)
+### 2. CHALLENGE (the tension)
 
 What made this problem hard to solve?
 
@@ -84,7 +84,7 @@ What made this problem hard to solve?
 - What was at stake (consequences of continued inaction)
 - Why previous approaches failed
 
-### 3. APPROACH (What You Did)
+### 3. APPROACH (what you did)
 
 Focus on methodology, not deliverables.
 
@@ -93,7 +93,7 @@ Focus on methodology, not deliverables.
 - What made your approach different
 - Specific frameworks or methodologies applied
 
-### 4. RESULTS (The After)
+### 4. RESULTS (the after)
 
 Measurable outcomes. Numbers, not adjectives.
 
@@ -102,7 +102,7 @@ Measurable outcomes. Numbers, not adjectives.
 - Timeline: how quickly results materialized
 - Qualitative outcomes: team capability, confidence, process improvement
 
-### 5. IMPACT (The So-What)
+### 5. IMPACT (the so-what)
 
 What does this mean going forward?
 
@@ -110,37 +110,37 @@ What does this mean going forward?
 - What changed structurally (not just the immediate deliverable)
 - What's possible now that wasn't before
 
-## Output Formats
+## Output formats
 
-### Format 1: Website Case Study
+### Format 1: Website case study
 
 ```
-## Website Case Study: [Anonymized Title]
+## Website case study: [Anonymized title]
 
 **Industry:** [Use general terms: "B2B SaaS," "professional services," "healthcare"]
 **Engagement Type:** [Workshop / Sprint / PoC / Full Build]
 **Duration:** [X weeks]
 
-### The Challenge
+### The challenge
 [2-3 paragraphs: Situation + Challenge from the story arc]
 
-### Our Approach
+### Our approach
 [2-3 paragraphs: Approach from the story arc. Focus on methodology.]
 
-### The Results
+### The results
 - [Primary metric with specific number]
 - [Secondary metric]
 - [Secondary metric]
 - [Timeline to results]
 
-### The Impact
+### The impact
 [1-2 paragraphs: long-term implications]
 
 **Service Area:** [which capability this maps to]
 **Tags:** [relevant service/industry tags]
 ```
 
-### Format 2: Companion Blog Post
+### Format 2: Companion blog post
 
 The "How We..." format. Primary SEO and content asset.
 
@@ -153,23 +153,23 @@ The "How We..." format. Primary SEO and content asset.
 **Structure (Hook-Retain-Reward):**
 
 ```
-## Blog Post: [Title]
+## Blog post: [Title]
 
-### HOOK (First 2-3 sentences)
+### HOOK (first 2-3 sentences)
 [Pain-point, speed, or surprise hook that earns the click]
 
 Example: "Most mid-market companies waste 6 months on pilots that never ship.
 We built a working prototype in 12 days. Here's exactly how."
 
-### RETAIN: The Setup (Situation + Challenge)
+### RETAIN: The setup (situation + challenge)
 [Tell the story. Drop the reader into the client's situation. Make them feel the tension.
 Use narrative structure, not bullet points. 3-4 paragraphs.]
 
-### RETAIN: What We Did (Approach)
+### RETAIN: What we did (approach)
 [Walk through the approach. Be specific enough that someone could learn from it
 but high-level enough that it's accessible. Break into 3-5 sections with subheadings.]
 
-### REWARD: What Happened (Results + Impact)
+### REWARD: What happened (results + impact)
 [Lead with the headline number. Support with secondary metrics.
 Include the timeline. End with what's possible now.
 The reader should think: "I learned something specific and I trust these people."]
@@ -182,12 +182,12 @@ The reader should think: "I learned something specific and I trust these people.
 **SEO:** Include target keyword naturally 3-5 times.
 **Anonymization:** Use industry categories, not client names (unless you have explicit permission).
 
-### Format 3: LinkedIn Post
+### Format 3: LinkedIn post
 
 ```
-## LinkedIn Post: [Topic Slug]
+## LinkedIn post: [Topic slug]
 
-[Hook -- first line must earn the "see more" click]
+[Hook, first line must earn the "see more" click]
 
 [Story arc compressed to 150-300 words]
 
@@ -203,19 +203,19 @@ The reader should think: "I learned something specific and I trust these people.
 **Format options:**
 - **Story > Insight** (preferred for case studies): Brief story + "here's what I learned" + takeaway
 - **Hot Take:** Bold claim supported by the case study result
-- **Listicle:** "X things we learned from [engagement]" -- numbered tactical insights
+- **Listicle:** "X things we learned from [engagement]": numbered tactical insights
 
 **Rules:**
 - Max 1,300 characters
 - No hashtags
 - Strong point of view
 
-### Format 4: Newsletter Section
+### Format 4: Newsletter section
 
 A self-contained section for your newsletter:
 
 ```
-## Newsletter Section: [Section Title]
+## Newsletter section: [Section title]
 
 [150-300 words. Narrative voice. Ties to a broader theme.]
 
@@ -224,38 +224,38 @@ A self-contained section for your newsletter:
 [One actionable takeaway.]
 ```
 
-## Proof Placement Mapping
+## Proof placement mapping
 
 For each case study, recommend where it should appear on your website:
 
 ```
-## Proof Placement: [Case Study Title]
+## Proof placement: [Case study title]
 
-### Primary Placement
+### Primary placement
 - **Page:** [specific page]
 - **Location:** [near which CTA or section]
 - **Reason:** [why this proof matches this location]
 
-### Secondary Placements
-- [Page]: [location] -- [reason]
+### Secondary placements
+- [Page]: [location]: [reason]
 
-### Objection Countered
+### Objection countered
 - This case study addresses: "[specific objection]"
 
-### Service Area Match
+### Service area match
 - Primary: [capability]
 - Secondary: [capability]
 
-### Customer Segment Match
+### Customer segment match
 - [Which ICP segment this resonates with and why]
 ```
 
-## Data Collection
+## Data collection
 
 Before generating a case study, you need engagement data. If structured data isn't available, use this form:
 
 ```
-## Case Study Data: [Client/Engagement Name]
+## Case study data: [Client/engagement name]
 
 1. **Client industry:** [anonymized category]
 2. **Company size:** [employees or revenue range]
@@ -269,19 +269,19 @@ Before generating a case study, you need engagement data. If structured data isn
 10. **Timeline to first result:** [how quickly did things move?]
 11. **Long-term impact:** [what changed structurally?]
 12. **Quote available?** [Y/N]
-13. **Permission to publish?** [Y/N -- never publish without confirmation]
+13. **Permission to publish?** [Y/N, never publish without confirmation]
 ```
 
 ## Workflow
 
-1. **Receive input** -- Client name, engagement identifier, or "batch" for all missing companion content
-2. **Collect data** -- Gather engagement results. Run data collection form if needed
-3. **Build the story arc** -- Extract all 5 elements. Present for confirmation before generating outputs
-4. **Generate all formats** -- Produce all 4 output formats from the confirmed story arc
-5. **Generate proof placement map** -- Map to website pages, objections, service areas
-6. **Review** -- Apply quality checklist before delivering
+1. **Receive input**: Client name, engagement identifier, or "batch" for all missing companion content
+2. **Collect data**: Gather engagement results. Run data collection form if needed
+3. **Build the story arc**: Extract all 5 elements. Present for confirmation before generating outputs
+4. **Generate all formats**: Produce all 4 output formats from the confirmed story arc
+5. **Generate proof placement map**: Map to website pages, objections, service areas
+6. **Review**: Apply quality checklist before delivering
 
-## Sherpa Mode
+## Sherpa mode
 
 When `mode` is `with-sherpa`, add these challenge prompts:
 
@@ -290,7 +290,7 @@ When `mode` is `with-sherpa`, add these challenge prompts:
 - "Can you tell the story of one client engagement in 60 seconds? If not, the story arc isn't clear enough yet."
 - "Who are your 3 most referenceable clients? Start with them."
 
-## Quality Checklist
+## Quality checklist
 
 Before delivering:
 
@@ -315,7 +315,7 @@ Before delivering:
 - Never reuse the same hook across multiple blog posts
 - If engagement data is incomplete, run the data collection form rather than guessing
 
-## Works Well With
+## Works well with
 
 - If using `testimonial-collector`: pair testimonials with case studies for combined proof
 - If using `content-calendar-planner`: case study blog posts should be scheduled in the content calendar

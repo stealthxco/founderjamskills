@@ -4,7 +4,7 @@
 
 ---
 
-## Pattern: "We Have No Competitors"
+## Pattern: "We have no competitors"
 
 **Signals:** Founder says "we're the only ones doing this," "there's nothing like it on the market," or dismisses the competitive analysis activity as not relevant to them.
 
@@ -20,13 +20,13 @@
 
 ---
 
-## Pattern: Founder Resists Automation
+## Pattern: Founder resists automation
 
 **Signals:** "I like doing this myself," "my clients expect a personal touch," "automation feels impersonal," or "we're not ready for this yet."
 
 **Root cause:** Fear of complexity, fear of losing the relationship quality that earned early customers, or a fundamental misunderstanding of what automation does and doesn't replace.
 
-**Intervention:** "Automation doesn't replace the relationship -- it handles the parts of the relationship that don't require you. If you're spending 3 hours a week on tasks that a workflow could handle, that's 3 hours you're not spending on the high-value conversations only you can have."
+**Intervention:** "Automation doesn't replace the relationship, it handles the parts of the relationship that don't require you. If you're spending 3 hours a week on tasks that a workflow could handle, that's 3 hours you're not spending on the high-value conversations only you can have."
 
 **Redirect:**
 1. Ask: "Which parts of your current process would a customer never know were automated?"
@@ -36,7 +36,7 @@
 
 ---
 
-## Pattern: Team Stuck or Drifting
+## Pattern: Team stuck or drifting
 
 **Signals:** Low energy, quiet room, the team is on their phones, conversations have gone in circles, no one is writing anything down, founders are looking at you for direction.
 
@@ -45,18 +45,18 @@
 **Intervention:** Name it. "It feels like we've lost momentum. Let's reset. What's the one thing that's blocking us right now?"
 
 **Redirect:**
-1. Re-center on the ICP: "Who are we building this for?" -- grounds the team in the concrete
+1. Re-center on the ICP: "Who are we building this for?": grounds the team in the concrete
 2. Identify the single highest-leverage workflow or prototype: "If you could only finish one thing today, what moves the needle most?"
 3. Create forward motion with a small, concrete action: "Spend 10 minutes writing the ICP one-liner. Just get something on the page."
 4. If energy is the issue: suggest a 5-minute break, get water, step outside briefly
 
 ---
 
-## Pattern: Too-Broad Problem Statement
+## Pattern: Too-broad problem statement
 
 **Signals:** "We help businesses grow," "we solve inefficiency," "we help people be healthier," or any statement that could apply to thousands of companies.
 
-**Root cause:** Fear of narrowing down and missing potential customers. Founders often think broad positioning protects optionality. It does the opposite -- it makes marketing, sales, and product decisions harder.
+**Root cause:** Fear of narrowing down and missing potential customers. Founders often think broad positioning protects optionality. It does the opposite, it makes marketing, sales, and product decisions harder.
 
 **Intervention:** "That's a category, not a problem statement. Who specifically is suffering most, and what specifically are they suffering from? The narrower you go, the easier everything gets."
 
@@ -68,11 +68,11 @@
 
 ---
 
-## Pattern: Founder Wants Custom Code
+## Pattern: Founder wants custom code
 
 **Signals:** "Can we just build this in React?", "I want to write a Python script for this," or "none of these tools do exactly what I need."
 
-**Root cause:** Technical founders often default to building over assembling. It can also be a form of perfectionism -- the no-code tools won't be "right."
+**Root cause:** Technical founders often default to building over assembling. It can also be a form of perfectionism, the no-code tools won't be "right."
 
 **Intervention:** "The goal today is to validate the workflow logic, not write production code. A working N8N workflow that proves the concept in 2 hours beats a custom build that takes 2 weeks. If the logic is validated, you can rebuild it properly later."
 
@@ -84,7 +84,7 @@
 
 ---
 
-## Pattern: Technical Issues (Tool Not Working, API Limits)
+## Pattern: Technical issues (tool not working, API limits)
 
 **Signals:** Error messages on screen, frustrated silence, the founder has been clicking the same thing for 5 minutes, or an API limit has been hit mid-session.
 
@@ -102,7 +102,7 @@
 
 ---
 
-## Pattern: Low Energy or Disengagement
+## Pattern: Low energy or disengagement
 
 **Signals:** One or more founders are on their phones, contributing minimally, staring out the window, or giving short answers.
 
@@ -118,39 +118,39 @@
 
 ---
 
-## Pattern: One Founder Dominating
+## Pattern: One founder dominating
 
 **Signals:** One person talks 80% of the time, others are nodding or checking phones, co-founders are not contributing, or the dominant founder consistently redirects or corrects their teammates.
 
 **Root cause:** Status dynamics, confidence gaps, genuine expertise differences, or a founder who doesn't realize how much space they're taking.
 
-**Intervention:** Redirect to the quiet team members explicitly. "That's a strong perspective. [Name], you haven't weighed in on this -- what's your take?" Do not make the dominant founder feel attacked.
+**Intervention:** Redirect to the quiet team members explicitly. "That's a strong perspective. [Name], you haven't weighed in on this, what's your take?" Do not make the dominant founder feel attacked.
 
 **Redirect:**
-1. Use structured turn-taking for a session: "Let's hear from each person -- what's your instinct on this?"
+1. Use structured turn-taking for a session: "Let's hear from each person, what's your instinct on this?"
 2. Give the quieter co-founders specific ownership: "You're going to lead the ICP definition while [dominant founder] works on competitive analysis."
 3. If the dynamic is severe, address it privately during a break: "I've noticed [Name] tends to speak for the team. Can you help me draw the others out more?"
 
 ---
 
-## Pattern: Internal Co-Founder Disagreement
+## Pattern: Internal co-founder disagreement
 
 **Signals:** Raised voices, tense silence after one person speaks, contradictory answers to your questions, eye-rolling, or a co-founder who disagrees with everything their partner says.
 
 **Root cause:** Unresolved strategic disagreements that existed before the workshop. Founder Jam surfaces real tensions because it forces concrete decisions.
 
-**Intervention:** Do not take sides or try to solve the underlying disagreement. Name the dynamic: "It sounds like there's a genuine difference in perspective here. That's actually useful -- let's make it explicit."
+**Intervention:** Do not take sides or try to solve the underlying disagreement. Name the dynamic: "It sounds like there's a genuine difference in perspective here. That's actually useful, let's make it explicit."
 
 **Redirect:**
 1. Get both positions on the whiteboard or Miro clearly and neutrally
 2. Identify whether it's a question of values/vision (harder) or tactics/priorities (more tractable)
 3. For tactical disagreements: "What experiment would tell you which of these is right?"
-4. For vision disagreements: "This feels like something to resolve outside the workshop. For today, can we agree on one direction to test -- not forever, just for 30 days?"
+4. For vision disagreements: "This feels like something to resolve outside the workshop. For today, can we agree on one direction to test, not forever, just for 30 days?"
 5. If the disagreement is paralyzing progress, escalate to the lead facilitator
 
 ---
 
-## Pattern: Sponsor or Guest Wants to Speak
+## Pattern: Sponsor or guest wants to speak
 
 **Signals:** A sponsor representative, partner, or external guest signals that they'd like to address the cohort, present their product, or extend a brief remark into a longer pitch.
 
@@ -160,14 +160,14 @@
 
 **Redirect:**
 1. Position sponsors at the welcome table for informal conversations, not group presentations
-2. If a sponsor's tool is genuinely relevant to a session (e.g., an automation tool during Session 2.2), invite them to show it in context -- "Could you show us how this would work for Session 2.2?" -- rather than a general pitch
-3. Keep it to 2 minutes maximum; signal the end clearly: "Thank you -- founders, any quick questions for [Name] during the break?"
+2. If a sponsor's tool is genuinely relevant to a session (e.g., an automation tool during Session 2.2), invite them to show it in context, "Could you show us how this would work for Session 2.2?": rather than a general pitch
+3. Keep it to 2 minutes maximum; signal the end clearly: "Thank you, founders, any quick questions for [Name] during the break?"
 
 ---
 
-## Pattern: ICP Too Broad ("We Can Help Anyone")
+## Pattern: ICP too broad ("we can help anyone")
 
-**Signals:** ICP statements like "small businesses," "B2B companies," "anyone dealing with [problem]," or "we're really universal -- our product works for everyone."
+**Signals:** ICP statements like "small businesses," "B2B companies," "anyone dealing with [problem]," or "we're really universal, our product works for everyone."
 
 **Root cause:** Fear of leaving money on the table by narrowing focus. Also common in founders who haven't done enough customer discovery to know who their best customers really are.
 
@@ -178,17 +178,17 @@
 2. Ask: "If you could only serve one industry or one role for the next 12 months, which one would you choose?"
 3. Apply the JTBD lens: "What specific situation triggers this person to look for a solution right now?"
 4. Check: "If you read your ICP statement to 100 people, how many would raise their hand? If it's more than 10-20, it's too broad."
-5. Remind them: narrow now, expand later -- initial focus builds the credibility to expand
+5. Remind them: narrow now, expand later, initial focus builds the credibility to expand
 
 ---
 
-## Pattern: Hypothesis Not Falsifiable
+## Pattern: Hypothesis not falsifiable
 
-**Signals:** Hypothesis statements like "we believe our product is valuable," "we think our ICP will love this," or "customers will find this useful" -- statements that cannot be proven wrong.
+**Signals:** Hypothesis statements like "we believe our product is valuable," "we think our ICP will love this," or "customers will find this useful": statements that cannot be proven wrong.
 
 **Root cause:** Founders conflate a belief with a testable hypothesis. A belief is "we think this will work." A hypothesis specifies what "working" means and what would prove it wrong.
 
-**Intervention:** "A hypothesis isn't a statement you believe -- it's a bet you can prove wrong. If there's no way for this to fail, it's not a hypothesis. Let's add a metric and a deadline."
+**Intervention:** "A hypothesis isn't a statement you believe, it's a bet you can prove wrong. If there's no way for this to fail, it's not a hypothesis. Let's add a metric and a deadline."
 
 **Redirect:**
 1. Apply the template: "If we [specific action], [specific metric] will [change by X] by [specific date]."

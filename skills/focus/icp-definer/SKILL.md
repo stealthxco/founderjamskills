@@ -1,6 +1,6 @@
 ---
 name: icp-definer
-description: Define the beachhead customer with Jobs-to-be-Done, study how competitors win their customers, and choose 1-2 distribution channels. Use in the Focus stage on the GTM and growth or sales path, or whenever a founder's customer is still 'anyone'. Ends with an updated FOUNDER JAM HANDOFF block.
+description: Define the beachhead customer with Jobs-to-be-Done, study how competitors win customers, and choose 1-2 distribution channels. Focus stage, GTM and growth or sales path. Ends with a handoff block.
 license: CC-BY-4.0
 ---
 
@@ -35,11 +35,11 @@ Optional evidence: your best ICP evidence is what real customers have said. If t
 
 ## Process
 
-### Sub-activity A: ICP Definition via Jobs-to-be-Done
+### Sub-activity A: ICP definition via Jobs-to-be-Done
 
 **Introduce the framework:**
 
-Jobs-to-be-Done (JTBD), developed by Clayton Christensen, focuses on the progress a customer is trying to make -- not their demographics. Customers "hire" a product to do a job.
+Jobs-to-be-Done (JTBD), developed by Clayton Christensen, focuses on the progress a customer is trying to make, not their demographics. Customers "hire" a product to do a job.
 
 **JTBD format:**
 > "When [trigger event], I want to [motivation/job], so I can [desired outcome]."
@@ -70,32 +70,32 @@ For each segment, craft a JTBD statement and build a profile:
 The beachhead is the ONE segment you own completely before expanding. A beachhead must be:
 - Winnable with current resources
 - Concentrated enough that they talk to each other
-- Urgent -- they have a problem that requires solving now
-- Resourced -- they have money or a clear path to monetization
+- Urgent: they have a problem that requires solving now
+- Resourced: they have money or a clear path to monetization
 
 Present the scoring table and recommend the highest-scoring segment as the beachhead. Let the founder confirm or override.
 
-**Two-sided marketplace guidance:** If the startup is a marketplace, define supply and demand sides separately. Recommend starting with supply first -- "solve for the harder side first." Identify the 10-20 supply-side participants who will make the marketplace credible before scaling demand.
+**Two-sided marketplace guidance:** If the startup is a marketplace, define supply and demand sides separately. Recommend starting with supply first, "solve for the harder side first." Identify the 10-20 supply-side participants who will make the marketplace credible before scaling demand.
 
-**ICP Red Flags -- check after beachhead selection:**
+**ICP Red Flags, check after beachhead selection:**
 
 If any of these patterns appear, push the founder to sharpen their ICP before moving on:
 
-- "We can help anyone" -- Push for specificity. A beachhead that includes everyone includes no one.
-- "Both enterprise and SMB" -- Pick ONE to start. Serving both requires different sales motions, pricing, and support.
-- No clear trigger event -- They don't know when buyers become buyers. Without a trigger, there is no urgency.
-- Can't name a real person who fits -- The ICP is theoretical, not based on data. Push for a named individual or company.
-- Targeting based on demographics not problems -- Flip to problem-first thinking. Demographics describe; problems motivate.
+- "We can help anyone": Push for specificity. A beachhead that includes everyone includes no one.
+- "Both enterprise and SMB": Pick ONE to start. Serving both requires different sales motions, pricing, and support.
+- No clear trigger event: They don't know when buyers become buyers. Without a trigger, there is no urgency.
+- Can't name a real person who fits: The ICP is theoretical, not based on data. Push for a named individual or company.
+- Targeting based on demographics not problems, Flip to problem-first thinking. Demographics describe; problems motivate.
 
-**ICP Validation Questions -- pressure-test the selected beachhead:**
+**ICP Validation Questions, pressure-test the selected beachhead:**
 
 After the founder selects a beachhead, run these five questions to validate the choice:
 
-1. "Of your current customers or prospects, which one is the BEST fit and why?" -- If they can't name someone specific, the ICP may be aspirational rather than real.
-2. "Who should we NOT target? Who's a bad customer?" -- Knowing who to exclude is as valuable as knowing who to pursue.
-3. "How does this person find solutions today?" -- Reveals the channel strategy and competitive landscape.
-4. "What would make them say no immediately?" -- Surfaces the real objections before the founder encounters them in the field.
-5. "What's the buying process? Who else is involved?" -- Identifies whether the ICP has budget authority or needs to sell internally.
+1. "Of your current customers or prospects, which one is the BEST fit and why?": If they can't name someone specific, the ICP may be aspirational rather than real.
+2. "Who should we NOT target? Who's a bad customer?": Knowing who to exclude is as valuable as knowing who to pursue.
+3. "How does this person find solutions today?": Reveals the channel strategy and competitive landscape.
+4. "What would make them say no immediately?": Surfaces the real objections before the founder encounters them in the field.
+5. "What's the buying process? Who else is involved?": Identifies whether the ICP has budget authority or needs to sell internally.
 
 **Optional: Opportunity Segmentation Matrix**
 
@@ -109,19 +109,19 @@ If time allows, evaluate segments through an additional lens after JTBD scoring.
 
 - **Future Focus:** Growing market, long-term potential, strategic value
 - **Just the Money:** Immediate revenue opportunity, high willingness to pay now
-- **Worst Customers:** Difficult to serve, low retention, high support cost -- avoid these
+- **Worst Customers:** Difficult to serve, low retention, high support cost, avoid these
 
 This matrix helps founders distinguish between segments that are attractive today vs. segments that build toward a defensible position.
 
 **Sherpa-mode challenge prompts:**
 - "Who has this problem the worst, right now, and would pay the most to fix it?"
 - "If you picked the wrong beachhead, how long until you'd know?"
-- "Who has budget authority AND urgency to act -- not just frustration?"
+- "Who has budget authority and urgency to act, beyond frustration?"
 
 **Output: ICP Card + Segment Comparison Table**
 
 ```
-## ICP Card - [startup_name]
+## ICP card - [startup_name]
 
 **Selected Beachhead:** [segment name]
 
@@ -140,11 +140,11 @@ When [trigger event], I want to [motivation/job], so I can [desired outcome].
 
 ---
 
-### Sub-activity B: Competitive Growth Analysis
+### Sub-activity B: Competitive growth analysis
 
 **Introduce the activity:**
 
-"Now let's look at how your competitors are actually growing -- not just who they are. We want to find the content gaps and channel opportunities they are leaving open."
+"Now let's look at how your competitors are actually growing, and who they are. We want to find the content gaps and channel opportunities they are leaving open."
 
 **Step 1: Identify 3-5 competitors**
 
@@ -180,7 +180,7 @@ After analyzing all competitors, identify:
 For each competitor:
 
 ```
-## Growth Battle Card: [Competitor Name]
+## Growth battle card: [Competitor name]
 
 **Their ICP:** [who they're targeting]
 **Content focus:** [topics and formats they lead with]
@@ -194,7 +194,7 @@ For each competitor:
 
 ---
 
-### Sub-activity C: Distribution Strategy
+### Sub-activity C: Distribution strategy
 
 **Introduce the activity:**
 
@@ -204,10 +204,10 @@ For each competitor:
 
 Score each channel 1-5:
 
-1. **Audience Match** -- Is your ICP actually active here? How concentrated vs. noisy?
-2. **Competition Level** -- How saturated is this channel in your category? Lower competition = more opportunity.
-3. **Time to Traction** -- How long until this channel produces real leads? (1 = 90+ days, 5 = within 2 weeks)
-4. **Founder Advantage** -- Do you have an existing network, credibility, or content asset here?
+1. **Audience Match**: Is your ICP actually active here? How concentrated vs. noisy?
+2. **Competition Level**: How saturated is this channel in your category? Lower competition = more opportunity.
+3. **Time to Traction**: How long until this channel produces real leads? (1 = 90+ days, 5 = within 2 weeks)
+4. **Founder Advantage**: Do you have an existing network, credibility, or content asset here?
 
 **Channel options by business type:**
 
@@ -248,7 +248,7 @@ Evaluate 4-6 relevant channels against all 4 criteria. Sum scores. Recommend the
 **Output: Channel Selection Matrix + Distribution Strategy Brief**
 
 ```
-## Channel Selection Matrix - [startup_name]
+## Channel selection matrix - [startup_name]
 
 | Channel | Audience Match | Competition | Time to Traction | Founder Advantage | Total |
 |---------|---------------|-------------|-----------------|-------------------|-------|
@@ -260,7 +260,7 @@ Evaluate 4-6 relevant channels against all 4 criteria. Sum scores. Recommend the
 **Primary Channel 2:** [name] - [1-sentence rationale]
 **Deprioritized:** [name] - [reason]
 
-## Distribution Strategy Brief
+## Distribution strategy brief
 
 **ICP:** [one-line summary of beachhead]
 **Primary channels:** [1-2 selected]
@@ -273,7 +273,7 @@ Evaluate 4-6 relevant channels against all 4 criteria. Sum scores. Recommend the
 ```
 
 **Sherpa-mode challenge prompts:**
-- "Which competitor is growing fastest -- and what are they doing that you could do better?"
+- "Which competitor is growing fastest: and what are they doing that you could do better?"
 - "Where does your ICP already go to solve adjacent problems?"
 - "What channel gives you 100 conversations in 30 days without paid budget?"
 

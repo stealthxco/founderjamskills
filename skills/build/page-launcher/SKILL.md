@@ -1,6 +1,6 @@
 ---
 name: page-launcher
-description: Claude Code only. Publishes a live page (an email-gated lead magnet, an A/B positioning test, a 30-day scoreboard, or a demo page) to agentpub.io by running shell commands, so it needs Claude Code with Bash access. In claude.ai or Claude desktop, publish an artifact instead. Use in the Build stage after offer-designer or prototype-launcher. Third-party skill by Scott Murtaugh of GP Automations.
+description: Claude Code only (needs Bash). Publishes a live page (lead magnet gate, A/B test, scoreboard, demo) to agentpub.io. Build stage. Third-party skill by Scott Murtaugh, GP Automations.
 license: CC0-1.0
 ---
 

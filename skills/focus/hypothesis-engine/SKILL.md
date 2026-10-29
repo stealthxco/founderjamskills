@@ -1,12 +1,12 @@
 ---
 name: hypothesis-engine
-description: Generate and choose a strategic hypothesis with the Double Diamond method. Diverge to 6-10 candidates, score each on desirability, feasibility, and viability, then converge to the top 2-3. Use in the Focus stage, especially on the product and positioning and ops and automation paths, after the Understand work on competitors.
+description: Generate and choose a strategic hypothesis with the Double Diamond method: diverge to 6-10 candidates, score on desirability, feasibility, and viability, converge to the top 2-3. Focus stage.
 license: CC-BY-4.0
 ---
 
 # Hypothesis Engine
 
-Turn your competitive insights into a testable strategic hypothesis. This skill runs the Double Diamond -- first diverging to generate many candidates, then converging to the 2-3 worth validating. You leave with a hypothesis written in two formats: an outcome statement and a validation commitment.
+Turn your competitive insights into a testable strategic hypothesis. This skill runs the Double Diamond, first diverging to generate many candidates, then converging to the 2-3 worth validating. You leave with a hypothesis written in two formats: an outcome statement and a validation commitment.
 
 **Stage:** Focus. **Best for paths:** product and positioning, ops and automation.
 **Time estimate:** 75 minutes
@@ -32,21 +32,21 @@ Fields needed: `startup_name`, `problem_statement`, `target_market`, `stage`.
 If a field is missing, ask conversationally:
 - "What's your startup called?"
 - "What problem does it solve, and for who?"
-- "What stage are you at -- idea, pre-revenue, or early-revenue?"
+- "What stage are you at: idea, pre-revenue, or early-revenue?"
 - "Do you have findings from the battle card session? Share any key competitive insights."
 
-## Step 1: Frame the Hypothesis Challenge
+## Step 1: Frame the hypothesis challenge
 
 Before generating candidates, orient the founder:
 
-"A good hypothesis is specific, time-bound, and falsifiable. We're going to use the Double Diamond -- first we'll generate more candidates than you need, then we'll score and select. Don't edit yourself in the diverge phase."
+"A good hypothesis is specific, time-bound, and falsifiable. We're going to use the Double Diamond, first we'll generate more candidates than you need, then we'll score and select. Don't edit yourself in the diverge phase."
 
 Share the two hypothesis formats:
 
-**Format 1 -- Outcome statement:**
+**Format 1, Outcome statement:**
 > "If we [change/experiment], then [target customer] will [measurable outcome] by [specific date]."
 
-**Format 2 -- Validation commitment:**
+**Format 2, Validation commitment:**
 > "We believe [ICP] will pay $[Y]/month for [specific outcome]. We will validate this by [specific experiment] within [timeframe]."
 
 A strong hypothesis is:
@@ -55,11 +55,11 @@ A strong hypothesis is:
 - Falsifiable (you can prove it wrong)
 - Connected to a mechanism (the "because" or "by" clause)
 
-## Step 2: Diverge Phase
+## Step 2: Diverge phase
 
-Generate 6-10 hypothesis candidates. Use the 20 thought starters below to prompt the founder. Do not generate all 20 -- pick 6-10 most relevant based on the startup context.
+Generate 6-10 hypothesis candidates. Use the 20 thought starters below to prompt the founder. Do not generate all 20, pick 6-10 most relevant based on the startup context.
 
-### 20 Hypothesis Thought Starters
+### 20 hypothesis thought starters
 
 Use these as starting points. Rewrite in the founder's own words using the formats above.
 
@@ -118,7 +118,7 @@ If we launch a targeted marketing campaign in [city/region], we will acquire 50 
 If we proactively reach out to customers who have not logged in for 14 days with a personalized check-in and help offer, we will re-engage 25% of at-risk users and reduce churn in that cohort by 20% within 90 days, because early inactivity is the strongest predictor of cancellation in our data.
 
 **19. Marketing Message**
-If we A/B test two versions of our homepage headline -- one focused on outcome and one focused on process -- we will identify a clear winner with at least 15% higher conversion within 30 days, because our current messaging has not been validated against user language and may not match how customers describe their own problem.
+If we A/B test two versions of our homepage headline, one focused on outcome and one focused on process, we will identify a clear winner with at least 15% higher conversion within 30 days, because our current messaging has not been validated against user language and may not match how customers describe their own problem.
 
 **20. Community Engagement**
 If we build an online community for our users to share best practices and peer support, we will increase product engagement by 30% and improve retention by 15% over six months, because customers who connect with peers around a shared tool develop stronger product habits and feel accountable to a group.
@@ -130,7 +130,7 @@ For each candidate, write it in the founder's voice using one of the two formats
 Output a diverge board:
 
 ```
-## Diverge Board: Hypothesis Candidates
+## Diverge board: Hypothesis candidates
 
 | # | Hypothesis | Category |
 |---|---|---|
@@ -141,7 +141,7 @@ Output a diverge board:
 
 If `mode` is `with-sherpa`, after the diverge board add: "Which hypothesis are you avoiding because it would require the most change? That's probably the most important one."
 
-## Step 3: Evaluate Phase
+## Step 3: Evaluate phase
 
 Score each hypothesis candidate on three dimensions (1-5 scale):
 
@@ -154,7 +154,7 @@ Also assign a **Risk Score (1-5):** How bad is it if this hypothesis is wrong? (
 Output an evaluation table:
 
 ```
-## Hypothesis Evaluation
+## Hypothesis evaluation
 
 | # | Hypothesis | Desirability | Feasibility | Viability | Risk | Total (D+F+V) |
 |---|---|---|---|---|---|---|
@@ -166,32 +166,32 @@ Output an evaluation table:
 Briefly explain scores for each hypothesis (1-2 sentences). Flag any hypothesis scoring below 8 total as unlikely to be worth pursuing.
 
 Sense-check each candidate against the founder's reality:
-- Stage (idea): prioritize desirability and feasibility over viability -- prove the need first
-- Stage (pre-revenue): balance all three -- you need a path to paying customers
-- Stage (early-revenue): weight viability higher -- optimize what's already working
+- Stage (idea): prioritize desirability and feasibility over viability, prove the need first
+- Stage (pre-revenue): balance all three, you need a path to paying customers
+- Stage (early-revenue): weight viability higher, optimize what's already working
 
-If `mode` is `with-sherpa`, challenge low-risk hypotheses: "A risk score of 1 might mean this hypothesis is safe to test -- or it might mean you're not testing something that matters. What's the highest-risk hypothesis on this board?"
+If `mode` is `with-sherpa`, challenge low-risk hypotheses: "A risk score of 1 might mean this hypothesis is safe to test, or it might mean you're not testing something that matters. What's the highest-risk hypothesis on this board?"
 
-## Step 4: Converge Phase
+## Step 4: Converge phase
 
 Select the top 2-3 hypotheses based on total score and founder preference. For each selected hypothesis, develop the full dual format:
 
 ```
-## Hypothesis Card: [H#] - [Short Name]
+## Hypothesis card: [H#] - [short name]
 
-### Outcome Statement
+### Outcome statement
 If we [specific change/experiment], then [target customer] will [measurable outcome] by [specific date].
 
-### Validation Commitment
+### Validation commitment
 We believe [ICP] will [specific behavior] for [specific outcome]. We will validate this by [specific experiment] within [timeframe].
 
-### Why This One
+### Why this one
 [2-3 sentences on why this hypothesis is worth testing now, given the competitive landscape and stage]
 
-### Fastest Way to Be Wrong
-[1 sentence -- what's the fastest experiment that could disprove this?]
+### Fastest way to be wrong
+[1 sentence, what's the fastest experiment that could disprove this?]
 
-### Validation Experiment Brief
+### Validation experiment brief
 [One paragraph describing the specific experiment: who you'll talk to, what you'll build or test, what signal will confirm or deny the hypothesis]
 ```
 
@@ -207,7 +207,7 @@ When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setu
 
 Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access, also write the same fields to `config.json`.
 
-## Sherpa-Mode Questions
+## Sherpa-mode questions
 
 When `mode` is `with-sherpa`, add these provocative questions at natural moments:
 
@@ -216,7 +216,7 @@ When `mode` is `with-sherpa`, add these provocative questions at natural moments
 - After convergence: "Are you testing a real risk to the business, or confirming something you already believe?"
 - Final challenge: "What would it take to prove this wrong in 2 weeks?"
 
-## Output Summary
+## Output summary
 
 When complete:
 - Diverge board: all 6-10 candidates (paste-ready table)

@@ -2,9 +2,9 @@
 
 ## What This Skill Does
 
-Completes the Growth Track with three connected deliverables: one automation spec you can set up today, a North Star metric with supporting metrics to track for 90 days, and a 30-day validation plan with explicit Green/Yellow/Red decision thresholds so you never have to make an emotional call about whether to pivot.
+Builds three connected deliverables: one automation spec you can set up today, a North Star metric with supporting metrics to track for 90 days, and a 30-day validation plan with explicit Green/Yellow/Red decision thresholds so you never have to make an emotional call about whether to pivot.
 
-**Time:** 120 minutes | **Growth Track Part 3 of 3**
+**Time:** 120 minutes | **Stage:** Build. **Best for paths:** GTM and growth, ops and automation
 
 ## How to Use
 
@@ -15,7 +15,7 @@ Copy everything below the line and paste it into a new Claude Desktop or Cowork 
 ## Activation Prompt
 
 ```
-I am working on the Growth Track at Founder Jam. Help me run the Growth Builder activity -- three sub-activities to build one automation, define my North Star metric, and create my 30-day validation plan.
+I am in the Build stage at Founder Jam. Help me run the Growth Builder activity, three sub-activities to build one automation, define my North Star metric, and create my 30-day validation plan.
 
 My startup context:
 - Startup name: [your startup name]
@@ -65,37 +65,43 @@ If cold outreach is a channel, enforce anti-pattern rules: no corporate jargon, 
 Then generate a Decision Framework Card with:
 - Green (70%+): scale, document what worked, build repeatable system
 - Yellow (40-70%): optimize one thing, hold investment, 30-day timer
-- Red (<40%): pivot -- revisit ICP or offer, talk to 5 non-converters
+- Red (<40%): pivot, revisit ICP or offer, talk to 5 non-converters
 
 Challenge my thinking along the way:
 - "Which automation saves you the most time in 30 days?"
 - "If you could only track one number for 90 days, what tells you if this is working?"
-- "What is your decision rule for pivot vs. persist -- and are you willing to commit to it now?"
+- "What is your decision rule for pivot vs. persist, and are you willing to commit to it now?"
 
 At the end, output all Miro-ready artifacts:
 1. Automation Spec (trigger, steps, tools, setup time, first action)
 2. Metrics Dashboard Template (North Star + 5 supporting metrics with targets)
 3. 30-Day Calendar (week-by-week actions with checkboxes)
 4. Decision Framework Card (Green/Yellow/Red thresholds for this startup)
+
+Handoff: if I paste a FOUNDER JAM HANDOFF block (key: value lines such as startup_name, mode, path, stage, problem_statement, target_market, icp_segment, hypothesis_selected, channels_selected, lead_magnet), use it as my context and ask only for what is missing. If I'm working alone, skip the challenge questions unless I ask to be pushed harder. When you finish, print the full block again in a code box with your new fields filled in and every other field unchanged, so I can paste it into the next prompt.
 ```
 
 ## What to Expect
 
 1. Claude will present both automation options and help you select the right fit for your stage
 2. The automation spec will include every step, the exact tools to use, and your first action today
-3. North Star Metric is recommended by business type -- you can adjust based on your specific situation
+3. North Star Metric is recommended by business type, you can adjust based on your specific situation
 4. The 30-day plan is built as a checklist with specific actions, not vague intentions
 5. The Decision Framework Card locks in your decision criteria before the experiment starts
 
 ## Output
 
-- **Automation Spec** -- trigger, step-by-step workflow, tools (free vs. paid), setup complexity, first action
-- **Metrics Dashboard Template** -- North Star + supporting metrics with 30-day targets (paste into Notion or a spreadsheet)
-- **30-Day Calendar** -- week-by-week action plan with checkbox format
-- **Decision Framework Card** -- Green/Yellow/Red thresholds specific to your startup and North Star target
+- **Automation Spec**: trigger, step-by-step workflow, tools (free vs. paid), setup complexity, first action
+- **Metrics Dashboard Template**: North Star + supporting metrics with 30-day targets (paste into Notion or a spreadsheet)
+- **30-Day Calendar**: week-by-week action plan with checkbox format
+- **Decision Framework Card**: Green/Yellow/Red thresholds specific to your startup and North Star target
 
 ## Next Skill
 
-Growth Track is complete. Proceed to the end-of-day share-out:
-- `pitch-builder.md` -- Structure your 5-minute presentation
-- `validation-planner.md` -- Create your 2-day / 2-week / 2-month commitment plan
+Next is the Validate stage:
+- `validation-planner.md`: create your 2-day, 2-week, and 2-month commitment plan
+- `pitch-builder.md`: structure your share-out
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

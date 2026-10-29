@@ -1,76 +1,52 @@
-# Pitch Builder - Instructions for Claude Desktop / Cowork
+# Pitch Builder: paste-in prompt
 
-## What This Skill Does
+## What this skill does
 
-Structures your end-of-day share-out in 20-30 minutes. Generates talking points -- not a script -- so your delivery stays natural. Works through each section one at a time, refining as you go. Track-aware: Product Track runs a 7-10 minute format, Growth Track runs a 5-minute format.
+Structures your end-of-day share-out in 20-30 minutes. It generates talking points, not a script, so your delivery stays natural. It works through one section at a time and picks a format from your path and the length of your slot.
 
-**Time:** 20-30 minutes
+**Stage:** Validate. **Best for paths:** all paths. **Time:** 20-30 minutes.
 
-## How to Use
+## How to use
 
-Copy the activation prompt for your track below and paste it into a new Claude Desktop or Cowork conversation.
+Copy everything inside the box below into a new Claude conversation. If you have a FOUNDER JAM HANDOFF block, paste it where the prompt says. Run this after `validation-planner.md`.
 
 ---
 
-## Activation Prompt - Product Track
+## Activation prompt
 
 ```
-I'm at Founder Jam on the Product Track and I need to prepare my end-of-day share-out. It should be 7-10 minutes.
+I'm at Founder Jam and I need to prepare my end-of-day share-out.
 
-My startup: [startup name]
+My FOUNDER JAM HANDOFF block (paste it here, or write "none"):
+[paste your block]
 
-Here's what I did today:
-- Competitive landscape findings: [what you learned about competitors and the market]
-- Hypothesis I chose: [the hypothesis you selected and why]
-- What I rejected: [hypotheses you didn't pick and the reason]
-- Prototype I built: [what it is and how it works]
-- Key surprises: [what you didn't expect]
-- Specific ask from cohort: [what help you actually need]
+Ask me which path I'm on and how long my share-out slot really is. Then pick a format:
 
-Build my pitch section by section. Work through one section at a time and check with me before moving on. Generate talking points -- not a word-for-word script.
-
-Product Track format:
+Format A, prototype share-out (7-10 minutes), the default for product and positioning:
 1. Competitive landscape findings (90 seconds)
 2. Hypothesis selection and rationale (90 seconds)
 3. Prototype demo walkthrough (3-4 minutes)
 4. Key learnings (60 seconds)
 5. One specific ask (30 seconds)
 
-After the full outline, give me:
-- A timing guide
-- 2-3 versions of a one-sentence pitch for hallway conversations
-
-Push me to be specific:
-- "If you only had 60 seconds, what's the one thing you want people to remember?"
-- "What's the ask that would actually move you forward this week?"
-- "What did you learn that surprised you most?"
-```
-
----
-
-## Activation Prompt - Growth Track
-
-```
-I'm at Founder Jam on the Growth Track and I need to prepare my end-of-day share-out. It should be 5 minutes.
-
-My startup: [startup name]
-
-Here's what I did today:
-- Beachhead customer: [the specific ICP you landed on and their JTBD statement]
-- Lead magnet: [type, title, and the outcome it delivers]
-- What I built: [nurture sequence, automation, or content workflow -- what it does]
-- Tools used: [what you used today]
-- 30-day commitments: [specific actions and numbers]
-- Specific ask from cohort: [what help you actually need]
-
-Build my pitch section by section. Work through one section at a time and check with me before moving on. Generate talking points -- not a word-for-word script.
-
-Growth Track format:
-1. ICP and offer (60 seconds)
+Format B, customer and offer share-out (5 minutes), the default for GTM and growth, sales, and ops and automation:
+1. Customer and offer (60 seconds)
 2. What I built today (90 seconds)
-3. 30-day plan with numbers (90 seconds)
+3. My 2-day, 2-week, and 2-month commitments with numbers (90 seconds)
 4. One specific ask (60 seconds)
 
+If my slot is shorter than the format, trim the middle sections and always keep the one ask.
+
+Here's what I did today:
+- What I learned about my market and competitors: [findings]
+- Hypothesis or beachhead customer I chose, and what I rejected: [answer]
+- What I built (prototype, lead magnet, sequence, automation): [what it is and how it works]
+- Key surprises: [what I didn't expect]
+- My 2-2-2 commitments: [specific actions and numbers]
+- Specific ask from the cohort: [what help I actually need]
+
+Build my pitch section by section. Work on one section at a time and check with me before moving on. Generate talking points, not a word-for-word script.
+
 After the full outline, give me:
 - A timing guide
 - 2-3 versions of a one-sentence pitch for hallway conversations
@@ -79,24 +55,29 @@ Push me to be specific:
 - "If you only had 60 seconds, what's the one thing you want people to remember?"
 - "What's the ask that would actually move you forward this week?"
 - "What did you learn that surprised you most?"
+
+When you finish, print an updated FOUNDER JAM HANDOFF block in a code box, with every field unchanged.
 ```
 
-## What to Expect
+## What to expect
 
-1. Claude will build each section one at a time and check with you before moving on
-2. You'll refine each section before the next -- don't rush this, it's worth the iteration
-3. Talking points, not scripts -- your delivery will be better when it's in your own words
-4. A timing guide to keep you on track during the share-out
-5. 2-3 one-sentence pitch options for hallway conversations
+1. Claude asks your path and slot length, then picks a format.
+2. It builds each section one at a time and checks with you before moving on.
+3. You refine each section. Don't rush this.
+4. Talking points, not scripts. Your delivery is better in your own words.
 
 ## Output
 
 Miro-ready markdown:
+
 - Pitch outline (section-by-section talking points)
 - Timing guide (section lengths)
 - One-sentence pitch options (2-3 variations)
 
-## Next Skill
+## Next skill
 
-After your share-out:
-- `validation-planner.md` -- turn today's work into a 30-day commitment plan before you leave
+If you skipped it, run `validation-planner.md` before the share-out to turn today's work into your 2-day, 2-week, and 2-month commitments.
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

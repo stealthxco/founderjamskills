@@ -1,12 +1,12 @@
 ---
 name: intervention-guide
-description: Real-time sherpa support. Describe what is happening at your table and get intervention language, a pacing check against the stage of the day, what not to say, a 5-minute redirect, and challenge questions. Covers all four paths. Use mid-session when a founder or team is stuck, drifting, or running long.
+description: Real-time sherpa support. Describe what is happening at a table and get intervention language, a pacing check by stage, what not to say, a 5-minute redirect, and challenge questions. All four paths.
 license: CC-BY-4.0
 ---
 
 # Intervention Guide
 
-Real-time support for sherpas during a Founder Jam event. Describe what's happening at your table and get specific words to say, pacing status, and a redirect strategy -- fast.
+Real-time support for sherpas during a Founder Jam event. Describe what's happening at your table and get specific words to say, pacing status, and a redirect strategy, fast.
 
 ## Overview
 
@@ -21,13 +21,13 @@ This skill is designed to be invoked mid-session. It takes a situational descrip
 
 ## Process
 
-### Step 1: Situation Intake
+### Step 1: Situation intake
 
 Ask the sherpa one question:
 
 "What's happening at your table right now? Describe the situation, which activity they're on, and what's not working."
 
-Accept freeform input. Do not ask follow-up questions before providing an initial assessment -- speed matters.
+Accept freeform input. Do not ask follow-up questions before providing an initial assessment, speed matters.
 
 Parse the response for:
 - Current activity (see Activity List below)
@@ -35,33 +35,33 @@ Parse the response for:
 - Approximate time into the session
 - Path (product and positioning, GTM and growth, sales, or ops and automation, if discernible)
 
-### Step 2: Activity Identification
+### Step 2: Activity identification
 
 Map the described situation to the current stage and activity:
 
 **Understand:**
-- `battle-card-builder` -- SWOT analysis, competitor research, battle card creation
-- `market-analyzer` -- market sizing, competitive landscape
+- `battle-card-builder`: SWOT analysis, competitor research, battle card creation
+- `market-analyzer`: market sizing, competitive landscape
 
 **Focus:**
-- `icp-definer` -- ICP definition, JTBD mapping, segment selection
-- `hypothesis-engine` -- hypothesis generation, diverge/converge, "If/then/by" framing
-- `lead-magnet-ideator` -- lead magnet concepts and scoring
+- `icp-definer`: ICP definition, JTBD mapping, segment selection
+- `hypothesis-engine`: hypothesis generation, diverge/converge, "If/then/by" framing
+- `lead-magnet-ideator`: lead magnet concepts and scoring
 
 **Build:**
-- `prototype-launcher` -- prototype type selection, build phase, internal review
-- `offer-designer` -- lead magnet selection, content workflow, email sequence
-- `growth-builder` -- automation build, North Star metrics, 30-day plan
-- `outbound-composer` -- prospect list, sequences, daily cadence
+- `prototype-launcher`: prototype type selection, build phase, internal review
+- `offer-designer`: lead magnet selection, content workflow, email sequence
+- `growth-builder`: automation build, North Star metrics, 30-day plan
+- `outbound-composer`: prospect list, sequences, daily cadence
 
 **Validate:**
-- `validation-planner` -- commitment writing
-- `pitch-builder` -- share-out prep
+- `validation-planner`: commitment writing
+- `pitch-builder`: share-out prep
 
 **General:**
-- `general` -- unclear or early in session
+- `general`: unclear or early in session
 
-### Step 3: Pacing Check
+### Step 3: Pacing check
 
 Based on the current time and activity, tell the sherpa where the startup should be. Reference `templates/session-pacing-guide.md` (bundled in this skill's folder) for block breakdowns. Its timings come from the v1 two-track days, so treat them as guidelines and flex to the day's actual schedule.
 
@@ -73,17 +73,17 @@ PACING: They should be at [X] by now. They are [ahead / on track / behind] by ap
 [If behind]: To recover, [specific cut or compress recommendation from pacing guide].
 ```
 
-### Step 4: Intervention Recommendation
+### Step 4: Intervention recommendation
 
 Based on the failure mode identified, provide:
 
-**What to say:** Specific words or questions the sherpa can use right now. Not generic advice -- actual language.
+**What to say:** Specific words or questions the sherpa can use right now. Not generic advice, actual language.
 
 **What NOT to say:** Common sherpa mistakes for this exact situation.
 
-**Redirect strategy:** How to get them back on track in 5 minutes or less. Include a specific action, not just a principle.
+**Redirect strategy:** How to get them back on track in 5 minutes or less. Include a specific action to take.
 
-#### Failure Mode Library
+#### Failure mode library
 
 | Failure Mode | What to Say | What NOT to Say | Redirect |
 |-------------|-------------|-----------------|----------|
@@ -92,14 +92,14 @@ Based on the failure mode identified, provide:
 | Founder is building a product instead of a prototype | "What's the fastest version of this that could teach you whether the idea works?" | "That's out of scope" | Name a specific prototype type (sales story, landing page, click-through mock) that fits their hypothesis. |
 | Team is stuck on a single option | "What would you do if this option didn't exist?" | "There must be another option" | Run a 3-minute "kill the darling" exercise. Remove the stuck option and force two alternatives. |
 | Founder resists narrowing ICP | "For today, we're going to pick one. You can expand later. Which segment has the most pain right now?" | "You need to niche down" (too prescriptive) | Frame it as a 30-day experiment, not a permanent decision. |
-| Team energy is low | "Let's take 5 and come back -- the best output comes in the last stretch." | Don't push through low energy | 5-minute break. Non-negotiable. |
+| Team energy is low | "Let's take 5 and come back, the best output comes in the last stretch." | Don't push through low energy | 5-minute break. Non-negotiable. |
 | Founder is venting / off-topic | "That's real. Let's put that in the risk column and come back to it. What's the one thing you can control today?" | "Let's stay on task" | Park the issue visibly (sticky note on a "parking lot" frame). Return to current activity. |
 | Technical issues (N8N, API) | "Let's map the workflow on the Miro board first, then we'll wire it up." | "It should work" / debugging live | Whiteboard the logic. Document the workflow as a diagram. Build from the diagram after. |
 | Founder resists automation | "What happens when you can't do this manually for a week? What breaks?" | "Automation is essential" | Reframe as scalability insurance, not replacement. Ask about their current time cost per week. |
 | Hypothesis is too vague | "Can you add a specific number and a deadline to that?" | "Good start, but..." | Hand them the If/Then/By template. Ask them to fill in the blank numbers out loud. |
-| No existing customer data | "Let's build from what competitors' customers say publicly -- reviews, Reddit, LinkedIn comments." | "You need data first" | Pull one competitor review together. Extract pain language directly from customer voice. |
+| No existing customer data | "Let's build from what competitors' customers say publicly, reviews, Reddit, LinkedIn comments." | "You need data first" | Pull one competitor review together. Extract pain language directly from customer voice. |
 
-### Step 5: Challenge Questions
+### Step 5: Challenge questions
 
 Suggest 2-3 provocative questions from the question bank below that match the current situation. These are designed to unlock momentum, not to create more debate.
 

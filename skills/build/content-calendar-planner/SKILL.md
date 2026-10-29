@@ -1,6 +1,6 @@
 ---
 name: content-calendar-planner
-description: Plan content across blog, social, newsletter, and email with publishing velocity rules, Isenberg's validation cascade, and Hormozi's give-to-ask ratios. Turns keyword maps and content ideas into a phased, trackable calendar. Use in the Build stage on the GTM and growth path, once channels and topics are chosen.
+description: Plan content across blog, social, newsletter, and email with publishing velocity rules and give-to-ask ratios. Turns keyword maps and ideas into a phased calendar. Build stage, GTM and growth path.
 license: CC-BY-4.0
 ---
 
@@ -27,21 +27,21 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 **Read from the handoff block:**
-- `startup_name` -- company name for content branding
-- `icp_segment` -- target customer for gap analysis
-- `business_type` -- service model for content type selection
-- `mode` -- `with-sherpa` adds challenge prompts
+- `startup_name`: company name for content branding
+- `icp_segment`: target customer for gap analysis
+- `business_type`: service model for content type selection
+- `mode`: `with-sherpa` adds challenge prompts
 
 **Optional details (not in the handoff block, ask if useful):**
-- `service_areas` -- array of service offerings for coverage tracking
-- `newsletter_name` -- for newsletter scheduling
-- `content_channels` -- array of active channels (e.g., ["blog", "linkedin", "newsletter", "email"])
+- `service_areas`: array of service offerings for coverage tracking
+- `newsletter_name`: for newsletter scheduling
+- `content_channels`: array of active channels (e.g., ["blog", "linkedin", "newsletter", "email"])
 
 **Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
-## Channel Cadence Framework
+## Channel cadence framework
 
-### Blog / Website
+### Blog / website
 
 **Acceleration cadence:** 3-5 posts per week (first 90 days of content push)
 **Steady state:** 2-3 posts per week
@@ -61,7 +61,7 @@ Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you 
 - Space blog posts at least 1 day apart
 - Batch-create content, then schedule over weeks
 
-### Social Media (LinkedIn, X, etc.)
+### Social media (LinkedIn, X, etc.)
 
 **Target cadence:** 3-5 posts per week
 
@@ -80,13 +80,13 @@ Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you 
 
 **Planning horizon:** Assign topics 2-4 weeks in advance
 
-### Email Nurture
+### Email nurture
 
 **Cadence:** Governed by nurture-engine sequences
 
 **Dependency tracking:** If a nurture email references a blog post or case study, that content must be published at least 3 days before the email sends.
 
-## Give-to-Ask Ratio Enforcement (Hormozi)
+## Give-to-ask ratio enforcement (Hormozi)
 
 Apply these ratios across all content:
 
@@ -105,12 +105,12 @@ Apply these ratios across all content:
 
 **Bridge content** counts as 0.5 ask. Example: teaching with a service mention.
 
-## Validation Cascade Integration (Isenberg)
+## Validation cascade integration (Isenberg)
 
 Before scheduling high-investment content, route through the cascade:
 
 ```
-## Validation Cascade: [Topic]
+## Validation cascade: [Topic]
 
 Stage 1: Social media one-liner
 - Date posted: YYYY-MM-DD
@@ -132,7 +132,7 @@ Stage 4: Amplification
 
 **Exception:** Case study companion posts and programmatic pages skip the cascade.
 
-## Content Pipeline Stages
+## Content pipeline stages
 
 | Stage | Definition |
 |-------|-----------|
@@ -145,15 +145,15 @@ Stage 4: Amplification
 | **Published** | Live |
 | **Atomized** | Derivatives created and scheduled across channels |
 
-## Content Gap Analysis
+## Content gap analysis
 
-### By Service Area
+### By service area
 
 | Service Area | Blog Posts | Case Studies | Social Posts | Newsletter Mentions | Gap Level |
 |-------------|-----------|-------------|-------------|--------------------| ----------|
 | [area] | X | X | X | X | [Full / Partial / Gap] |
 
-### By Funnel Stage
+### By funnel stage
 
 | Stage | Content Types Needed | Current Count | Gap? |
 |-------|---------------------|--------------|------|
@@ -162,46 +162,46 @@ Stage 4: Amplification
 | Decision | Testimonials, package pages, ROI content | X | [Y/N] |
 | Retention | Newsletter, check-in content | X | [Y/N] |
 
-### By Customer Segment
+### By customer segment
 
 | Segment | Content Targeting Them | Gap? |
 |---------|----------------------|------|
 | [from icp_segment] | X pieces | [Y/N] |
 
-## Calendar Output Format
+## Calendar output format
 
 ```
-## Content Calendar: [Period]
+## Content calendar: [Period]
 **Generated:** YYYY-MM-DD
 **Give-to-Ask Ratio:** X:1
 
-### Week of [Date]
+### Week of [date]
 
 | Day | Channel | Type | Topic/Title | Status | Keyword Target | Give/Ask | Source |
 |-----|---------|------|-------------|--------|---------------|----------|--------|
 | Mon | Blog | Case Study Companion | "How We [result]..." | Scheduled | [keyword] | Give | case-study-generator |
-| Mon | Social | Story > Insight | [hook] | Drafting | -- | Give | -- |
-| Tue | Newsletter | Issue #X | [theme] | Briefed | -- | Give | -- |
+| Mon | Social | Story > Insight | [hook] | Drafting |, | Give |, |
+| Tue | Newsletter | Issue #X | [theme] | Briefed |, | Give |, |
 | Wed | Blog | Framework | [topic] | Validating | [keyword] | Give | seo-keyword-mapper |
-| Thu | Social | Tactical | [hook] | Idea | -- | Give | -- |
-| Fri | Social | Validation Test | [one-liner] | Idea | -- | Give | -- |
+| Thu | Social | Tactical | [hook] | Idea |, | Give |, |
+| Fri | Social | Validation Test | [one-liner] | Idea |, | Give |, |
 
 ### Dependencies
 - [Blog post X] must publish before [nurture email Y] sends on [date]
 
-### Ratio Check
+### Ratio check
 - Gives: X | Bridges: X (0.5 ask each) | Asks: X
 - Ratio: X:1
 - Status: [On target / Below threshold]
 ```
 
-## Pipeline Tracker
+## Pipeline tracker
 
 ```
-## Content Pipeline Tracker
+## Content pipeline tracker
 **Last updated:** YYYY-MM-DD
 
-### Pipeline Summary
+### Pipeline summary
 | Stage | Count |
 |-------|-------|
 | Ideas | X |
@@ -212,12 +212,12 @@ Stage 4: Amplification
 | Scheduled | X |
 | Published (this month) | X |
 
-### Monthly Publishing Velocity
+### Monthly publishing velocity
 | Month | Blog | Social | Newsletter | Programmatic | Total |
 |-------|------|--------|------------|-------------|-------|
 | [Month] | X | X | X | X | X |
 
-### Give-to-Ask Ratio (Monthly)
+### Give-to-ask ratio (monthly)
 | Month | Gives | Bridges | Asks | Ratio |
 |-------|-------|---------|------|-------|
 | [Month] | X | X | X | X:1 |
@@ -225,14 +225,14 @@ Stage 4: Amplification
 
 ## Workflow
 
-1. **Specify period** -- "next week," "March," "Q2," etc.
-2. **Assess inventory** -- Count available content by pipeline stage
-3. **Build the calendar** -- Schedule Tier 1 keyword content first, fill with case studies and derivatives
-4. **Validate ratio** -- Calculate give-to-ask ratio, adjust if below 3.5:1
-5. **Check dependencies** -- Ensure referenced content exists before emails send
-6. **Track** -- Update pipeline tracker
+1. **Specify period**: "next week," "March," "Q2," etc.
+2. **Assess inventory**: Count available content by pipeline stage
+3. **Build the calendar**: Schedule Tier 1 keyword content first, fill with case studies and derivatives
+4. **Validate ratio**: Calculate give-to-ask ratio, adjust if below 3.5:1
+5. **Check dependencies**: Ensure referenced content exists before emails send
+6. **Track**: Update pipeline tracker
 
-## Sherpa Mode
+## Sherpa mode
 
 When `mode` is `with-sherpa`, add these challenge prompts:
 
@@ -249,11 +249,11 @@ When `mode` is `with-sherpa`, add these challenge prompts:
 - Never publish content that hasn't been through a human review
 - Never schedule newsletter issues without a confirmed theme
 
-## Works Well With
+## Works well with
 
 - If using `seo-keyword-mapper`: keyword maps provide the topic inventory for blog and programmatic content
 - If using `case-study-generator`: case study packages provide blog companions, social posts, and newsletter sections
-- If using `nurture-engine`: nurture emails reference published content -- the calendar tracks dependencies
+- If using `nurture-engine`: nurture emails reference published content, the calendar tracks dependencies
 - If using `lead-magnet-ideator`: new lead magnets need landing pages and promotional content scheduled
 
 ## Where this runs

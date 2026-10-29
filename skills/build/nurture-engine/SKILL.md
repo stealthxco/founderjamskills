@@ -1,6 +1,6 @@
 ---
 name: nurture-engine
-description: Write source-specific 7-email nurture sequences for leads from assessments, lead magnets, contact forms, and newsletter signups, with Hormozi's 3.5:1 give-to-ask ratio and a non-closer track. Use in the Build stage on the GTM and growth or sales path, once a lead magnet or offer exists.
+description: Write source-specific 7-email nurture sequences for leads from assessments, lead magnets, forms, and newsletter signups, at a 3.5:1 give-to-ask ratio. Build stage, GTM and growth or sales path.
 license: CC-BY-4.0
 ---
 
@@ -27,20 +27,20 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 **Read from the handoff block:**
-- `startup_name` -- company name for email personalization
-- `icp_segment` -- target customer profile for content matching
-- `business_type` -- service model for CTA selection
-- `mode` -- `with-sherpa` adds challenge prompts
+- `startup_name`: company name for email personalization
+- `icp_segment`: target customer profile for content matching
+- `business_type`: service model for CTA selection
+- `mode`: `with-sherpa` adds challenge prompts
 
 **Optional details (not in the handoff block, ask if useful):**
-- `crm_platform` -- CRM for integration guidance (e.g., "hubspot", "activecampaign", "mailchimp")
-- `newsletter_name` -- your newsletter name for subscriber sequence
-- `service_areas` -- array of service offerings for content matching
-- `sign_off_phrase` -- custom email sign-off
+- `crm_platform`: CRM for integration guidance (e.g., "hubspot", "activecampaign", "mailchimp")
+- `newsletter_name`: your newsletter name for subscriber sequence
+- `service_areas`: array of service offerings for content matching
+- `sign_off_phrase`: custom email sign-off
 
 **Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
 
-## The 7-Email Framework (Dickerson, Adapted)
+## The 7-email framework (Dickerson, adapted)
 
 Every sequence follows this structure with source-specific content:
 
@@ -58,9 +58,9 @@ Every sequence follows this structure with source-specific content:
 
 After Email 7: move to regular newsletter cadence for long-term nurture.
 
-## Source-Specific Sequences
+## Source-specific sequences
 
-### Source 1: Assessment Completers
+### Source 1: Assessment completers
 
 Prospects who completed one of your assessment tools. Highest intent. They have a scored result and know their gaps.
 
@@ -74,7 +74,7 @@ Prospects who completed one of your assessment tools. Highest intent. They have 
 | 6 | 16 | "Want to walk through your results together?" | Soft pitch: "I'd be happy to spend 20 minutes reviewing your results. No pitch, just analysis." |
 | 7 | 21 | "Last thought on your assessment" | Direct: "If [challenge revealed by assessment] is still a priority, let's talk. Book 20 minutes: [link]." |
 
-### Source 2: Lead Magnet Downloaders
+### Source 2: Lead magnet downloaders
 
 Prospects who downloaded a playbook, framework, or guide. Medium-high intent.
 
@@ -88,7 +88,7 @@ Prospects who downloaded a playbook, framework, or guide. Medium-high intent.
 | 6 | 16 | "Quick question about [resource topic]" | Soft pitch: "How's the implementation going? If you're running into roadblocks, reply to this email." |
 | 7 | 21 | "Ready to move faster on [topic]?" | Direct: "If [topic] is still a priority, our [package name] is designed to take you from framework to action. Book a call: [link]." |
 
-### Source 3: General Contact Form
+### Source 3: General contact form
 
 Mixed intent. Need more context to qualify.
 
@@ -102,7 +102,7 @@ Mixed intent. Need more context to qualify.
 | 6 | 16 | "Still exploring options?" | Soft pitch: "If you're evaluating partners, here's what I'd recommend asking every firm: [3 questions]." |
 | 7 | 21 | "Let me know how I can help" | Direct: "If [their stated need] is still on your radar, I'd love to learn more. Book 20 minutes: [link]." |
 
-### Source 4: Newsletter Subscribers
+### Source 4: Newsletter subscribers
 
 Lowest commercial intent. Longest nurture cycle.
 
@@ -111,14 +111,14 @@ Lowest commercial intent. Longest nurture cycle.
 | 1 | 0 | "Welcome to [newsletter_name]" | What to expect. Link to the 3 most popular past issues. Brief intro. |
 | 2 | 7 | "The one thing I wish I knew earlier about [topic]" | Personal story. Vulnerability. Something that resonates with your audience. |
 | 3 | 14 | "A framework I keep coming back to" | Teach a specific framework. Immediately useful regardless of whether they hire you. |
-| 4 | 21 | (Skip -- they'll receive regular newsletter) | -- |
+| 4 | 21 | (Skip, they'll receive regular newsletter) |, |
 | 5 | 28 | "What we've been building lately" | Bridge: share a recent outcome or new tool. Not a pitch, just "here's what we've been up to." |
-| 6 | 60 | "Quick question for you" | Soft pitch: "What's the biggest challenge you're facing with [your domain]? Reply -- I genuinely want to know." |
+| 6 | 60 | "Quick question for you" | Soft pitch: "What's the biggest challenge you're facing with [your domain]? Reply. I genuinely want to know." |
 | 7 | 90 | "If you ever need a hand" | Direct: "If you're ever working through [relevant challenge], we're here. Book a conversation: [link]." |
 
 **Note:** Newsletter subscribers get a much slower cadence (90 days vs. 21 days) because the regular newsletter already provides ongoing value.
 
-## Non-Closer Nurture Track
+## Non-closer nurture track
 
 For prospects who completed a discovery call but didn't convert.
 
@@ -127,20 +127,20 @@ For prospects who completed a discovery call but didn't convert.
 | # | Timing | Content |
 |---|--------|---------|
 | 1 | 2 weeks post-call | New case study relevant to their situation. No pitch. "Thought you'd find this interesting." |
-| 2 | 6 weeks post-call | New framework, tool, or resource. "We just released this -- figured it might be useful." |
+| 2 | 6 weeks post-call | New framework, tool, or resource. "We just released this, figured it might be useful." |
 | 3 | 3 months post-call | Check-in: "How's [their initiative] going? If you're still working through it, happy to reconnect." |
 | 4 | 4.5 months post-call | Event invite. Community-first, not sales-first. |
 | 5 | 6 months post-call | Direct re-engagement: "We've had availability open up. If [challenge] is still a priority, let's revisit." |
 
 After 6 months: quarterly touchpoints and newsletter only.
 
-## VSL Video Script Framework (Hormozi)
+## VSL video script framework (Hormozi)
 
 Structure for any video sales letter or "How We Work" video:
 
 ```
-## VSL Script: [Page Name]
-### Duration Target: 2-3 minutes
+## VSL script: [Page name]
+### Duration target: 2-3 minutes
 
 ### 1. PROMISE (15 seconds)
 "We help [specific audience] achieve [specific outcome] in [specific timeframe]."
@@ -160,10 +160,10 @@ Step 2: [next phase]
 Step 3: [outcome]
 
 ### 5. CTA (15 seconds)
-"Book a free 20-minute strategy call. No pitch -- just a conversation about what's possible."
+"Book a free 20-minute strategy call. No pitch, just a conversation about what's possible."
 ```
 
-## Email Copy Rules
+## Email copy rules
 
 All nurture emails should follow professional, direct writing:
 
@@ -176,7 +176,7 @@ All nurture emails should follow professional, direct writing:
 - Include a P.S. in Emails 4 and 6 (teaser for next email or secondary CTA)
 - No email exceeds 200 words (short = higher read rate)
 
-## CRM Integration Guidance
+## CRM integration guidance
 
 | Integration | Purpose |
 |------------|---------|
@@ -189,14 +189,14 @@ Adapt these to your specific CRM platform.
 
 ## Workflow
 
-1. **Select source type** -- assessment, lead-magnet, contact, newsletter, non-closer, or all
-2. **Review available content** -- What case studies, frameworks, and resources can you reference?
-3. **Generate sequence** -- Write all 7 emails for the selected source type
-4. **Validate give-to-ask ratio** -- Must be at least 3.5:1 across the full sequence
-5. **Review copy** -- Check against email copy rules
-6. **Map CRM triggers** -- Document automation points for your CRM
+1. **Select source type**: assessment, lead-magnet, contact, newsletter, non-closer, or all
+2. **Review available content**: What case studies, frameworks, and resources can you reference?
+3. **Generate sequence**: Write all 7 emails for the selected source type
+4. **Validate give-to-ask ratio**: Must be at least 3.5:1 across the full sequence
+5. **Review copy**: Check against email copy rules
+6. **Map CRM triggers**: Document automation points for your CRM
 
-## Sherpa Mode
+## Sherpa mode
 
 When `mode` is `with-sherpa`, add these challenge prompts:
 
@@ -214,7 +214,7 @@ When `mode` is `with-sherpa`, add these challenge prompts:
 - Never use pressure language ("you're missing out," "don't fall behind," "your competitors are already..")
 - Every email must stand alone (doesn't require reading previous emails)
 
-## Works Well With
+## Works well with
 
 - If using `offer-architect`: package names and value propositions feed Email 5 (Bridge) and Email 7 (Direct)
 - If using `show-rate-optimizer`: leads who book calls from nurture emails enter the show-rate sequence

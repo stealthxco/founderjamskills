@@ -43,3 +43,7 @@ Rules: never invent statistics or customer stories; be honest about build time; 
 ---
 
 **Next:** post the top test, see who bites, then build the winner.
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam
