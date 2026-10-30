@@ -30,7 +30,7 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 Fields needed:
-- `path`: picks the format (Format A for product and positioning, Format B for the others)
+- `path`: picks the format (Format A for product and positioning, Format B for the others). If it is missing or `undecided`, ask which of the four paths they are on before picking a format.
 - `startup_name`: personalizes output
 - `mode`: with-sherpa adds coach prompts
 - Also read for context: `hypothesis_selected`, `icp_segment`, `lead_magnet`, `outbound_system`, `channels_selected`

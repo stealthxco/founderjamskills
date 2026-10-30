@@ -41,9 +41,11 @@ If the founder shared their FOUNDER JAM HANDOFF block (the format is defined in 
 
 4. "What were their 3 commitments from the validation planner?"
    - 2-day commitment: [specific action]
-   - 2-week commitment: [specific action with a number if possible]
-   - 2-month commitment: [specific outcome with a number if possible]
+   - 2-week commitment: [specific action with a number]
+   - 2-month commitment: [specific outcome with a number]
    -> `commitment_2day`, `commitment_2week`, `commitment_2month`
+
+   If the 2-week or 2-month commitment has no number, ask: "What number would count as hitting it?" Messages 2 and 3 grade against these numbers.
 
 5. "What were their Week 1 actions from the 30-day plan? List 3-5 specific actions."
    -> `week1_actions[]`
@@ -53,10 +55,12 @@ If the founder shared their FOUNDER JAM HANDOFF block (the format is defined in 
 6. "What was their Week 2 success criteria? Give me the specific metrics or milestones they wrote down."
    -> `week2_milestones[]`
 
-   Without a 30-day plan, use the 2-week commitment as the milestone, with its number as the metric.
+   Without a 30-day plan, use the 2-week commitment as the first milestone, with its number as the metric, and ask for one more thing they expect to have done by week 2, so there are 2 milestones.
 
 7. "What specific number did they set as their 30-day target? (e.g., 50 landing page visitors, 10 email signups, 3 discovery calls)"
    -> `thirty_day_target`
+
+   Without a 30-day plan, don't ask. Use the number from the 2-week commitment.
 
 8. "What was their North Star metric and target number? (Expected on GTM and growth, sales, and ops and automation; optional on product and positioning)"
    -> `north_star_metric`, `north_star_target`
@@ -82,7 +86,7 @@ Generate all three messages using the `templates/follow-up-messages.md` format.
 **Requirements for each message:**
 - Founder's first name (not "Hi there" or generic opening)
 - Specific numbers from their commitments: not generic percentages or vague language
-- Specific actions they said they would take, pulled directly from their 30-day plan
+- Specific actions they said they would take, pulled directly from their 30-day plan (without one, from their validation-planner commitments and the extra steps they named in Step 1)
 - Path-specific language:
   - Product and positioning: use "hypothesis," "prototype," "validate," "test"
   - GTM and growth: use "ICP," "lead magnet," "sequence," "pipeline"

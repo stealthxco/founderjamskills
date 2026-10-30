@@ -82,9 +82,9 @@ Reply with your color and I'll send you specific next steps for that path.
 | `[Founder Name]` | First name only |
 | `[Day]` | Day of week (e.g., Saturday) |
 | `[specific commitment from validation planner]` | The 2-day commitment they read aloud |
-| `[Week 1 action 1-3]` | From their 30-day plan, Week 1 rows |
-| `[Week 2 milestone 1-2]` | From their 30-day plan, Week 2 success criteria |
-| `[specific number from 30-day plan]` | The quantified target they set (e.g., 50 landing page visitors) |
+| `[Week 1 action 1-3]` | From their 30-day plan, Week 1 rows (without one: the 2-day commitment plus 2 more first-week steps) |
+| `[Week 2 milestone 1-2]` | From their 30-day plan, Week 2 success criteria (without one: the 2-week commitment plus one more week-2 milestone) |
+| `[specific number from 30-day plan]` | The quantified target they set (e.g., 50 landing page visitors); without a 30-day plan, the number from the 2-week commitment |
 | `[2-month commitment]` | The 2-month commitment from the validation planner (the validation gate) |
 | `[specific metric]` | Their North Star metric, or their hypothesis metric on product and positioning |
 | `[Sherpa Name]` | Your first name |
