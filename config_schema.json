@@ -49,11 +49,12 @@
     "mode": {
       "type": "string",
       "enum": [
+        "",
         "solo",
         "with-sherpa"
       ],
-      "default": "solo",
-      "description": "solo = no challenge prompts (default); with-sherpa = skills add challenge questions the sherpa or founder can ask"
+      "default": "",
+      "description": "empty = not asked yet (skills ask once whether a sherpa is present); solo = no challenge prompts; with-sherpa = skills add challenge questions the sherpa or founder can ask"
     },
     "icp_segment": {
       "type": "string",

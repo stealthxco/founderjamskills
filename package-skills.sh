@@ -44,15 +44,43 @@ for src in "$SKILLS_DIR"/*/*/SKILL.md; do
   case "$seen" in *" $skill "*) fail "ERROR: duplicate skill name '$skill'." ;; esac
   seen="$seen$skill "
 
-  # Frontmatter: name must match the folder; description and license are required.
+  # Frontmatter: must parse as YAML (a loader rejects an unquoted ": " in a value);
+  # name must match the folder; description (max 200 chars) and license are required.
   head -1 "$src" | grep -q '^---$' || fail "ERROR: $skill missing YAML frontmatter."
-  fm="$(awk 'NR==1{next} /^---$/{exit} {print}' "$src")"
-  echo "$fm" | grep -qx "name: $skill" || fail "ERROR: $skill frontmatter 'name:' must equal '$skill'."
-  desc="$(echo "$fm" | sed -n 's/^description: //p')"
-  [ -n "$desc" ] || fail "ERROR: $skill missing 'description:' in frontmatter."
-  [ "${#desc}" -le 200 ] || fail "ERROR: $skill description is ${#desc} chars (max 200)."
-  lic="$(echo "$fm" | sed -n 's/^license: //p')"
-  echo "$fm" | grep -Eq '^license: (CC-BY-4\.0|CC0-1\.0)$' || fail "ERROR: $skill missing 'license: CC-BY-4.0' (or CC0-1.0 for third-party skills)."
+  lic="$(python3 -I - "$src" "$skill" <<'PY'
+import re, sys
+path, skill = sys.argv[1:3]
+fm = open(path, encoding="utf-8").read().split("---", 2)[1]
+try:
+    import yaml
+    data = yaml.safe_load(fm)
+except ImportError:
+    # No PyYAML: parse the flat key: value lines and reject plain scalars YAML would misread.
+    data = {}
+    for line in fm.strip().splitlines():
+        key, _, val = line.partition(":")
+        val = val.strip()
+        if val[:1] in ('"', "'"):
+            val = val[1:-1].replace('\\"', '"')
+        elif ": " in val or " #" in val:
+            sys.exit(f"ERROR: {skill} '{key}:' has an unquoted ': ' or ' #'. Quote the value.")
+        data[key.strip()] = val
+except yaml.YAMLError as e:
+    sys.exit(f"ERROR: {skill} frontmatter is not valid YAML: {e}")
+if not isinstance(data, dict):
+    sys.exit(f"ERROR: {skill} frontmatter is not a YAML mapping.")
+if data.get("name") != skill:
+    sys.exit(f"ERROR: {skill} frontmatter 'name:' must equal '{skill}'.")
+desc = str(data.get("description") or "")
+if not desc:
+    sys.exit(f"ERROR: {skill} missing 'description:' in frontmatter.")
+if len(desc) > 200:
+    sys.exit(f"ERROR: {skill} description is {len(desc)} chars (max 200).")
+if data.get("license") not in ("CC-BY-4.0", "CC0-1.0"):
+    sys.exit(f"ERROR: {skill} missing 'license: CC-BY-4.0' (or CC0-1.0 for third-party skills).")
+print(data["license"])
+PY
+)" || exit 1
 
   # Every templates/ or content/ file referenced in the skill must be bundled with it.
   deps="$(grep -oE '(templates|content)/[A-Za-z0-9._-]+\.md' "$src" | sort -u || true)"
@@ -80,6 +108,9 @@ import os, sys, zipfile
 src, name, out, license_file, credit = sys.argv[1:6]
 entries = []  # (archive path, bytes)
 for root, dirs, files in os.walk(src):
+    for d in dirs:
+        if os.path.islink(os.path.join(root, d)):
+            sys.exit("ERROR: symlinked folder in skill folder: " + os.path.join(root, d))
     dirs.sort()
     for f in sorted(files):
         if f == ".DS_Store":

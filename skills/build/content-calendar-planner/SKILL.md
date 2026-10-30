@@ -24,7 +24,7 @@ Key capabilities:
 
 Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
-Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 **Read from the handoff block:**
 - `startup_name`: company name for content branding
@@ -180,11 +180,11 @@ Stage 4: Amplification
 | Day | Channel | Type | Topic/Title | Status | Keyword Target | Give/Ask | Source |
 |-----|---------|------|-------------|--------|---------------|----------|--------|
 | Mon | Blog | Case Study Companion | "How We [result]..." | Scheduled | [keyword] | Give | case-study-generator |
-| Mon | Social | Story > Insight | [hook] | Drafting |, | Give |, |
-| Tue | Newsletter | Issue #X | [theme] | Briefed |, | Give |, |
+| Mon | Social | Story > Insight | [hook] | Drafting | -- | Give | -- |
+| Tue | Newsletter | Issue #X | [theme] | Briefed | -- | Give | -- |
 | Wed | Blog | Framework | [topic] | Validating | [keyword] | Give | seo-keyword-mapper |
-| Thu | Social | Tactical | [hook] | Idea |, | Give |, |
-| Fri | Social | Validation Test | [one-liner] | Idea |, | Give |, |
+| Thu | Social | Tactical | [hook] | Idea | -- | Give | -- |
+| Fri | Social | Validation Test | [one-liner] | Idea | -- | Give | -- |
 
 ### Dependencies
 - [Blog post X] must publish before [nurture email Y] sends on [date]

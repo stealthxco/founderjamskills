@@ -29,7 +29,7 @@ Four modes. Pick the one that matches the founder's next test:
 
 Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
-Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 Fields needed (helpful, not required): `startup_name`, `icp_segment`, `lead_magnet`, `business_type`.
 
@@ -176,7 +176,7 @@ When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setu
 
 - `published_pages`: [purpose]=[url], comma-separated, e.g. lead-magnet-gate=https://slug.agentpub.io/
 
-Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access, also write the same fields to `config.json`.
+Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the same fields there and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
 
 ## Safety Notes
 

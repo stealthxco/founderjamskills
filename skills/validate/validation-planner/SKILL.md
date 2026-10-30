@@ -1,6 +1,6 @@
 ---
 name: validation-planner
-description: Create the plan that closes the day: 2-day, 2-week, and 2-month commitments with numbers and owners, funnel math, a 30-day Green/Yellow/Red framework, and an accountability partner. Validate stage.
+description: "Create the plan that closes the day: 2-day, 2-week, and 2-month commitments with numbers and owners, funnel math, a 30-day Green/Yellow/Red framework, and an accountability partner. Validate stage."
 license: CC-BY-4.0
 ---
 
@@ -26,7 +26,7 @@ This is the last skill of the day. Run it in the final 15 minutes.
 
 Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
-Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 Fields needed:
 - `path`: tailors funnel math template (B2B vs B2C defaults)
@@ -113,7 +113,7 @@ Build a funnel math table tailored to path and startup stage. The goal is to wor
 
 | Stage | Target | Conversion Rate | Notes |
 |-------|--------|-----------------|-------|
-| Outreach sent | [X] |, | Starting volume |
+| Outreach sent | [X] | -- | Starting volume |
 | Website visits | [X] | [X]% | From outreach |
 | Email captures | [X] | [X]% | Typical 60-70% of visits |
 | Qualified leads | [X] | [X]% | ICP match filter |

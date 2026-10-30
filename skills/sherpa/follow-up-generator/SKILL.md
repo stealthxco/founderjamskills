@@ -1,6 +1,6 @@
 ---
 name: follow-up-generator
-description: Generate personalized post-event follow-ups for founders: the 2-day, 2-week, and 2-month check-ins that reference each founder's own commitments, numbers, and path. Use after the event, per startup.
+description: "Generate personalized post-event follow-ups for founders: the 2-day, 2-week, and 2-month check-ins that reference each founder's own commitments, numbers, and path. Use after the event, per startup."
 license: CC-BY-4.0
 ---
 

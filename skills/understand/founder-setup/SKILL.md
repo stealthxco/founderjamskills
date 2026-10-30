@@ -115,7 +115,7 @@ Claude.ai and Claude desktop have no shared files, so the next skill can't read 
 
 See "FOUNDER JAM HANDOFF format" below for the exact layout.
 
-If you are running in Claude Code with file access, also write the same fields to `config.json` in the working directory. Skip this in claude.ai and Claude desktop.
+If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the same fields there and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config. Skip this in claude.ai and Claude desktop.
 
 ### Step 5: Startup snapshot
 
@@ -226,7 +226,7 @@ When `mode` is `solo`, skip the challenge prompts and run the intake efficiently
 | Where | What happens |
 |-------|--------------|
 | claude.ai or Claude desktop (skill uploaded) | Full flow. The handoff block is the only memory. Copy it out at the end. |
-| Claude Code | Full flow. Also writes `config.json` if you have file access. |
+| Claude Code | Full flow. Also updates a Founder Jam `config.json` if one is in the working directory. |
 
 ---
 

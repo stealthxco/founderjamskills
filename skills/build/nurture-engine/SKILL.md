@@ -24,7 +24,7 @@ Key capabilities:
 
 Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
-Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 **Read from the handoff block:**
 - `startup_name`: company name for email personalization
@@ -111,7 +111,7 @@ Lowest commercial intent. Longest nurture cycle.
 | 1 | 0 | "Welcome to [newsletter_name]" | What to expect. Link to the 3 most popular past issues. Brief intro. |
 | 2 | 7 | "The one thing I wish I knew earlier about [topic]" | Personal story. Vulnerability. Something that resonates with your audience. |
 | 3 | 14 | "A framework I keep coming back to" | Teach a specific framework. Immediately useful regardless of whether they hire you. |
-| 4 | 21 | (Skip, they'll receive regular newsletter) |, |
+| 4 | 21 | (Skip, they'll receive regular newsletter) | -- |
 | 5 | 28 | "What we've been building lately" | Bridge: share a recent outcome or new tool. Not a pitch, just "here's what we've been up to." |
 | 6 | 60 | "Quick question for you" | Soft pitch: "What's the biggest challenge you're facing with [your domain]? Reply. I genuinely want to know." |
 | 7 | 90 | "If you ever need a hand" | Direct: "If you're ever working through [relevant challenge], we're here. Book a conversation: [link]." |

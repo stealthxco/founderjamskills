@@ -1,6 +1,6 @@
 ---
 name: battle-card-builder
-description: Map the competitive landscape: run a SWOT self-assessment, identify 3-5 competitors across four categories, and build a battle card for each. Understand stage, especially product and positioning.
+description: "Map the competitive landscape: run a SWOT self-assessment, identify 3-5 competitors across four categories, and build a battle card for each. Understand stage, especially product and positioning."
 license: CC-BY-4.0
 ---
 
@@ -23,7 +23,7 @@ Map your competitive landscape before you build anything else. This skill runs y
 
 Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
-Sherpa check: if the block has no `mode` field, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
+Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 Fields needed: `startup_name`, `problem_statement`, `target_market`.
 
