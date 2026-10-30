@@ -85,7 +85,7 @@ If any of these patterns appear, push the founder to sharpen their ICP before mo
 - "Both enterprise and SMB": Pick ONE to start. Serving both requires different sales motions, pricing, and support.
 - No clear trigger event: They don't know when buyers become buyers. Without a trigger, there is no urgency.
 - Can't name a real person who fits: The ICP is theoretical, not based on data. Push for a named individual or company.
-- Targeting based on demographics not problems, Flip to problem-first thinking. Demographics describe; problems motivate.
+- Targeting based on demographics, not problems: Flip to problem-first thinking. Demographics describe; problems motivate.
 
 **ICP Validation Questions, pressure-test the selected beachhead:**
 
