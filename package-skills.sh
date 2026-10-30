@@ -117,7 +117,8 @@ for root, dirs, files in os.walk(src):
 with open(license_file, "rb") as fh:
     entries.append((os.path.join(name, "LICENSE"), fh.read()))
 entries.append((os.path.join(name, "CREDIT.txt"), (credit + "\n").encode("utf-8")))
-# The handoff format is defined once, in founder-setup. Copy that section into every other skill's zip.
+# The handoff format is defined once, in founder-setup. Copy that section into every other skill's zip
+# (starter-kit/build.py does the same for the kit zips).
 if name != "founder-setup":
     text = open(format_src, encoding="utf-8").read()
     start = text.find("\n## FOUNDER JAM HANDOFF format\n")
@@ -125,7 +126,7 @@ if name != "founder-setup":
         sys.exit("ERROR: founder-setup/SKILL.md has no '## FOUNDER JAM HANDOFF format' section.")
     end = text.find("\n## ", start + 1)
     section = text[start + 1:end if end >= 0 else len(text)].rstrip() + "\n"
-    section = "Copied from the founder-setup skill by package-skills.sh. If founder-setup is installed, its copy is the same.\n\n" + section
+    section = "Copied from the founder-setup skill when this zip was built. If founder-setup is installed, its copy is the same.\n\n" + section
     entries.append((os.path.join(name, "HANDOFF-FORMAT.md"), section.encode("utf-8")))
 with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
     for arc, data in sorted(entries):

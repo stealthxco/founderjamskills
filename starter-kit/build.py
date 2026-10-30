@@ -5,7 +5,7 @@ The kit is two skills (icp-definer, lead-magnet-ideator) for founders who are no
 at a Founder Jam. There is one copy of each skill: the zips are built straight from
 skills/focus/<name>/, the same folder package-skills.sh uses for dist/, so the kit
 cannot drift from the pack and a founder who uploads both gets identical skills.
-Each zip also carries LICENSE and CREDIT.txt, the same as dist/*.zip.
+Each zip also carries LICENSE, CREDIT.txt, and HANDOFF-FORMAT.md, the same as dist/*.zip.
 
 Output:
   starter-kit/dist/<skill>.zip                   (claude.ai / Desktop upload)
@@ -26,6 +26,19 @@ CREDIT = (
     "Founder Jam curriculum and skills by Drew Burdick \u00b7 program co-created with "
     "Innovate Charlotte \u00b7 CC BY 4.0 \u00b7 drewburdick.com/founderjam"
 )
+FORMAT_SRC = REPO / "skills" / "understand" / "founder-setup" / "SKILL.md"
+
+
+def handoff_format() -> bytes:
+    """The FOUNDER JAM HANDOFF format section of founder-setup, as package-skills.sh bundles it."""
+    text = FORMAT_SRC.read_text(encoding="utf-8")
+    start = text.find("\n## FOUNDER JAM HANDOFF format\n")
+    if start < 0:
+        sys.exit("ERROR: founder-setup/SKILL.md has no '## FOUNDER JAM HANDOFF format' section.")
+    end = text.find("\n## ", start + 1)
+    section = text[start + 1:end if end >= 0 else len(text)].rstrip() + "\n"
+    header = "Copied from the founder-setup skill when this zip was built. If founder-setup is installed, its copy is the same.\n\n"
+    return (header + section).encode("utf-8")
 
 
 def entry(zf: zipfile.ZipFile, arc: str, data: bytes) -> None:
@@ -44,10 +57,13 @@ def build_skill_zip(name: str, out: pathlib.Path) -> None:
     for path in sorted(src.rglob("*")):
         if path.is_symlink():
             sys.exit(f"ERROR: symlink in skill folder: {path}")
+        if path.is_file() and path.name in ("LICENSE", "CREDIT.txt", "HANDOFF-FORMAT.md"):
+            sys.exit(f"ERROR: {path} is generated into the zip; remove it from the skill folder.")
         if path.is_file() and path.name != ".DS_Store":
             files.append((f"{name}/{path.relative_to(src).as_posix()}", path.read_bytes()))
     files.append((f"{name}/LICENSE", (REPO / "LICENSE").read_bytes()))
     files.append((f"{name}/CREDIT.txt", (CREDIT + "\n").encode("utf-8")))
+    files.append((f"{name}/HANDOFF-FORMAT.md", handoff_format()))
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
         for arc, data in sorted(files):
             entry(zf, arc, data)
