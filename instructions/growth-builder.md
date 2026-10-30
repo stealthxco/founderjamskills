@@ -39,7 +39,7 @@ Trigger (form submission) -> Enrich (Apollo/Clay) -> Score (High/Medium/Low ICP 
 Option 2 - Customer Support Automation:
 Intake (unified inbox) -> Classify (billing / feature / bug / general) -> Route (founder / product log / urgent queue / template) -> Escalate (24h open ticket = founder alert)
 
-If my process is internal, Option 2 or a custom internal workflow fits best.
+If my process is customer support, Option 2 fits. If it is another internal process, tell me to sketch it with `prototype-launcher.md` first and come back.
 
 For the selected option, output a full automation spec: trigger, steps, tools (free vs. paid), setup complexity, first action to take today.
 

@@ -219,6 +219,8 @@ For each metric, ask the founder: "What would Green look like in 30 days?" Use t
 
 **Output: Metrics Dashboard Template**
 
+For an internal process, label the metric rows Adoption, Time saved, and Error rate instead of Acquisition, Activation, Engagement, and Revenue.
+
 ```
 ## Metrics dashboard - [startup_name]
 

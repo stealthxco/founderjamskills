@@ -38,6 +38,7 @@ If a field is missing, ask:
 1. "Which path are you on: product and positioning, GTM and growth, sales, or ops and automation?"
 2. "What stage are you at, idea, pre-revenue, or early-revenue?"
 3. "What's your startup name?"
+4. On the ops and automation path only: "Is this an internal or support process, or go-to-market work like lead enrichment?"
 
 ### Step 2: Context check
 
@@ -150,7 +151,7 @@ Internal operations path (ops and automation, automating an internal or support 
 | People who could use it | [X] | -- | Everyone the process serves |
 | People who tried it | [X] | [X]% | Used it at least once |
 | People using it weekly | [X] | [X]% | Habit, not a one-off try |
-| Tasks completed through it | [X] | [X]% | Share of all tasks that go through it |
+| Tasks completed through it per week | [X] | [X]% | Share of all such tasks per week (ask the total) |
 ```
 
 Also track two measures next to the table:
@@ -238,7 +239,7 @@ Deliver in sequence, paste-ready:
 
 ## Handoff
 
-When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence. This skill adds no field of its own. Fill in any fields you collected during this session, and keep every other field as you received it. Tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the fields you collected and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence. This skill adds no field of its own. Fill in any FOUNDER JAM HANDOFF fields you collected during this session (never add keys the format does not define), and keep every other field as you received it. Tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the fields you collected and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
 
 ## Where this runs
 

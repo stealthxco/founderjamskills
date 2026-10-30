@@ -34,7 +34,7 @@ Run me through these steps:
 
 2. Diverge phase, use the 20 hypothesis thought starters to help me generate 6-10 candidates customized to my startup. Pick the most relevant thought starters based on my stage and problem. Output a diverge board table with all candidates labeled H1 through H[n].
 
-3. Evaluate phase, score each hypothesis on desirability (1-5), feasibility (1-5), viability (1-5), and risk (1-5). Show a scoring table. Flag anything below 8 total as unlikely to be worth pursuing. Sense-check feasibility against my actual stage and resources.
+3. Evaluate phase, score each hypothesis on desirability (1-5), feasibility (1-5), viability (1-5; for an internal process on the ops and automation path, score the time or cost it saves instead), and risk (1-5). Show a scoring table. Flag anything below 8 total as unlikely to be worth pursuing. Sense-check feasibility against my actual stage and resources.
 
 4. Converge phase, help me select the top 2-3. For each selected hypothesis, develop:
    - The full outcome statement

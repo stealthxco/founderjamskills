@@ -37,7 +37,7 @@ Show a comparison table ranked by composite. Flag anything under 3.0 to rework o
 
 4. Recommend the next step: 4.0+ means build it now; 3.0-3.9 means post the test first; under 3.0 means rethink the customer or the problem.
 
-5. Ask which concept I'm going with. Then print my FOUNDER JAM HANDOFF block again inside a code box, with `lead_magnet` set to that concept as "title - type". Keep every other field as I pasted it. If my block was missing fields, use this layout:
+5. Ask which concept I'm going with. Then print my FOUNDER JAM HANDOFF block again inside a code box, with `lead_magnet` set to that concept as "type - title". Keep every other field as I pasted it. If my block was missing fields, use this layout:
 
 FOUNDER JAM HANDOFF
 version: 2
