@@ -56,7 +56,7 @@ Push me to be specific:
 - "What's the ask that would actually move you forward this week?"
 - "What did you learn that surprised you most?"
 
-When you finish, print an updated FOUNDER JAM HANDOFF block in a code box, with any field I gave you that the block was missing filled in and every other field unchanged.
+When you finish, print an updated FOUNDER JAM HANDOFF block in a code box, with any field I gave you that the block was missing filled in and every other field unchanged. If I wrote "none", build the block from what I told you. Print the block in this layout: a first line `FOUNDER JAM HANDOFF`, then `version: 2`, then one `key: value` line for each of startup_name, mode, path, stage, problem_statement, target_market, team_size, traction, business_type, icp_segment, top_pains, hypothesis_selected, channels_selected, lead_magnet, outbound_system, published_pages, in that order. Leave a value empty when it is unknown, and write channels_selected and published_pages as comma-separated lists on one line.
 ```
 
 ## What to expect

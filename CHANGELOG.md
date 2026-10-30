@@ -36,3 +36,5 @@ Founder Jam moves to one track with four paths.
 ### Upgrading from v1
 
 Run `./install.sh` again. It replaces the old links in `~/.claude/skills/` that pointed at `skills/<name>`. If you use the plugin, run `claude plugin marketplace update founder-jam-skills` in your shell.
+
+If you kept a v1 `config.json` (it has `track` and no `path`), the v2 skills leave it alone, because they only update a file with both `startup_name` and `path`. To keep using it, add a `path` key set to `product-positioning`, `gtm-growth`, `sales`, `ops-automation`, or `undecided`; your other saved fields stay as they are. Or delete it and run `founder-setup` again.

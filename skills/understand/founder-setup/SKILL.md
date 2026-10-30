@@ -201,6 +201,7 @@ Rules for every skill that touches the block:
 - One `key: value` line per field, plain text, no markdown inside the fence.
 - `stage` means the startup's stage (idea, pre-revenue, early-revenue). It is not a Founder Jam stage.
 - `channels_selected` and `published_pages` are comma-separated on one line.
+- When a value comes from `config.json`, convert it: `channels_selected` (an array of strings) becomes a comma-separated list, and `published_pages` (an array of objects) becomes comma-separated `purpose=url` pairs. Keep every entry. When you write the block back to `config.json`, turn them back into arrays.
 - Leave a field empty when it is unknown. Never invent a value.
 - When a skill finishes, it prints the full block again with its new fields filled in, so the founder always holds the latest version. Keep every field you didn't change. This applies to every founder skill (Understand, Focus, Build, Validate). The sherpa skills read founders' blocks but do not print one back.
 - If a founder pastes an older or partial block, use what is there and ask for the rest.
