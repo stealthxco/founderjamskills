@@ -23,7 +23,7 @@ This skill produces three messages:
 
 Ask the sherpa for the following information about one startup. Collect everything before generating messages.
 
-If the founder shared their FOUNDER JAM HANDOFF block (the format is defined in the `founder-setup` skill), read `startup_name`, `path`, `icp_segment`, `hypothesis_selected`, `lead_magnet`, `outbound_system`, and `channels_selected` from it and confirm them instead of asking again.
+If the founder shared their FOUNDER JAM HANDOFF block (the format is defined in the `founder-setup` skill; if `founder-setup` is not installed, the same format is in `HANDOFF-FORMAT.md` next to this file), read `startup_name`, `path`, `icp_segment`, `hypothesis_selected`, `lead_magnet`, `outbound_system`, and `channels_selected` from it and confirm them instead of asking again.
 
 **Questions to ask (in order):**
 

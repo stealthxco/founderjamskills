@@ -24,7 +24,7 @@ This is the last skill of the day. Run it in the final 15 minutes.
 
 ### Step 1: Load context
 
-Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`; if `founder-setup` is not installed, the same format is in `HANDOFF-FORMAT.md` next to this file). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
 Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
@@ -38,7 +38,8 @@ If a field is missing, ask:
 1. "Which path are you on: product and positioning, GTM and growth, sales, or ops and automation?"
 2. "What stage are you at, idea, pre-revenue, or early-revenue?"
 3. "What's your startup name?"
-4. On the ops and automation path only: "Is this an internal or support process, or go-to-market work like lead enrichment?"
+
+On the `ops-automation` path, also ask this whenever the handoff and the founder's answers so far do not make it clear, even if every field above is filled in: "Is this an internal or support process, or go-to-market work like lead enrichment?" The answer picks the funnel template in Step 4.
 
 ### Step 2: Context check
 
@@ -239,7 +240,7 @@ Deliver in sequence, paste-ready:
 
 ## Handoff
 
-When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence. This skill adds no field of its own. Fill in any FOUNDER JAM HANDOFF fields you collected during this session (never add keys the format does not define), and keep every other field as you received it. Tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the fields you collected and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`; if `founder-setup` is not installed, the same format is in `HANDOFF-FORMAT.md` next to this file) in a code fence. This skill adds no field of its own. Fill in any FOUNDER JAM HANDOFF fields you collected during this session (never add keys the format does not define), and keep every other field as you received it. Tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the fields you collected and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
 
 ## Where this runs
 

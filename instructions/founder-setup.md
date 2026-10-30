@@ -37,7 +37,7 @@ After my answers:
 
 If mode is with-sherpa, challenge me along the way: "Is the problem painful enough that someone would pay today to solve it?", "Who has this problem the worst? Are you building for them?", "What have you already tried to validate this?" If mode is solo, skip the challenges and move efficiently.
 
-Finish by printing this block in a code box, with every field you know filled in and the rest left empty. Never invent a value. Tell me to paste it at the start of each later prompt.
+Finish by printing this block in a code box, with every field you know filled in and the rest left empty. Never invent a value. If I pasted an older block to redo setup, keep every field you didn't ask about (such as icp_segment, lead_magnet, or published_pages) exactly as it was. Tell me to paste it at the start of each later prompt.
 
 FOUNDER JAM HANDOFF
 version: 2

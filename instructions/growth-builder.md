@@ -39,7 +39,7 @@ Trigger (form submission) -> Enrich (Apollo/Clay) -> Score (High/Medium/Low ICP 
 Option 2 - Customer Support Automation:
 Intake (unified inbox) -> Classify (billing / feature / bug / general) -> Route (founder / product log / urgent queue / template) -> Escalate (24h open ticket = founder alert)
 
-If my process is customer support, Option 2 fits. If it is another internal process, tell me to sketch it with `prototype-launcher.md` first and come back.
+If my process is customer support, Option 2 fits. If it is another internal process, tell me to sketch it with `prototype-launcher.md` first. When I come back with that sketch, use it as my automation spec (type: internal process) and continue with the internal-process metrics.
 
 For the selected option, output a full automation spec: trigger, steps, tools (free vs. paid), setup complexity, first action to take today.
 
@@ -86,7 +86,7 @@ At the end, output all Miro-ready artifacts:
 3. 30-Day Calendar (week-by-week actions with checkboxes)
 4. Decision Framework Card (Green/Yellow/Red thresholds for this startup)
 
-Handoff: if I paste a FOUNDER JAM HANDOFF block (key: value lines such as startup_name, mode, path, stage, problem_statement, target_market, icp_segment, hypothesis_selected, channels_selected, lead_magnet), use it as my context and ask only for what is missing. If I'm working alone, skip the challenge questions unless I ask to be pushed harder. When you finish, print the full block again in a code box with your new fields filled in and every other field unchanged, so I can paste it into the next prompt.
+Handoff: if I paste a FOUNDER JAM HANDOFF block (key: value lines such as startup_name, mode, path, stage, problem_statement, target_market, icp_segment, hypothesis_selected, channels_selected, lead_magnet), use it as my context and ask only for what is missing. If I'm working alone, skip the challenge questions unless I ask to be pushed harder. When you finish, print the full block again in a code box with your new fields, and any field I gave you that the block was missing, filled in and every other field unchanged, so I can paste it into the next prompt.
 ```
 
 ## What to Expect

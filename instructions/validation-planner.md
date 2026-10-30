@@ -30,6 +30,8 @@ For each horizon, capture:
 - 2 Weeks: specific milestone I'll have completed (with a number)
 - 2 Months: the validation signal that would make me confident to invest more
 
+If I'm on the ops and automation path and it isn't clear whether I'm automating an internal or support process or go-to-market work like lead enrichment, ask me first. The answer picks the funnel model.
+
 Then build a funnel math table working backwards from my customer target. Use these defaults and adjust based on my context:
 - B2B model: 250 cold emails -> 50 visits -> 36 captures -> 18 qualified -> 9 calls -> 3 customers
 - B2C model: 1,000 impressions -> 100 clicks -> 70 captures -> 35 qualified -> 10 replies -> 3 customers
@@ -49,7 +51,7 @@ Push me if I'm being vague:
 - "If you hit Yellow in 30 days, what's your decision rule for pivoting vs. optimizing?"
 - "Who outside this room will hold you accountable to these numbers?"
 
-Handoff: if I paste a FOUNDER JAM HANDOFF block (key: value lines such as startup_name, mode, path, stage, problem_statement, target_market, icp_segment, hypothesis_selected, channels_selected, lead_magnet), use it as my context and ask only for what is missing. If I'm working alone, skip the challenge questions unless I ask to be pushed harder. When you finish, print the full block again in a code box with your new fields filled in and every other field unchanged, so I can paste it into the next prompt.
+Handoff: if I paste a FOUNDER JAM HANDOFF block (key: value lines such as startup_name, mode, path, stage, problem_statement, target_market, icp_segment, hypothesis_selected, channels_selected, lead_magnet), use it as my context and ask only for what is missing. If I'm working alone, skip the challenge questions unless I ask to be pushed harder. When you finish, print the full block again in a code box with your new fields, and any field I gave you that the block was missing, filled in and every other field unchanged, so I can paste it into the next prompt.
 ```
 
 ## What to Expect

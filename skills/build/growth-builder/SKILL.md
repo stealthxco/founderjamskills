@@ -14,7 +14,7 @@ Build one automation to replace a manual process, define the single metric that 
 
 Three sequential sub-activities:
 
-1. **Choose One Automation** - Select and spec either Sales Lead Enrichment or Customer Support Automation
+1. **Choose One Automation** - Select and spec either Sales Lead Enrichment or Customer Support Automation (on the `ops-automation` path, any other internal process is sketched in `prototype-launcher` first)
 2. **North Star Metric + Supporting Metrics** - Define the one number that matters and the 3-5 metrics that explain it
 3. **30-Day Validation Plan** - Week-by-week actions with Green/Yellow/Red decision thresholds
 
@@ -22,7 +22,7 @@ Three sequential sub-activities:
 
 ## Setup
 
-Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`; if `founder-setup` is not installed, the same format is in `HANDOFF-FORMAT.md` next to this file). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
 Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
@@ -135,6 +135,8 @@ Tools:
 
 Setup complexity: **Easy** (1-2 hours first-time setup)
 
+**Another internal process (`ops-automation` path only):** If the founder's manual process is neither lead enrichment nor customer support (for example invoice processing or onboarding paperwork), neither option fits. Have the founder sketch the workflow with `prototype-launcher` first, then come back and paste that sketch here. Use it for the automation spec below (its trigger, steps, and tools, with **Type:** Internal process), then continue to Sub-activity B with the internal-process metrics.
+
 ---
 
 **Output: Automation Spec**
@@ -142,7 +144,7 @@ Setup complexity: **Easy** (1-2 hours first-time setup)
 ```
 ## Automation spec - [startup_name]
 
-**Type:** [Sales Lead Enrichment / Customer Support]
+**Type:** [Sales Lead Enrichment / Customer Support / Internal process]
 **Setup complexity:** [Easy / Medium / Hard]
 **Estimated setup time:** [X hours]
 
@@ -392,11 +394,11 @@ Based on the 30-day plan, confirm which channels the founder is committing to. A
 
 ## Handoff
 
-When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence with these fields filled in:
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`; if `founder-setup` is not installed, the same format is in `HANDOFF-FORMAT.md` next to this file) in a code fence with these fields filled in:
 
 - `channels_selected`: [confirmed primary channel 1], [confirmed primary channel 2] (leave unchanged if you skipped Step 3)
 
-Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the same fields there and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
+Also fill in any other FOUNDER JAM HANDOFF field you collected during this session, such as `mode` from the sherpa check or a startup field the block was missing (never add keys the format does not define). Keep every remaining field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the same fields there and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
 
 ## Where this runs
 

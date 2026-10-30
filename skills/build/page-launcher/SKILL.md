@@ -27,7 +27,7 @@ Four modes. Pick the one that matches the founder's next test:
 
 ## Setup
 
-Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`; if `founder-setup` is not installed, the same format is in `HANDOFF-FORMAT.md` next to this file). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
 Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
@@ -172,11 +172,11 @@ Solo founders in claude.ai or Claude desktop can get the same result without a s
 
 ## Handoff
 
-When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence with these fields filled in:
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`; if `founder-setup` is not installed, the same format is in `HANDOFF-FORMAT.md` next to this file) in a code fence with these fields filled in:
 
 - `published_pages`: [purpose]=[url], comma-separated, for example `lead-magnet-gate=https://slug.agentpub.io/`. Keep every entry already in `published_pages` and add one entry for each new URL. Never replace earlier URLs. Mode B publishes two URLs, so add both (ab-test-a and ab-test-b). In `config.json`, `published_pages` is an array of objects, each with `purpose` and `url` (and optionally `name` and `gate`). Append new objects and leave the existing ones as they are.
 
-Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the same fields there and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
+Also fill in any other FOUNDER JAM HANDOFF field you collected during this session, such as `mode` from the sherpa check or a startup field the block was missing (never add keys the format does not define). Keep every remaining field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the same fields there and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
 
 ## Safety Notes
 

@@ -34,7 +34,7 @@ Whichever you pick, start with `founder-setup`. It asks whether a sherpa is with
 4. The skill appears in your list. Switch it on.
 5. Start a new chat and ask for it by name: "Run founder-setup."
 
-Every zip holds one folder named for the skill, with SKILL.md inside, plus the templates the skill uses, a LICENSE file, and a CREDIT.txt. If an upload fails, the usual causes are a zip that is too large, a folder name that doesn't match the skill name, a missing SKILL.md, or odd characters in the skill name or description. Use the zips from `dist/` unchanged and none of those should apply.
+Every zip holds one folder named for the skill, with SKILL.md inside, plus the templates the skill uses, a LICENSE file, a CREDIT.txt, and a HANDOFF-FORMAT.md (a copy of the handoff format from founder-setup, so the skill works even if you upload it on its own). If an upload fails, the usual causes are a zip that is too large, a folder name that doesn't match the skill name, a missing SKILL.md, or odd characters in the skill name or description. Use the zips from `dist/` unchanged and none of those should apply.
 
 Upload the skills you need for your path (see [PATHS.md](../PATHS.md)), not all 25. Skills stay private to your account until you share them.
 

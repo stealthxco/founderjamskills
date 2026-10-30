@@ -115,7 +115,9 @@ Claude.ai and Claude desktop have no shared files, so the next skill can't read 
 
 See "FOUNDER JAM HANDOFF format" below for the exact layout.
 
-If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the same fields there and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config. Skip this in claude.ai and Claude desktop.
+If the founder is re-running setup and pasted an existing block, or a Founder Jam `config.json` already exists, carry over every field this skill does not collect (`icp_segment`, `top_pains`, `hypothesis_selected`, `channels_selected`, `lead_magnet`, `outbound_system`, `published_pages`) exactly as it was. Never print those fields empty just because setup did not ask about them.
+
+If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update only the fields you collected in this session and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config. Skip this in claude.ai and Claude desktop.
 
 ### Step 5: Startup snapshot
 

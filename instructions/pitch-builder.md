@@ -56,7 +56,7 @@ Push me to be specific:
 - "What's the ask that would actually move you forward this week?"
 - "What did you learn that surprised you most?"
 
-When you finish, print an updated FOUNDER JAM HANDOFF block in a code box, with every field unchanged.
+When you finish, print an updated FOUNDER JAM HANDOFF block in a code box, with any field I gave you that the block was missing filled in and every other field unchanged.
 ```
 
 ## What to expect

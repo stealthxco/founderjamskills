@@ -102,7 +102,7 @@ Skills run from the handoff block you paste into the chat, so nothing needs to b
 
 ## Building the zips
 
-After you edit a skill, run `./package-skills.sh`. It checks each skill's frontmatter and bundled files, then writes `dist/<skill>.zip`. Each zip has one folder named for the skill with its SKILL.md, templates, LICENSE, and a CREDIT.txt.
+After you edit a skill, run `./package-skills.sh`. It checks each skill's frontmatter and bundled files, then writes `dist/<skill>.zip`. Each zip has one folder named for the skill with its SKILL.md, templates, LICENSE, a CREDIT.txt, and (except founder-setup) a HANDOFF-FORMAT.md copied from founder-setup. The script needs PyYAML (`python3 -m pip install --user pyyaml`).
 
 ## Frameworks and attribution
 

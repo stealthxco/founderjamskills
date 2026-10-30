@@ -23,7 +23,7 @@ A prototype is not meant to last. It is meant to answer one question: does this 
 
 ## Context
 
-Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
+Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is defined in `founder-setup`; if `founder-setup` is not installed, the same format is in `HANDOFF-FORMAT.md` next to this file). If you are running in Claude Code with file access, `config.json` in the working directory works too. Ask for anything that is missing, one question at a time.
 
 Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
@@ -562,7 +562,7 @@ When complete:
 
 Then say: "You have a prototype and a test plan. Show it to five people before the end-of-day share-out. The goal is one real signal, not polish."
 
-Finally, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence. This skill has no field of its own to add. Fill in any FOUNDER JAM HANDOFF fields you collected during this session (never add keys the format does not define) (for example `startup_name`, `stage`, `target_market`, `mode`), and keep every other field as you received it. Tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the fields you collected and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
+Finally, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`; if `founder-setup` is not installed, the same format is in `HANDOFF-FORMAT.md` next to this file) in a code fence. This skill has no field of its own to add. Fill in any FOUNDER JAM HANDOFF fields you collected during this session (never add keys the format does not define) (for example `startup_name`, `stage`, `target_market`, `mode`), and keep every other field as you received it. Tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the fields you collected and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
 
 ## Where this runs
 

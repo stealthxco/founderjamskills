@@ -30,6 +30,10 @@ fail() { echo -e "${RED}$1${NC}" >&2; exit 1; }
 command -v python3 >/dev/null 2>&1 || fail "ERROR: 'python3' not found. Install it and re-run."
 [ -f "$REPO_DIR/LICENSE" ] || fail "ERROR: LICENSE not found at the repo root."
 [ -f "$REPO_DIR/licenses/CC0-1.0.txt" ] || fail "ERROR: licenses/CC0-1.0.txt not found."
+python3 -I -c 'import site, sys; sys.path.append(site.getusersitepackages()); import yaml' 2>/dev/null \
+  || fail "ERROR: PyYAML is required to check skill frontmatter. Install it with: python3 -m pip install --user pyyaml"
+FORMAT_SRC="$SKILLS_DIR/understand/founder-setup/SKILL.md"
+[ -f "$FORMAT_SRC" ] || fail "ERROR: founder-setup/SKILL.md not found. It defines the handoff format bundled into every zip."
 
 mkdir -p "$DIST_DIR"
 rm -f "$DIST_DIR"/*.zip
@@ -44,27 +48,17 @@ for src in "$SKILLS_DIR"/*/*/SKILL.md; do
   case "$seen" in *" $skill "*) fail "ERROR: duplicate skill name '$skill'." ;; esac
   seen="$seen$skill "
 
-  # Frontmatter: must parse as YAML (a loader rejects an unquoted ": " in a value);
+  # Frontmatter: must parse as YAML (PyYAML, checked above; it rejects an unquoted ": " in a value);
   # name must match the folder; description (max 200 chars) and license are required.
   head -1 "$src" | grep -q '^---$' || fail "ERROR: $skill missing YAML frontmatter."
   lic="$(python3 -I - "$src" "$skill" <<'PY'
-import re, sys
+import site, sys
+sys.path.append(site.getusersitepackages())  # -I hides user site-packages; a pip --user PyYAML lives there.
+import yaml
 path, skill = sys.argv[1:3]
 fm = open(path, encoding="utf-8").read().split("---", 2)[1]
 try:
-    import yaml
     data = yaml.safe_load(fm)
-except ImportError:
-    # No PyYAML: parse the flat key: value lines and reject plain scalars YAML would misread.
-    data = {}
-    for line in fm.strip().splitlines():
-        key, _, val = line.partition(":")
-        val = val.strip()
-        if val[:1] in ('"', "'"):
-            val = val[1:-1].replace('\\"', '"')
-        elif ": " in val or " #" in val:
-            sys.exit(f"ERROR: {skill} '{key}:' has an unquoted ': ' or ' #'. Quote the value.")
-        data[key.strip()] = val
 except yaml.YAMLError as e:
     sys.exit(f"ERROR: {skill} frontmatter is not valid YAML: {e}")
 if not isinstance(data, dict):
@@ -89,7 +83,7 @@ PY
   done
 
   # The skill folder must not already hold the generated files.
-  for gen in LICENSE CREDIT.txt; do
+  for gen in LICENSE CREDIT.txt HANDOFF-FORMAT.md; do
     [ -e "$skill_dir/$gen" ] && fail "ERROR: $skill/$gen exists in the skill folder. It is generated into the zip; remove it."
   done
 
@@ -103,9 +97,9 @@ PY
   fi
 
   # Deterministic zip (sorted entries, fixed timestamps) with one top-level folder <name>/.
-  python3 -I - "$skill_dir" "$skill" "$DIST_DIR/$skill.zip" "$license_file" "$credit" <<'PY'
+  python3 -I - "$skill_dir" "$skill" "$DIST_DIR/$skill.zip" "$license_file" "$credit" "$FORMAT_SRC" <<'PY'
 import os, sys, zipfile
-src, name, out, license_file, credit = sys.argv[1:6]
+src, name, out, license_file, credit, format_src = sys.argv[1:7]
 entries = []  # (archive path, bytes)
 for root, dirs, files in os.walk(src):
     for d in dirs:
@@ -123,6 +117,16 @@ for root, dirs, files in os.walk(src):
 with open(license_file, "rb") as fh:
     entries.append((os.path.join(name, "LICENSE"), fh.read()))
 entries.append((os.path.join(name, "CREDIT.txt"), (credit + "\n").encode("utf-8")))
+# The handoff format is defined once, in founder-setup. Copy that section into every other skill's zip.
+if name != "founder-setup":
+    text = open(format_src, encoding="utf-8").read()
+    start = text.find("\n## FOUNDER JAM HANDOFF format\n")
+    if start < 0:
+        sys.exit("ERROR: founder-setup/SKILL.md has no '## FOUNDER JAM HANDOFF format' section.")
+    end = text.find("\n## ", start + 1)
+    section = text[start + 1:end if end >= 0 else len(text)].rstrip() + "\n"
+    section = "Copied from the founder-setup skill by package-skills.sh. If founder-setup is installed, its copy is the same.\n\n" + section
+    entries.append((os.path.join(name, "HANDOFF-FORMAT.md"), section.encode("utf-8")))
 with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
     for arc, data in sorted(entries):
         info = zipfile.ZipInfo(arc, date_time=(2026, 1, 1, 0, 0, 0))

@@ -134,6 +134,7 @@
   },
   "required": [
     "startup_name",
+    "path",
     "stage",
     "problem_statement",
     "target_market"
