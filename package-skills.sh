@@ -97,9 +97,9 @@ PY
   fi
 
   # Deterministic zip (sorted entries, fixed timestamps) with one top-level folder <name>/.
-  python3 -I - "$skill_dir" "$skill" "$DIST_DIR/$skill.zip" "$license_file" "$credit" "$FORMAT_SRC" <<'PY'
+  python3 -I - "$skill_dir" "$skill" "$DIST_DIR/$skill.zip" "$license_file" "$credit" "$FORMAT_SRC" "$CREDIT_LINE" <<'PY'
 import os, sys, zipfile
-src, name, out, license_file, credit, format_src = sys.argv[1:7]
+src, name, out, license_file, credit, format_src, credit_line = sys.argv[1:8]
 entries = []  # (archive path, bytes)
 for root, dirs, files in os.walk(src):
     for d in dirs:
@@ -126,7 +126,7 @@ if name != "founder-setup":
         sys.exit("ERROR: founder-setup/SKILL.md has no '## FOUNDER JAM HANDOFF format' section.")
     end = text.find("\n## ", start + 1)
     section = text[start + 1:end if end >= 0 else len(text)].rstrip() + "\n"
-    section = "Copied from the founder-setup skill when this zip was built. If founder-setup is installed, its copy is the same.\n\n" + section
+    section = "Copied from the founder-setup skill when this zip was built. If founder-setup is installed, its copy is the same. This file is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), even in a skill whose own LICENSE is CC0. Credit: " + credit_line + "\n\n" + section
     entries.append((os.path.join(name, "HANDOFF-FORMAT.md"), section.encode("utf-8")))
 with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
     for arc, data in sorted(entries):

@@ -37,7 +37,7 @@ def handoff_format() -> bytes:
         sys.exit("ERROR: founder-setup/SKILL.md has no '## FOUNDER JAM HANDOFF format' section.")
     end = text.find("\n## ", start + 1)
     section = text[start + 1:end if end >= 0 else len(text)].rstrip() + "\n"
-    header = "Copied from the founder-setup skill when this zip was built. If founder-setup is installed, its copy is the same.\n\n"
+    header = "Copied from the founder-setup skill when this zip was built. If founder-setup is installed, its copy is the same. This file is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), even in a skill whose own LICENSE is CC0. Credit: " + CREDIT + "\n\n"
     return (header + section).encode("utf-8")
 
 
