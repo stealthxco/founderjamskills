@@ -526,14 +526,16 @@ By [date], I will [persist / pivot / revise] based on what I learned.
 
 End every prototype session with this checklist. It's a reminder that the prototype is not the product.
 
+On the `ops-automation` path with an internal process, print the pricing line as "We assumed people will switch to it, NOT YET VALIDATED with real weekly use" and leave out the channel line.
+
 ```
 ## Throwaway checklist
 
 Check each assumption baked into this prototype that still needs validation:
 
 [ ] We assumed [ICP] has this problem, NOT YET VALIDATED with real conversations
-[ ] We assumed they'd pay $[X]: NOT YET VALIDATED with a real purchase attempt (internal process: replace with "We assumed people will switch to it, NOT YET VALIDATED with real weekly use")
-[ ] We assumed [channel] reaches them, NOT YET VALIDATED with a live test (internal process: skip)
+[ ] We assumed they'd pay $[X]: NOT YET VALIDATED with a real purchase attempt
+[ ] We assumed [channel] reaches them, NOT YET VALIDATED with a live test
 [ ] We assumed [mechanism] works, NOT YET VALIDATED with real usage data
 [ ] We assumed [timeline] is achievable, NOT YET VALIDATED against real constraints
 
