@@ -52,7 +52,7 @@ Before building the pitch, gather what happened during the day. Ask conversation
 5. "What specific help do you need from this cohort?"
 
 **If Format B:**
-1. "Who is your beachhead customer, be specific. What's the JTBD statement you landed on?" On the ops and automation path with an internal process, ask instead: "Who runs this process today, and what job were you making easier for them?"
+1. "Who is your beachhead customer, be specific. What's the JTBD statement you landed on?" On the ops and automation path with an internal or support process, ask instead: "Who runs this process today, and what job were you making easier for them?"
 2. Ask what they actually built, based on `path`. GTM and growth: "What's your lead magnet and what did you build today (nurture sequence, automation, or content workflow)?" Sales: "What's your offer and outbound system, and what did you build today (sequence, call script, or follow-up flow)? A lead magnet is optional." Ops and automation: "Which manual process did you automate, and what does it do now (workflow, tools, time saved)? A lead magnet is optional."
 3. "What are your concrete 30-day commitments? Give me the numbers."
 4. "What specific help do you need from this room?"
