@@ -193,6 +193,12 @@ When complete, confirm:
 
 Then say: "Save this output, your hypothesis engine session works best when you know exactly which competitors you're trying to outmaneuver."
 
+## Handoff
+
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence. Fill in any of `startup_name`, `problem_statement`, `target_market`, and `mode` that you collected in this session, even if the founder started with a partial block or none at all.
+
+Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the same fields there and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
+
 ## Where this runs
 
 | Where | What happens |

@@ -1,7 +1,7 @@
 # Startup Debrief: [Name]
 
 **Date:** [Event Date]
-**Path:** [Product and positioning / GTM and growth / Sales / Ops and automation]
+**Path:** [Product and positioning / GTM and growth / Sales / Ops and automation / Undecided]
 **Sherpa:** [Your Name]
 
 ## What they committed to
@@ -14,6 +14,7 @@
 - **Prototype/Lead Magnet:** [What they built]
 - **Channels:** [Selected distribution channels]
 - **North Star Metric:** [If they set one]
+- **North Star Target:** [Target number, if they set one]
 
 ## Sherpa assessment
 **Energy Level:** [High / Medium / Low]

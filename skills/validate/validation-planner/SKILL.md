@@ -121,6 +121,19 @@ Build a funnel math table tailored to path and startup stage. The goal is to wor
 | Closed customers | [X] | [X]% | Close rate from calls |
 ```
 
+For the B2C or GTM and growth model, swap the stages to match its benchmark:
+
+```
+| Stage | Target | Conversion Rate | Notes |
+|-------|--------|-----------------|-------|
+| Impressions | [X] | -- | Starting volume |
+| Clicks | [X] | [X]% | From content |
+| Email captures | [X] | [X]% | Typical 60-70% of clicks |
+| Qualified leads | [X] | [X]% | ICP match filter |
+| Replies | [X] | [X]% | Response to nurture or follow-up |
+| Closed customers | [X] | [X]% | Close rate from replies |
+```
+
 **Default conversion benchmarks by model:**
 
 B2B or sales path (cold outreach model):

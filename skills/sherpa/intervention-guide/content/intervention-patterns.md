@@ -160,7 +160,7 @@
 
 **Redirect:**
 1. Position sponsors at the welcome table for informal conversations, not group presentations
-2. If a sponsor's tool is genuinely relevant to a session (e.g., an automation tool during Session 2.2), invite them to show it in context, "Could you show us how this would work for Session 2.2?": rather than a general pitch
+2. If a sponsor's tool is genuinely relevant to a session (e.g., an automation tool during Session 7), invite them to show it in context, "Could you show us how this would work for Session 7?": rather than a general pitch
 3. Keep it to 2 minutes maximum; signal the end clearly: "Thank you, founders, any quick questions for [Name] during the break?"
 
 ---

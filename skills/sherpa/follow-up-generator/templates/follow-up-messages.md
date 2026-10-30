@@ -6,7 +6,7 @@ Three templated messages for post-event founder follow-up. Each message uses per
 
 ## Message 1: 2-day check-in
 
-**Subject:** Quick follow-up from Founder Jam
+Subject: Quick follow-up from Founder Jam
 
 ---
 
@@ -17,9 +17,9 @@ Great working with you at Founder Jam on [Day]. I wanted to check in while every
 You committed to [specific commitment from validation planner] in the first 2 days. How's that going?
 
 Quick reminder of your immediate priorities:
-- [Week 1 action 1]
-- [Week 1 action 2]
-- [Week 1 action 3]
+1. [Week 1 action 1]
+2. [Week 1 action 2]
+3. [Week 1 action 3]
 
 If you hit a wall on any of these, reply and I'll point you in the right direction.
 
@@ -29,15 +29,15 @@ If you hit a wall on any of these, reply and I'll point you in the right directi
 
 ## Message 2: 2-week milestone
 
-**Subject:** 2-week check, how's [specific metric] looking?
+Subject: 2-week check, how's [specific metric] looking?
 
 ---
 
 Hey [Founder Name],
 
 Two weeks since Founder Jam. By now you should have:
-- [Week 2 milestone 1]
-- [Week 2 milestone 2]
+1. [Week 2 milestone 1]
+2. [Week 2 milestone 2]
 
 How are the numbers looking? Your target was [specific number from 30-day plan].
 
@@ -50,7 +50,7 @@ If you're behind, that's normal. The question is why. Reply with a quick update 
 
 ## Message 3: 2-month validation gate
 
-**Subject:** Decision time, Green, Yellow, or Red?
+Subject: Decision time, Green, Yellow, or Red?
 
 ---
 
@@ -62,9 +62,9 @@ Your North Star target was [specific metric]: [specific number].
 
 Where did you land?
 
-- Green (70%+): You've found signal. Time to double down and build systems around what's working.
-- Yellow (40-70%): There's something here but it needs tuning. What's the one metric furthest from target?
-- Red (<40%): Time to revisit the fundamentals. Was the ICP right? Was the channel right? Was the offer right?
+Green (70% or more): You've found signal. Time to double down and build systems around what's working.
+Yellow (40% to under 70%): There's something here but it needs tuning. What's the one metric furthest from target?
+Red (under 40%): Time to revisit the fundamentals. Was the ICP right? Was the channel right? Was the offer right?
 
 No judgment either way, the framework exists so you can make the call without emotion.
 

@@ -26,9 +26,9 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 
 Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
-Fields needed: `icp_segment`, `lead_magnet`, `channels_selected`, `startup_name`, `stage`, `business_type`.
+Fields needed: `icp_segment`, `startup_name`, `stage`, `business_type`, and `path`. Also needed: `channels_selected` and `lead_magnet`, unless `path` is `ops-automation`. On the `ops-automation` path, ask for them only if the founder's automation in Sub-activity A is a go-to-market one. Skip `lead_magnet` if the founder picks Customer Support Automation.
 
-If any fields are missing, ask for them before proceeding. If `channels_selected` is empty, ask which channel(s) the founder selected in the previous activity.
+If any needed fields are missing, ask for them before proceeding. If `channels_selected` is empty and it is needed, ask which channel(s) the founder selected in the previous activity. On the `ops-automation` path with an internal manual process and no lead magnet, skip `lead_magnet` and `channels_selected` (no channels, outreach, or lead magnet steps in the plan), and ask instead which manual process the founder wants to automate and who it serves.
 
 ## Process
 
@@ -254,25 +254,25 @@ For each metric, ask the founder: "What would Green look like in 30 days?" Use t
 
 **Week 1, Setup (Days 1-7)**
 Goal: Everything is live, nothing is manual.
-- [ ] Channels activated (profiles, pages, templates ready)
-- [ ] Lead magnet live at a real URL
+- [ ] Channels activated (profiles, pages, templates ready) (skip on the `ops-automation` path with an internal process)
+- [ ] Lead magnet live at a real URL (skip if you chose Customer Support Automation or have no lead magnet)
 - [ ] Automation tested with one real submission
 - [ ] Metrics dashboard created and baseline recorded
-- [ ] First content piece drafted or scheduled
+- [ ] First content piece drafted or scheduled (internal process: skip)
 
 **Week 2, Launch (Days 8-14)**
-Goal: First real outreach or publish.
-- [ ] First outreach batch sent (minimum: 50 personalized messages, or 1 piece of content published)
-- [ ] Lead magnet promoted on primary channel
-- [ ] First lead captured and routed through automation
-- [ ] Weekly metrics check: are acquisition numbers moving?
+Goal: First real outreach or publish. On the `ops-automation` path with an internal process, the goal is the first real run of the automation by the people it serves.
+- [ ] First outreach batch sent (minimum: 50 personalized messages, or 1 piece of content published) (internal process: roll the automation out to its first real users instead)
+- [ ] Lead magnet promoted on primary channel (skip if you have no lead magnet)
+- [ ] First lead captured and routed through automation (internal process: first task completed through the automation)
+- [ ] Weekly metrics check: are acquisition numbers moving? (internal process: are tasks completed through the automation and time saved moving?)
 
 **Week 3, Optimize (Days 15-21)**
 Goal: Fix the weakest element before scaling.
 - [ ] Review all metrics against targets
 - [ ] Identify the single metric furthest from target
-- [ ] Run one focused adjustment (message, audience, offer, or channel)
-- [ ] Keep outreach or publishing cadence consistent
+- [ ] Run one focused adjustment (message, audience, offer, or channel; for an internal process, one step of the workflow)
+- [ ] Keep outreach or publishing cadence consistent (internal process: keep the automation in daily use)
 
 **Week 4, Decide (Days 22-30)**
 Goal: Green/Yellow/Red assessment with a commitment to the next 60 days.
@@ -309,7 +309,7 @@ Decision: Pivot the approach.
 
 **80/15/5 Channel Allocation Rule:**
 
-When the founder confirms channels for the 30-day plan, apply this allocation framework:
+When the founder confirms channels for the 30-day plan (skip on the `ops-automation` path with an internal process), apply this allocation framework:
 
 - **Primary channel (80% of effort):** The one channel that scored highest and has the fastest path to signal. This is where nearly all time, energy, and budget goes for the first 30 days.
 - **Secondary channel (15% of effort):** A supporting channel that reinforces the primary, often content or nurture that feeds the primary channel's pipeline.
@@ -332,6 +332,8 @@ Each cold message should feel like a 1:1 message, not a blast. If it could be se
 
 **Step 3: Confirm channels_selected**
 
+Skip this step on the `ops-automation` path with an internal process, and leave `channels_selected` as you received it.
+
 Based on the 30-day plan, confirm which channels the founder is committing to. Apply the 80/15/5 framework to make the allocation explicit. Update the handoff block.
 
 **Output: 30-Day Calendar + Decision Framework Card**
@@ -341,8 +343,8 @@ Based on the 30-day plan, confirm which channels the founder is committing to. A
 
 **North Star:** [metric]
 **Target:** [number]
-**Primary channel:** [channel]
-**Lead magnet:** [title]
+**Primary channel:** [channel, or "none" if internal process]
+**Lead magnet:** [title, or "none" if not used]
 
 ### Week 1: Setup
 - [ ] [specific action 1]
@@ -388,7 +390,7 @@ Based on the 30-day plan, confirm which channels the founder is committing to. A
 
 When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence with these fields filled in:
 
-- `channels_selected`: [confirmed primary channel 1], [confirmed primary channel 2]
+- `channels_selected`: [confirmed primary channel 1], [confirmed primary channel 2] (leave unchanged if you skipped Step 3)
 
 Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the same fields there and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
 

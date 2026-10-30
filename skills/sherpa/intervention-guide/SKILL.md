@@ -32,7 +32,7 @@ Accept freeform input. Do not ask follow-up questions before providing an initia
 Parse the response for:
 - Current activity (see Activity List below)
 - Failure mode (see Failure Modes below)
-- Approximate time into the session
+- Approximate time into the session (if not stated, do not guess)
 - Path (product and positioning, GTM and growth, sales, or ops and automation, if discernible)
 
 ### Step 2: Activity identification
@@ -72,6 +72,8 @@ PACING: They should be at [X] by now. They are [ahead / on track / behind] by ap
 
 [If behind]: To recover, [specific cut or compress recommendation from pacing guide].
 ```
+
+If the sherpa did not say how far into the session they are, do not invent a value. Write "PACING: timing unknown." and ask how many minutes into the session they are. Give the intervention in Step 4 anyway.
 
 ### Step 4: Intervention recommendation
 

@@ -28,7 +28,7 @@ Accept cohort data in any of these formats:
 
 **CSV or JSON:** Accept structured input directly.
 
-**Founder handoff blocks:** If a founder shares their FOUNDER JAM HANDOFF block (the format is defined in the `founder-setup` skill), read `startup_name`, `path`, `stage`, `problem_statement`, `icp_segment`, `hypothesis_selected`, `lead_magnet`, `outbound_system`, `channels_selected`, and `published_pages` from it instead of asking.
+**Founder handoff blocks:** If a founder shares their FOUNDER JAM HANDOFF block (the format is defined in the `founder-setup` skill), read `startup_name`, `path`, `stage`, `business_type`, `problem_statement`, `icp_segment`, `hypothesis_selected`, `lead_magnet`, `outbound_system`, `channels_selected`, and `published_pages` from it instead of asking.
 
 **Required fields per startup:**
 - `startup_name`

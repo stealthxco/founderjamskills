@@ -561,6 +561,8 @@ When complete:
 
 Then say: "You have a prototype and a test plan. Show it to five people before the end-of-day share-out. The goal is one real signal, not polish."
 
+Finally, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence. This skill has no field of its own to add. Fill in any fields you collected during this session (for example `startup_name`, `stage`, `target_market`, `mode`), and keep every other field as you received it. Tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the fields you collected and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
+
 ## Where this runs
 
 | Where | What happens |

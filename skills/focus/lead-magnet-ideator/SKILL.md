@@ -230,6 +230,14 @@ Use these when `mode` is `with-sherpa`:
 [Hooks from Step 4 for top 2-3 concepts]
 ```
 
+## Handoff
+
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence with these fields filled in:
+
+- `lead_magnet`: [top concept type] - [working title], once the founder confirms the pick
+
+Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the same fields there and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config. Tell the founder that `offer-designer` will use this concept instead of starting selection again.
+
 ## Constraints
 
 - Never fabricate statistics, customer stories, or case study results. Use placeholders or general terms.

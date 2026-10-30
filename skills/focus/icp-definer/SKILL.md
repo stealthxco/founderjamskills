@@ -26,7 +26,7 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 
 Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
-Path check: if `path` is empty or `undecided`, help the founder choose one of the four paths (see `founder-setup`, Step 2) before going further. With a sherpa, decide it together.
+Path check: if `path` is empty or `undecided`, help the founder choose one of the four paths (see `founder-setup`, Step 2) before going further. With a sherpa, decide it together. Write the path the founder confirms into `path` in the block you print, so the next skill does not ask again. Never carry `undecided` forward once the founder has chosen. Update `path` in `config.json` too when it exists.
 
 If the block doesn't have them, ask:
 - Startup name, problem statement, target market, stage, business type
@@ -284,6 +284,7 @@ When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setu
 - `icp_segment`: [beachhead segment name and one-line JTBD]
 - `top_pains`: [the 1-2 pains the beachhead feels most]
 - `channels_selected`: [primary channel 1], [primary channel 2]
+- `path`: [the path confirmed in the path check, if it was `undecided` or empty when you received it]
 
 Keep every other field as you received it, and tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the same fields there and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
 

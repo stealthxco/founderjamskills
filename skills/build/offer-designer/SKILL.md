@@ -32,6 +32,8 @@ If `icp_segment` is missing, ask: "What's your beachhead customer segment? (Run 
 
 If `business_type` is missing, ask: "What type of business is this? B2B SaaS, Services, Marketplace, or Consumer?"
 
+If `lead_magnet` is already filled in (for example from `lead-magnet-ideator`), treat it as the selected concept. Confirm the concept with the founder in one question, then skip only the concept selection in Step 1 and go straight to its Lead Magnet Requirements Checklist (the six criteria). Run Steps 2 and 3 and the brief as written. If `lead_magnet` is empty, run Step 1 in full.
+
 ## Process
 
 ### Optional pre-step: Value proposition canvas

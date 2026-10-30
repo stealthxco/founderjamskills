@@ -26,13 +26,16 @@ For each startup in the cohort, ask the sherpa these questions conversationally.
 
 **Questions (in order):**
 
-If a founder shared their FOUNDER JAM HANDOFF block (the format is defined in the `founder-setup` skill), read the answers it already holds (`startup_name`, `path`, `icp_segment`, `hypothesis_selected`, `lead_magnet`, `outbound_system`, `channels_selected`) and confirm them instead of asking again.
+If a founder shared their FOUNDER JAM HANDOFF block (the format is defined in the `founder-setup` skill), read the answers it already holds (`startup_name`, `path`, `stage`, `business_type`, `icp_segment`, `hypothesis_selected`, `lead_magnet`, `outbound_system`, `channels_selected`) and confirm them instead of asking again.
 
 1. "What startup are we debriefing?"
    -> `startup_name`
 
-2. "Which path did they pick in Focus? (product and positioning, GTM and growth, sales, or ops and automation)"
+2. "Which path did they pick in Focus? (product and positioning, GTM and growth, sales, ops and automation, or undecided)"
    -> `path`
+
+   If `stage` and `business_type` did not come from a handoff block, ask: "What stage are they at (idea, pre-revenue, or early-revenue), and what type of business is it (B2B SaaS, services, marketplace, or consumer)?"
+   -> `stage`, `business_type`
 
 3. "What did they commit to? Walk me through their 2-day, 2-week, and 2-month commitments from the validation planner."
    -> `commitments[]`
@@ -77,7 +80,7 @@ Fill all fields from the collected notes. Do not leave template placeholders unf
 After all individual cards are complete, analyze patterns across the cohort:
 
 **Distribution analysis:**
-- Path split (N product and positioning / N GTM and growth / N sales / N ops and automation)
+- Path split (N product and positioning / N GTM and growth / N sales / N ops and automation / N undecided)
 - Stage distribution (Idea / Pre-Revenue / Early-Revenue)
 - Business type distribution (B2B SaaS / Services / Marketplace / Consumer)
 

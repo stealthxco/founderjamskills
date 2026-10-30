@@ -33,7 +33,7 @@ Fields needed:
 - `path`: picks the format (Format A for product and positioning, Format B for the others)
 - `startup_name`: personalizes output
 - `mode`: with-sherpa adds coach prompts
-- Also read for context: `hypothesis_selected`, `icp_segment`, `lead_magnet`, `channels_selected`
+- Also read for context: `hypothesis_selected`, `icp_segment`, `lead_magnet`, `outbound_system`, `channels_selected`
 
 If a field is missing, ask:
 1. "Which path are you on, and how long is your share-out slot?"
@@ -53,7 +53,7 @@ Before building the pitch, gather what happened during the day. Ask conversation
 
 **If Format B:**
 1. "Who is your beachhead customer, be specific. What's the JTBD statement you landed on?"
-2. "What's your lead magnet and what did you build today (nurture sequence, automation, or content workflow)?"
+2. Ask what they actually built, based on `path`. GTM and growth: "What's your lead magnet and what did you build today (nurture sequence, automation, or content workflow)?" Sales: "What's your offer and outbound system, and what did you build today (sequence, call script, or follow-up flow)? A lead magnet is optional." Ops and automation: "Which manual process did you automate, and what does it do now (workflow, tools, time saved)? A lead magnet is optional."
 3. "What are your concrete 30-day commitments? Give me the numbers."
 4. "What specific help do you need from this room?"
 
@@ -150,7 +150,7 @@ Draft format:
 
 Generate talking points covering:
 - Beachhead customer (specific, not broad)
-- Lead magnet type and title
+- Path-specific offer: lead magnet type and title (GTM and growth), the offer and outbound system (sales), or the manual process and who it serves (ops and automation)
 - Why this ICP and this offer are the right combination
 
 Draft format:
@@ -158,14 +158,14 @@ Draft format:
 ## Section 1: ICP & offer (60s)
 
 - [Beachhead customer: who they are, what triggers their need]
-- [Lead magnet: type + title + the one outcome it delivers]
+- [Offer: lead magnet type + title + the one outcome it delivers (GTM and growth), the offer and outbound system (sales), or the process you automated and who it helps (ops and automation)]
 - [Why this pairing: the connection between ICP pain and offer value]
 ```
 
 **Section 2: What You Built (90 seconds)**
 
 Generate talking points covering:
-- What was built today (nurture sequence, automation, or content workflow)
+- What was built today: nurture sequence, automation, or content workflow (GTM and growth); outbound sequence, call script, or follow-up flow (sales); internal workflow or support automation (ops and automation)
 - How it works end-to-end in plain language
 - Tools used
 
