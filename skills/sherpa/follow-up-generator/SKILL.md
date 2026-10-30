@@ -45,8 +45,12 @@ If the founder shared their FOUNDER JAM HANDOFF block (the format is defined in 
 5. "What were their Week 1 actions from the 30-day plan? List 3-5 specific actions."
    -> `week1_actions[]`
 
+   Only founders who ran `growth-builder` have a 30-day plan. If they did not (the usual case on the product and positioning and sales paths), don't ask. Use the 2-day commitment as the first action and ask for 1-2 more steps they planned for the first week.
+
 6. "What was their Week 2 success criteria? Give me the specific metrics or milestones they wrote down."
    -> `week2_milestones[]`
+
+   Without a 30-day plan, use the 2-week commitment as the milestone, with its number as the metric.
 
 7. "What specific number did they set as their 30-day target? (e.g., 50 landing page visitors, 10 email signups, 3 discovery calls)"
    -> `thirty_day_target`
