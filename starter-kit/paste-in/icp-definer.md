@@ -45,16 +45,26 @@ Finish with:
 2. The segment comparison table
 3. The competitor battle cards
 4. The channel scores and 30-day plan
-5. This block, filled in, inside a code box so I can copy it into the next prompt:
+5. This block, inside a code box so I can copy it into the next prompt. Fill in what you learned (startup_name, problem_statement, target_market, business_type, stage, icp_segment, top_pains, channels_selected) and leave the other fields empty:
 
 FOUNDER JAM HANDOFF
+version: 2
 startup_name:
-problem_statement:
-business_type:
+mode:
+path:
 stage:
+problem_statement:
+target_market:
+team_size:
+traction:
+business_type:
 icp_segment:
 top_pains:
+hypothesis_selected:
 channels_selected:
+lead_magnet:
+outbound_system:
+published_pages:
 ```
 
 ---

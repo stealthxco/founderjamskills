@@ -254,6 +254,10 @@ Deliver in sequence, paste-ready:
 2. **Timing Guide**: section lengths
 3. **One-Sentence Pitch**: 2-3 options for hallway conversations
 
+## Handoff
+
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence. This skill adds no field of its own. Fill in any fields you collected during this session, and keep every other field as you received it. Tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the fields you collected and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
+
 ## Where this runs
 
 | Where | What happens |

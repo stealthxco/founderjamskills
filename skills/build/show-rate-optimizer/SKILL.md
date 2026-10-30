@@ -36,7 +36,7 @@ Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you tod
 - `scheduling_tool`: calendar booking tool (e.g., "calendly", "hubspot meetings")
 - `service_areas`: array of service offerings for case study matching
 
-**Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
+**Writes:** No new handoff fields. Prints the latest handoff block at the end (see Handoff). Other output is presented for review and manual saving.
 
 ## The 89% show-rate protocol (Hormozi, adapted)
 
@@ -321,6 +321,10 @@ When `mode` is `with-sherpa`, add these challenge prompts:
 - If using `lead-magnet-ideator`: prospects who came through a lead magnet get a confirmation that references the specific asset they engaged with
 - If using `offer-architect`: named packages can be referenced in the agenda section of Email 2
 - If using `nurture-engine`: no-show prospects who exhaust recovery can enter a longer nurture sequence
+
+## Handoff
+
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence. This skill adds no field of its own. Fill in any fields you collected during this session, and keep every other field as you received it. Tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the fields you collected and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
 
 ## Where this runs
 

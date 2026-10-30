@@ -37,7 +37,7 @@ Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you tod
 - `newsletter_name`: for newsletter scheduling
 - `content_channels`: array of active channels (e.g., ["blog", "linkedin", "newsletter", "email"])
 
-**Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
+**Writes:** No new handoff fields. Prints the latest handoff block at the end (see Handoff). Other output is presented for review and manual saving.
 
 ## Channel cadence framework
 
@@ -255,6 +255,10 @@ When `mode` is `with-sherpa`, add these challenge prompts:
 - If using `case-study-generator`: case study packages provide blog companions, social posts, and newsletter sections
 - If using `nurture-engine`: nurture emails reference published content, the calendar tracks dependencies
 - If using `lead-magnet-ideator`: new lead magnets need landing pages and promotional content scheduled
+
+## Handoff
+
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence. This skill adds no field of its own. Fill in any fields you collected during this session, and keep every other field as you received it. Tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the fields you collected and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
 
 ## Where this runs
 

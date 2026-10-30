@@ -200,7 +200,7 @@ Rules for every skill that touches the block:
 - `stage` means the startup's stage (idea, pre-revenue, early-revenue). It is not a Founder Jam stage.
 - `channels_selected` and `published_pages` are comma-separated on one line.
 - Leave a field empty when it is unknown. Never invent a value.
-- When a skill finishes, it prints the full block again with its new fields filled in, so the founder always holds the latest version. Keep every field you didn't change.
+- When a skill finishes, it prints the full block again with its new fields filled in, so the founder always holds the latest version. Keep every field you didn't change. This applies to every founder skill (Understand, Focus, Build, Validate). The sherpa skills read founders' blocks but do not print one back.
 - If a founder pastes an older or partial block, use what is there and ask for the rest.
 
 ## Context sources

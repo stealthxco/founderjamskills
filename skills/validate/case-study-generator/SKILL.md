@@ -38,7 +38,7 @@ Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you tod
 - `newsletter_name`: for newsletter section formatting
 - `sign_off_phrase`: for LinkedIn post sign-off
 
-**Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
+**Writes:** No new handoff fields. Prints the latest handoff block at the end (see Handoff). Other output is presented for review and manual saving.
 
 ## The referral flywheel (Dickerson)
 
@@ -322,6 +322,10 @@ Before delivering:
 - If using `seo-keyword-mapper`: blog post keywords should come from the keyword map
 - If using `nurture-engine`: case studies feed Email 4 (social proof) across all nurture sequences
 - If using `landing-page-auditor`: case study pages should be audited for conversion effectiveness
+
+## Handoff
+
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence. This skill adds no field of its own. Fill in any fields you collected during this session, and keep every other field as you received it. Tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the fields you collected and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
 
 ## Where this runs
 

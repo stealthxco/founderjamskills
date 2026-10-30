@@ -36,7 +36,7 @@ Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you tod
 - `service_areas`: array of service offerings (drives Circle 1)
 - `industries_served`: array of target industries (drives programmatic templates)
 
-**Writes:** Nothing back to the handoff block. Output is presented for review and manual saving.
+**Writes:** No new handoff fields. Prints the latest handoff block at the end (see Handoff). Other output is presented for review and manual saving.
 
 ## The 6 Circles method (Dickerson)
 
@@ -262,6 +262,10 @@ When `mode` is `with-sherpa`, add these challenge prompts:
 - If using `case-study-generator`: Circle 3 keywords map to specific case studies for blog posts
 - If using `lead-magnet-ideator`: Circle 2 and Circle 5 feed lead magnet concept generation
 - If using `landing-page-auditor`: programmatic pages should be audited after creation
+
+## Handoff
+
+When you finish, print the full FOUNDER JAM HANDOFF block (format: `founder-setup`) in a code fence. This skill adds no field of its own. Fill in any fields you collected during this session, and keep every other field as you received it. Tell the founder to copy the block and paste it into the next skill. If you are running in Claude Code with file access and a Founder Jam `config.json` (one with `startup_name` and `path` keys) already exists in the working directory, update the fields you collected and leave every other key as it is. Never create `config.json` in another project or overwrite a file that is not a Founder Jam config.
 
 ## Where this runs
 
