@@ -183,12 +183,13 @@ Based on `business_type`:
 | Marketplace | Transactions completed per week | Captures supply AND demand engagement |
 | Services / Agency | Discovery calls completed per week | Ties growth to real sales activity |
 | Consumer app | Weekly Active Users (WAU) | Habit formation is the retention moat |
+| Internal process (`ops-automation`) | Tasks completed through the automation per week | Shows the automation is in real use |
 
 Let the founder confirm or adjust the North Star Metric based on their specific situation.
 
 **Step 2: Define supporting metrics (3-5 total)**
 
-Select relevant metrics from each category:
+Select relevant metrics from each category. For an internal process, use these instead: people using it weekly (adoption), time saved per task, and error or rework rate.
 
 **Acquisition (choose 1-2):**
 - Unique website visitors per week
@@ -292,7 +293,7 @@ Decision: Persist and scale.
 - Build a repeatable system around what is working
 - Set 60-day target at 2x the 30-day result
 
-**Yellow, 40-70% of target achieved**
+**Yellow, 40% to under 70% of target achieved**
 Decision: Optimize before scaling.
 - Identify the single metric furthest from target, that is the constraint
 - Run one focused A/B test on the weakest element
@@ -306,6 +307,7 @@ Decision: Pivot the approach.
 - Return to diagnosis: Was the ICP right? Was the message right? Was the channel right?
 - Talk to 5 people who saw the offer but did not convert, listen for the real objection
 - Pick a different channel or fundamentally reframe the offer before investing more
+- Internal process: skip ICP and offer work. Re-scope the process, fix the step where people stop using it, or pick a different process. Talk to 5 people who tried it and stopped.
 
 **80/15/5 Channel Allocation Rule:**
 
@@ -374,8 +376,8 @@ Based on the 30-day plan, confirm which channels the founder is committing to. A
 | Outcome | Threshold | Decision | First Action |
 |---------|-----------|----------|-------------|
 | Green | 70%+ of target | Scale: double effort | Document what worked |
-| Yellow | 40-70% of target | Optimize: fix weakest metric | Run one A/B test |
-| Red | <40% of target | Pivot: revisit ICP or offer | Talk to 5 non-converters |
+| Yellow | 40% to under 70% of target | Optimize: fix weakest metric | Run one A/B test |
+| Red | <40% of target | Pivot: revisit ICP or offer (internal process: re-scope or pick a different process) | Talk to 5 non-converters (internal process: 5 people who stopped using it) |
 
 **Decision date:** [date 30 days from today]
 **Who reviews with me:** [accountability partner name]

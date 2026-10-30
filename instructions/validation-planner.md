@@ -33,11 +33,12 @@ For each horizon, capture:
 Then build a funnel math table working backwards from my customer target. Use these defaults and adjust based on my context:
 - B2B model: 250 cold emails -> 50 visits -> 36 captures -> 18 qualified -> 9 calls -> 3 customers
 - B2C model: 1,000 impressions -> 100 clicks -> 70 captures -> 35 qualified -> 10 replies -> 3 customers
+- Internal operations model (ops and automation, automating an internal or support process with no lead magnet or acquisition channels): people who could use it -> people who tried it -> people using it weekly -> tasks completed through it. Put "--" in the first row's conversion cell. Also track time saved per task and error or rework rate.
 
 Then give me a 30-day decision framework:
 - Green (70%+ of target): persist, double down on what's working
-- Yellow (40-70%): optimize, find the one funnel step furthest from target and fix it
-- Red (below 40%): pivot, revisit ICP or offer before investing more effort
+- Yellow (40% to under 70%): optimize, find the one funnel step furthest from target and fix it
+- Red (below 40%): pivot, revisit ICP or offer before investing more effort. For an internal process, don't go back to ICP or offer work. Re-scope the process, fix the step where adoption stalls, or pick a different process.
 
 Ask me who my accountability partner is and when I'll check in with them.
 

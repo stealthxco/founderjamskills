@@ -29,7 +29,7 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
 Fields needed:
-- `path`: tailors funnel math template (B2B vs B2C defaults)
+- `path`: tailors funnel math template (B2B, B2C, or internal operations defaults)
 - `stage`: adjusts ambition of targets (idea vs early-revenue)
 - `startup_name`: personalizes output
 - `mode`: with-sherpa adds coach prompts
@@ -142,7 +142,22 @@ B2B or sales path (cold outreach model):
 B2C or GTM and growth path (content + lead magnet model):
 - 1,000 impressions -> 100 clicks (10%) -> 70 captures (70%) -> 35 qualified (50%) -> 10 replies (29%) -> 3 customers (30%)
 
-On the product and positioning and ops and automation paths, use whichever model matches how the founder will reach their first users.
+Internal operations path (ops and automation, automating an internal or support process, no lead magnet and no acquisition channels). Use the adoption funnel instead of cold outreach or content:
+
+```
+| Stage | Target | Conversion Rate | Notes |
+|-------|--------|-----------------|-------|
+| People who could use it | [X] | -- | Everyone the process serves |
+| People who tried it | [X] | [X]% | Used it at least once |
+| People using it weekly | [X] | [X]% | Habit, not a one-off try |
+| Tasks completed through it | [X] | [X]% | Share of all tasks that go through it |
+```
+
+Also track two measures next to the table:
+- Time saved per task: minutes before vs. minutes now
+- Error or rework rate: share of tasks that need a redo or a manual fix
+
+On the product and positioning path, use whichever of the three models matches how the founder will reach their first users. On the ops and automation path, use the adoption funnel for an internal or support process. Use the B2B or B2C model only if the automation is go-to-market work, such as lead enrichment.
 
 Adjust defaults based on `stage`:
 - Idea stage: use conservative numbers, note they're benchmarks not guarantees
@@ -163,11 +178,12 @@ Present the Green/Yellow/Red framework with thresholds specific to this startup:
 | Signal | Threshold | Action |
 |--------|-----------|--------|
 | Green | 70%+ of target | Persist, double down on what's working, document the playbook |
-| Yellow | 40-70% of target | Optimize, find the one funnel step furthest from target and fix it |
-| Red | Below 40% | Pivot, revisit ICP or offer before investing more effort |
+| Yellow | 40% to under 70% of target | Optimize, find the one funnel step furthest from target and fix it |
+| Red | Below 40% | Pivot, revisit ICP or offer before investing more effort (internal process: re-scope the process, fix the step where adoption stalls, or pick a different process) |
 
 **If Yellow:** Run a funnel audit. Find the biggest drop-off. Fix that one thing before changing anything else.
-**If Red:** Go back to founder-setup. Revisit your ICP and problem statement before the next push.
+**If Red (every other path):** Go back to founder-setup. Revisit your ICP and problem statement before the next push.
+**If Red on an internal process (ops and automation):** Skip ICP and offer work. Talk to 3-5 people who tried it and stopped. Then re-scope the process, fix the step where adoption stalls, or pick a different process to automate.
 ```
 
 Ask the founder to confirm the North Star metric before finalizing. Push for one number, not a list.

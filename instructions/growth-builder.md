@@ -8,7 +8,7 @@ Builds three connected deliverables: one automation spec you can set up today, a
 
 ## How to Use
 
-Copy everything below the line and paste it into a new Claude Desktop or Cowork conversation. Include your outputs from ICP Definer and Offer Designer in the context section below.
+Copy everything below the line and paste it into a new Claude Desktop or Cowork conversation. Include your outputs from ICP Definer and Offer Designer in the context section below (on the ops and automation path with an internal process, your hypothesis-engine output is enough).
 
 ---
 
@@ -22,8 +22,11 @@ My startup context:
 - Stage: [idea / pre-revenue / early-revenue]
 - Business type: [B2B SaaS / Services / Marketplace / Consumer]
 - ICP beachhead: [one-line description of your target customer]
-- Lead magnet: [name and type of lead magnet from offer-designer]
-- Primary channel(s): [1-2 channels selected in icp-definer]
+- Lead magnet: [name and type of lead magnet from offer-designer, or "none" if I'm on the ops and automation path automating an internal process]
+- Primary channel(s): [1-2 channels selected in icp-definer, or "none" if I'm on the ops and automation path automating an internal process]
+- If I'm automating an internal process: [which manual process, and who it serves]
+
+If I'm on the ops and automation path and my process is internal or for support (no lead magnet, no acquisition channels), don't ask me for a lead magnet or channels, and leave out channel, outreach, and lead magnet steps from every deliverable.
 
 Run these three sub-activities in order:
 
@@ -36,6 +39,8 @@ Trigger (form submission) -> Enrich (Apollo/Clay) -> Score (High/Medium/Low ICP 
 Option 2 - Customer Support Automation:
 Intake (unified inbox) -> Classify (billing / feature / bug / general) -> Route (founder / product log / urgent queue / template) -> Escalate (24h open ticket = founder alert)
 
+If my process is internal, Option 2 or a custom internal workflow fits best.
+
 For the selected option, output a full automation spec: trigger, steps, tools (free vs. paid), setup complexity, first action to take today.
 
 **Sub-activity B: North Star Metric + Supporting Metrics**
@@ -44,7 +49,8 @@ For the selected option, output a full automation spec: trigger, steps, tools (f
   - Marketplace: transactions completed per week
   - Services: discovery calls per week
   - Consumer: weekly active users (WAU)
-- Help me define 3-5 supporting metrics across acquisition, activation, engagement, and revenue
+  - Internal process: tasks completed through the automation per week
+- Help me define 3-5 supporting metrics across acquisition, activation, engagement, and revenue (for an internal process: adoption, time saved per task, and error or rework rate)
 - Set specific 30-day targets for each metric
 - Output a metrics dashboard template I can use in a spreadsheet or Notion
 
@@ -55,7 +61,9 @@ Build a week-by-week plan:
 - Week 3: Optimize (review metrics, fix weakest element)
 - Week 4: Decide (apply Green/Yellow/Red framework)
 
-Apply the 80/15/5 channel allocation rule:
+For an internal process, skip channels, outreach, and lead magnet promotion. Week 1 is the automation tested and the baseline set. Week 2 is the first real users running it, with the first tasks completed through it. Week 3 is one focused fix to a workflow step. Week 4 is the decision.
+
+Apply the 80/15/5 channel allocation rule (skip this for an internal process):
 - Primary channel: 80% of effort (where all the focus goes)
 - Secondary channel: 15% of effort (supporting the primary)
 - Experimental: 5% of effort (one small test to learn from)
@@ -64,8 +72,8 @@ If cold outreach is a channel, enforce anti-pattern rules: no corporate jargon, 
 
 Then generate a Decision Framework Card with:
 - Green (70%+): scale, document what worked, build repeatable system
-- Yellow (40-70%): optimize one thing, hold investment, 30-day timer
-- Red (<40%): pivot, revisit ICP or offer, talk to 5 non-converters
+- Yellow (40% to under 70%): optimize one thing, hold investment, 30-day timer
+- Red (<40%): pivot, revisit ICP or offer, talk to 5 non-converters (for an internal process: re-scope the process, fix the step where people stop using it, or pick a different process, and talk to 5 people who tried it and stopped)
 
 Challenge my thinking along the way:
 - "Which automation saves you the most time in 30 days?"

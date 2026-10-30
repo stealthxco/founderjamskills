@@ -84,6 +84,7 @@ Which prototype type fits your hypothesis?
 - Pre-revenue + service/consulting -> Sales Script or Workflow
 - Early-revenue + growth lever -> Marketing Campaign, Subscription Model, or Brand Identity
 - Any stage + "I don't know if they'd pay" -> Landing Page with pricing shown
+- `ops-automation` path + internal or support process -> Workflow / Process first (type 5), then Software / App. Skip Landing Page, Marketing Campaign, and Subscription Model. The question is whether people will use it, not whether they will pay.
 
 If `mode` is `with-sherpa`, after selection add: "Before you build, what assumption does this prototype NOT test? Name it. That might be the one that kills you later."
 
@@ -317,7 +318,7 @@ Generate a service blueprint.
 | 5 | | | | | |
 
 **Manual First Commitment:**
-Run this workflow manually for [X] customers before building any automation. Document what breaks and what takes longest. That's your build priority list.
+Run this workflow manually for [X] customers (internal process: [X] real tasks with the people who run it) before building any automation. Document what breaks and what takes longest. That's your build priority list.
 
 **Automation Candidates (after manual validation):**
 - [Step X]: can be automated with [tool]
@@ -531,8 +532,8 @@ End every prototype session with this checklist. It's a reminder that the protot
 Check each assumption baked into this prototype that still needs validation:
 
 [ ] We assumed [ICP] has this problem, NOT YET VALIDATED with real conversations
-[ ] We assumed they'd pay $[X]: NOT YET VALIDATED with a real purchase attempt
-[ ] We assumed [channel] reaches them, NOT YET VALIDATED with a live test
+[ ] We assumed they'd pay $[X]: NOT YET VALIDATED with a real purchase attempt (internal process: replace with "We assumed people will switch to it, NOT YET VALIDATED with real weekly use")
+[ ] We assumed [channel] reaches them, NOT YET VALIDATED with a live test (internal process: skip)
 [ ] We assumed [mechanism] works, NOT YET VALIDATED with real usage data
 [ ] We assumed [timeline] is achievable, NOT YET VALIDATED against real constraints
 

@@ -42,6 +42,7 @@ Run me through these steps:
    6. Brand Identity (brand brief)
    7. Sales Script (discovery call framework)
    8. Onboarding Flow (step-by-step sequence)
+   If I'm on the ops and automation path automating an internal or support process, recommend Workflow / Process first, then Software / App, and skip Landing Page, Marketing Campaign, and Subscription Model. The question is whether people will use it, not whether they will pay.
 
 3. Relevant thought starters, before generating the artifact, show me 2-3 of the 14 prototype thought starters most relevant to my selected type.
 
@@ -49,7 +50,7 @@ Run me through these steps:
 
 5. Test plan, define: who I'll show it to (minimum 5 specific people), what I'll measure, how I'll get feedback, and my decision deadline.
 
-6. Throwaway checklist, list the assumptions still baked into this prototype that I have NOT yet validated, as a reminder of what comes next.
+6. Throwaway checklist, list the assumptions still baked into this prototype that I have NOT yet validated, as a reminder of what comes next. If I'm automating an internal or support process, skip the payment and channel assumptions and use "people will switch to it, not yet validated with real weekly use" instead.
 
 Challenge me throughout:
 - "What's the riskiest assumption in your prototype? Can you test that first?"

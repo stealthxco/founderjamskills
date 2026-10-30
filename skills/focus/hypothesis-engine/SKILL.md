@@ -49,6 +49,8 @@ Share the two hypothesis formats:
 **Format 2, Validation commitment:**
 > "We believe [ICP] will pay $[Y]/month for [specific outcome]. We will validate this by [specific experiment] within [timeframe]."
 
+On the `ops-automation` path, if the founder is automating an internal or support process, there is no price to test. Use: "We believe [the people who run this process] will [specific behavior, e.g. use the automation for most tasks] to [specific outcome, e.g. save X hours a week]. We will validate this by [specific experiment] within [timeframe]." Do not ask for a price.
+
 A strong hypothesis is:
 - Specific (names the change, the target, the metric)
 - Time-bound (has a date or timeframe)
@@ -147,7 +149,7 @@ Score each hypothesis candidate on three dimensions (1-5 scale):
 
 - **Desirability (1-5):** Do customers actually want this? Is there evidence of demand?
 - **Feasibility (1-5):** Can you realistically execute this given your team size, stage, and resources?
-- **Viability (1-5):** Does this create a path to sustainable revenue? Does it help the business model?
+- **Viability (1-5):** Does this create a path to sustainable revenue? Does it help the business model? For an internal process on the `ops-automation` path, score the time or cost it saves instead.
 
 Also assign a **Risk Score (1-5):** How bad is it if this hypothesis is wrong? (5 = catastrophic, 1 = low stakes)
 

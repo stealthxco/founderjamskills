@@ -30,6 +30,7 @@ Run me through these steps:
 1. Frame the hypothesis formats, show me the two templates I'll use:
    - Outcome statement: "If we [change/experiment], then [target customer] will [measurable outcome] by [specific date]."
    - Validation commitment: "We believe [ICP] will pay $[Y]/month for [specific outcome]. We will validate this by [specific experiment] within [timeframe]."
+   - If I'm automating an internal or support process, use "We believe [the people who run this process] will [specific behavior, e.g. use the automation for most tasks] to [specific outcome, e.g. save X hours a week]. We will validate this by [specific experiment] within [timeframe]." Do not ask for a price.
 
 2. Diverge phase, use the 20 hypothesis thought starters to help me generate 6-10 candidates customized to my startup. Pick the most relevant thought starters based on my stage and problem. Output a diverge board table with all candidates labeled H1 through H[n].
 

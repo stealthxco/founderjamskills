@@ -30,8 +30,8 @@ Format A, prototype share-out (7-10 minutes), the default for product and positi
 5. One specific ask (30 seconds)
 
 Format B, customer and offer share-out (5 minutes), the default for GTM and growth, sales, and ops and automation:
-1. Customer and offer (60 seconds)
-2. What I built today (90 seconds)
+1. Customer and offer (60 seconds). Path-specific offer: lead magnet (GTM and growth), the offer and outbound system (sales), or the manual process and who it serves (ops and automation)
+2. What I built today (90 seconds). Nurture sequence, automation, or content workflow (GTM and growth); outbound sequence, call script, or follow-up flow (sales); internal workflow or support automation (ops and automation)
 3. My 2-day, 2-week, and 2-month commitments with numbers (90 seconds)
 4. One specific ask (60 seconds)
 
@@ -40,7 +40,7 @@ If my slot is shorter than the format, trim the middle sections and always keep 
 Here's what I did today:
 - What I learned about my market and competitors: [findings]
 - Hypothesis or beachhead customer I chose, and what I rejected: [answer]
-- What I built (prototype, lead magnet, sequence, automation): [what it is and how it works]
+- What I built (prototype, lead magnet, sequence, automation): [what it is and how it works. On the ops and automation path: which manual process I automated, what it does now, tools, time saved. A lead magnet is optional.]
 - Key surprises: [what I didn't expect]
 - My 2-2-2 commitments: [specific actions and numbers]
 - Specific ask from the cohort: [what help I actually need]
