@@ -58,6 +58,7 @@ Hey [Founder Name],
 
 It's been 2 months since Founder Jam. Time for the honest check-in.
 
+Your 2-month commitment was: [2-month commitment].
 Your North Star target was [specific metric]: [specific number].
 
 Where did you land?
@@ -84,6 +85,7 @@ Reply with your color and I'll send you specific next steps for that path.
 | `[Week 1 action 1-3]` | From their 30-day plan, Week 1 rows |
 | `[Week 2 milestone 1-2]` | From their 30-day plan, Week 2 success criteria |
 | `[specific number from 30-day plan]` | The quantified target they set (e.g., 50 landing page visitors) |
+| `[2-month commitment]` | The 2-month commitment from the validation planner (the validation gate) |
 | `[specific metric]` | Their North Star metric, or their hypothesis metric on product and positioning |
 | `[Sherpa Name]` | Your first name |
 

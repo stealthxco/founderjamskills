@@ -36,6 +36,9 @@ If the founder shared their FOUNDER JAM HANDOFF block (the format is defined in 
 3. "Which path did they pick in Focus? (product and positioning, GTM and growth, sales, or ops and automation)"
    -> `path`
 
+   On ops and automation, also ask: "Was it an internal or support process, or go-to-market work like lead enrichment?"
+   -> `process_type`
+
 4. "What were their 3 commitments from the validation planner?"
    - 2-day commitment: [specific action]
    - 2-week commitment: [specific action with a number if possible]
@@ -110,11 +113,14 @@ Fill the template with:
 
 Fill the template with:
 - `[Founder Name]` -> `founder_first_name`
+- `[2-month commitment]` -> `commitment_2month`
 - `[specific metric]` -> `north_star_metric`
 - `[specific number]` -> `north_star_target`
 - `[Sherpa Name]` -> `sherpa_name`
 
-If no North Star metric was captured (common on product and positioning), substitute the 30-day target metric and number. Note the substitution in a sherpa comment above the message.
+The 2-month commitment is the validation gate, so grade against it. If no North Star metric was captured (common on product and positioning), leave out the North Star line and grade against the 2-month commitment alone. Note the omission in a sherpa comment above the message.
+
+On ops and automation with an internal or support process, replace the Red line with: "Red (under 40%): Time to revisit the process. Talk to 3-5 people who tried it and stopped, then re-scope the process, fix the step where adoption stalls, or pick a different process to automate."
 
 ### Step 3: Personalization check
 
