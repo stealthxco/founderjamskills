@@ -83,7 +83,7 @@ PY
 )" || exit 1
 
   # Every templates/ or content/ file referenced in the skill must be bundled with it.
-  deps="$(grep -oE '(templates|content)/[A-Za-z0-9._-]+\.md' "$src" | sort -u || true)"
+  deps="$(grep -oE '(templates|content)/[A-Za-z0-9._/-]+\.[A-Za-z0-9]+' "$src" | sort -u || true)"
   for dep in $deps; do
     [ -f "$skill_dir/$dep" ] || fail "ERROR: $skill references '$dep' but it is not in skills/*/$skill/."
   done
