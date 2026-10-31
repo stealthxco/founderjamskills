@@ -33,8 +33,10 @@ If the founder shared their FOUNDER JAM HANDOFF block (the format is defined in 
 2. "What's the founder's first name?"
    -> `founder_first_name`
 
-3. "Which path did they pick in Focus? (product and positioning, GTM and growth, sales, or ops and automation)"
+3. "Which path did they pick in Focus? (product and positioning, GTM and growth, sales, ops and automation, or undecided)"
    -> `path`
+
+   If they left undecided, skip the path-specific language in Step 2 and use the words that fit what they built.
 
    On ops and automation, also ask: "Was it an internal or support process, or go-to-market work like lead enrichment?"
    -> `process_type`
