@@ -13,7 +13,7 @@ Post-event skill for sherpas. Generate three ready-to-send follow-up messages pe
 This skill produces three messages:
 1. **2-Day check-in**: accountability nudge while commitments are fresh
 2. **2-Week milestone**: progress check against specific targets
-3. **2-Month validation gate**: Green / Yellow / Red assessment against North Star
+3. **2-Month validation gate**: Green / Yellow / Red assessment against the 2-month commitment
 
 **When to run:** After the event, using notes from each startup's validation planner output. Run once per startup.
 
@@ -45,7 +45,7 @@ If the founder shared their FOUNDER JAM HANDOFF block (the format is defined in 
    - 2-month commitment: [specific outcome with a number]
    -> `commitment_2day`, `commitment_2week`, `commitment_2month`
 
-   If the 2-week or 2-month commitment has no number, ask: "What number would count as hitting it?" Messages 2 and 3 grade against these numbers.
+   If the 2-week or 2-month commitment has no number, ask: "What number would count as hitting it?" Message 2 checks progress against `thirty_day_target`, and Message 3 grades against the 2-month commitment's number.
 
 5. "What were their Week 1 actions from the 30-day plan? List 3-5 specific actions."
    -> `week1_actions[]`
@@ -122,7 +122,7 @@ Fill the template with:
 - `[specific number]` -> `north_star_target`
 - `[Sherpa Name]` -> `sherpa_name`
 
-The 2-month commitment is the validation gate, so grade against it. If no North Star metric was captured (common on product and positioning), leave out the North Star line and grade against the 2-month commitment alone. Note the omission in a sherpa comment above the message.
+The 2-month commitment is the validation gate, so grade against its number, even when a North Star target exists and differs. The North Star line is context only. If no North Star metric was captured (common on product and positioning), leave that line out and note the omission in a sherpa comment above the message.
 
 On ops and automation with an internal or support process, replace the Red line with: "Red (under 40%): Time to revisit the process. Talk to 3-5 people who tried it and stopped, then re-scope the process, fix the step where adoption stalls, or pick a different process to automate."
 

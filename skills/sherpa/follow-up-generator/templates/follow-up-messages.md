@@ -61,7 +61,7 @@ It's been 2 months since Founder Jam. Time for the honest check-in.
 Your 2-month commitment was: [2-month commitment].
 Your North Star target was [specific metric]: [specific number].
 
-Where did you land?
+Where did you land against your 2-month commitment?
 
 Green (70% or more): You've found signal. Time to double down and build systems around what's working.
 Yellow (40% to under 70%): There's something here but it needs tuning. What's the one metric furthest from target?
