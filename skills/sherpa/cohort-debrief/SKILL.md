@@ -69,6 +69,19 @@ If a founder shared their FOUNDER JAM HANDOFF block (the format is defined in th
 
 Collect data for all startups before generating cards.
 
+Then ask about the event as a whole, one question at a time. Step 4 is built from these answers:
+
+13. "Which activities ran long or short, and by roughly how much?"
+    -> `pacing_notes[]`
+
+14. "Which frameworks did you have to re-explain, and to how many startups?"
+    -> `framework_confusion[]`
+
+15. "Which tools caused delays or confusion (for example N8N, Miro, or the AI tools)?"
+    -> `tool_friction[]`
+
+If the sherpa has nothing for one of these, record "None reported" and do not invent a finding for it in Step 4.
+
 ### Step 2: Generate summary cards
 
 For each startup, produce a debrief card using the `templates/debrief-template.md` format.

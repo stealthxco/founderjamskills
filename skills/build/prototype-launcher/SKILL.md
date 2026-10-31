@@ -27,7 +27,7 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 
 Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
-Path check: if `path` is empty or `undecided`, help the founder choose one of the four paths (see `founder-setup`, Step 2) before going further. With a sherpa, decide it together. Write the path the founder confirms into `path` in the block you print, so the next skill does not ask again. Never carry `undecided` forward once the founder has chosen. If a Founder Jam `config.json` (one with `startup_name` and `path` keys) exists in the working directory, update `path` there too and leave every other key as it is.
+Path check: if `path` is empty, `undecided`, or anything other than `product-positioning`, `gtm-growth`, `sales` or `ops-automation`, help the founder choose one of the four paths (see `founder-setup`, Step 2) before going further. With a sherpa, decide it together. Write the path the founder confirms into `path` in the block you print, so the next skill does not ask again. Never carry `undecided` forward once the founder has chosen. If a Founder Jam `config.json` (one with `startup_name` and `path` keys) exists in the working directory, update `path` there too and leave every other key as it is.
 
 Fields needed: `hypothesis_selected`, `startup_name`, `stage`, `target_market`, `path`.
 

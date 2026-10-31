@@ -59,7 +59,7 @@ Hey [Founder Name],
 It's been 2 months since Founder Jam. Time for the honest check-in.
 
 Your 2-month commitment was: [2-month commitment].
-Your North Star target was [specific metric]: [specific number].
+[Only if a North Star metric was captured:] Your North Star target was [specific metric]: [specific number].
 
 Where did you land against your 2-month commitment?
 
