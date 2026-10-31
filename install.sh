@@ -178,6 +178,11 @@ if [ ! -f "$REPO_DIR/config.json" ]; then
     cp "$REPO_DIR/config.example.json" "$REPO_DIR/config.json"
     echo ""
     print_success "Created config.json from template (optional in Claude Code)."
+elif python3 -c 'import json, sys; c = json.load(open(sys.argv[1])); sys.exit(0 if isinstance(c, dict) and "startup_name" in c and "path" not in c else 1)' "$REPO_DIR/config.json" 2>/dev/null; then
+    echo ""
+    print_warning "config.json is a v1 file (it has no 'path' key), so the v2 skills will not read or update it."
+    echo "  Add a \"path\" key set to product-positioning, gtm-growth, sales, ops-automation, or undecided,"
+    echo "  or delete config.json and run founder-setup again. See 'Upgrading from v1' in CHANGELOG.md."
 fi
 
 echo ""
