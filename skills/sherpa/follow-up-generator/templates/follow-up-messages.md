@@ -86,7 +86,7 @@ Reply with your color and I'll send you specific next steps for that path.
 | `[Week 2 milestone 1-2]` | From their 30-day plan, Week 2 success criteria (without one: the 2-week commitment plus one more week-2 milestone) |
 | `[specific number from 30-day plan]` | The quantified target they set (e.g., 50 landing page visitors); without a 30-day plan, the number from the 2-week commitment |
 | `[2-month commitment]` | The 2-month commitment from the validation planner (the validation gate) |
-| `[specific metric]` | Their North Star metric, or their hypothesis metric on product and positioning |
+| `[specific metric]` | Message 2: the primary metric from their first week-2 milestone. Message 3: their North Star metric; if none was captured, leave the North Star line out |
 | `[Sherpa Name]` | Your first name |
 
 ## Notes
