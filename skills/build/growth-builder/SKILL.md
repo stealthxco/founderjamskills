@@ -26,6 +26,8 @@ Get context from a FOUNDER JAM HANDOFF block pasted in the chat (the format is d
 
 Sherpa check: if `mode` is missing or empty, ask once, "Is a sherpa with you today?" Default to solo. With a sherpa, add this skill's challenge prompts. Solo, skip them.
 
+Path check: if `path` is empty, `undecided`, or anything other than `product-positioning`, `gtm-growth`, `sales` or `ops-automation`, help the founder choose one of the four paths (see `founder-setup`, Step 2) before going further. With a sherpa, decide it together. Write the path the founder confirms into `path` in the block you print, so the next skill does not ask again. Never carry `undecided` forward once the founder has chosen. If a Founder Jam `config.json` (one with `startup_name` and `path` keys) exists in the working directory, update `path` there too and leave every other key as it is.
+
 Fields needed: `icp_segment`, `startup_name`, `stage`, `business_type`, and `path`. Also needed: `channels_selected` and `lead_magnet`, unless `path` is `ops-automation`. On the `ops-automation` path, ask for them only if the founder's automation in Sub-activity A is a go-to-market one. Skip `lead_magnet` if the founder picks Customer Support Automation.
 
 If any needed fields are missing, ask for them before proceeding. If `channels_selected` is empty and it is needed, ask which channel(s) the founder selected in the previous activity. On the `ops-automation` path with an internal manual process and no lead magnet, skip `lead_magnet` and `channels_selected` (no channels, outreach, or lead magnet steps in the plan), and ask instead which manual process the founder wants to automate and who it serves.
