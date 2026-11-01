@@ -18,7 +18,9 @@ for arg in "$@"; do
             echo "  --no-sherpa   skip the facilitator skills in skills/sherpa/"
             echo "  --lite        show the Claude Desktop / claude.ai options (no install)"
             echo "  --uninstall   remove the links this script created"
-            echo "Prefer the plugin? In Claude Code: /plugin marketplace add stealthxco/founderjamskills"
+            echo "Prefer the plugin? In Claude Code:"
+            echo "  /plugin marketplace add stealthxco/founderjamskills"
+            echo "  /plugin install founder-jam@founder-jam-skills"
             exit 0 ;;
         *) echo "Unknown option: $arg (try --help)" >&2; exit 1 ;;
     esac
@@ -46,12 +48,12 @@ if [ "$MODE" = "--uninstall" ]; then
     for skill_dir in "$SKILLS_DIR"/*/*/; do
         skill_name=$(basename "$skill_dir")
         target="$CLAUDE_SKILLS_DIR/$skill_name"
-        # Only remove links that point into this repo (new layout or the old flat v1 layout).
+        # Only remove links this script made: this skill's folder, or its old flat v1 path.
         if [ -L "$target" ]; then
             link_dest="$(readlink "$target")"
-            case "$link_dest" in
-                "$SKILLS_DIR"/*) rm "$target"; print_success "  Removed: $skill_name" ;;
-                *) print_warning "  Kept:    $skill_name (link points outside this repo)" ;;
+            case "${link_dest%/}" in
+                "${skill_dir%/}"|"$SKILLS_DIR/$skill_name") rm "$target"; print_success "  Removed: $skill_name" ;;
+                *) print_warning "  Kept:    $skill_name (link wasn't made by this script)" ;;
             esac
         fi
     done
@@ -149,20 +151,15 @@ for skill_dir in "$SKILLS_DIR"/*/*/; do
     fi
 
     # A link from an older layout (v1 pointed at skills/<name>) goes stale after the move to
-    # skills/<stage>/<name>. Replace stale links that point into this repo.
-    if [ -L "$target" ]; then
+    # skills/<stage>/<name>. Replace only that exact old link.
+    if [ -L "$target" ] && [ "$(readlink "$target" | sed 's:/*$::')" = "$SKILLS_DIR/$skill_name" ]; then
         link_dest="$(readlink "$target")"
-        case "$link_dest" in
-            "$SKILLS_DIR"/*)
-                if [ "${link_dest%/}" != "$skill_dir" ]; then
-                    rm "$target"
-                    print_warning "  Relinked: $skill_name (was $link_dest)"
-                fi ;;
-        esac
+        rm "$target"
+        print_warning "  Relinked: $skill_name (was $link_dest)"
     fi
 
     # Symlink skill directory into ~/.claude/skills/
-    if [ -e "$target" ]; then
+    if [ -e "$target" ] || [ -L "$target" ]; then
         print_warning "  Exists:  $skill_name (skipped, already installed)"
         skipped=$((skipped + 1))
     else
@@ -196,5 +193,7 @@ print_success "Ready! Run 'founder-setup' to get started."
 echo ""
 echo "Stages: Understand -> Focus -> Build -> Validate"
 echo "Start with founder-setup, then follow your path (see PATHS.md)."
-echo "Prefer a plugin? In Claude Code: /plugin marketplace add stealthxco/founderjamskills"
+echo "Prefer a plugin? In Claude Code:"
+echo "  /plugin marketplace add stealthxco/founderjamskills"
+echo "  /plugin install founder-jam@founder-jam-skills"
 echo ""

@@ -12,7 +12,7 @@ Turn today's work into a concrete 30-day commitment plan before you leave. Pushe
 
 ## Overview
 
-This is the last skill of the day. Run it in the final 15 minutes.
+Run this right before `pitch-builder`, so your share-out can use these commitments.
 
 - Works for all four paths
 - Tailors funnel math defaults to path and startup stage

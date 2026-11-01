@@ -31,6 +31,8 @@ Path check: if `path` is empty, `undecided`, or anything other than `product-pos
 
 Fields needed: `hypothesis_selected`, `startup_name`, `stage`, `target_market`, `path`.
 
+On the `ops-automation` path, ask: "Is this an internal or support process, or go-to-market automation?" Use the answer in Step 2 and in the final checklist.
+
 If `hypothesis_selected` is empty or the handoff block is missing, ask:
 - "What's your winning hypothesis from the hypothesis engine session?"
 - "What's your startup and who is your target customer?"

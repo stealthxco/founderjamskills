@@ -54,7 +54,7 @@ Before building the pitch, gather what happened during the day. Ask conversation
 **If Format B:**
 1. "Who is your beachhead customer, be specific. What's the JTBD statement you landed on?" On the ops and automation path with an internal or support process, ask instead: "Who runs this process today, and what job were you making easier for them?"
 2. Ask what they actually built, based on `path`. GTM and growth: "What's your lead magnet and what did you build today (nurture sequence, automation, or content workflow)?" Sales: "What's your offer and outbound system, and what did you build today (sequence, call script, or follow-up flow)? A lead magnet is optional." Ops and automation: "Which manual process did you automate, and what does it do now (workflow, tools, time saved)? A lead magnet is optional."
-3. "What are your concrete 30-day commitments? Give me the numbers."
+3. "What are your 2-day, 2-week, and 2-month commitments? Give me the numbers." Use the ones from `validation-planner` if they ran it.
 4. "What specific help do you need from this room?"
 
 ### Step 3: Build pitch section by section
@@ -178,18 +178,18 @@ Draft format:
 - [Tools: [free tools] + [optional paid enhancements if applicable]]
 ```
 
-**Section 3: 30-Day Plan (90 seconds)**
+**Section 3: Commitments (90 seconds)**
 
 Generate talking points with real numbers. Push for specificity.
 
 Draft format:
 ```
-## Section 3: 30-day plan (90s)
+## Section 3: Commitments (90s)
 
-- [Week 1 commitment: specific action + specific number]
-- [Week 2 commitment: specific action + specific number]
-- [North Star metric: the one number that will tell you if it's working]
-- [Decision rule: what Green/Yellow/Red looks like at Day 30]
+- [2-day commitment: specific action]
+- [2-week commitment: specific action + specific number]
+- [2-month commitment: specific outcome + specific number]
+- [How you'll know it's working: the number you'll watch, and what you'll do if you miss it]
 ```
 
 **Section 4: One Ask (60 seconds)**
@@ -227,7 +227,7 @@ After all sections are drafted, generate a timing guide:
 
 0:00 - 1:00   ICP & offer
 1:00 - 2:30   What you built
-2:30 - 4:00   30-day plan
+2:30 - 4:00   Commitments
 4:00 - 5:00   One ask
 ```
 
