@@ -11,7 +11,7 @@ Two Founder Jam skills, set up for founders working on their own: find your firs
 
 **Any Claude plan, including Free:** open `paste-in-prompts/` in the kit zip (`starter-kit/paste-in/` in this repo), copy a prompt into a new chat at claude.ai, fill in the brackets.
 
-**Claude Pro, Max, Team or Enterprise:** upload the zips in `upload-to-claude/` in the kit zip (`starter-kit/dist/` in this repo) under **Settings → Capabilities → Skills → Upload skill**, then start a chat and say "Run icp-definer."
+**Claude with Skills turned on (needs "Code execution and file creation" in Settings → Capabilities):** upload the zips in `upload-to-claude/` in the kit zip (`starter-kit/dist/` in this repo) under **Customize → Skills → + → Create skill → Upload a skill** (older layout: Settings → Capabilities → Skills → Upload skill), then start a chat and say "Run icp-definer."
 
 Either way, run ICP Definer first. It ends with a **FOUNDER JAM HANDOFF** block. Copy it and paste it into Lead Magnet Ideator so you don't retype your answers.
 
@@ -21,10 +21,12 @@ Either way, run ICP Definer first. It ends with a **FOUNDER JAM HANDOFF** block.
 
 Founder Jam is a full-day working session in Charlotte with an experienced founder or operator beside you. See [innovatecharlotte.org/founderjam](https://www.innovatecharlotte.org/founderjam).
 
-The full 21-skill pack is in this repository: [github.com/stealthxco/founderjamskills](https://github.com/stealthxco/founderjamskills).
+The full pack, 21 founder skills and 4 sherpa skills, is in this repository: [github.com/stealthxco/founderjamskills](https://github.com/stealthxco/founderjamskills).
 
 ---
 
-Founder Jam is a program of Innovate Charlotte, co-created with StealthX. Skills are CC0; frameworks are credited in `ATTRIBUTION.md` in the main repository.
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam
 
-*Maintainers: this folder is generated. Edit `skills/`, `starter-kit/paste-in/`, or this README, then run `python3 starter-kit/build.py`.*
+The two skills in this kit are CC BY 4.0. Frameworks are credited in `ATTRIBUTION.md` in the main repository.
+
+*Maintainers: this folder is generated. Edit `skills/focus/`, `starter-kit/paste-in/`, or this README, then run `python3 starter-kit/build.py`.*

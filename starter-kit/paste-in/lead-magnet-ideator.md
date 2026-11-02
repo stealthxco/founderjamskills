@@ -37,9 +37,34 @@ Show a comparison table ranked by composite. Flag anything under 3.0 to rework o
 
 4. Recommend the next step: 4.0+ means build it now; 3.0-3.9 means post the test first; under 3.0 means rethink the customer or the problem.
 
+5. Ask which concept I'm going with. Then print my FOUNDER JAM HANDOFF block again inside a code box, with `lead_magnet` set to that concept as "type - title". Keep every other field as I pasted it. If my block was missing fields, use this layout:
+
+FOUNDER JAM HANDOFF
+version: 2
+startup_name:
+mode:
+path:
+stage:
+problem_statement:
+target_market:
+team_size:
+traction:
+business_type:
+icp_segment:
+top_pains:
+hypothesis_selected:
+channels_selected:
+lead_magnet:
+outbound_system:
+published_pages:
+
 Rules: never invent statistics or customer stories; be honest about build time; if my customer is too broad to make specific ideas, make me narrow it first.
 ```
 
 ---
 
-**Next:** post the top test, see who bites, then build the winner.
+**Next:** post the top test, see who bites, then build the winner. Copy the updated FOUNDER JAM HANDOFF block and paste it into the next prompt.
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

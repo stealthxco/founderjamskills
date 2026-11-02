@@ -5,6 +5,27 @@ REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
 SKILLS_DIR="$REPO_DIR/skills"
 CLAUDE_SKILLS_DIR="$HOME/.claude/skills"
 
+# Flags: --no-sherpa skips the four facilitator skills in skills/sherpa/.
+INSTALL_SHERPA=1
+MODE=""
+for arg in "$@"; do
+    case "$arg" in
+        --no-sherpa) INSTALL_SHERPA=0 ;;
+        --uninstall|--lite) MODE="$arg" ;;
+        -h|--help)
+            echo "Usage: ./install.sh [--no-sherpa | --lite | --uninstall]"
+            echo "  (no flag)     link every skill into ~/.claude/skills/ for Claude Code"
+            echo "  --no-sherpa   skip the facilitator skills in skills/sherpa/"
+            echo "  --lite        show the Claude Desktop / claude.ai options (no install)"
+            echo "  --uninstall   remove the links this script created"
+            echo "Prefer the plugin? In Claude Code:"
+            echo "  /plugin marketplace add stealthxco/founderjamskills"
+            echo "  /plugin install founder-jam@founder-jam-skills"
+            exit 0 ;;
+        *) echo "Unknown option: $arg (try --help)" >&2; exit 1 ;;
+    esac
+done
+
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -18,18 +39,22 @@ print_error() { echo -e "${RED}$1${NC}"; }
 # -------------------------------------------------------------------
 # Uninstall mode
 # -------------------------------------------------------------------
-if [ "$1" = "--uninstall" ]; then
+if [ "$MODE" = "--uninstall" ]; then
     echo "Uninstalling Founder Jam skills..."
     if [ ! -d "$CLAUDE_SKILLS_DIR" ]; then
         print_warning "No Claude skills directory found. Nothing to uninstall."
         exit 0
     fi
-    for skill_dir in "$SKILLS_DIR"/*/; do
+    for skill_dir in "$SKILLS_DIR"/*/*/; do
         skill_name=$(basename "$skill_dir")
         target="$CLAUDE_SKILLS_DIR/$skill_name"
+        # Only remove links this script made: this skill's folder, or its old flat v1 path.
         if [ -L "$target" ]; then
-            rm "$target"
-            print_success "  Removed: $skill_name"
+            link_dest="$(readlink "$target")"
+            case "${link_dest%/}" in
+                "${skill_dir%/}"|"$SKILLS_DIR/$skill_name") rm "$target"; print_success "  Removed: $skill_name" ;;
+                *) print_warning "  Kept:    $skill_name (link wasn't made by this script)" ;;
+            esac
         fi
     done
     echo ""
@@ -41,17 +66,21 @@ fi
 # -------------------------------------------------------------------
 # Lite mode (Desktop/Cowork)
 # -------------------------------------------------------------------
-if [ "$1" = "--lite" ]; then
+if [ "$MODE" = "--lite" ]; then
     echo ""
     echo "Founder Jam Skills - Desktop/Cowork Mode"
     echo "========================================="
     echo ""
     echo "You don't need Claude Code for this. Two options:"
     echo ""
-    echo "EASIEST - Upload a ready-made skill (Pro/Max/Team/Enterprise plans):"
+    echo "EASIEST - Upload a ready-made skill:"
     echo "  1. Grab a .zip from the dist/ folder (start with founder-setup.zip)"
-    echo "  2. In Claude Desktop or claude.ai: Settings > Capabilities > Skills > Upload skill"
-    echo "  3. Ask for it by name in a new chat. See dist/README.md for details."
+    echo "  2. In Claude Desktop or claude.ai: Customize > Skills > + > Create skill > Upload a skill"
+    echo "     (older layout: Settings > Capabilities > Skills > Upload skill)"
+    echo "  3. Ask for it by name in a new chat. See docs/claude-apps-guide.md for details."
+    echo ""
+    echo "PLUGIN - Add this repo as a marketplace (Claude Desktop: Customize > Plugins > Add marketplace):"
+    echo "  stealthxco/founderjamskills, then install the founder-jam plugin."
     echo ""
     echo "ANY PLAN - Paste in an activation prompt (no upload needed):"
     echo "  1. Open the instructions/ folder in this repo"
@@ -59,10 +88,8 @@ if [ "$1" = "--lite" ]; then
     echo "  3. Copy the activation prompt from the instructions file"
     echo "  4. Paste it into a new Claude Desktop or Cowork conversation"
     echo ""
-    echo "Skill order:"
-    echo ""
-    echo "  Product Track:  founder-setup -> battle-card-builder -> hypothesis-engine -> prototype-launcher -> pitch-builder -> validation-planner"
-    echo "  Growth Track:   founder-setup -> icp-definer -> offer-designer -> growth-builder -> pitch-builder -> validation-planner"
+    echo "  Start with founder-setup, then follow your path. See PATHS.md for the skills on each path."
+    echo "  Stages: Understand -> Focus -> Build -> Validate"
     echo ""
 
     # Try to open the instructions README
@@ -104,26 +131,35 @@ mkdir -p "$CLAUDE_SKILLS_DIR"
 installed=0
 skipped=0
 
-for skill_dir in "$SKILLS_DIR"/*/; do
+# Skills live at skills/<stage>/<name>/SKILL.md; each skill folder is linked by name.
+for skill_dir in "$SKILLS_DIR"/*/*/; do
+    skill_dir="${skill_dir%/}"
     skill_name=$(basename "$skill_dir")
-    skill_file="$skill_dir/$skill_name.skill"
     skill_md="$skill_dir/SKILL.md"
     target="$CLAUDE_SKILLS_DIR/$skill_name"
 
-    # Verify skill file exists
-    if [ ! -f "$skill_file" ]; then
-        print_warning "  Skipped: $skill_name (no .skill file found)"
+    # Sherpa skills are for facilitators; skip them with --no-sherpa.
+    if [ "$INSTALL_SHERPA" -eq 0 ] && [ "$(basename "$(dirname "$skill_dir")")" = "sherpa" ]; then
+        continue
+    fi
+
+    # Verify SKILL.md exists
+    if [ ! -f "$skill_md" ]; then
+        print_warning "  Skipped: $skill_name (no SKILL.md found)"
         skipped=$((skipped + 1))
         continue
     fi
 
-    # Create SKILL.md symlink inside skill directory if missing
-    if [ ! -e "$skill_md" ]; then
-        ln -s "$skill_name.skill" "$skill_md"
+    # A link from an older layout (v1 pointed at skills/<name>) goes stale after the move to
+    # skills/<stage>/<name>. Replace only that exact old link.
+    if [ -L "$target" ] && [ "$(readlink "$target" | sed 's:/*$::')" = "$SKILLS_DIR/$skill_name" ]; then
+        link_dest="$(readlink "$target")"
+        rm "$target"
+        print_warning "  Relinked: $skill_name (was $link_dest)"
     fi
 
     # Symlink skill directory into ~/.claude/skills/
-    if [ -e "$target" ]; then
+    if [ -e "$target" ] || [ -L "$target" ]; then
         print_warning "  Exists:  $skill_name (skipped, already installed)"
         skipped=$((skipped + 1))
     else
@@ -133,11 +169,17 @@ for skill_dir in "$SKILLS_DIR"/*/; do
     fi
 done
 
-# Copy config template if needed
+# config.json is optional. The skills work from a pasted FOUNDER JAM HANDOFF block;
+# in Claude Code they can also read and write config.json when it exists.
 if [ ! -f "$REPO_DIR/config.json" ]; then
     cp "$REPO_DIR/config.example.json" "$REPO_DIR/config.json"
     echo ""
-    print_success "Created config.json from template."
+    print_success "Created config.json from template (optional in Claude Code)."
+elif python3 -c 'import json, sys; c = json.load(open(sys.argv[1])); sys.exit(0 if isinstance(c, dict) and "startup_name" in c and "path" not in c else 1)' "$REPO_DIR/config.json" 2>/dev/null; then
+    echo ""
+    print_warning "config.json is a v1 file (it has no 'path' key), so the v2 skills will not read or update it."
+    echo "  Add a \"path\" key set to product-positioning, gtm-growth, sales, ops-automation, or undecided,"
+    echo "  or delete config.json and run founder-setup again. See 'Upgrading from v1' in CHANGELOG.md."
 fi
 
 echo ""
@@ -149,7 +191,9 @@ fi
 echo ""
 print_success "Ready! Run 'founder-setup' to get started."
 echo ""
-echo "Skill order:"
-echo "  Product Track:  founder-setup -> battle-card-builder -> hypothesis-engine -> prototype-launcher -> pitch-builder -> validation-planner"
-echo "  Growth Track:   founder-setup -> icp-definer -> offer-designer -> growth-builder -> pitch-builder -> validation-planner"
+echo "Stages: Understand -> Focus -> Build -> Validate"
+echo "Start with founder-setup, then follow your path (see PATHS.md)."
+echo "Prefer a plugin? In Claude Code:"
+echo "  /plugin marketplace add stealthxco/founderjamskills"
+echo "  /plugin install founder-jam@founder-jam-skills"
 echo ""

@@ -4,7 +4,7 @@
 
 Turns founder-led selling into a founder-led outbound system: a prospect sourcing plan with copy-paste search recipes, a 3-touch LinkedIn + 4-touch email sequence pack personalized to your ICP, a daily 30-minute cadence with reply-triage rules, and 2 posts/week of founder content that echoes your sequences. Manual-first by design - automation (HeyReach/Instantly) is presented as a tier you graduate into after the copy earns replies.
 
-**Time:** 60-90 minutes | **Growth Track supplement (run after Offer Designer; alternative or follow-on to Growth Builder's automation sub-activity)**
+**Time:** 60-90 minutes | **Stage:** Build. **Best for paths:** sales (also useful on GTM and growth). Third-party skill.
 
 ## When To Use It
 
@@ -19,7 +19,7 @@ Copy everything below the line into a new Claude conversation. Fill in your cont
 ## Activation Prompt
 
 ```
-I am working on the Growth Track at Founder Jam. Help me run the Outbound Composer
+I am in the Build stage at Founder Jam, on the sales path. Help me run the Outbound Composer
 activity - three sub-activities to build my founder-led outbound system.
 
 My startup context:
@@ -71,4 +71,13 @@ Then run three sub-activities in order:
 
 Challenge me hard: make me name three real people who match my ICP, read my
 connection request out loud, and commit to a calendar slot for the daily block.
+
+Handoff: if I paste a FOUNDER JAM HANDOFF block (key: value lines such as startup_name, mode, path, stage, problem_statement, target_market, icp_segment, hypothesis_selected, channels_selected, lead_magnet), use it as my context and ask only for what is missing. If I'm working alone, skip the challenge questions unless I ask to be pushed harder. When you finish, print the full block again in a code box with your new fields, and any field I gave you that the block was missing, filled in and every other field unchanged, so I can paste it into the next prompt. Print the block in this layout: a first line `FOUNDER JAM HANDOFF`, then `version: 2`, then one `key: value` line for each of startup_name, mode, path, stage, problem_statement, target_market, team_size, traction, business_type, icp_segment, top_pains, hypothesis_selected, channels_selected, lead_magnet, outbound_system, published_pages, in that order. Leave a value empty when it is unknown, and write channels_selected and published_pages as comma-separated lists on one line.
 ```
+
+
+---
+
+Third-party skill by Scott Murtaugh of GP Automations, released under CC0 1.0. It is not covered by the CC BY 4.0 license that applies to the rest of the Founder Jam pack.
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam

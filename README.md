@@ -1,148 +1,121 @@
-# Founder Jam Skills Pack
+# Founder Jam skills
 
-A set of 19 Claude Code skills -- 10 for the workshop day, 9 for post-workshop growth operations -- for early-stage startup founders attending Founder Jam, a full-day workshop experience hosted by [Innovate Charlotte](https://www.innovatecharlotte.org/) and [StealthX](https://stealthx.co/). Two tracks (Product and Growth) guide founders from competitive analysis through prototyping or go-to-market strategy, with AI-powered tools at every step.
+Skills for Founder Jam, a one-day workshop for early-stage founders. Founder Jam was co-created by Drew Burdick and [Innovate Charlotte](https://www.innovatecharlotte.org/). The skills work in claude.ai, Claude desktop, and Claude Code, and they follow the day's four stages: Understand, Focus, Build, Validate.
 
-Learn more at [innovatecharlotte.org/founderjams](https://www.innovatecharlotte.org/founderjams).
+Version 2 runs as one track with four paths. During Focus, each founder picks a path with their sherpa: product and positioning, GTM and growth, sales, or ops and automation. The path decides which skills to lean on. The day ends with 2-day, 2-week, and 2-month commitments.
 
-## Quick Start
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam
+
+## Quick start
+
+Pick the one that matches how you work. Then run `founder-setup`.
+
+### claude.ai or Claude desktop (upload a zip)
+
+1. Download `founder-setup.zip` from [`dist/`](dist/).
+2. In Claude, open Customize > Skills, click the plus button, choose "Create skill", then "Upload a skill", and pick the zip. (Older layout: Settings > Capabilities > Skills > Upload skill.) Skills need "Code execution and file creation" switched on in Settings > Capabilities.
+3. Start a new chat and say "Run founder-setup."
+4. Upload the other zips you need for your path.
+
+Details, artifacts, and connectors: [docs/claude-apps-guide.md](docs/claude-apps-guide.md).
+
+### Plugin (Claude desktop or Claude Code)
+
+This repository is also a plugin marketplace. In Claude Code:
+
+```
+/plugin marketplace add stealthxco/founderjamskills
+/plugin install founder-jam@founder-jam-skills
+```
+
+On Claude Code 2.1.275 or later, one step does both: `/plugin install founder-jam --marketplace stealthxco/founderjamskills`.
+
+In Claude desktop, open Customize > Plugins, choose "Add marketplace", enter `stealthxco/founderjamskills`, and install the Founder Jam plugin. Either way you get all 25 skills in one install.
+
+### Claude Code (clone and link)
 
 ```bash
-# 1. Clone and install
 git clone https://github.com/stealthxco/founderjamskills.git
 cd founderjamskills
-./install.sh
-
-# 2. Capture your startup context
-# In Claude Code, run:
-founder-setup
-
-# 3. Follow your track (see Skill Map below)
+./install.sh              # add --no-sherpa to skip the facilitator skills
 ```
 
-Setup takes about 5 minutes. After running `founder-setup`, you're ready to start your track activities.
+Then run `founder-setup` in a Claude Code session.
 
-## Skill Map
+### Any plan, no install
 
-| # | Skill | Track | When | What It Produces |
-|---|-------|-------|------|-----------------|
-| 1 | `founder-setup` | Both | Morning Kickoff | config.json + startup snapshot |
-| 2 | `battle-card-builder` | Product | Activity 1 (9:30am) | SWOT + competitive battle cards |
-| 3 | `hypothesis-engine` | Product | Activity 2 (11:00am) | Ranked hypotheses with validation plans |
-| 4 | `prototype-launcher` | Product | Activity 3 (1:00pm) | Prototype artifacts (Lovable prompts, landing pages, etc.) |
-| 5 | `icp-definer` | Growth | Part 1 (9:30am) | ICP cards + channel strategy |
-| 6 | `offer-designer` | Growth | Part 2 (11:00am) | Lead magnet + 7-email nurture sequence |
-| 7 | `growth-builder` | Growth | Part 3 (1:00pm) | Automation spec + 30-day plan |
-| 8 | `market-analyzer` | Both | On-demand | TAM/SAM/SOM + competitive landscape |
-| 9 | `pitch-builder` | Both | Share-Outs (4:00pm) | Talking points for end-of-day presentation |
-| 10 | `validation-planner` | Both | Commitments (4:45pm) | 2D/2W/2M plan + Green/Yellow/Red decision gates |
-| | | | | |
-| 11 | `lead-magnet-ideator` | Growth | Post-Workshop | 5-7 scored lead magnet concepts with validation hooks |
-| 12 | `testimonial-collector` | Both | Post-Workshop | Personalized testimonial request emails, collection tracker, champion activation plans |
-| 13 | `show-rate-optimizer` | Growth | Post-Workshop | 3-email confirmation sequences, pre-call value notes, no-show recovery |
-| 14 | `offer-architect` | Growth | Post-Workshop | Grand Slam packages with bonus stacking, guarantees, and upsell/downsell architecture |
-| 15 | `nurture-engine` | Growth | Post-Workshop | Source-specific 7-email nurture sequences with give-to-ask ratio enforcement |
-| 16 | `case-study-generator` | Both | Post-Workshop | Multi-format case study packages (website, blog, social, newsletter) |
-| 17 | `seo-keyword-mapper` | Both | Post-Workshop | 6 Circles keyword maps, programmatic SEO templates, publishing roadmaps |
-| 18 | `content-calendar-planner` | Both | Post-Workshop | Weekly/monthly content calendars with velocity rules and ratio tracking |
-| 19 | `landing-page-auditor` | Both | Post-Workshop | 8-dimension page audits with prioritized fixes and A/B test variants |
-| 20 | `outbound-composer` | Growth | Part 3 (alternative) or Post-Workshop | Prospect sourcing plan, LinkedIn + email sequence pack, daily cadence + reply triage, one-page Outbound OS |
-| 21 | `page-launcher` | Both | On-demand (after `offer-designer` / `prototype-launcher`) | Live published pages via agentpub.io: email-gated lead magnet, positioning A/B test, 30-day scoreboard, demo-that-travels (Claude Code only) |
+Open [`instructions/`](instructions/), copy an activation prompt into a new chat, and follow it. [`starter-kit/`](starter-kit/) packages two skills for founders working on their own.
 
-## Founder Jam Starter Kit
+## How the day works
 
-Not at a Founder Jam yet? [`starter-kit/`](starter-kit/) packages `icp-definer` and `lead-magnet-ideator` for working on your own: paste-in prompts for any Claude plan, solo-mode upload zips, and a one-page quickstart. Download everything as [`starter-kit/dist/founder-jam-starter-kit.zip`](starter-kit/dist/founder-jam-starter-kit.zip).
+1. Understand: `founder-setup`, `market-analyzer`, `battle-card-builder`
+2. Focus: pick a path, then `icp-definer`, `hypothesis-engine`, `lead-magnet-ideator`
+3. Build: the skills for your path (prototype, offer, outbound, automation, content)
+4. Validate: `validation-planner` and `pitch-builder`, plus proof and audit skills
 
-## Three Ways to Use These Skills
+`founder-setup` suggests a path and prints a FOUNDER JAM HANDOFF block. Paste that block at the start of each later skill. Every skill prints an updated block when it finishes, so the latest one always goes into the next skill.
 
-### Claude Desktop / claude.ai (Upload a File — easiest)
+The path map, with the core skills for each path and stage, is in [PATHS.md](PATHS.md).
 
-Download a ready-to-install `.zip` from the [`dist/`](dist/) folder and upload it in the
-Claude app under **Settings → Capabilities → Skills → Upload skill**. No terminal, no
-cloning. Start with `founder-setup.zip`. See [`dist/README.md`](dist/README.md) for the
-2-minute walkthrough. *(Uploading Skills requires a Pro, Max, Team, or Enterprise plan.)*
+## Skills
 
-### Claude Code (Full Experience)
+The skill folders are grouped by stage under [`skills/`](skills/).
 
-Run `./install.sh` to symlink all skills into Claude Code. Invoke any skill by name. Skills read and write to a shared `config.json` so context flows between them automatically.
+| Stage | Skill | What it produces |
+|-------|-------|------------------|
+| Understand | `founder-setup` | Startup snapshot, suggested path, handoff block |
+| Understand | `market-analyzer` | TAM, SAM, SOM and a competitive landscape |
+| Understand | `battle-card-builder` | SWOT and a battle card for each competitor |
+| Focus | `icp-definer` | ICP card, competitor growth analysis, 1 to 2 channels |
+| Focus | `hypothesis-engine` | Ranked hypotheses with validation plans |
+| Focus | `lead-magnet-ideator` | 5 to 7 scored lead magnet concepts |
+| Build | `prototype-launcher` | A prototype (including a clickable Claude artifact) and a test plan |
+| Build | `offer-designer` | Lead magnet and a 7-email nurture sequence |
+| Build | `growth-builder` | An automation spec and a 30-day plan |
+| Build | `outbound-composer` | Outbound system, sequences, and daily cadence (third-party, CC0) |
+| Build | `page-launcher` | Live pages from Claude Code, or an artifact elsewhere (third-party, CC0) |
+| Build | `offer-architect` | Grand Slam package with bonuses and guarantees |
+| Build | `nurture-engine` | Source-specific 7-email sequences |
+| Build | `seo-keyword-mapper` | Keyword maps and a publishing roadmap |
+| Build | `content-calendar-planner` | Content calendar with velocity rules |
+| Build | `show-rate-optimizer` | Confirmation sequences and no-show recovery |
+| Validate | `validation-planner` | 2-day, 2-week, 2-month commitments and decision gates |
+| Validate | `pitch-builder` | Talking points for the share-out |
+| Validate | `testimonial-collector` | Testimonial requests and a collection tracker |
+| Validate | `case-study-generator` | Case study package in several formats |
+| Validate | `landing-page-auditor` | 8-dimension page audit with A/B variants |
 
-### Paste-In Prompts (any plan, no install)
+### For sherpas
 
-Browse the [`instructions/`](instructions/) folder (or run `./install.sh --lite`). Each file contains an activation prompt to paste into a new Claude conversation. Works on any plan, no upload needed.
+The [`skills/sherpa/`](skills/sherpa/) folder holds four skills for the people guiding a cohort. Founders don't need them.
 
-## Product Track Guide
+| Skill | Use it |
+|-------|--------|
+| `cohort-prep` | Before the event: briefing cards, sherpa assignments, a Miro setup checklist |
+| `intervention-guide` | During the event: language for a stuck table, pacing checks, challenge questions |
+| `cohort-debrief` | The same day: a card per startup and patterns across the cohort |
+| `follow-up-generator` | After the event: personalized 2-day, 2-week, and 2-month check-ins |
 
-**Who it's for:** Founders building products who want to validate their competitive position, sharpen their strategic hypothesis, and build a rapid prototype.
+## Your context
 
-**Sequence:**
+Skills run from the handoff block you paste into the chat, so nothing needs to be saved. In Claude Code, skills can also read and write an optional `config.json` (copy [`config.example.json`](config.example.json); it's never committed). In `founder-setup` you say whether a sherpa is with you. Without one, skills skip the challenge prompts and run in solo mode.
 
-1. **`founder-setup`** -- Capture your startup context and get oriented
-2. **`battle-card-builder`** -- SWOT self-assessment, identify 3-5 competitors (including "status quo"), generate battle cards with competitive intelligence
-3. **`hypothesis-engine`** -- Diverge to 6-10 candidate hypotheses using thought starters, score on desirability/feasibility/viability, converge to top 2-3
-4. **`prototype-launcher`** -- Select prototype type, generate artifacts (Lovable prompts, landing page copy, service blueprints, etc.)
-5. **`pitch-builder`** -- Structure your 7-10 minute share-out with talking points
-6. **`validation-planner`** -- Create your 2 Days / 2 Weeks / 2 Months commitment plan
+## Building the zips
 
-Use `market-analyzer` any time you need competitive research or market sizing.
+After you edit a skill, run `./package-skills.sh`. It checks each skill's frontmatter and bundled files, then writes `dist/<skill>.zip`. Each zip has one folder named for the skill with its SKILL.md, templates, LICENSE, a CREDIT.txt, and (except founder-setup) a HANDOFF-FORMAT.md copied from founder-setup. The script needs PyYAML (`python3 -m pip install --user pyyaml`).
 
-**Post-Workshop Extensions:** `testimonial-collector` (gather proof from early users), `case-study-generator` (turn wins into marketing assets), `landing-page-auditor` (optimize your prototype's landing page), `content-calendar-planner` (plan ongoing content), `seo-keyword-mapper` (find your organic search opportunities).
+## Frameworks and attribution
 
-## Growth Track Guide
+The skills cite published frameworks, and two skills are third-party material by Scott Murtaugh of GP Automations. [ATTRIBUTION.md](ATTRIBUTION.md) has the full credits and the license history. Release notes are in [CHANGELOG.md](CHANGELOG.md).
 
-**Who it's for:** Founders focused on go-to-market strategy who want to define their ideal customer, design their offer, and build distribution automation.
+## License
 
-**Sequence:**
+Version 2.0.0 and later is licensed by Drew Burdick under [CC BY 4.0](LICENSE). Credit line:
 
-1. **`founder-setup`** -- Capture your startup context and get oriented
-2. **`icp-definer`** -- Define ICP via Jobs-to-be-Done, analyze competitor growth tactics, select 1-2 distribution channels
-3. **`offer-designer`** -- Design lead magnet matched to business type, build content workflow, write 7-email nurture sequence
-4. **`growth-builder`** -- Build one automation (sales enrichment or support), define North Star metric, create 30-day validation plan
-5. **`pitch-builder`** -- Structure your 5-minute share-out with talking points
-6. **`validation-planner`** -- Create your 2 Days / 2 Weeks / 2 Months commitment plan
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam
 
-Use `market-analyzer` any time you need competitive research or market sizing.
+Version 1.x (tag `v1.0.0`) was released under CC0 1.0 and stays that way. The `outbound-composer` and `page-launcher` skills are third-party material under CC0 1.0.
 
-**Post-Workshop Extensions:** `lead-magnet-ideator` (brainstorm and score concepts before building with `offer-designer`), `offer-architect` (optimize your offer into a Grand Slam package), `nurture-engine` (build source-specific email sequences), `show-rate-optimizer` (maximize discovery call show rates), `testimonial-collector` (gather proof from early users), `case-study-generator` (turn wins into marketing assets), `content-calendar-planner` (plan ongoing content), `seo-keyword-mapper` (find organic search opportunities), `landing-page-auditor` (optimize your pages).
+## More
 
-**Workflow progression:** `offer-designer` -> `offer-architect` (optimize into Grand Slam package). `lead-magnet-ideator` -> `seo-keyword-mapper` -> `content-calendar-planner` -> `case-study-generator` (proof assets). `testimonial-collector` and `show-rate-optimizer` can run independently at any time.
-
-## After the Workshop
-
-These skills work in solo mode too. In your `config.json`, set:
-
-```json
-{
-  "facilitated_mode": false
-}
-```
-
-This switches skills from workshop mode (with facilitator challenge prompts) to solo mode (more streamlined, less confrontational). Use the skills with real customer data, real competitor research, and real traction numbers.
-
-The `validation-planner` output becomes your 30-day roadmap. Check back at the Green/Yellow/Red decision gates to know whether to persist, optimize, or pivot.
-
-## Frameworks and Attribution
-
-All frameworks referenced in these skills come from published sources. See [ATTRIBUTION.md](ATTRIBUTION.md) for full citations, including:
-
-- Good Strategy / Bad Strategy (Richard Rumelt)
-- Jobs-to-be-Done (Clayton Christensen)
-- Customer Development (Steve Blank)
-- Double Diamond (Design Council UK)
-- $100M Offers / $100M Leads (Alex Hormozi)
-- 6 Circles Method / Content Atomizer (James Dickerson)
-- ACP Framework / Champion Activation (Greg Isenberg)
-
-## More Resources
-
-Want more tools, frameworks, and insights for founders? Subscribe to the **Building Great Experiences** newsletter for practical startup and product strategy content:
-
-[greatexperiences.beehiiv.com/subscribe](https://greatexperiences.beehiiv.com/subscribe)
-
-## About Founder Jam
-
-Founder Jam is a full-day workshop experience for early-stage startup founders, hosted by Innovate Charlotte and StealthX.
-
-**Innovate Charlotte** -- [innovatecharlotte.org](https://www.innovatecharlotte.org/) | [LinkedIn](https://www.linkedin.com/company/innovatecharlotte/) | [Instagram](https://www.instagram.com/innovateclt/)
-
-**StealthX** -- [stealthx.co](https://stealthx.co/) | [LinkedIn](https://linkedin.com/company/stealthxco) | [Instagram](https://instagram.com/stealthxco)
-
-Visit the [Founder Jam page](https://www.innovatecharlotte.org/founderjams) for upcoming events and registration.
+Founder Jam is a program of Innovate Charlotte. See [innovatecharlotte.org/founderjam](https://www.innovatecharlotte.org/founderjam) for upcoming events. For more on building products founders want, subscribe to the Building Great Experiences newsletter at [greatexperiences.beehiiv.com/subscribe](https://greatexperiences.beehiiv.com/subscribe).

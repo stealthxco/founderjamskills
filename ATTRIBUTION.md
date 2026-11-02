@@ -1,6 +1,41 @@
 # Attribution
 
-The Founder Jam Skills Pack references frameworks and methodologies from the following published sources. All frameworks are used for educational purposes within the workshop context.
+Credit line (use it verbatim when you share or adapt this material):
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam
+
+## Author
+
+Drew Burdick wrote the Founder Jam curriculum and the skills in this repository and is the licensor of version 2.0.0 and later under CC BY 4.0 (see `LICENSE`).
+
+## Program
+
+Founder Jam is a program co-created with [Innovate Charlotte](https://www.innovatecharlotte.org/). The workshop format, the four stages (Understand, Focus, Build, Validate), the 2-day, 2-week, and 2-month commitments, and the sherpa role come from that collaboration. The paths (product and positioning, GTM and growth, sales, ops and automation) follow the focus areas on the Founder Jam application.
+
+## Third-party contributions
+
+Scott Murtaugh of GP Automations contributed to the Growth content. His material is third-party material in this pack and is not relicensed under CC BY 4.0.
+
+| Item | Author | License | Where |
+|------|--------|---------|-------|
+| `outbound-composer` skill | Scott Murtaugh, GP Automations | CC0 1.0 | `skills/build/outbound-composer/` |
+| `page-launcher` skill | Scott Murtaugh, GP Automations | CC0 1.0 | `skills/build/page-launcher/` |
+| Growth Track curriculum contributions in v1 (ICP worksheets, lead magnet brainstorming frameworks, email sequence templates, AI prompt library) | Scott Murtaugh, GP Automations | CC0 1.0, as published in v1.x | Git tag `v1.0.0` |
+
+The v2 skills that adapt the v1 Growth Track material (for example `icp-definer`, `offer-designer`, and `growth-builder`) are Drew Burdick's adaptations. Scott's underlying contributions stay under the license they were published with. Each third-party skill states its license in its `SKILL.md` frontmatter and in the footer of the file, and the zip built for it carries the CC0 text instead of CC BY.
+
+## Licensing history
+
+| Version | Material | License |
+|---------|----------|---------|
+| v1.x (tag `v1.0.0`) | Founder skills | CC0 1.0. Not withdrawn. |
+| Earlier separate repository | Facilitator skills (`cohort-prep`, `intervention-guide`, `cohort-debrief`, `follow-up-generator`) | CC BY-NC-SA 4.0 |
+| v2.0.0 and later | All Drew Burdick material, including the facilitator skills | CC BY 4.0. The author relicensed the facilitator skills from CC BY-NC-SA 4.0 to CC BY 4.0 for v2. |
+| v2.0.0 and later | Third-party items listed above | Their own license (CC0 1.0) |
+
+## Frameworks and published sources
+
+The Founder Jam Skills Pack references the following published frameworks and methods. They are cited for educational use within the workshop context.
 
 ## Strategy Frameworks
 
@@ -31,14 +66,6 @@ Beachhead market selection: pick one narrow, winnable segment to dominate before
 **Double Diamond**
 Design Council UK (public domain)
 Four-phase design process: Discover (diverge), Define (converge), Develop (diverge), Deliver (converge). Used in hypothesis-engine to structure the diverge-then-converge approach to hypothesis generation and selection.
-
-## Workshop Design
-
-The Founder Jam workshop format and facilitation methodology are original to Innovate Charlotte's Founder Jam program.
-
-## Growth Track Curriculum
-
-Growth Track curriculum contributions by Scott Murtaugh / [Growth Process Automation](https://growthprocessautomation.com/). ICP worksheets, lead magnet brainstorming frameworks, email sequence templates, and AI prompt library adapted for the Growth Track skills.
 
 ## Lead Magnet & Offer Frameworks
 

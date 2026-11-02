@@ -1,1 +1,0 @@
-lead-magnet-ideator.skill

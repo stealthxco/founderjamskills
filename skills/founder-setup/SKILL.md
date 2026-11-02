@@ -1,1 +1,0 @@
-founder-setup.skill

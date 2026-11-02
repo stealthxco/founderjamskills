@@ -1,0 +1,17 @@
+{
+  "name": "founder-jam-skills",
+  "description": "Founder Jam skills by Drew Burdick, a program co-created with Innovate Charlotte. Install the founder-jam plugin to get every skill.",
+  "owner": {
+    "name": "Drew Burdick",
+    "url": "https://drewburdick.com/founderjam"
+  },
+  "plugins": [
+    {
+      "name": "founder-jam",
+      "source": "./",
+      "description": "21 founder skills grouped by stage (Understand, Focus, Build, Validate) and 4 sherpa skills. Start with founder-setup.",
+      "category": "startups",
+      "tags": ["founders", "workshop", "go-to-market", "prototyping"]
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 
 Builds your lead generation engine in three connected pieces: a lead magnet matched to how your ICP actually makes decisions, the automation workflow to capture and score leads from it, and a 7-email nurture sequence to convert cold leads into warm conversations. Every output in this skill is tailored to the beachhead segment you selected in ICP Definer.
 
-**Time:** 75 minutes | **Growth Track Part 2 of 3**
+**Time:** 75 minutes | **Stage:** Build. **Best for paths:** GTM and growth
 
 ## How to Use
 
@@ -15,7 +15,7 @@ Copy everything below the line and paste it into a new Claude Desktop or Cowork 
 ## Activation Prompt
 
 ```
-I am working on the Growth Track at Founder Jam. Help me run the Offer Designer activity -- three sub-activities to build my lead magnet, automation workflow, and email nurture sequence.
+I am in the Build stage at Founder Jam, on the GTM and growth path. Help me run the Offer Designer activity, three sub-activities to build my lead magnet, automation workflow, and email nurture sequence.
 
 My startup context:
 - Startup name: [your startup name]
@@ -46,8 +46,8 @@ Use this structure, tailored to my ICP and offer:
 Use 8 subject line formulas (Question, How-to, Number, Curiosity, Urgency, Personalized, Story, Benefit) and generate:
 - Email 1 (Day 0): Deliver lead magnet + set expectations + P.S. hook
 - Email 2 (Day 2): Pure value, no ask
-- Email 3 (Day 5): Education -- how to think about the problem
-- Email 4 (Day 8): Social proof -- customer story with specific numbers + P.S.
+- Email 3 (Day 5): Education, how to think about the problem
+- Email 4 (Day 8): Social proof, customer story with specific numbers + P.S.
 - Email 5 (Day 12): Value + soft CTA (first gentle offer)
 - Email 6 (Day 16): Address the most common objection + P.S.
 - Email 7 (Day 21): Ongoing cadence invitation + P.S.
@@ -56,7 +56,7 @@ For each email: subject line + full fill-in email body with personalization toke
 Challenge my thinking along the way:
 - "Would you give your email address for this lead magnet? Would your best customer?"
 - "What would make someone forward this email to a colleague?"
-- "Which email is most likely to get a reply -- is it soon enough?"
+- "Which email is most likely to get a reply, is it soon enough?"
 
 At the end, output all Miro-ready artifacts:
 1. Lead Magnet Brief (type, title, format, description)
@@ -64,6 +64,8 @@ At the end, output all Miro-ready artifacts:
 3. Automation Workflow Diagram (text-based sticky sequence)
 4. 7-Email Sequence (subject lines + body for each)
 5. Tools List (free vs. paid with setup complexity)
+
+Handoff: if I paste a FOUNDER JAM HANDOFF block (key: value lines such as startup_name, mode, path, stage, problem_statement, target_market, icp_segment, hypothesis_selected, channels_selected, lead_magnet), use it as my context and ask only for what is missing. If I'm working alone, skip the challenge questions unless I ask to be pushed harder. When you finish, print the full block again in a code box with your new fields, and any field I gave you that the block was missing, filled in and every other field unchanged, so I can paste it into the next prompt. Print the block in this layout: a first line `FOUNDER JAM HANDOFF`, then `version: 2`, then one `key: value` line for each of startup_name, mode, path, stage, problem_statement, target_market, team_size, traction, business_type, icp_segment, top_pains, hypothesis_selected, channels_selected, lead_magnet, outbound_system, published_pages, in that order. Leave a value empty when it is unknown, and write channels_selected and published_pages as comma-separated lists on one line.
 ```
 
 ## What to Expect
@@ -71,19 +73,23 @@ At the end, output all Miro-ready artifacts:
 1. Claude will ask which lead magnet type fits your business best and help you write the offer framing
 2. You will review and refine the landing page copy before moving on
 3. Sub-activity B produces a visual workflow you can paste into Miro as a sticky sequence
-4. Sub-activity C builds each email one at a time -- you can refine each before moving to the next
+4. Sub-activity C builds each email one at a time, you can refine each before moving to the next
 5. All outputs are formatted to paste directly into Miro or your email tool
 
 ## Output
 
-- **Lead Magnet Brief** -- type, title, format, one-paragraph description
-- **Landing Page Copy** -- headline, subhead, 3 bullets, CTA (ready to paste into Carrd, Squarespace, or HubSpot)
-- **Automation Workflow Diagram** -- text-based, Miro-ready sticky sequence
-- **7-Email Sequence** -- subject lines and body copy for all 7 emails
-- **Tools List** -- free vs. paid with setup complexity rating
+- **Lead Magnet Brief**: type, title, format, one-paragraph description
+- **Landing Page Copy**: headline, subhead, 3 bullets, CTA (ready to paste into Carrd, Squarespace, or HubSpot)
+- **Automation Workflow Diagram**: text-based, Miro-ready sticky sequence
+- **7-Email Sequence**: subject lines and body copy for all 7 emails
+- **Tools List**: free vs. paid with setup complexity rating
 
-Save the Lead Magnet Brief -- `growth-builder` will ask for it.
+Save the Lead Magnet Brief, `growth-builder` will ask for it.
 
 ## Next Skill
 
-Growth Track Part 3: `growth-builder.md`
+Next: `growth-builder.md`. Paste your updated handoff block.
+
+---
+
+Founder Jam curriculum and skills by Drew Burdick · program co-created with Innovate Charlotte · CC BY 4.0 · drewburdick.com/founderjam
